@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcasts - Papa Remo Beach</title>
+    <meta name="description" content="Listen to the sounds and stories of Watamu through Papa Remo Beach's podcast series. Featuring local music, nature sounds, and interviews with community members.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo/papa-remo-logo.jpg" type="image/jpeg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/images/logo/papa-remo-logo.jpg" alt="Papa Remo Beach Logo" class="logo">
+                </a>
+                <img src="../assets/images/icons/italian-flag.svg" alt="Italian Flag" class="italian-flag">
+            </div>
+            
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="wedding.html">Weddings</a></li>
+                <li><a href="village.html">Village</a></li>
+                <li><a href="podcasts.html" aria-current="page">Podcasts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <a href="contact.html?subject=general" class="book-now-btn">Book Now</a>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section" style="background-image: url('../assets/images/beach/beach-view-2.jpg');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Sounds of Watamu</h1>
+                    <p>Listen to our podcast series featuring the sounds, stories, and spirit of Papa Remo Beach</p>
+                </div>
+            </section>
+            
+            <!-- Podcast Introduction -->
+            <section class="section">
+                <h2 class="section-title">Our Podcast Series</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Welcome to "Sounds of Watamu," a podcast series that captures the essence of life at Papa Remo Beach. Through these audio experiences, we invite you to immerse yourself in the natural sounds, music, and stories that make our corner of Kenya so special.</p>
+                        <p>From the gentle lapping of waves on the shore to interviews with local community members, our podcasts offer a unique way to connect with Watamu even when you're far away.</p>
+                        <p>Listen to our episodes below, and let the sounds transport you to our beautiful beach.</p>
+                    </div>
+                    <div class="podcast-player-intro">
+                        <div class="podcast-intro-player">
+                            <h3>Introduction to Sounds of Watamu</h3>
+                            <audio controls>
+                                <source src="../assets/audio/podcast_intro.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <p class="podcast-duration">2:15</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Featured Episodes -->
+            <section class="section">
+                <h2 class="section-title">Featured Episodes</h2>
+                <div class="podcast-grid">
+                    <div class="podcast-card" data-episode="1">
+                        <div class="podcast-image" style="background-image: url('../assets/images/beach/beach-view-1.jpg');"></div>
+                        <div class="podcast-content">
+                            <h3>Episode 1: Morning at the Beach</h3>
+                            <p class="podcast-date">Released: March 15, 2025</p>
+                            <p class="podcast-description">Experience the sounds of Watamu as the sun rises over the Indian Ocean. Listen to the morning birds, gentle waves, and the beach coming to life.</p>
+                            <div class="podcast-player">
+                                <audio controls>
+                                    <source src="../assets/audio/morning_birds.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <p class="podcast-duration">5:23</p>
+                            </div>
+                            <div class="podcast-actions">
+                                <button class="podcast-like-btn" data-episode="1">
+                                    <i class="far fa-heart"></i> <span class="like-count">24</span>
+                                </button>
+                                <button class="podcast-comment-btn" data-episode="1">
+                                    <i class="far fa-comment"></i> Comments (<span class="comment-count">8</span>)
+                                </button>
+                                <button class="podcast-share-btn" data-episode="1">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                            <div class="podcast-comments" id="comments-1">
+                                <h4>Comments</h4>
+                                <div class="comment-list">
+                                    <div class="comment">
+                                        <p class="comment-author">Maria S.</p>
+                                        <p class="comment-date">April 2, 2025</p>
+                                        <p class="comment-text">This brings back such wonderful memories of my stay at Papa Remo last year. The morning sounds are exactly as I remember them!</p>
+                                    </div>
+                                    <div class="comment">
+                                        <p class="comment-author">John D.</p>
+                                        <p class="comment-date">March 20, 2025</p>
+                                        <p class="comment-text">So peaceful. I listen to this while working from home and it makes me feel like I'm on vacation.</p>
+                                    </div>
+                                </div>
+                                <div class="comment-form">
+                                    <h5>Add a Comment</h5>
+                                    <form class="podcast-comment-form" data-episode="1">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Your Comment" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn">Post Comment</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="podcast-card" data-episode="2">
+                        <div class="podcast-image" style="background-image: url('../assets/images/beach/beach-view-3.jpg');"></div>
+                        <div class="podcast-content">
+                            <h3>Episode 2: Sunset Waves</h3>
+                            <p class="podcast-date">Released: March 22, 2025</p>
+                            <p class="podcast-description">The magical sounds of Watamu at sunset, when the beach takes on golden hues and the rhythm of the waves creates a perfect natural soundtrack.</p>
+                            <div class="podcast-player">
+                                <audio controls>
+                                    <source src="../assets/audio/waves_at_sunset.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <p class="podcast-duration">4:45</p>
+                            </div>
+                            <div class="podcast-actions">
+                                <button class="podcast-like-btn" data-episode="2">
+                                    <i class="far fa-heart"></i> <span class="like-count">18</span>
+                                </button>
+                                <button class="podcast-comment-btn" data-episode="2">
+                                    <i class="far fa-comment"></i> Comments (<span class="comment-count">5</span>)
+                                </button>
+                                <button class="podcast-share-btn" data-episode="2">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                            <div class="podcast-comments" id="comments-2">
+                                <h4>Comments</h4>
+                                <div class="comment-list">
+                                    <div class="comment">
+                                        <p class="comment-author">Sarah M.</p>
+                                        <p class="comment-date">April 5, 2025</p>
+                                        <p class="comment-text">I listen to this every night before bed. So calming!</p>
+                                    </div>
+                                </div>
+                                <div class="comment-form">
+                                    <h5>Add a Comment</h5>
+                                    <form class="podcast-comment-form" data-episode="2">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Your Comment" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn">Post Comment</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- More Episodes -->
+            <section class="section">
+                <h2 class="section-title">More Episodes</h2>
+                <div class="podcast-list">
+                    <div class="podcast-list-item">
+                        <div class="podcast-list-image" style="background-image: url('../assets/images/restaurant/restaurant-view.jpg');"></div>
+                        <div class="podcast-list-content">
+                            <h3>Episode 3: Flavors of Papa Remo</h3>
+                            <p class="podcast-date">Released: March 29, 2025</p>
+                            <p class="podcast-description">An interview with our chef discussing the Italian-Kenyan fusion cuisine that makes our restaurant special, accompanied by the ambient sounds of our kitchen and dining area.</p>
+                            <div class="podcast-player">
+                                <audio controls>
+                                    <source src="../assets/audio/podcast_episode3.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <p class="podcast-duration">12:38</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="podcast-list-item">
+                        <div class="podcast-list-image" style="background-image: url('../assets/images/wedding/beach-wedding.jpg');"></div>
+                        <div class="podcast-list-content">
+                            <h3>Episode 4: Wedding Bells by the Sea</h3>
+                            <p class="podcast-date">Released: April 5, 2025</p>
+                            <p class="podcast-description">The sounds of a beach wedding at Papa Remo, featuring interviews with a couple who celebrated their special day with us.</p>
+                            <div class="podcast-player">
+                                <audio controls>
+                                    <source src="../assets/audio/podcast_episode4.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <p class="podcast-duration">15:22</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="podcast-list-item">
+                        <div class="podcast-list-image" style="background-image: url('../assets/images/beach/beach-view-2.jpg');"></div>
+                        <div class="podcast-list-content">
+                            <h3>Episode 5: Saturday Night at Papa Remo</h3>
+                            <p class="podcast-date">Released: April 12, 2025</p>
+                            <p class="podcast-description">Experience the vibrant atmosphere of our famous Saturday night beach parties, with music, laughter, and the sounds of celebration.</p>
+                            <div class="podcast-player">
+                                <audio controls>
+                                    <source src="../assets/audio/saturday_night_party.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <p class="podcast-duration">8:15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Upcoming Episodes -->
+            <section class="section">
+                <h2 class="section-title">Coming Soon</h2>
+                <div class="upcoming-episodes">
+                    <div class="upcoming-episode">
+                        <h3>Episode 6: Voices of Watamu</h3>
+                        <p class="release-date">Releasing: April 19, 2025</p>
+                        <p>Interviews with local community members sharing stories about the history and culture of Watamu.</p>
+                    </div>
+                    
+                    <div class="upcoming-episode">
+                        <h3>Episode 7: A Day in the Village</h3>
+                        <p class="release-date">Releasing: April 26, 2025</p>
+                        <p>Experience life in Papa Remo Village through ambient sounds and interviews with residents.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Podcast Subscription -->
+            <section class="section">
+                <h2 class="section-title">Subscribe to Our Podcast</h2>
+                <div class="podcast-subscription">
+                    <p>Never miss an episode! Subscribe to "Sounds of Watamu" on your favorite podcast platform:</p>
+                    <div class="podcast-platforms">
+                        <a href="#" class="podcast-platform">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </a>
+                        <a href="#" class="podcast-platform">
+                            <i class="fab fa-apple"></i> Apple Podcasts
+                        </a>
+                        <a href="#" class="podcast-platform">
+                            <i class="fab fa-google"></i> Google Podcasts
+                        </a>
+                        <a href="#" class="podcast-platform">
+                            <i class="fas fa-rss"></i> RSS Feed
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Podcast Suggestions -->
+            <section class="section cta-section">
+                <h2>Have an Idea for an Episode?</h2>
+                <p>We'd love to hear your suggestions for future podcast episodes about Papa Remo Beach and Watamu.</p>
+                <a href="contact.html?subject=general" class="btn">Submit Your Idea</a>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="../assets/images/logo/papa-remo-logo.jpg" alt="Papa Remo Beach Logo" class="footer-logo">
+            
+            <div class="footer-contact">
+                <p>Jacaranda Road, Watamu, Kenya</p>
+                <p>Phone: +254 707 010527 | Email: beach@paparemobeach.com</p>
+                <p>Open daily: 9:00 AM to 10:00 PM</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/paparemobeach/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/paparemobeach/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            
+            <div class="footer-nav">
+                <a href="../index.html">Home</a>
+                <a href="story.html">Our Story</a>
+                <a href="restaurant.html">Restaurant</a>
+                <a href="wedding.html">Weddings</a>
+                <a href="village.html">Village</a>
+                <a href="podcasts.html">Podcasts</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 Papa Remo Beach. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/village-podcasts-handler.js"></script>
+</body>
+</html>
