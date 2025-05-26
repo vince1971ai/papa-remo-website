@@ -1,0 +1,38 @@
+{
+  "navigation": {
+    "home": "Home",
+    "story": "Storia di Papa Remo",
+    "restaurant": "Ristorante",
+    "wedding": "Matrimonio",
+    "events": "Eventi",
+    "village": "Villaggio Paparemo",
+    "podcast": "Podcast",
+    "contact": "Contatti"
+  },
+  "buttons": {
+    "bookNow": "Prenota Ora",
+    "readMore": "Leggi di Più",
+    "submit": "Invia",
+    "send": "Invia Messaggio"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "location": "Jacaranda Road, Watamu, Kenya",
+    "phone": "+254 707 010527",
+    "email": "reservation@paparemobeach.com"
+  },
+  "forms": {
+    "name": "Nome Completo",
+    "email": "Indirizzo Email",
+    "phone": "Numero di Telefono",
+    "date": "Data Preferita",
+    "time": "Orario Preferito",
+    "guests": "Numero di Ospiti",
+    "message": "Il Tuo Messaggio",
+    "required": "Campo obbligatorio"
+  },
+  "footer": {
+    "followUs": "Seguici",
+    "copyright": "© 2025 Papa Remo Beach Bar. Tutti i diritti riservati."
+  }
+}

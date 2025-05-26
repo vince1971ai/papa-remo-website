@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Papa Remo Beach Bar</title>
+<meta content="Contact Papa Remo Beach Bar in Watamu, Kenya. Make reservations, inquire about events, or get directions to our location." name="description"/>
+<link href="../assets/css/main.css" rel="stylesheet"/>
+<link href="../assets/css/pages.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<!-- Sidebar / Vertical Menu -->
+<aside class="sidebar">
+<div class="sidebar-logo">
+<a href="index.html">
+<picture><source srcset="../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Bar Logo" src="../assets/images/optimized/logo.jpg"/></picture>
+</a>
+</div>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Papa Remo Story</a></li>
+<li><a href="restaurant.html">Restaurant</a></li>
+<li><a href="wedding.html">Wedding</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="village.html">Paparemo Village</a></li>
+<li><a href="podcast.html">Podcast</a></li>
+<li><a class="active" href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="sidebar-contact">
+<h3>Contact Us</h3>
+<p><i class="fas fa-map-marker-alt"></i> Jacaranda Road, Watamu, Kenya</p>
+<p><i class="fas fa-phone"></i> +254 707 010527</p>
+<p><i class="fas fa-envelope"></i> reservation@paparemobeach.com</p>
+</div>
+<a class="book-now-btn" href="contact.html#reservation">Book Now</a>
+<div class="language-toggle">
+<img alt="Italian Flag" src="../assets/images/italian_flag.svg"/>
+<span>Italiano</span>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="main-content">
+<header class="page-header">
+<h1>Contact Us</h1>
+<p>Get in touch with Papa Remo Beach Bar</p>
+</header>
+<section class="contact-info">
+<div class="contact-grid">
+<div class="contact-card">
+<i class="fas fa-map-marker-alt"></i>
+<h1 class="">Location</h1>
+<p>Papa Remo Beach Bar<br/>Jacaranda Road<br/>Watamu, Kenya</p>
+</div>
+<div class="contact-card">
+<i class="fas fa-phone"></i>
+<h3>Phone</h3>
+<p>+254 707 010527</p>
+</div>
+<div class="contact-card">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<p>reservation@paparemobeach.com</p>
+</div>
+<div class="contact-card">
+<i class="fas fa-clock"></i>
+<h3>Opening Hours</h3>
+<p>Restaurant: 10:00 AM - 10:00 PM<br/>Beach Bar: 10:00 AM - Late</p>
+</div>
+</div>
+</section>
+<section class="map-section mt-4">
+<h2>Find Us</h2>
+<div class="map-container">
+<!-- Placeholder for map - in a real implementation, this would be an iframe with Google Maps -->
+<div class="map-placeholder">
+<p>Map of Papa Remo Beach Bar location in Watamu, Kenya</p>
+<p>Jacaranda Road, Watamu, Kenya</p>
+</div>
+</div>
+</section>
+<section class="reservation-form mt-4" id="reservation">
+<h2>Make a Reservation</h2>
+<p>Fill out the form below to make a reservation at Papa Remo Beach Bar. We'll get back to you as soon as possible to confirm your booking.</p>
+<form action="https://formspree.io/f/reservation@paparemobeach.com" id="reservation-form" method="POST">
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="name">Full Name *</label>
+<input class="form-control" id="name" name="name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="email">Email Address *</label>
+<input class="form-control" id="email" name="email" required="" type="email"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="phone">Phone Number</label>
+<input class="form-control" id="phone" name="phone" type="tel"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="date">Preferred Date *</label>
+<input class="form-control" id="date" name="date" required="" type="date"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="time">Preferred Time *</label>
+<input class="form-control" id="time" name="time" required="" type="time"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="guests">Number of Guests *</label>
+<input class="form-control" id="guests" min="1" name="guests" required="" type="number"/>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label" for="reservation-type">Reservation Type *</label>
+<select class="form-control" id="reservation-type" name="reservation-type" required="">
+<option value="">Select an option</option>
+<option value="restaurant">Restaurant Dining</option>
+<option value="event">Private Event</option>
+<option value="wedding">Wedding Inquiry</option>
+<option value="accommodation">Accommodation</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="message">Special Requests or Comments</label>
+<textarea class="form-control" id="message" name="message" rows="4"></textarea>
+</div>
+<div class="form-group">
+<button class="btn btn-primary" type="submit">Submit Reservation Request</button>
+</div>
+</form>
+</section>
+<section class="general-inquiry mt-4">
+<h2>General Inquiry</h2>
+<p>Have a question or comment? Send us a message and we'll get back to you as soon as possible.</p>
+<form action="https://formspree.io/f/reservation@paparemobeach.com" id="inquiry-form" method="POST">
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="inquiry-name">Full Name *</label>
+<input class="form-control" id="inquiry-name" name="name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-email">Email Address *</label>
+<input class="form-control" id="inquiry-email" name="email" required="" type="email"/>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-subject">Subject *</label>
+<input class="form-control" id="inquiry-subject" name="subject" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-message">Message *</label>
+<textarea class="form-control" id="inquiry-message" name="message" required="" rows="4"></textarea>
+</div>
+<div class="form-group">
+<button class="btn btn-primary" type="submit">Send Message</button>
+</div>
+</form>
+</section>
+<section class="social-connect mt-4">
+<h2>Connect With Us</h2>
+<p>Follow us on social media for updates, events, and beautiful photos of Watamu.</p>
+<div class="social-links mt-3">
+<a class="social-link" href="https://www.instagram.com/paparemobeach/" target="_blank">
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
+<span class="social-handle">@paparemobeach</span>
+</a>
+<a class="social-link" href="https://www.facebook.com/paparemobeach/" target="_blank">
+<i class="fab fa-facebook"></i>
+<span>Facebook</span>
+<span class="social-handle">Papa Remo Beach</span>
+</a>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-column">
+<h3>Papa Remo Beach Bar</h3>
+<p>Jacaranda Road, Watamu, Kenya</p>
+<p>Phone: +254 707 010527</p>
+<p>Email: reservation@paparemobeach.com</p>
+</div>
+<div class="footer-column">
+<h3>Follow Us</h3>
+<div class="social-links">
+<a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+</div>
+</div>
+<div class="copyright">
+<p>© 2025 Papa Remo Beach Bar. All rights reserved.</p>
+</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/language-toggle.js"></script>
+<script src="../assets/js/weather-widget.js"></script>
+</body>
+</html>

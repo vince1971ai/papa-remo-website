@@ -1,0 +1,48 @@
+:root {
+  /* Primary Colors */
+  --primary-dark: #1d1d1b;      /* Dark color from logo */
+  --primary-light: #ffffff;     /* Light color from logo */
+  
+  /* Beach Theme Colors */
+  --ocean-blue: #1560BD;        /* Deep ocean blue */
+  --turquoise: #40E0D0;         /* Turquoise water */
+  --sand: #cdc2ac;              /* Sandy beige from beach images */
+  --coral: #FF7F50;             /* Warm coral accent */
+  
+  /* Neutral Colors */
+  --light-gray: #F5F5F5;        /* Light background */
+  --dark-gray: #333333;         /* Dark text */
+  
+  /* Functional Colors */
+  --success: #28a745;           /* Success messages */
+  --warning: #ffc107;           /* Warning messages */
+  --danger: #dc3545;            /* Error messages */
+  --info: #17a2b8;              /* Info messages */
+  
+  /* Text Colors */
+  --text-dark: var(--primary-dark);
+  --text-light: var(--primary-light);
+  
+  /* Background Colors */
+  --bg-primary: var(--primary-light);
+  --bg-secondary: var(--sand);
+  --bg-accent: var(--turquoise);
+  
+  /* Border Colors */
+  --border-light: #e9ecef;
+  --border-dark: var(--primary-dark);
+}
+
+/* Color Classes for easy use */
+.bg-primary { background-color: var(--primary-dark); }
+.bg-secondary { background-color: var(--sand); }
+.bg-accent { background-color: var(--turquoise); }
+.bg-ocean { background-color: var(--ocean-blue); }
+.bg-coral { background-color: var(--coral); }
+.bg-light { background-color: var(--light-gray); }
+
+.text-primary { color: var(--primary-dark); }
+.text-light { color: var(--primary-light); }
+.text-ocean { color: var(--ocean-blue); }
+.text-turquoise { color: var(--turquoise); }
+.text-coral { color: var(--coral); }
