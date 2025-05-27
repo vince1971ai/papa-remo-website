@@ -291,54 +291,109 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 1rem;
-}
+} [cite: 1]
 
 .event-info li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
+} [cite: 1]
 
 .event-info i {
   color: var(--ocean-blue);
-}
+} [cite: 1]
 
 .featured-event {
   border-left: 4px solid var(--coral);
-}
+} [cite: 1]
 
 .private-events-content {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
-}
+} [cite: 1]
 
 .private-events-text {
    -webkit-flex:  1;
    -ms-flex:  1;
   flex: 1;
   min-width: 300px;
-}
+} [cite: 1]
 
 .private-events-image {
    -webkit-flex:  1;
    -ms-flex:  1;
   flex: 1;
   min-width: 300px;
-}
+} [cite: 1]
 
 .private-events-image img {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+} [cite: 1]
 
 .private-event-options {
   list-style-type: disc;
   padding-left: 1.5rem;
   margin: 1rem 0;
+} [cite: 1]
+
+/* Stili per la nuova sezione del calendario eventi (Events Page) */
+.event-calendar-section {
+  text-align: center; /* Centra il titolo e il contenitore del calendario */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f9f9f9; /* Opzionale: un leggero sfondo per distinguere la sezione */
+  border-top: 1px solid #eee; /* Opzionale: linea di separazione superiore */
+  border-bottom: 1px solid #eee; /* Opzionale: linea di separazione inferiore */
 }
+
+.event-calendar-section h2 {
+  margin-bottom: 10px;
+  font-size: 2.2em; /* Dimensione del titolo, modifica se necessario */
+  color: #333; /* Colore del titolo, modifica se necessario */
+}
+
+.event-calendar-section p {
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.calendar-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px; /* Larghezza massima del calendario, puoi aumentarla o diminuirla */
+  margin: 0 auto; /* Centra il contenitore nella sezione */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Ombra per dare profondità */
+  border-radius: 8px; /* Angoli arrotondati per il contenitore */
+}
+
+.calendar-container iframe {
+  width: 100%; /* Rende l'iframe responsivo in larghezza */
+  height: 650px; /* Altezza del calendario, puoi modificarla. Google Calendar spesso sta bene con 600-700px */
+  border: none; /* Assicura che non ci siano bordi */
+}
+
+/* Media query per schermi più piccoli per aggiustare l'altezza se necessario */
+@media (max-width: 768px) {
+  .event-calendar-section h2 {
+    font-size: 1.8em;
+  }
+  .calendar-container iframe {
+    height: 500px; /* Un'altezza minore per schermi piccoli */
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-container iframe {
+    height: 400px; /* Un'altezza ancora minore per schermi molto piccoli */
+  }
+}
+/* Fine Stili per la nuova sezione del calendario eventi */
 
 /* Village Page */
 .accommodation-card {
