@@ -50,7 +50,7 @@ img {
 
 /* Sidebar / Vertical Menu */
 .sidebar {
-  width: 280px;
+  width: 290px;
   background-color: var(--primary-dark);
   color: var(--text-light);
   padding: 2rem;
