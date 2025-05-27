@@ -1,0 +1,80 @@
+C:.
+└───paparemo_website
+    ├───assets
+    │   ├───css
+    │   ├───fonts
+    │   ├───images
+    │   │   └───optimized
+    │   └───js
+    ├───locales
+    │   ├───en
+    │   └───it
+    └───pages
+
+C:.
+│   .bashrc
+│   .bash_logout
+│   .profile
+│   .sudo_as_admin_successful
+│   .wget-hsts
+│   index.html
+│   jh.JPG
+│   struttura_sito.txt
+│
+└───paparemo_website
+    │   README.md
+    │   responsive-test.html
+    │
+    ├───assets
+    │   ├───css
+    │   │       color_scheme.css
+    │   │       main.css
+    │   │       pages.css
+    │   │
+    │   ├───fonts
+    │   ├───images
+    │   │   │   beach_party.jpg
+    │   │   │   beach_view1.jpg
+    │   │   │   beach_view2.jpg
+    │   │   │   beach_view3.jpg
+    │   │   │   beach_view4.jpg
+    │   │   │   italian_flag.svg
+    │   │   │   logo.jpg
+    │   │   │
+    │   │   └───optimized
+    │   │           beach_party.jpg
+    │   │           beach_party.webp
+    │   │           beach_view1.jpg
+    │   │           beach_view1.webp
+    │   │           beach_view2.jpg
+    │   │           beach_view2.webp
+    │   │           beach_view3.jpg
+    │   │           beach_view3.webp
+    │   │           italian_flag.svg
+    │   │           logo.jpg
+    │   │           logo.webp
+    │   │
+    │   └───js
+    │           language-toggle.js
+    │           main.js
+    │           mobile-menu.js
+    │           weather-widget.js
+    │
+    ├───locales
+    │   ├───en
+    │   │       README.txt
+    │   │       translations.json
+    │   │
+    │   └───it
+    │           README.txt
+    │           translations.json
+    │
+    └───pages
+            contact.html
+            events.html
+            index.html
+            podcast.html
+            restaurant.html
+            story.html
+            village.html
+            wedding.html
