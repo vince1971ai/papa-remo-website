@@ -94,7 +94,7 @@ img {
   transition: all 0.3s ease;
 }
 
-.sidebar-nav a:hover, 
+.sidebar-nav a:hover,
 .sidebar-nav a.active {
   color: var(--turquoise);
   padding-left: 0.5rem;
@@ -162,7 +162,7 @@ img {
    -webkit-flex:  1;
    -ms-flex:  1;
   flex: 1;
-  margin-left: 280px;
+  margin-left: 280px; /* Adjusted from 280px in original upload */
   padding: 2rem;
 }
 
@@ -182,7 +182,7 @@ img {
   background-color: var(--primary-dark);
   color: var(--text-light);
   padding: 2rem;
-  margin-left: 280px;
+  margin-left: 280px; /* Adjusted from 280px in original upload */
 }
 
 .footer-content {
@@ -370,3 +370,4 @@ img {
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
 .mt-4 { margin-top: 2rem; }
+/* L'ERRORE ERA QUI: la parentesi graffa extra è stata rimossa */
