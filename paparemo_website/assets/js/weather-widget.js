@@ -71,9 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
             weatherWidget.innerHTML = '<div class="weather-loading">Loading weather data...</div>';
             
             // OpenWeatherMap API endpoint for Watamu, Kenya
-            // Note: In a production environment, the API key should be kept secure
-            // and requests should be proxied through a server-side component
-            const apiKey = 'YOUR_API_KEY'; // Replace with actual API key in production
+            // API Key inserita qui sotto
+            const apiKey = '487fe8d2b491bee5de598826d5c2a022'; // CHIAVE API INSERITA
             const location = 'Watamu,Kenya';
             const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
             
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const weatherData = {
                         location: 'Watamu, Kenya',
                         temperature: Math.round(data.main.temp) + '°C',
-                        condition: data.weather[0].description,
+                        condition: data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1), // Capitalize first letter
                         icon: getWeatherIcon(data.weather[0].id)
                     };
                     
@@ -121,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="weather-location">${fallbackData.location}</div>
                             <div class="weather-temp">${fallbackData.temperature}</div>
                             <div class="weather-condition">${fallbackData.condition}</div>
-                            <div class="weather-loading">Live data unavailable</div>
+                            <div class="weather-loading" style="font-size: 0.8em; margin-top: 0.5em;">Live data unavailable</div>
                         </div>
                     `;
                 });
@@ -137,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (code >= 600 && code < 700) return '❄️'; // Snow
         if (code >= 700 && code < 800) return '🌫️'; // Atmosphere (fog, mist, etc.)
         if (code === 800) return '☀️'; // Clear
-        if (code > 800) return '☁️'; // Clouds
+        if (code > 800 && code < 805) return '☁️'; // Clouds (few, scattered, broken, overcast)
         
         return '🌡️'; // Default
     }
@@ -145,6 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load the weather widget
     loadWeatherWidget();
     
-    // Refresh the weather data every hour
+    // Refresh the weather data every hour (3600000 milliseconds)
     setInterval(loadWeatherWidget, 3600000);
 });
