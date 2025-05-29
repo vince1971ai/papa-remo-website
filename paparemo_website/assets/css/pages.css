@@ -652,13 +652,13 @@
 }
 
 .map-container {
-  height: 450px; /* MODIFICATO QUI: da 400px a 450px */
+  height: 450px;
   background-color: var(--bg-secondary);
   border-radius: 8px;
   overflow: hidden;
 }
 
-.map-placeholder {
+.map-placeholder { /* Anche se il placeholder non è più usato, lascio lo stile per ora */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -720,6 +720,25 @@
   font-size: 0.9rem;
   color: var(--dark-gray);
 }
+
+/* Stili per l'immagine nell'header della pagina Contatti (AGGIUNTI QUI) */
+.contact-header-image-container {
+  text-align: center; /* Centra l'immagine se è inline-block o se il contenitore è più largo */
+  margin-top: 1.5rem; /* Spazio sopra l'immagine */
+  margin-bottom: 2.5rem; /* Spazio sotto l'immagine, prima della sezione successiva */
+}
+
+.contact-header-image {
+  max-width: 100%; /* Assicura che l'immagine non superi la larghezza del suo contenitore */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  border-radius: 8px; /* Angoli arrotondati, come per altre immagini nel sito */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Una leggera ombra, opzionale */
+  display: block; /* Per far funzionare text-align sul contenitore se l'immagine è di per sé un blocco, o per centrarla con margin auto */
+  margin-left: auto; /* Centra l'immagine se è display: block */
+  margin-right: auto; /* Centra l'immagine se è display: block */
+}
+/* Fine Stili per l'immagine nell'header della pagina Contatti */
+
 
 /* Responsive adjustments for all pages */
 @media (max-width: 768px) {
