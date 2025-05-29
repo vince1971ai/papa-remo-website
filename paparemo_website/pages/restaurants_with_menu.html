@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Restaurant - Papa Remo Beach Bar</title>
+<meta content="Enjoy delicious cuisine with ocean views at Papa Remo Beach Bar's restaurant in Watamu, Kenya." name="description"/>
+<link href="../assets/css/main.css" rel="stylesheet"/>
+<link href="../assets/css/pages.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+    /* Base styles for stacked menu sections - to be moved/improved in pages.css */
+    .menu-section-stacked {
+        margin-bottom: 2rem;
+    }
+    .menu-content-stacked {
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+        background-color: #f9f9f9; /* Light background for menu sections */
+        border-radius: 8px;
+    }
+    .menu-content-stacked > h3 { /* Lunch Menu / Dinner Menu Titles */
+        font-size: 2em;
+        color: var(--ocean-blue);
+        margin-bottom: 0.5rem;
+        border-bottom: 2px solid var(--coral);
+        padding-bottom: 0.5rem;
+    }
+    .menu-content-stacked .menu-availability {
+        font-style: italic;
+        color: var(--dark-gray);
+        margin-bottom: 1.5rem;
+        font-size: 0.9em;
+    }
+    .menu-category-title-stacked { /* Category titles within menus */
+        font-size: 1.5em;
+        color: var(--ocean-blue);
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--sand);
+    }
+    .menu-item-detailed { 
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dashed var(--border-light);
+    }
+    .menu-item-detailed:last-child {
+        border-bottom: none;
+    }
+    .menu-item-detailed h4 { /* Dish name */
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2em;
+        color: var(--text-dark);
+        margin-bottom: 0.3rem;
+    }
+    .menu-item-description-long {
+        font-size: 0.95rem;
+        color: var(--dark-gray);
+        margin-bottom: 0.5rem;
+    }
+    .menu-item-price {
+        font-weight: 600;
+        color: var(--coral);
+    }
+    .menu-item-photo-small {
+        width: 120px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 4px;
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .menu-item-detailed::after { /* Clearfix for .menu-item-detailed if image is floated */
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .download-menu-link {
+        display: block; 
+        margin-top: 1.5rem;
+        text-align: left; 
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<aside class="sidebar">
+<div class="sidebar-logo">
+<a href="index.html">
+<picture><source srcset="../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Bar Logo" src="../assets/images/optimized/logo.jpg"/></picture>
+</a>
+</div>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Papa Remo Story</a></li>
+<li><a class="active" href="restaurant.html">Restaurant</a></li>
+<li><a href="wedding.html">Wedding</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="village.html">Paparemo Village</a></li>
+<li><a href="podcast.html">Podcast</a></li>
+<li><a href="our-posts.html">Our Posts</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="sidebar-contact">
+<h3>Contact Us</h3>
+<p><i class="fas fa-map-marker-alt"></i> Jacaranda Road, Watamu, Kenya</p>
+<p><i class="fas fa-phone"></i> +254 707 010527</p>
+<p><i class="fas fa-envelope"></i> reservation@paparemobeach.com</p>
+</div>
+<a class="book-now-btn" href="contact.html#reservation">Book Now</a>
+<div class="language-toggle">
+<img alt="Italian Flag" src="../assets/images/italian_flag.svg"/>
+<span>Italiano</span>
+</div>
+</aside>
+<main class="main-content">
+<header class="page-header">
+<h1>Our Restaurant</h1>
+<p>Delicious cuisine with breathtaking ocean views</p>
+</header>
+
+<section class="restaurant-intro">
+<div class="restaurant-image">
+    <picture><source srcset="../assets/images/optimized/restaurant.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_party.jpg" type="image/jpeg"/><img alt="Papa Remo Restaurant View" src="../assets/images/optimized/beach_party.jpg"/></picture>
+</div>
+<div class="restaurant-text mt-4">
+    <h2 class="">Dining at Papa Remo</h2>
+    <p>Our restaurant offers a unique dining experience that combines delicious cuisine with breathtaking views of the Indian Ocean. Located on the beautiful Watamu beach, Papa Remo Restaurant is the perfect place to enjoy a meal while taking in the natural beauty of the Kenyan coast.</p>
+    <p>We pride ourselves on serving fresh, locally-sourced ingredients prepared with a blend of Italian and Kenyan influences.</p>
+    <div class="restaurant-features mt-3">
+        <div class="feature"><i class="fas fa-fish"></i><span>Fresh Seafood</span></div>
+        <div class="feature"><i class="fas fa-pizza-slice"></i><span>Italian Cuisine</span></div>
+        <div class="feature"><i class="fas fa-cocktail"></i><span>Signature Cocktails</span></div>
+        <div class="feature"><i class="fas fa-umbrella-beach"></i><span>Beach Dining</span></div>
+    </div>
+</div>
+</section>
+
+<section class="dining-experience-detailed mt-4">
+    <h2>The Papa Remo Experience</h2>
+    <div class="row">
+        <div class="col">
+            <h3><i class="fas fa-sun"></i> Lunch by the Sea</h3>
+            <p>Enjoy a relaxed lunch with your feet in the sand. Our daytime menu offers light, fresh options perfect for a sunny day on the Kenyan coast. The atmosphere is casual and welcoming for families and beachgoers.</p>
+            <img src="https://placehold.co/600x400.jpg?text=Lunch+Ambiance+at+Papa+Remo" alt="Lunch at Papa Remo" style="width:100%; border-radius:8px; margin-top:1rem;">
+        </div>
+        <div class="col">
+            <h3><i class="fas fa-moon"></i> Dinner Under the Stars</h3>
+            <p>As the sun sets, Papa Remo transforms into a magical dining spot. Experience a romantic dinner with the sound of the waves, or a vibrant evening with friends, enjoying our exquisite dinner menu and curated wine list.</p>
+            <img src="https://placehold.co/600x400.jpg?text=Dinner+Ambiance+at+Papa+Remo" alt="Dinner at Papa Remo" style="width:100%; border-radius:8px; margin-top:1rem;">
+        </div>
+    </div>
+</section>
+
+<section id="our-menus-stacked" class="menu-section-stacked mt-4">
+    <h2>Our Menus</h2>
+    <p class="mb-3">Our offerings change with the freshest seasonal ingredients. We invite you to explore our selections.</p>
+
+    <div class="menu-content-stacked" id="lunch-menu-stacked">
+        <h3>Lunch Menu</h3>
+        <p class="menu-availability">Served from 12:00 PM to 3:00 PM</p>
+        
+        <h4 class="menu-category-title-stacked">Light Appetizers</h4>
+        <div class="menu-item-detailed">
+            <h4>Fresh Tomato Bruschetta</h4>
+            <p class="menu-item-description-long">Toasted homemade bread with fresh tomatoes, basil, garlic, and a drizzle of extra virgin olive oil.</p>
+            </div>
+        <div class="menu-item-detailed">
+            <h4>Papa Remo Tropical Salad</h4>
+            <p class="menu-item-description-long">An exotic mix of seasonal fresh fruit, local prawns, and a light lime vinaigrette.</p>
+        </div>
+
+        <h4 class="menu-category-title-stacked">Wood-Fired Pizzas</h4>
+        <div class="menu-item-detailed">
+            <h4>Margherita Pizza</h4>
+            <p class="menu-item-description-long">The classic with San Marzano tomatoes, fior di latte mozzarella, and fresh basil.</p>
+        </div>
+        <div class="menu-item-detailed">
+            <h4>'Watamu' Pizza</h4>
+            <p class="menu-item-description-long">Mozzarella, fresh local tuna, Tropea red onions, and capers.</p>
+        </div>
+        <div class="download-menu-link">
+             <a href="#" class="btn btn-secondary">Download Lunch Menu PDF</a>
+        </div>
+    </div>
+
+    <div class="menu-content-stacked mt-4" id="dinner-menu-stacked">
+        <h3>Dinner Menu</h3>
+        <p class="menu-availability">Served from 7:00 PM to 10:00 PM</p>
+
+        <h4 class="menu-category-title-stacked">Sophisticated Appetizers</h4>
+         <div class="menu-item-detailed">
+            <h4>Smoked Swordfish Carpaccio</h4>
+            <p class="menu-item-description-long">Thinly sliced artisanal smoked swordfish with rocket, parmesan shavings, and citronette.</p>
+        </div>
+
+        <h4 class="menu-category-title-stacked">Fresh Seafood Specialties</h4>
+        <div class="menu-item-detailed">
+            <h4>Papa Remo Grand Grill</h4>
+            <p class="menu-item-description-long">An opulent selection of the best catch of the day, lobster, king prawns, calamari, grilled to perfection.</p>
+        </div>
+        <div class="menu-item-detailed">
+            <h4>Grouper Fillet in Potato Crust</h4>
+            <p class="menu-item-description-long">Delicate local grouper fillet wrapped in a crispy potato crust, served with a lemon sauce.</p>
+        </div>
+        
+        <h4 class="menu-category-title-stacked">Traditional Pasta & Risotto</h4>
+         <div class="menu-item-detailed">
+            <h4>Black Tagliolini with Lobster</h4>
+            <p class="menu-item-description-long">Fresh black squid ink pasta with fresh lobster meat, cherry tomatoes, and a hint of chili.</p>
+        </div>
+        <div class="download-menu-link">
+            <a href="#" class="btn btn-secondary">Download Dinner Menu PDF</a>
+        </div>
+    </div>
+
+    <div class="menu-content-stacked mt-4" id="drinks-menu-stacked">
+        <h3>Drinks & Bar</h3>
+        
+        <h4 class="menu-category-title-stacked">Signature Cocktails</h4>
+        <div class="menu-item-detailed">
+            <h4>Papa Remo Sunset</h4>
+            <p class="menu-item-description-long">An exotic and refreshing mix, perfect for enjoying the sunset on the beach.</p>
+        </div>
+        <div class="menu-item-detailed">
+            <h4>Dawa Classic</h4>
+            <p class="menu-item-description-long">The famous Kenyan cocktail made with vodka, lime, honey, and cane sugar.</p>
+        </div>
+
+        <h4 class="menu-category-title-stacked">Selected Wines</h4>
+        <div class="menu-item-detailed">
+            <h4>Italian and International Wines</h4>
+            <p class="menu-item-description-long">We offer a curated selection of white, red, rosé, and sparkling wines to best accompany your dishes.</p>
+        </div>
+         <div class="download-menu-link">
+            <a href="#" class="btn btn-secondary">Download Drinks Menu PDF</a>
+        </div>
+    </div>
+
+    <div class="menu-note mt-3" style="text-align:center;">
+        <p>* Our menu changes seasonally to ensure the freshest ingredients. Please ask our staff for daily specials.</p>
+    </div>
+</section>
+
+<section class="reservation-cta mt-4">
+<h2>Make a Reservation</h2>
+<p>To ensure the best dining experience, we recommend making a reservation, especially during peak season.</p>
+<a class="btn btn-primary" href="contact.html#reservation">Reserve a Table</a>
+</section>
+</main>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Papa Remo Beach Bar</h3>
+            <p>Jacaranda Road, Watamu, Kenya</p>
+            <p>Phone: +254 707 010527</p>
+            <p>Email: reservation@paparemobeach.com</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Papa Remo Beach Bar. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/language-toggle.js"></script>
+<script src="../assets/js/weather-widget.js"></script>
+
+<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmb8fu5cu002ncxd62utidh80'></zapier-interfaces-chatbot-embed>
+</body>
+</html>
