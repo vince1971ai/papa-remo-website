@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Titolo del Tuo Post - Papa Remo Blog</title>
+    <meta content="Una breve descrizione o un riassunto del tuo post." name="description"/>
+    <link href="../../assets/css/main.css" rel="stylesheet"/>
+    <link href="../../assets/css/pages.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Stili specifici per la visualizzazione del singolo post */
+        .post-full-content {
+            padding-bottom: 2rem; /* Spazio extra alla fine */
+        }
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.5rem 0; /* Spazio sopra e sotto l'immagine */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: block; /* Per centrare con margin auto se necessario */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .post-meta-single {
+            font-size: 0.9em;
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-light);
+            display: flex; /* Per allineare gli item */
+            flex-wrap: wrap; /* Per andare a capo su mobile */
+            gap: 1.5rem; /* Spazio tra gli item */
+        }
+        .post-meta-single span {
+            display: inline-flex; /* Allinea icona e testo */
+            align-items: center;
+        }
+        .post-meta-single i {
+            margin-right: 0.5rem;
+            color: var(--ocean-blue);
+        }
+        .post-content h2 {
+            font-size: 1.8em;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--ocean-blue);
+        }
+        .post-content h3 {
+            font-size: 1.5em;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .post-content blockquote {
+            border-left: 4px solid var(--coral);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--dark-gray);
+        }
+        .post-content ul, .post-content ol {
+            margin-left: 20px;
+            margin-bottom: 1rem;
+        }
+        .post-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <a href="../index.html"> <picture><source srcset="../../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Bar Logo" src="../../assets/images/optimized/logo.jpg"/></picture>
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../story.html">Papa Remo Story</a></li>
+                <li><a href="../restaurant.html">Restaurant</a></li>
+                <li><a href="../wedding.html">Wedding</a></li>
+                <li><a href="../events.html">Events</a></li>
+                <li><a href="../village.html">Paparemo Village</a></li>
+                <li><a href="../podcast.html">Podcast</a></li>
+                <li><a class="active" href="../our-posts.html">Our Posts</a></li> <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Jacaranda Road, Watamu, Kenya</p>
+            <p><i class="fas fa-phone"></i> +254 707 010527</p>
+            <p><i class="fas fa-envelope"></i> reservation@paparemobeach.com</p>
+        </div>
+        <a class="book-now-btn" href="../contact.html#reservation">Book Now</a>
+        <div class="language-toggle">
+            <img alt="Italian Flag" src="../../assets/images/italian_flag.svg"/>
+            <span>Italiano</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <article class="post-full-content">
+            <header class="page-header">
+                <h1>Titolo Esempio del Tuo Post Meraviglioso</h1>
+            </header>
+            <div class="post-meta-single">
+                <span><i class="far fa-calendar-alt"></i> 29 Maggio 2025</span>
+                <span><i class="fas fa-user-edit"></i> Papa Remo Team</span>
+                <span><i class="fas fa-tag"></i> Notizie dal Paradiso</span>
+            </div>
+
+            <div class="post-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                
+                <img src="https://placehold.co/800x450.jpg?text=Immagine+del+Post" alt="Descrizione significativa dell'immagine del post">
+                
+                <h2>Un Sottotitolo Coinvolgente</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.</p>
+                
+                <h3>Dettagli Aggiuntivi</h3>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                <ul>
+                    <li>Primo punto elenco importante.</li>
+                    <li>Secondo punto, forse con un <a href="#">link interno</a> o <a href="https://example.com" target="_blank">esterno</a>.</li>
+                    <li>Terzo punto da evidenziare.</li>
+                </ul>
+
+                <blockquote>
+                    <p>Questa è una citazione che potresti voler includere. Magari da un ospite felice o una fonte ispiratrice.</p>
+                    <footer>— Nome Autore Citazione</footer>
+                </blockquote>
+
+                <p>Sedut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+        </article>
+
+        </main>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column"><h3>Papa Remo Beach Bar</h3><p>Jacaranda Road, Watamu, Kenya</p><p>Phone: +254 707 010527</p><p>Email: reservation@paparemobeach.com</p></div>
+        <div class="footer-column"><h3>Follow Us</h3><div class="social-links"><a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i></a></div></div>
+    </div>
+    <div class="copyright"><p>© 2025 Papa Remo Beach Bar. All rights reserved.</p></div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/mobile-menu.js"></script>
+<script src="../../assets/js/language-toggle.js"></script>
+<script src="../../assets/js/weather-widget.js"></script>
+
+<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmb8fu5cu002ncxd62utidh80'></zapier-interfaces-chatbot-embed>
+</body>
+</html>
