@@ -56,50 +56,58 @@
 <h2>General inquiry/Make a reservation</h2>
 <p>Fill out the form below to make a reservation at Papa Remo Beach Bar. We'll get back to you as soon as possible to confirm your booking.</p>
 <form action="https://formspree.io/f/reservation@paparemobeach.com" id="reservation-form" method="POST">
-<div class="form-row">
-<div class="form-group">
-<label class="form-label" for="name">Full Name *</label>
-<input class="form-control" id="name" name="name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label class="form-label" for="email">Email Address *</label>
-<input class="form-control" id="email" name="email" required="" type="email"/>
-</div>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label class="form-label" for="phone">Phone Number</label>
-<input class="form-control" id="phone" name="phone" type="tel"/>
-</div>
-<div class="form-group">
-<label class="form-label" for="date">Preferred Date</label> <input class="form-control" id="date" name="date" type="date"/> </div>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label class="form-label" for="time">Preferred Time</label> <input class="form-control" id="time" name="time" type="time"/> </div>
-<div class="form-group">
-<label class="form-label" for="guests">Number of Guests</label> <input class="form-control" id="guests" min="1" name="guests" type="number"/> </div>
-</div>
-<div class="form-group">
-<label class="form-label" for="reservation-type">Reservation Type *</label>
-<select class="form-control" id="reservation-type" name="reservation-type" required="">
-<option value="">Select an option</option>
-<option value="restaurant">Restaurant Dining</option>
-<option value="event">Private Event</option>
-<option value="wedding">Wedding Inquiry</option>
-<option value="accommodation">Accommodation</option>
-<option value="general_inquiry">General Inquiry</option>
-</select>
-</div>
-<div class="form-group">
-<label class="form-label" for="message">Special Requests or Comments</label>
-<textarea class="form-control" id="message" name="message" rows="4"></textarea>
-</div>
-<div class="form-group">
-<button class="btn btn-primary" type="submit">Submit Request</button>
-</div>
+    <div class="form-group">
+        <label class="form-label" for="reservation-type">Reservation Type *</label>
+        <select class="form-control" id="reservation-type" name="reservation-type" required="">
+            <option value="">Select an option</option>
+            <option value="restaurant">Restaurant Dining</option>
+            <option value="event">Private Event</option>
+            <option value="wedding">Wedding Inquiry</option>
+            <option value="accommodation">Accommodation</option>
+            <option value="general_inquiry">General Inquiry</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label" for="name">Full Name *</label>
+            <input class="form-control" id="name" name="name" required="" type="text"/>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input class="form-control" id="email" name="email" required="" type="email"/>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-control" id="phone" name="phone" type="tel"/>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="date">Preferred Date</label>
+            <input class="form-control" id="date" name="date" type="date"/>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label class="form-label" for="time">Preferred Time</label>
+            <input class="form-control" id="time" name="time" type="time"/>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="guests">Number of Guests</label>
+            <input class="form-control" id="guests" min="1" name="guests" type="number"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="message">Special Requests or Comments</label>
+        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit Request</button>
+    </div>
 </form>
 </section>
+
 <section class="contact-info mt-4"> 
 <div class="contact-grid">
 <div class="contact-card">
