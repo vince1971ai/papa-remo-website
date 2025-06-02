@@ -8,6 +8,58 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <link href="../assets/css/pages.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+    /* CSS per lo Slideshow Hero */
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 500px; /* Altezza desktop (corrisponde a .hero-image in main.css) */
+        overflow: hidden; 
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Il slide riempie il slideshow-container */
+        opacity: 0; /* Inizia invisibile */
+        animation: fadeEffect 15s infinite; /* Durata totale animazione: 5s per slide * 3 slides */
+    }
+
+    .slide img.hero-image { 
+        display: block; /* Rimuove spazio extra sotto l'immagine se presente */
+        /* width: 100%; Altezza e larghezza sono già in .hero-image da main.css */
+        /* height: 100%; */
+        /* object-fit: cover; è già in .hero-image da main.css */
+    }
+
+    /* Ritardi per le animazioni delle slide */
+    .slide:nth-child(1) {
+        animation-delay: 0s; 
+    }
+    .slide:nth-child(2) {
+        animation-delay: 5s; 
+    }
+    .slide:nth-child(3) {
+        animation-delay: 10s;
+    }
+
+    @keyframes fadeEffect {
+      0% { opacity: 0; }
+      10% { opacity: 1; }    /* Fade in (1.5s su 15s totali) */
+      33.33% { opacity: 1; } /* Mantiene visibilità (per circa 3.5s) */
+      43.33% { opacity: 0; } /* Fade out (1.5s) - completa il ciclo di una slide da 5s */
+      100% { opacity: 0; }
+    }
+
+    /* Adattamento altezza slideshow per mobile */
+    @media (max-width: 768px) {
+        .slideshow-container {
+            height: 300px; /* Altezza mobile (corrisponde a .hero-image in main.css) */
+        }
+    }
+</style>
 </head>
 <body>
 <div class="container">
@@ -41,7 +93,7 @@
 <li><a href="restaurant.html">Restaurant</a></li>
 <li><a href="wedding.html">Wedding</a></li>
 <li><a href="events.html">Events</a></li>
-<li><a href="village.html">Paparemo Village</a></li>
+<li><a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer">Paparemo Village</a></li>
 <li><a href="podcast.html">Podcast</a></li>
 <li><a href="our-posts.html">Our Posts</a></li>
 <li><a href="contact.html">Contact</a></li>
@@ -66,12 +118,34 @@
 </header>
 
 <section class="hero">
-<picture><source srcset="../assets/images/optimized/index.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_party.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Bar View" class="hero-image" src="../assets/images/optimized/beach_party.jpg"/></picture>
-<div class="hero-overlay">
-<h1 class="">Your Paradise on the Kenyan Coast</h1>
-<p>Established in 1997 by Remo Lenzi</p>
-<a class="btn btn-primary" href="restaurant.html">Explore Our Restaurant</a>
-</div>
+    <div class="slideshow-container">
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/front_beach.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/front_beach.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Papa Remo Beach Front View" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/ground_beach.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/ground_beach.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Papa Remo Beach Ground View" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relaxing at Papa Remo Beach" class="hero-image">
+            </picture>
+        </div>
+    </div>
+    <div class="hero-overlay">
+        <h1 class="">Your Paradise on the Kenyan Coast</h1>
+        <p>Established in 1997 by Remo Lenzi</p>
+        <a class="btn btn-primary" href="restaurant.html">Explore Our Restaurant</a>
+    </div>
 </section>
 
 <section class="about mt-4">
@@ -85,8 +159,9 @@
 </div>
 <div class="col">
     <picture>
-        <source srcset="https://placehold.co/600x400.webp?text=About+Papa+Remo" type="image/webp">
-        <img src="https://placehold.co/600x400.jpg?text=About+Papa+Remo" alt="About Papa Remo Beach Bar" class="about-image">
+        <source srcset="../assets/images/optimized/General/in_entrance.webp" type="image/webp">
+        <source srcset="../assets/images/optimized/General/in_entrance.jpg" type="image/jpeg">
+        <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Entrance of Papa Remo Beach Bar" class="about-image">
     </picture>
 </div>
 </div>
@@ -96,8 +171,9 @@
     <div class="row" style="align-items: center;">
         <div class="col">
             <picture>
-                <source srcset="https://placehold.co/550x360.webp?text=Dream+Beach+Wedding" type="image/webp">
-                <img src="https://placehold.co/550x360.jpg?text=Dream+Beach+Wedding" alt="Dream wedding setup at Papa Remo Beach" class="about-image">
+                <source srcset="../assets/images/optimized/General/wedding.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/wedding.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/General/wedding.jpg" alt="Beach Wedding at Papa Remo" class="about-image">
             </picture>
         </div>
         <div class="col">
@@ -119,8 +195,9 @@
         </div>
         <div class="col">
             <picture>
-                <source srcset="https://placehold.co/550x360.webp?text=Exciting+Beach+Event" type="image/webp">
-                <img src="https://placehold.co/550x360.jpg?text=Exciting+Beach+Event" alt="Vibrant event at Papa Remo Beach" class="about-image">
+                <source srcset="../assets/images/optimized/General/beach_party.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/beach_party.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/General/beach_party.jpg" alt="Vibrant Beach Party at Papa Remo" class="about-image">
             </picture>
         </div>
     </div>
@@ -130,15 +207,16 @@
     <div class="row" style="align-items: center;">
         <div class="col"> 
             <picture>
-                <source srcset="https://placehold.co/550x360.webp?text=Paparemo+Village+Stay" type="image/webp">
-                <img src="https://placehold.co/550x360.jpg?text=Paparemo+Village+Stay" alt="Comfortable stay at Paparemo Village" class="about-image">
+                <source srcset="../assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/Paparemovillage.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/General/Paparemovillage.jpg" alt="Comfortable stay at Paparemo Village" class="about-image">
             </picture>
         </div>
         <div class="col"> 
             <h2>Discover Paparemo Village</h2>
             <p>Experience authentic Watamu charm with a comfortable stay at Paparemo Village. Our accommodations offer a perfect blend of local style and modern amenities, ideal for your serene getaway or a longer residence on the Kenyan coast.</p>
             <p>Enjoy privacy, comfort, and easy access to Papa Remo Beach Bar and all its facilities.</p>
-            <a href="village.html" class="btn btn-primary mt-2">Explore the Village</a>
+            <a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Explore the Village</a>
         </div>
     </div>
 </section>
@@ -153,8 +231,9 @@
         </div>
         <div class="col"> 
             <picture>
-                <source srcset="https://placehold.co/550x360.webp?text=Papa+Remo+Podcast+Cover" type="image/webp">
-                <img src="https://placehold.co/550x360.jpg?text=Papa+Remo+Podcast+Cover" alt="Papa Remo Podcast" class="about-image">
+                <source srcset="../assets/images/optimized/General/podcast.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/podcast.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast" class="about-image">
             </picture>
         </div>
     </div>
@@ -164,8 +243,9 @@
     <div class="row" style="align-items: center;">
         <div class="col"> 
             <picture>
-                <source srcset="https://placehold.co/550x360.webp?text=Latest+Papa+Remo+News" type="image/webp">
-                <img src="https://placehold.co/550x360.jpg?text=Latest+Papa+Remo+News" alt="Latest news and stories from Papa Remo" class="about-image">
+                <source srcset="../assets/images/optimized/General/latest_news.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/latest_news.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/General/latest_news.jpg" alt="Latest news and stories from Papa Remo" class="about-image">
             </picture>
         </div>
         <div class="col"> 
