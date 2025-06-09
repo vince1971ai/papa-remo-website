@@ -24,7 +24,7 @@
         width: 100%;
         height: 100%; /* Il slide riempie il slideshow-container */
         opacity: 0; /* Inizia invisibile */
-        animation: fadeEffect 15s infinite; /* Durata totale animazione: 5s per slide * 3 slides */
+        animation: fadeEffect 20s infinite; /* Durata totale animazione: 5s per slide * 4 slides */
     }
 
     .slide img.hero-image { 
@@ -41,12 +41,15 @@
     .slide:nth-child(3) {
         animation-delay: 10s;
     }
+    .slide:nth-child(4) {
+        animation-delay: 15s; /* Aggiunto ritardo per la quarta slide */
+    }
 
     @keyframes fadeEffect {
       0% { opacity: 0; }
-      10% { opacity: 1; }    /* Fade in (1.5s su 15s totali) */
-      33.33% { opacity: 1; } /* Mantiene visibilità (per circa 3.5s) */
-      43.33% { opacity: 0; } /* Fade out (1.5s) - completa il ciclo di una slide da 5s */
+      5% { opacity: 1; }    /* Fade in (1s / 20s totali) */
+      20% { opacity: 1; }   /* Mantiene visibilità (per 3s) */
+      25% { opacity: 0; }   /* Fade out (1s) - completa il ciclo di una slide da 5s */
       100% { opacity: 0; }
     }
 
@@ -135,6 +138,13 @@
                 <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
                 <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" type="image/jpeg">
                 <img src="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relaxing at Papa Remo Beach" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/bar.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/hero_slideshow/bar.jpg" alt="The bar at Papa Remo Beach" class="hero-image">
             </picture>
         </div>
     </div>

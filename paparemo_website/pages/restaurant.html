@@ -8,6 +8,75 @@
 <link href="../assets/css/main.css" rel="stylesheet"/>
 <link href="../assets/css/pages.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+<style>
+    /* CSS for the Aperitivo section slideshow */
+    .aperitivo-slideshow-container {
+        position: relative;
+        width: 100%;
+        min-height: 350px; /* Minimum height for the container */
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    .aperitivo-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        animation: aperitivoFadeEffect 30s infinite;
+    }
+    .aperitivo-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .aperitivo-slide:nth-child(1) { animation-delay: 0s; }
+    .aperitivo-slide:nth-child(2) { animation-delay: 5s; }
+    .aperitivo-slide:nth-child(3) { animation-delay: 10s; }
+    .aperitivo-slide:nth-child(4) { animation-delay: 15s; }
+    .aperitivo-slide:nth-child(5) { animation-delay: 20s; }
+    .aperitivo-slide:nth-child(6) { animation-delay: 25s; }
+
+    @keyframes aperitivoFadeEffect {
+      0% { opacity: 0; }
+      3.33% { opacity: 1; }
+      13.33% { opacity: 1; }
+      16.67% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    /* CSS for the new Food Gallery */
+    .gallery-grid-3-col {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+        gap: 1rem; /* Space between images */
+    }
+    .gallery-item-photo img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    .gallery-item-photo img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    /* Responsive adjustments for the gallery */
+    @media (max-width: 992px) {
+        .gallery-grid-3-col {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        }
+    }
+    @media (max-width: 576px) {
+        .gallery-grid-3-col {
+            grid-template-columns: 1fr; /* 1 column on mobile */
+        }
+    }
+</style>
 </head>
 <body>
 <div class="container">
@@ -36,7 +105,7 @@
        data-hide-download="true"
        data-title="Papa Remo Beach"
        data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">
-       Ascolta "Papa Remo Beach" su Spreaker.</a>
+       Listen to "Papa Remo Beach" on Spreaker.</a>
     <script async src="https://widget.spreaker.com/widgets.js"></script>
 </div>
 <nav class="sidebar-nav">
@@ -61,7 +130,7 @@
 <a class="book-now-btn" href="contact.html#reservation">Book Now</a>
 <div class="language-toggle">
 <img alt="Italian Flag" src="../assets/images/italian_flag.svg"/>
-<span>Italiano</span>
+<span>Italian</span>
 </div>
 </aside>
 <main class="main-content">
@@ -78,20 +147,9 @@
         </picture>
     </div>
     <div class="restaurant-text mt-4">
-        <div class="row" style="align-items: center;"> 
-            <div class="col text-col"> 
-                <h1 class="">Dining at Papa Remo</h1>
-                <p>Our restaurant offers a unique dining experience that combines delicious cuisine with breathtaking views of the Indian Ocean. Located on the beautiful Watamu beach, Papa Remo Restaurant is the perfect place to enjoy a meal while taking in the natural beauty of the Kenyan coast.</p>
-                <p>We pride ourselves on serving fresh, locally-sourced ingredients prepared with a blend of Italian and Kenyan influences. Our menu features a variety of seafood dishes, traditional Italian favorites, and local specialties, ensuring there's something for everyone to enjoy.</p>
-            </div>
-            <div class="col image-col"> 
-                <picture>
-                    <source srcset="../assets/images/optimized/restaurant/passion_fruit.webp" type="image/webp">
-                    <source srcset="../assets/images/optimized/restaurant/passion_fruit.jpg" type="image/jpeg">
-                    <img src="../assets/images/optimized/restaurant/passion_fruit.jpg" alt="Fresh Passion Fruit dish at Papa Remo" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; display: block;">
-                </picture>
-            </div>
-        </div>
+        <h1 class="">Dining at Papa Remo</h1>
+        <p>Our restaurant offers a unique dining experience that combines delicious cuisine with breathtaking views of the Indian Ocean. Located on the beautiful Watamu beach, Papa Remo Restaurant is the perfect place to enjoy a meal while taking in the natural beauty of the Kenyan coast.</p>
+        <p>We pride ourselves on serving fresh, locally-sourced ingredients prepared with a blend of Italian and Kenyan influences. Our menu features a variety of seafood dishes, traditional Italian favorites, and local specialties, ensuring there's something for everyone to enjoy.</p>
         <div class="restaurant-features mt-3">
             <div class="feature">
                 <i class="fas fa-fish"></i>
@@ -112,9 +170,101 @@
         </div>
     </div>
 </section>
+
+<section class="restaurant-gallery mt-4">
+    <h2>Our Culinary Creations</h2>
+    <div class="gallery-grid-3-col baguette-gallery">
+        <a href="../assets/images/restaurant/food_1.jpg" class="gallery-item-photo">
+            <picture>
+                <source srcset="../assets/images/optimized/restaurant/food_1.webp" type="image/webp">
+                <img src="../assets/images/optimized/restaurant/food_1.jpg" alt="A delicious seafood dish served at Papa Remo">
+            </picture>
+        </a>
+        <a href="../assets/images/restaurant/food_2.jpg" class="gallery-item-photo">
+            <picture>
+                <source srcset="../assets/images/optimized/restaurant/food_2.webp" type="image/webp">
+                <img src="../assets/images/optimized/restaurant/food_2.jpg" alt="Exotic fruit platter from our kitchen">
+            </picture>
+        </a>
+        <a href="../assets/images/restaurant/food_3.jpg" class="gallery-item-photo">
+            <picture>
+                <source srcset="../assets/images/optimized/restaurant/food_3.webp" type="image/webp">
+                <img src="../assets/images/optimized/restaurant/food_3.jpg" alt="Gourmet pizza with fresh ingredients">
+            </picture>
+        </a>
+        <a href="../assets/images/restaurant/food_4.jpg" class="gallery-item-photo">
+            <picture>
+                <source srcset="../assets/images/optimized/restaurant/food_4.webp" type="image/webp">
+                <img src="../assets/images/optimized/restaurant/food_4.jpg" alt="Freshly prepared pasta dish">
+            </picture>
+        </a>
+        <a href="../assets/images/restaurant/food_5.jpg" class="gallery-item-photo">
+            <picture>
+                <source srcset="../assets/images/optimized/restaurant/food_5.webp" type="image/webp">
+                <img src="../assets/images/optimized/restaurant/food_5.jpg" alt="A plate of grilled fish with vegetables">
+            </picture>
+        </a>
+        <a href="../assets/images/restaurant/food_6.jpg" class="gallery-item-photo">
+            <picture>
+                <source srcset="../assets/images/optimized/restaurant/food_6.webp" type="image/webp">
+                <img src="../assets/images/optimized/restaurant/food_6.jpg" alt="Artfully presented culinary creation">
+            </picture>
+        </a>
+    </div>
+</section>
+<section class="aperitivo-promo mt-4">
+    <div class="row" style="align-items: center;">
+        <div class="col">
+            <h2>Sunset Aperitivo</h2>
+            <p>Experience the magic of the Italian aperitivo at Papa Remo. As the sun sets over the Indian Ocean, relax with one of our signature cocktails, a glass of fine wine, or your favorite drink. It's the perfect moment to unwind and soak in the breathtaking views from our beachfront location.</p>
+            <p>To make the experience even more special, every aperitivo comes with a selection of delicious complimentary appetizers ("stuzzichini"), freshly prepared by our chefs to tantalize your taste buds before dinner.</p>
+            <a href="#beverages" class="btn btn-primary mt-2">Discover Our Cocktails</a>
+        </div>
+        <div class="col">
+            <div class="aperitivo-slideshow-container">
+                <div class="aperitivo-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/bar_slide_1.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/bar_slide_1.jpg" alt="Aperitivo cocktail at the bar">
+                    </picture>
+                </div>
+                <div class="aperitivo-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/bar_slide_2.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/bar_slide_2.jpg" alt="View of the beach during sunset aperitivo">
+                    </picture>
+                </div>
+                <div class="aperitivo-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/bar_slide_3.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/bar_slide_3.jpg" alt="Colorful drinks served for aperitivo">
+                    </picture>
+                </div>
+                <div class="aperitivo-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/bar_slide_4.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/bar_slide_4.jpg" alt="Guests enjoying drinks at Papa Remo">
+                    </picture>
+                </div>
+                <div class="aperitivo-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/bar_slide_5.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/bar_slide_5.jpg" alt="Close-up of an exotic cocktail">
+                    </picture>
+                </div>
+                <div class="aperitivo-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/bar_slide_6.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/bar_slide_6.jpg" alt="A platter of delicious appetizers">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="menu-preview mt-4">
 <h2>Our Menu Highlights</h2>
-<div class="menu-category">
+<div class="menu-category" id="seafood">
 <h3>Seafood Specialties</h3>
 <div class="menu-items">
 <div class="menu-item">
@@ -131,7 +281,7 @@
 </div>
 </div>
 </div>
-<div class="menu-category">
+<div class="menu-category" id="italian">
 <h3>Italian Favorites</h3>
 <div class="menu-items">
 <div class="menu-item">
@@ -148,7 +298,7 @@
 </div>
 </div>
 </div>
-<div class="menu-category">
+<div class="menu-category" id="beverages">
 <h3>Beverages</h3>
 <div class="menu-items">
 <div class="menu-item">
@@ -220,6 +370,14 @@
 <script src="../assets/js/mobile-menu.js"></script>
 <script src="../assets/js/language-toggle.js"></script>
 <script src="../assets/js/weather-widget.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" async></script>
+<script>
+    window.addEventListener('load', function() {
+      // Inizializza la galleria con effetto lightbox
+      baguetteBox.run('.baguette-gallery');
+    });
+</script>
 
 <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmb8fu5cu002ncxd62utidh80'></zapier-interfaces-chatbot-embed>
