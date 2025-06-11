@@ -14,7 +14,7 @@
         position: relative;
         width: 100%;
         height: 500px; /* Altezza desktop (corrisponde a .hero-image in main.css) */
-        overflow: hidden; 
+        overflow: hidden;
     }
 
     .slide {
@@ -24,32 +24,29 @@
         width: 100%;
         height: 100%; /* Il slide riempie il slideshow-container */
         opacity: 0; /* Inizia invisibile */
-        animation: fadeEffect 20s infinite; /* Durata totale animazione: 5s per slide * 4 slides */
+        animation: fadeEffect 15s infinite; /* Durata totale animazione: 5s per slide * 3 slides */
     }
 
-    .slide img.hero-image { 
+    .slide img.hero-image {
         display: block; /* Rimuove spazio extra sotto l'immagine se presente */
     }
 
     /* Ritardi per le animazioni delle slide */
     .slide:nth-child(1) {
-        animation-delay: 0s; 
+        animation-delay: 0s;
     }
     .slide:nth-child(2) {
-        animation-delay: 5s; 
+        animation-delay: 5s;
     }
     .slide:nth-child(3) {
         animation-delay: 10s;
     }
-    .slide:nth-child(4) {
-        animation-delay: 15s;
-    }
 
     @keyframes fadeEffect {
       0% { opacity: 0; }
-      5% { opacity: 1; }    /* Fade in (1s / 20s totali) */
-      20% { opacity: 1; }   /* Mantiene visibilità (per 3s) */
-      25% { opacity: 0; }   /* Fade out (1s) - completa il ciclo di una slide da 5s */
+      10% { opacity: 1; }    /* Fade in (1.5s su 15s totali) */
+      33.33% { opacity: 1; } /* Mantiene visibilità (per circa 3.5s) */
+      43.33% { opacity: 0; } /* Fade out (1.5s) - completa il ciclo di una slide da 5s */
       100% { opacity: 0; }
     }
 
@@ -70,14 +67,14 @@
 </a>
 </div>
 
-<div class="sidebar-mini-player" style="padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+<div class="sidebar-mini-player" style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
     <h4 style="color: var(--turquoise); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Listen to Our Podcast</h4>
     <a class="spreaker-player" href="https://www.spreaker.com/podcast/papa-remo-beach--6638332"
        data-resource="show_id=6638332"
        data-width="100%"
        data-height="150px"  data-theme="dark"
        data-playlist="false" data-playlist-continuous="false"
-       data-chapters-image="false" data-episode-image-position="right" 
+       data-chapters-image="false" data-episode-image-position="right"
        data-hide-logo="true"   data-hide-likes="true"
        data-hide-comments="true"
        data-hide-sharing="true"
@@ -86,6 +83,12 @@
        Ascolta "Papa Remo Beach" su Spreaker.</a>
     <script async src="https://widget.spreaker.com/widgets.js"></script>
 </div>
+
+<div class="language-toggle" style="text-align: center; padding-top: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+<img alt="Italian Flag" src="../assets/images/italian_flag.svg"/>
+<span>Italiano</span>
+</div>
+
 <nav class="sidebar-nav">
 <ul>
 <li><a class="active" href="index.html">Home</a></li>
@@ -98,17 +101,14 @@
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
+<a class="book-now-btn" href="contact.html#reservation">Book Now</a>
 <div class="sidebar-contact">
 <h3>Contact Us</h3>
 <p><i class="fas fa-map-marker-alt"></i> Jacaranda Road, Watamu, Kenya</p>
 <p><i class="fas fa-phone"></i> +254 707 010527</p>
 <p><i class="fas fa-envelope"></i> reservation@paparemobeach.com</p>
 </div>
-<a class="book-now-btn" href="contact.html#reservation">Book Now</a>
-<div class="language-toggle">
-<img alt="Italian Flag" src="../assets/images/italian_flag.svg"/>
-<span>Italiano</span>
-</div>
+
 </aside>
 <main class="main-content">
 <header class="page-header">
@@ -121,25 +121,22 @@
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/front_beach.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/front_beach.jpg" type="image/jpeg">
                 <img src="../assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Papa Remo Beach Front View" class="hero-image">
             </picture>
         </div>
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/ground_beach.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/ground_beach.jpg" type="image/jpeg">
                 <img src="../assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Papa Remo Beach Ground View" class="hero-image">
             </picture>
         </div>
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" type="image/jpeg">
                 <img src="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relaxing at Papa Remo Beach" class="hero-image">
-            </picture>
-        </div>
-        <div class="slide">
-            <picture>
-                <source srcset="../assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/bar.jpg" alt="The bar at Papa Remo Beach" class="hero-image">
             </picture>
         </div>
     </div>
@@ -162,27 +159,11 @@
 <div class="col">
     <picture>
         <source srcset="../assets/images/optimized/General/in_entrance.webp" type="image/webp">
+        <source srcset="../assets/images/optimized/General/in_entrance.jpg" type="image/jpeg">
         <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Entrance of Papa Remo Beach Bar" class="about-image">
     </picture>
 </div>
 </div>
-</section>
-
-<section class="village-promo mt-4">
-    <div class="row" style="align-items: center;">
-        <div class="col"> 
-            <picture>
-                <source srcset="../assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/Paparemovillage.jpg" alt="Comfortable stay at Paparemo Village" class="about-image">
-            </picture>
-        </div>
-        <div class="col"> 
-            <h2>Discover Paparemo Village</h2>
-            <p>Experience authentic Watamu charm with a comfortable stay at Paparemo Village. Our accommodations offer a perfect blend of local style and modern amenities, ideal for your serene getaway or a longer residence on the Kenyan coast.</p>
-            <p>Enjoy privacy, comfort, and easy access to Papa Remo Beach Bar and all its facilities.</p>
-            <a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Explore the Village</a>
-        </div>
-    </div>
 </section>
 
 <section class="wedding-promo mt-4">
@@ -190,6 +171,7 @@
         <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/wedding.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/wedding.jpg" type="image/jpeg">
                 <img src="../assets/images/optimized/General/wedding.jpg" alt="Beach Wedding at Papa Remo" class="about-image">
             </picture>
         </div>
@@ -213,23 +195,43 @@
         <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/beach_party.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/beach_party.jpg" alt="Vibrant Beach Party at Papa Remo" class="about-image">
+                <source srcset="../assets/images/optimized/General/beach_party.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/General/beach_party.jpg" alt="Vibrant event at Papa Remo Beach" class="about-image">
             </picture>
+        </div>
+    </div>
+</section>
+
+<section class="village-promo mt-4">
+    <div class="row" style="align-items: center;">
+        <div class="col">
+            <picture>
+                <source srcset="../assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/Paparemovillage.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/General/Paparemovillage.jpg" alt="Comfortable stay at Paparemo Village" class="about-image">
+            </picture>
+        </div>
+        <div class="col">
+            <h2>Discover Paparemo Village</h2>
+            <p>Experience authentic Watamu charm with a comfortable stay at Paparemo Village. Our accommodations offer a perfect blend of local style and modern amenities, ideal for your serene getaway or a longer residence on the Kenyan coast.</p>
+            <p>Enjoy privacy, comfort, and easy access to Papa Remo Beach Bar and all its facilities.</p>
+            <a href="village.html" class="btn btn-primary mt-2">Explore the Village</a>
         </div>
     </div>
 </section>
 
 <section class="podcast-promo mt-4">
     <div class="row" style="align-items: center;">
-        <div class="col"> 
+        <div class="col">
             <h2>Tune into Papa Remo Waves</h2>
             <p>Dive deeper into the stories, sounds, and soul of Watamu with the official Papa Remo Podcast. Hear from local personalities, explore conservation efforts, and get unique insights into the vibrant life on the Kenyan coast.</p>
             <p>New episodes regularly, bringing the magic of Papa Remo directly to you, wherever you are.</p>
             <a href="podcast.html" class="btn btn-primary mt-2">Listen to Our Podcast</a>
         </div>
-        <div class="col"> 
+        <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/podcast.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/podcast.jpg" type="image/jpeg">
                 <img src="../assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast" class="about-image">
             </picture>
         </div>
@@ -238,13 +240,14 @@
 
 <section class="our-posts-promo mt-4">
     <div class="row" style="align-items: center;">
-        <div class="col"> 
+        <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/latest_news.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/General/latest_news.jpg" type="image/jpeg">
                 <img src="../assets/images/optimized/General/latest_news.jpg" alt="Latest news and stories from Papa Remo" class="about-image">
             </picture>
         </div>
-        <div class="col"> 
+        <div class="col">
             <h2>Latest News & Stories</h2>
             <p>Stay updated with the latest happenings, captivating stories from the beach, and unique insights from the Papa Remo family. Our blog brings you closer to the heart of Watamu and our vibrant community.</p>
             <p>Discover tips, event highlights, and much more.</p>
@@ -253,7 +256,7 @@
     </div>
 </section>
 
-<section class="events mt-4"> 
+<section class="events mt-4">
 <h2>Upcoming Events</h2>
 <div class="event-card">
 <div class="event-date">
@@ -326,7 +329,7 @@
 <script src="../assets/js/main.js"></script>
 <script src="../assets/js/mobile-menu.js"></script>
 <script src="../assets/js/language-toggle.js"></script>
-<script src="../assets/js/weather-widget.js"></script>
+
 
 <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmb8fu5cu002ncxd62utidh80'></zapier-interfaces-chatbot-embed>
