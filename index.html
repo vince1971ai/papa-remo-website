@@ -26,37 +26,33 @@
             height: 100%;
             background-color: #0c1a2c;
             z-index: 9999;
-            animation: fadeOutSplashScreen 7.5s forwards;
+            /* Durata animazione sfondo aggiornata a 5.5s per una dissolvenza più morbida */
+            animation: fadeOutSplashScreen 5.5s forwards;
         }
 
-        /* Contenitore principale che funge da riferimento per il posizionamento */
         #splash-content {
             position: relative;
             width: 100%;
             text-align: center;
         }
         
-        /* * SOLUZIONE: I due blocchi di testo (iniziale e finale) sono posizionati 
-         * in modo assoluto al centro, ma gli elementi al loro interno
-         * mantengono il loro layout e spaziatura normali.
-        */
         #intro-text-group, #final-text-group {
             position: absolute;
             width: 100%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            opacity: 0; /* Partono invisibili */
+            opacity: 0; 
         }
         
-        /* Animazione per il primo blocco di testo (Paparemo Beach + Watamu Kenya) */
+        /* Animazione aggiornata a 5s */
         #intro-text-group {
-            animation: intro-anim 7s forwards;
+            animation: intro-anim 5s forwards;
         }
         
-        /* Animazione per il testo finale */
+        /* Animazione aggiornata a 5s */
         #final-text-group {
-            animation: final-text-anim 7s forwards;
+            animation: final-text-anim 5s forwards;
         }
         
         #main-title {
@@ -72,7 +68,7 @@
             font-size: clamp(1rem, 3vw, 2rem);
             font-weight: 400;
             color: #FFFFFF;
-            margin-top: 0.5em; /* Spaziatura corretta tra titolo e sottotitolo */
+            margin-top: 0.5em; 
         }
 
         #final-text {
@@ -82,25 +78,27 @@
             color: #FFFFFF;
         }
 
-        /* KEYFRAMES PER LA SEQUENZA CORRETTA */
+        /* KEYFRAMES AGGIORNATI PER UNA DURATA DI 5 SECONDI */
 
+        /* Animazione per "Paparemo Beach" e "Watamu Kenya" */
         @keyframes intro-anim {
             0% { opacity: 0; }
-            10% { opacity: 1; } /* Appare */
-            65% { opacity: 1; } /* Rimane visibile */
-            75% { opacity: 0; } /* Scompare */
+            10% { opacity: 1; } /* Appare (0.5s) */
+            50% { opacity: 1; } /* Rimane (2s) */
+            60% { opacity: 0; } /* Scompare (0.5s) */
             100% { opacity: 0; }
         }
 
+        /* Animazione per "Your dream come true" */
         @keyframes final-text-anim {
             0% { opacity: 0; }
-            75% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
-            85% { opacity: 1; transform: translate(-50%, -50%) scale(1); } /* Appare quando l'altro scompare */
-            100% { opacity: 1; }
+            60% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+            70% { opacity: 1; transform: translate(-50%, -50%) scale(1); } /* Appare */
+            100% { opacity: 1; } /* Rimane fino alla fine */
         }
         
         @keyframes fadeOutSplashScreen {
-            0%, 90% { opacity: 1; }
+            0%, 90% { opacity: 1; } /* Rimane visibile per 4.5s dei 5s totali */
             100% { opacity: 0; visibility: hidden; }
         }
     </style>
@@ -108,7 +106,7 @@
     <script>
         setTimeout(function() {
             window.location.href = 'paparemo_website/pages/index.html';
-        }, 7000); // REINDIRIZZA DOPO 7 SECONDI
+        }, 5000); // REINDIRIZZA ESATTAMENTE DOPO 5 SECONDI
     </script>
 </head>
 <body>
