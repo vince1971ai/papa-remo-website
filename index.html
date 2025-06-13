@@ -1,11 +1,129 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<html lang="it">
+<head>
     <meta charset="UTF-8">
-    <title>Links</title>
-    <meta http-equiv="refresh" content="0; url=./paparemo_website/pages/index.html">
-  </head>
-  <body>
-    <p>If you are not redirected automatically, follow this <a href="./paparemo_website/pages/index.html">./paparemo_website/pages/index.html</a>.</p>
-  </body>
-  </html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuti a Papa Remo Beach, Watamu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #splash-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0c1a2c;
+            z-index: 9999;
+            animation: fadeOutSplashScreen 7.5s forwards;
+        }
+
+        /* Contenitore principale che funge da riferimento per il posizionamento */
+        #splash-content {
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* * SOLUZIONE: I due blocchi di testo (iniziale e finale) sono posizionati 
+         * in modo assoluto al centro, ma gli elementi al loro interno
+         * mantengono il loro layout e spaziatura normali.
+        */
+        #intro-text-group, #final-text-group {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0; /* Partono invisibili */
+        }
+        
+        /* Animazione per il primo blocco di testo (Paparemo Beach + Watamu Kenya) */
+        #intro-text-group {
+            animation: intro-anim 7s forwards;
+        }
+        
+        /* Animazione per il testo finale */
+        #final-text-group {
+            animation: final-text-anim 7s forwards;
+        }
+        
+        #main-title {
+            font-size: clamp(2.5rem, 10vw, 7rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        #subtitle {
+            font-size: clamp(1rem, 3vw, 2rem);
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-top: 0.5em; /* Spaziatura corretta tra titolo e sottotitolo */
+        }
+
+        #final-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.8rem, 6vw, 4rem);
+            color: #FFFFFF;
+        }
+
+        /* KEYFRAMES PER LA SEQUENZA CORRETTA */
+
+        @keyframes intro-anim {
+            0% { opacity: 0; }
+            10% { opacity: 1; } /* Appare */
+            65% { opacity: 1; } /* Rimane visibile */
+            75% { opacity: 0; } /* Scompare */
+            100% { opacity: 0; }
+        }
+
+        @keyframes final-text-anim {
+            0% { opacity: 0; }
+            75% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+            85% { opacity: 1; transform: translate(-50%, -50%) scale(1); } /* Appare quando l'altro scompare */
+            100% { opacity: 1; }
+        }
+        
+        @keyframes fadeOutSplashScreen {
+            0%, 90% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+    </style>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'paparemo_website/pages/index.html';
+        }, 7000); // REINDIRIZZA DOPO 7 SECONDI
+    </script>
+</head>
+<body>
+
+    <div id="splash-screen">
+        <div id="splash-content">
+            <div id="intro-text-group">
+                <h1 id="main-title">Paparemo Beach</h1>
+                <p id="subtitle">Watamu Kenya</p>
+            </div>
+            <div id="final-text-group">
+                <h2 id="final-text">Your dream come true</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
