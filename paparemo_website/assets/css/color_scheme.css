@@ -1,48 +1,43 @@
+/* color_scheme.css */
 :root {
-  /* Primary Colors */
-  --primary-dark: #1d1d1b;      /* Dark color from logo */
-  --primary-light: #ffffff;     /* Light color from logo */
+  /* Palette Principale (Light Mode di default) */
+  --bg-primary: #f8f9fa;       /* Sfondo principale chiaro */
+  --primary-dark: #0c1a2c;    /* Sidebar */
+  --text-dark: #343a40;       /* Testo principale scuro */
+  --text-light: #ffffff;      /* Testo chiaro (per sidebar) */
+  --dark-gray: #6c757d;       /* Testo secondario */
+  --sand: #e9ecef;           /* Colore sabbia/grigio chiaro per bordi e sfondi secondari */
+  --border-light: #dee2e6;    /* Bordo per form e card */
+
+  /* Colori d'accento */
+  --ocean-blue: #1560bd;
+  --turquoise: #1abc9c;
+  --coral: #e74c3c;
   
-  /* Beach Theme Colors */
-  --ocean-blue: #1560BD;        /* Deep ocean blue */
-  --turquoise: #40E0D0;         /* Turquoise water */
-  --sand: #cdc2ac;              /* Sandy beige from beach images */
-  --coral: #FF7F50;             /* Warm coral accent */
-  
-  /* Neutral Colors */
-  --light-gray: #F5F5F5;        /* Light background */
-  --dark-gray: #333333;         /* Dark text */
-  
-  /* Functional Colors */
-  --success: #28a745;           /* Success messages */
-  --warning: #ffc107;           /* Warning messages */
-  --danger: #dc3545;            /* Error messages */
-  --info: #17a2b8;              /* Info messages */
-  
-  /* Text Colors */
-  --text-dark: var(--primary-dark);
-  --text-light: var(--primary-light);
-  
-  /* Background Colors */
-  --bg-primary: var(--primary-light);
-  --bg-secondary: var(--sand);
-  --bg-accent: var(--turquoise);
-  
-  /* Border Colors */
-  --border-light: #e9ecef;
-  --border-dark: var(--primary-dark);
+  /* Colori specifici per componenti */
+  --card-bg: #ffffff;
 }
 
-/* Color Classes for easy use */
-.bg-primary { background-color: var(--primary-dark); }
-.bg-secondary { background-color: var(--sand); }
-.bg-accent { background-color: var(--turquoise); }
-.bg-ocean { background-color: var(--ocean-blue); }
-.bg-coral { background-color: var(--coral); }
-.bg-light { background-color: var(--light-gray); }
+/* * =========================================
+ * DARK MODE COLOR SCHEME
+ * =========================================
+ */
 
-.text-primary { color: var(--primary-dark); }
-.text-light { color: var(--primary-light); }
-.text-ocean { color: var(--ocean-blue); }
-.text-turquoise { color: var(--turquoise); }
-.text-coral { color: var(--coral); }
+/* Applichiamo queste variabili quando l'elemento <html> ha l'attributo data-theme="dark" */
+html[data-theme="dark"] {
+  --bg-primary: #0c1a2c;      /* Sfondo principale molto scuro */
+  --primary-dark: #07111d;    /* Sidebar ancora più scura */
+  --text-dark: #e0e1e2;       /* Testo "scuro" diventa chiaro */
+  --text-light: #ffffff;      /* Testo "chiaro" rimane bianco */
+  --dark-gray: #a0a7b3;       /* Grigio per testi secondari */
+  --sand: #3a4a60;           /* Sabbia diventa un grigio/blu scuro per i bordi */
+  --border-light: #2c3a4f;    /* Bordi chiari diventano più scuri */
+  
+  /* Colori d'accento possono rimanere vibranti o essere leggermente aggiustati */
+  --ocean-blue: #3498db;
+  --turquoise: #1abc9c;
+  --coral: #e67e22;
+
+  /* Sfondo per le card in modalità scura */
+  --card-bg: var(--primary-dark);
+}
