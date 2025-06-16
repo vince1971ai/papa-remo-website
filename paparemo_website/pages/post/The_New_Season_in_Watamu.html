@@ -1,195 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>The New Season in Watamu is Here! - Papa Remo Blog</title>
-    <meta content="The wait is almost over! The new season is about to blossom on the coast of Kenya. Watamu, with its crystal-clear sea and white sandy beaches, is ready for you." name="description"/>
-    <link href="../../assets/css/main.css" rel="stylesheet"/>
-    <link href="../../assets/css/pages.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-    <style>
-        /* Stili specifici per la visualizzazione del singolo post */
-        .post-full-content {
-            padding-bottom: 2rem; /* Spazio extra alla fine */
-        }
-        .post-cover-image {
-            margin-bottom: 2rem;
-        }
-        .post-cover-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .post-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 1.5rem 0; /* Spazio sopra e sotto l'immagine */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: block; /* Per centrare con margin auto se necessario */
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .post-meta-single {
-            font-size: 0.9em;
-            color: var(--dark-gray);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-light);
-            display: flex; /* Per allineare gli item */
-            flex-wrap: wrap; /* Per andare a capo su mobile */
-            gap: 1.5rem; /* Spazio tra gli item */
-        }
-        .post-meta-single span {
-            display: inline-flex; /* Allinea icona e testo */
-            align-items: center;
-        }
-        .post-meta-single i {
-            margin-right: 0.5rem;
-            color: var(--ocean-blue);
-        }
-        .post-content h2 {
-            font-size: 1.8em;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--ocean-blue);
-        }
-        .post-content h3 {
-            font-size: 1.5em;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-        .post-content blockquote {
-            border-left: 4px solid var(--coral);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: var(--dark-gray);
-        }
-        .post-content ul, .post-content ol {
-            margin-left: 20px;
-            margin-bottom: 1rem;
-        }
-        .post-content li {
-            margin-bottom: 0.5rem;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paparemo Village - Papa Remo Beach Bar</title>
+<meta content="Discover the Paparemo Village, a luxury residential complex adjacent to Papa Remo Beach in Watamu, Kenya." name="description"/>
+
+<script>
+    (function() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+</script>
+
+<link href="../assets/css/main.css" rel="stylesheet"/>
+<link href="../assets/css/pages.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="container">
-    <aside class="sidebar">
-        <div class="sidebar-logo">
-            <a href="../index.html"> <picture><source srcset="../../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Bar Logo" src="../../assets/images/optimized/logo.jpg"/></picture>
-            </a>
-        </div>
+<aside class="sidebar">
+<div class="sidebar-logo">
+    <a href="index.html">
+        <picture><source srcset="../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Bar Logo" src="../assets/images/optimized/logo.jpg"/></picture>
+    </a>
+</div>
 
-        <div class="sidebar-mini-player" style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
-            <h4 style="color: var(--turquoise); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Listen to Our Podcast</h4>
-            <a class="spreaker-player" href="https://www.spreaker.com/podcast/papa-remo-beach--6638332"
-               data-resource="show_id=6638332"
-               data-width="100%"
-               data-height="150px"
-               data-theme="dark"
-               data-playlist="false"
-               data-playlist-continuous="false"
-               data-chapters-image="false"
-               data-episode-image-position="right"
-               data-hide-logo="true"
-               data-hide-likes="true"
-               data-hide-comments="true"
-               data-hide-sharing="true"
-               data-hide-download="true"
-               data-title="Papa Remo Beach"
-               data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">
-               Ascolta "Papa Remo Beach" su Spreaker.</a>
-            <script async src="https://widget.spreaker.com/widgets.js"></script>
-        </div>
+<div class="sidebar-controls">
+    <div class="language-toggle">
+        <img alt="Italian Flag" src="../assets/images/italian_flag.svg"/>
+        <span>Italiano</span>
+    </div>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
 
-        <div class="language-toggle" style="text-align: center; padding-top: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
-            <img alt="Italian Flag" src="../../assets/images/italian_flag.svg"/>
-            <span>Italiano</span>
-        </div>
+<div class="sidebar-mini-player" style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <h4 style="color: var(--turquoise); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Listen to Our Podcast</h4>
+    <a class="spreaker-player" href="https://www.spreaker.com/podcast/papa-remo-beach--6638332"
+       data-resource="show_id=6638332"
+       data-width="100%"
+       data-height="150px"
+       data-theme="dark"
+       data-playlist="false"
+       data-playlist-continuous="false"
+       data-chapters-image="false"
+       data-episode-image-position="right" 
+       data-hide-logo="true"
+       data-hide-likes="true"
+       data-hide-comments="true"
+       data-hide-sharing="true"
+       data-hide-download="true"
+       data-title="Papa Remo Beach"
+       data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">
+       Listen to "Papa Remo Beach" on Spreaker.</a>
+    <script async src="https://widget.spreaker.com/widgets.js"></script>
+</div>
 
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../story.html">Papa Remo Story</a></li>
-                <li><a href="../restaurant.html">Restaurant</a></li>
-                <li><a href="../wedding.html">Wedding</a></li>
-                <li><a href="../events.html">Events</a></li>
-                <li><a href="../podcast.html">Podcast</a></li>
-                <li><a class="active" href="../our-posts.html">Our Posts</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <a class="book-now-btn" href="../contact.html#reservation">Book Now</a>
-        <div class="sidebar-contact">
-            <h3>Contact Us</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Jacaranda Road</p>
-            <p><i class="fas fa-phone"></i> +254 707 010527</p>
-            <p><i class="fas fa-envelope"></i> reservation@paparemobeach.com</p>
-        </div>
-    </aside>
+<nav class="sidebar-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="story.html">Papa Remo Story</a></li>
+<li><a href="restaurant.html">Restaurant</a></li>
+<li><a href="wedding.html">Wedding</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer">Paparemo Village</a></li>
+<li><a href="podcast.html">Podcast</a></li>
+<li><a href="our-posts.html">Our Posts</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<a class="book-now-btn" href="contact.html#reservation">Book Now</a>
+<div class="sidebar-contact">
+<h3>Contact Us</h3>
+<p><i class="fas fa-map-marker-alt"></i> Jacaranda Road, Watamu, Kenya</p>
+<p><i class="fas fa-phone"></i> +254 707 010527</p>
+<p><i class="fas fa-envelope"></i> beach@paparemobeach.com</p>
+</div>
+</aside>
 
-    <main class="main-content">
-        <article class="post-full-content">
-            <header class="page-header">
-                <h1>The New Season in Watamu is Here: The Kenyan Paradise Awaits!</h1>
-            </header>
-            
-            <div class="post-meta-single">
-                <span><i class="far fa-calendar-alt"></i> June 06, 2025</span>
-                <span><i class="fas fa-user-edit"></i> Papa Remo Team</span>
-                <span><i class="fas fa-tag"></i> News from Paradise</span>
-            </div>
-
-            <div class="post-cover-image">
-                <picture>
-                    <source srcset="../../assets/images/optimized/posts/The_New_Season_in_Watamu.webp" type="image/webp"/>
-                    <source srcset="../../assets/images/optimized/posts/The_New_Season_in_Watamu.jpg" type="image/jpeg"/>
-                    <img src="../../assets/images/posts/The_New_Season_in_Watamu.jpg" alt="A stunning view of Papa Remo Beach in Watamu, ready for the new season"/>
-                </picture>
-            </div>
-
-            <div class="post-content">
-                <p>The wait is almost over! As summer unfolds, a new and exciting season is about to blossom on the coast of Kenya. Watamu, with its crystal-clear sea caressing white sandy beaches and its unspoiled nature, is ready to offer you an unforgettable experience.</p>
-                                
-                <h2>A Jewel on the Indian Ocean</h2>
-                <p>Picture yourself immersed in the warm waters of the Indian Ocean, surrounded by breathtaking landscapes and the magical African atmosphere. This is Watamu, a jewel of Kenya that enchants travelers from all over the world every year. And in the beating heart of this paradise, there is a place that embodies its festive and relaxed soul: Papa Remo Beach.</p>
-                
-                <h3>The Ultimate Destination for Sun, Fun, and Flavour</h3>
-                <p>Located in one of the most stunning bays, known as "Love Beach," Papa Remo Beach is the ultimate destination for those seeking not only sun and relaxation but also fun and unforgettable evenings. With the new season arriving, the staff is ready to reopen the doors to this corner of paradise, promising days of pure bliss and nights brought to life by beach parties under the stars.</p>
-                <ul>
-                    <li>Enjoy the mild and pleasant climate, perfect from July to October.</li>
-                    <li>Explore the natural wonders of the Marine Park and Mida Creek.</li>
-                    <li>Savour exquisite dishes at our renowned restaurant on the beach.</li>
-                    <li>Join our legendary beach parties that light up the Watamu nights.</li>
-                </ul>
-
-                <blockquote>
-                    <p>Pack your bags, Africa is calling! A summer you will never forget awaits you.</p>
-                    <footer>— The Papa Remo Team</footer>
-                </blockquote>
-
-                <p>The upcoming season is the perfect time to visit. Whether you want to relax under the Kenyan sun, explore underwater marvels, or dance the night away, Watamu and Papa Remo are ready to welcome you. Don't miss your chance for a dream holiday.</p>
-            </div>
-        </article>
-
-    </main>
+<main class="main-content">
+<header class="page-header">
+<h1>Paparemo Village</h1>
+<p>Luxury, comfort, and nature in the heart of Watamu</p>
+</header>
+<section class="village-intro">
+<div class="village-image">
+<picture><source srcset="../assets/images/optimized/paparemovillage.webp" type="image/webp"/><source srcset="../assets/images/optimized/paparemovillage.jpg" type="image/jpeg"/><img alt="Paparemo Village Overview" src="../assets/images/optimized/paparemovillage.jpg"/></picture>
+</div>
+<div class="village-text mt-4">
+<h1 class="">A Luxury Residential Complex in the Heart of Watamu</h1>
+<p>Paparemo Village is an exclusive residential complex offering a blend of luxury, comfort, and the natural beauty of the Kenyan coast. Located just a short walk from the pristine sands of Papa Remo Beach, the village provides a serene and secure environment for your perfect getaway or long-term residence.</p>
+<p>Our accommodations are designed with a unique blend of local charm and modern amenities, ensuring a comfortable and memorable stay. Whether you're seeking a peaceful retreat or a base for exploring the wonders of Watamu, Paparemo Village is your ideal home away from home.</p>
+</div>
+</section>
+<section class="accommodation mt-4">
+<h2>Our Accommodations</h2>
+<div class="row">
+<div class="col">
+<div class="card accommodation-card">
+<picture>
+<source srcset="../assets/images/optimized/village/villa_1.webp" type="image/webp"/>
+<source srcset="../assets/images/optimized/village/villa_1.jpg" type="image/jpeg"/>
+<img alt="Deluxe Apartments" class="card-img" src="../assets/images/optimized/village/villa_1.jpg"/>
+</picture>
+<div class="card-content">
+<h3 class="card-title">Deluxe Apartments</h3>
+<p class="card-text">Spacious and elegantly furnished apartments with modern amenities, perfect for couples and small families.</p>
+<ul class="accommodation-features">
+<li>Fully equipped kitchenette</li>
+<li>Private balcony or terrace</li>
+<li>Air conditioning</li>
+<li>Wi-Fi access</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="village-amenities mt-4">
+<h2>Village Amenities</h2>
+<div class="amenities-grid">
+<div class="amenity-item">
+<i class="fas fa-swimming-pool"></i>
+<h3>Swimming Pool</h3>
+<p>Relax and unwind by our beautiful swimming pool, surrounded by lush tropical gardens.</p>
+</div>
+<div class="amenity-item">
+<i class="fas fa-shield-alt"></i>
+<h3>24/7 Security</h3>
+<p>Your safety is our priority. Our village is equipped with 24/7 security for your peace of mind.</p>
+</div>
+<div class="amenity-item">
+<i class="fas fa-parking"></i>
+<h3>Private Parking</h3>
+<p>Convenient and secure parking available for all residents and guests.</p>
+</div>
+<div class="amenity-item">
+<i class="fas fa-concierge-bell"></i>
+<h3>Concierge Services</h3>
+<p>Our friendly staff is available to assist with tour bookings, transportation, and other requests.</p>
+</div>
+</div>
+</section>
+</main>
 </div>
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-column"><h3>Papa Remo Beach Bar</h3><p>Jacaranda Road, Watamu, Kenya</p><p>Phone: +254 707 010527</p><p>Email: reservation@paparemobeach.com</p></div>
-        <div class="footer-column"><h3>Follow Us</h3><div class="social-links"><a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i></a></div></div>
-    </div>
-    <div class="copyright"><p>© 2025 Papa Remo Beach Bar. All rights reserved.</p></div>
+<div class="footer-content">
+<div class="footer-column">
+<h3>Papa Remo Beach Bar</h3>
+<p>Jacaranda Road, Watamu, Kenya</p>
+<p>Phone: +254 707 010527</p>
+<p>Email: beach@paparemobeach.com</p>
+</div>
+<div class="footer-column">
+<h3>Follow Us</h3>
+<div class="social-links">
+<a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+</div>
+</div>
+<div class="copyright">
+<p>© 2025 Papa Remo Beach Bar. All rights reserved.</p>
+</div>
 </footer>
 
-<script src="../../assets/js/main.js"></script>
-<script src="../../assets/js/mobile-menu.js"></script>
-<script src="../../assets/js/language-toggle.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/language-toggle.js"></script>
+<script src="../assets/js/theme-switcher.js"></script>
 
 <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmb8fu5cu002ncxd62utidh80'></zapier-interfaces-chatbot-embed>

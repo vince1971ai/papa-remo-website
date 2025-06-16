@@ -5,74 +5,20 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Paparemo Beach Watamu: The New Season is Here! - Papa Remo Blog</title>
     <meta content="The new event season at Paparemo Beach Watamu is here! Discover our new calendar of exclusive parties, sunset socials, and gourmet experiences under the Kenyan sky." name="description"/>
+    
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
     <link href="../../assets/css/main.css" rel="stylesheet"/>
     <link href="../../assets/css/pages.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
     <style>
         /* Stili specifici per la visualizzazione del singolo post */
-        .post-full-content {
-            padding-bottom: 2rem; /* Spazio extra alla fine */
-        }
-        .post-featured-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 1.5rem; /* Spazio sotto l'immagine principale */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .post-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 1.5rem 0; /* Spazio sopra e sotto le immagini nel testo */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .post-meta-single {
-            font-size: 0.9em;
-            color: var(--dark-gray);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-light);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-        .post-meta-single span {
-            display: inline-flex;
-            align-items: center;
-        }
-        .post-meta-single i {
-            margin-right: 0.5rem;
-            color: var(--ocean-blue);
-        }
-        .post-content h2 {
-            font-size: 1.8em;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--ocean-blue);
-        }
-        .post-content h3 {
-            font-size: 1.5em;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-        .post-content blockquote {
-            border-left: 4px solid var(--coral);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: var(--dark-gray);
-        }
-        .post-content ul, .post-content ol {
-            margin-left: 20px;
-            margin-bottom: 1rem;
-        }
-        .post-content li {
-            margin-bottom: 0.5rem;
-        }
+        .post-full-content{padding-bottom:2rem}.post-featured-image{width:100%;height:auto;border-radius:8px;margin-bottom:1.5rem;box-shadow:0 4px 12px rgba(0,0,0,.15)}.post-content img{max-width:100%;height:auto;border-radius:8px;margin:1.5rem 0;box-shadow:0 4px 12px rgba(0,0,0,.1);display:block;margin-left:auto;margin-right:auto}.post-meta-single{font-size:.9em;color:var(--dark-gray);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border-light);display:flex;flex-wrap:wrap;gap:1.5rem}.post-meta-single span{display:inline-flex;align-items:center}.post-meta-single i{margin-right:.5rem;color:var(--ocean-blue)}.post-content h2{font-size:1.8em;margin-top:2rem;margin-bottom:1rem;color:var(--ocean-blue)}.post-content h3{font-size:1.5em;margin-top:1.5rem;margin-bottom:.8rem}.post-content blockquote{border-left:4px solid var(--coral);padding-left:1rem;margin:1.5rem 0;font-style:italic;color:var(--dark-gray)}.post-content ul,.post-content ol{margin-left:20px;margin-bottom:1rem}.post-content li{margin-bottom:.5rem}
     </style>
 </head>
 <body>
@@ -83,31 +29,29 @@
             </a>
         </div>
 
+        <div class="sidebar-controls">
+            <div class="language-toggle">
+                <img alt="Italian Flag" src="../../assets/images/italian_flag.svg"/>
+                <span>Italiano</span>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
         <div class="sidebar-mini-player" style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
             <h4 style="color: var(--turquoise); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Listen to Our Podcast</h4>
             <a class="spreaker-player" href="https://www.spreaker.com/podcast/papa-remo-beach--6638332"
-               data-resource="show_id=6638332"
-               data-width="100%"
-               data-height="150px"
-               data-theme="dark"
-               data-playlist="false"
-               data-playlist-continuous="false"
-               data-chapters-image="false"
-               data-episode-image-position="right"
-               data-hide-logo="true"
-               data-hide-likes="true"
-               data-hide-comments="true"
-               data-hide-sharing="true"
-               data-hide-download="true"
-               data-title="Papa Remo Beach"
-               data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">
-               Ascolta "Papa Remo Beach" su Spreaker.</a>
+               data-resource="show_id=6638332" data-width="100%" data-height="150px" data-theme="dark"
+               data-playlist="false" data-playlist-continuous="false" data-chapters-image="false"
+               data-episode-image-position="right" data-hide-logo="true" data-hide-likes="true"
+               data-hide-comments="true" data-hide-sharing="true" data-hide-download="true"
+               data-title="Papa Remo Beach" data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">
+               Listen to "Papa Remo Beach" on Spreaker.</a>
             <script async src="https://widget.spreaker.com/widgets.js"></script>
-        </div>
-
-        <div class="language-toggle" style="text-align: center; padding-top: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
-            <img alt="Italian Flag" src="../../assets/images/italian_flag.svg"/>
-            <span>Italiano</span>
         </div>
 
         <nav class="sidebar-nav">
@@ -117,6 +61,7 @@
                 <li><a href="../restaurant.html">Restaurant</a></li>
                 <li><a href="../wedding.html">Wedding</a></li>
                 <li><a href="../events.html">Events</a></li>
+                <li><a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer">Paparemo Village</a></li>
                 <li><a href="../podcast.html">Podcast</a></li>
                 <li><a class="active" href="../our-posts.html">Our Posts</a></li>
                 <li><a href="../contact.html">Contact</a></li>
@@ -125,9 +70,9 @@
         <a class="book-now-btn" href="../contact.html#reservation">Book Now</a>
         <div class="sidebar-contact">
             <h3>Contact Us</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Jacaranda Road</p>
+            <p><i class="fas fa-map-marker-alt"></i> Jacaranda Road, Watamu, Kenya</p>
             <p><i class="fas fa-phone"></i> +254 707 010527</p>
-            <p><i class="fas fa-envelope"></i> reservation@paparemobeach.com</p>
+            <p><i class="fas fa-envelope"></i> beach@paparemobeach.com</p>
         </div>
     </aside>
 
@@ -150,9 +95,7 @@
 
             <div class="post-content">
                 <p>The wait is over. The nights of Watamu are about to reignite with the unmistakable magic of <strong>Paparemo Beach</strong>, the gem set in the stunning Bay of Love. With the arrival of the new season, the most iconic beach club on the Kenyan coast is ready to unveil a calendar of events that promises to exceed all expectations, blending its signature elegance with a wave of fresh, vibrant new experiences.</p>
-                
                 <p>Paparemo Beach is not just a destination; it's an experience. It's the place where golden sand meets the crystal-clear waters of the Indian Ocean, where fiery sunsets give way to starry skies that provide the backdrop for unforgettable nights. And for this season, the bar for entertainment and style is being raised even higher.</p>
-
                 <h2>A Stellar Calendar: Between Anticipated Returns and Exclusive Debuts</h2>
                 <p>The new season's lineup is a expertly orchestrated mix of classic events and exclusive surprises, designed to cater to an international and cosmopolitan audience.</p>
                 <p>The <strong>Saturday Night Beach Party</strong>, as per tradition, remains the beating heart of the week. Top resident DJs and internationally renowned guest stars will take turns at the decks to make you dance until dawn, with your feet in the sand and your gaze lost on the sea horizon.</p>
@@ -162,10 +105,8 @@
                     <li><h3>"Full Moon Magic"</h3><p>On every full moon, Paparemo will dress in white for a magical night. Candlelit dinners directly on the beach, fire-eater shows, and artistic performances will create an ethereal and dreamy atmosphere, a tribute to the beauty of Kenyan nature.</p></li>
                     <li><h3>"Taste of Kenya"</h3><p>One Wednesday a month will be dedicated to discovering the authentic flavors of Kenya, revisited with a gourmet twist. A culinary journey that will celebrate local products and traditional recipes, in a perfect blend of innovation and culture.</p></li>
                 </ul>
-
                 <h2>Not Just Parties: An Oasis of Relaxation and Style</h2>
                 <p>By day, Paparemo Beach continues to be the ideal retreat for those seeking relaxation and impeccable service. Comfortable king-size sunbeds, attentive and discreet service, and a light and delicious lunch menu are the ingredients for a perfect day by the sea. The restaurant, with its breathtaking view, will continue to offer high-level cuisine, featuring fresh fish specialties and a carefully selected wine list.</p>
-
                 <h2>Save the Date: The Opening Party</h2>
                 <p>The season will officially kick off with a <strong>Grand Opening Party</strong> not to be missed. A night of music, entertainment, and surprises that will launch months of pure fun. The official date will be announced soon on Paparemo Beach's social media channels.</p>
                 <p>Get ready to live another unforgettable season. Paparemo Beach in Watamu awaits you to write new chapters of magical African nights together.</p>
@@ -175,7 +116,7 @@
 </div>
 <footer class="footer">
     <div class="footer-content">
-        <div class="footer-column"><h3>Papa Remo Beach Bar</h3><p>Jacaranda Road, Watamu, Kenya</p><p>Phone: +254 707 010527</p><p>Email: reservation@paparemobeach.com</p></div>
+        <div class="footer-column"><h3>Papa Remo Beach Bar</h3><p>Jacaranda Road, Watamu, Kenya</p><p>Phone: +254 707 010527</p><p>Email: beach@paparemobeach.com</p></div>
         <div class="footer-column"><h3>Follow Us</h3><div class="social-links"><a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i></a></div></div>
     </div>
     <div class="copyright"><p>© 2025 Papa Remo Beach Bar. All rights reserved.</p></div>
@@ -184,6 +125,7 @@
 <script src="../../assets/js/main.js"></script>
 <script src="../../assets/js/mobile-menu.js"></script>
 <script src="../../assets/js/language-toggle.js"></script>
+<script src="../../assets/js/theme-switcher.js"></script>
 
 <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
 <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmb8fu5cu002ncxd62utidh80'></zapier-interfaces-chatbot-embed>

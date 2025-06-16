@@ -152,8 +152,6 @@ img {
   margin-left: 290px;
 }
 
-/* ... Other existing styles ... */
-
 /* Stile per i controlli in fondo alla sidebar */
 .sidebar-controls {
     display: flex;
@@ -161,11 +159,11 @@ img {
     align-items: center;
     gap: 1.5rem;
     padding-top: 1rem;
-    margin-top: auto;
+    margin-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* NUOVI STILI PER L'INTERRUTTORE DEL TEMA */
+/* Stili per l'interruttore del tema */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -218,4 +216,59 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--ocean-blue);
+  box-shadow: 0 0 0 3px rgba(34, 137, 221, 0.2);
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+    }
+    .main-content, .footer {
+        margin-left: 0;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
 }
