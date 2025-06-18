@@ -17,8 +17,42 @@
 <link href="../assets/css/pages.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <style>
-    /* CSS per lo Slideshow Hero */
-    .slideshow-container{position:relative;width:100%;height:500px;overflow:hidden}.slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;animation:fadeEffect 20s infinite}.slide img.hero-image{display:block}.slide:nth-child(1){animation-delay:0s}.slide:nth-child(2){animation-delay:5s}.slide:nth-child(3){animation-delay:10s}.slide:nth-child(4){animation-delay:15s}@keyframes fadeEffect{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}@media (max-width:768px){.slideshow-container{height:300px}}
+    /* CSS per lo Slideshow Hero aggiornato per 5 immagini */
+    .slideshow-container{
+        position:relative;
+        width:100%;
+        height:500px;
+        overflow:hidden
+    }
+    .slide{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        opacity:0;
+        /* Durata totale animazione: 5s per slide * 5 slides = 25s */
+        animation:fadeEffect 25s infinite
+    }
+    .slide img.hero-image{
+        display:block
+    }
+    .slide:nth-child(1){animation-delay:0s}
+    .slide:nth-child(2){animation-delay:5s}
+    .slide:nth-child(3){animation-delay:10s}
+    .slide:nth-child(4){animation-delay:15s}
+    .slide:nth-child(5){animation-delay:20s} /* Aggiunto ritardo per la quinta slide */
+
+    @keyframes fadeEffect{
+        0%{opacity:0}
+        4%{opacity:1}   /* Fade in (1s / 25s totali) */
+        16%{opacity:1}  /* Mantiene visibilità (per 3s) */
+        20%{opacity:0}  /* Fade out (1s) - completa il ciclo di una slide da 5s */
+        100%{opacity:0}
+    }
+    @media (max-width:768px){
+        .slideshow-container{height:300px}
+    }
 </style>
 </head>
 <body>
@@ -62,6 +96,7 @@
 <li><a href="restaurant.html">Restaurant</a></li>
 <li><a href="wedding.html">Wedding</a></li>
 <li><a href="events.html">Events</a></li>
+<li><a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer">Paparemo Village</a></li>
 <li><a href="podcast.html">Podcast</a></li>
 <li><a href="our-posts.html">Our Posts</a></li>
 <li><a href="contact.html">Contact</a></li>
@@ -109,6 +144,13 @@
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
                 <img src="../assets/images/optimized/hero_slideshow/bar.jpg" alt="The bar at Papa Remo Beach" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/event_dj.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/event_dj.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/hero_slideshow/event_dj.jpg" alt="DJ playing at a Papa Remo event" class="hero-image">
             </picture>
         </div>
     </div>
@@ -289,7 +331,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>© 2025 Papa Remo Beach Bar. All rights reserved.</p>
+        <p>© 2025 Papa Remo Beach Bar. All rights reserved. | <a href="cookie-policy.html" style="color: var(--dark-gray);">Cookie Policy</a></p>
     </div>
 </footer>
 <script src="../assets/js/main.js"></script>
