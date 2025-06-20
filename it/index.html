@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Papa Remo Beach - Ristorante e Spiaggia a Watamu, Kenya</title>
+<meta content="Benvenuti a Papa Remo Beach a Watamu, Kenya. Scopri il nostro ristorante, beach club, eventi e molto altro in questo paradiso sulla costa." name="description"/>
+<meta name="keywords" content="papa remo beach, ristorante watamu, spiaggia watamu, beach club kenya, eventi watamu, matrimonio spiaggia, cucina italiana watamu, vacanze kenya"/>
+
+<link rel="canonical" href="https://www.paparemobeach.com/it/index.html" />
+<link rel="alternate" hreflang="it" href="https://www.paparemobeach.com/it/index.html" />
+<link rel="alternate" hreflang="en" href="https://www.paparemobeach.com/en/index.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.paparemobeach.com/en/index.html" />
+
+<meta property="og:title" content="Papa Remo Beach - Ristorante e Spiaggia a Watamu, Kenya" />
+<meta property="og:description" content="Vivi la magia di Watamu nel nostro incantevole ristorante e beach club sulla costa." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.paparemobeach.com/it/index.html" />
+<meta property="og:image" content="https://www.paparemobeach.com/assets/images/optimized/hero_slideshow/front_beach.jpg" />
+<meta property="og:site_name" content="Papa Remo Beach" />
+
+
+<script>
+    (function() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+</script>
+
+<link href="../assets/css/main.css" rel="stylesheet"/>
+<link href="../assets/css/pages.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+    /* CSS per lo Slideshow Hero aggiornato per 5 immagini */
+    .slideshow-container{
+        position:relative;
+        width:100%;
+        height:500px;
+        overflow:hidden
+    }
+    .slide{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        opacity:0;
+        /* Durata totale animazione: 5s per slide * 5 slides = 25s */
+        animation:fadeEffect 25s infinite
+    }
+    .slide img.hero-image{
+        display:block
+    }
+    .slide:nth-child(1){animation-delay:0s}
+    .slide:nth-child(2){animation-delay:5s}
+    .slide:nth-child(3){animation-delay:10s}
+    .slide:nth-child(4){animation-delay:15s}
+    .slide:nth-child(5){animation-delay:20s} /* Aggiunto ritardo per la quinta slide */
+
+    @keyframes fadeEffect{
+        0%{opacity:0}
+        4%{opacity:1}   /* Fade in (1s / 25s totali) */
+        16%{opacity:1}  /* Mantiene visibilità (per 3s) */
+        20%{opacity:0}  /* Fade out (1s) - completa il ciclo di una slide da 5s */
+        100%{opacity:0}
+    }
+    @media (max-width:768px){
+        .slideshow-container{height:300px}
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<aside class="sidebar">
+<div class="sidebar-logo">
+    <a href="index.html">
+    <picture><source srcset="../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Logo Papa Remo Beach" src="../assets/images/optimized/logo.jpg"/></picture>
+    </a>
+</div>
+
+<div class="sidebar-controls">
+    <div class="language-toggle">
+        <a href="../en/index.html" title="Switch to English">
+            <i class="fas fa-globe" style="margin-right: 8px; font-size: 1.1em;"></i>
+            <span>English</span>
+        </a>
+    </div>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
+
+<div class="sidebar-mini-player" style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+    <h4 style="color: var(--turquoise); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase;">Ascolta il Nostro Podcast</h4>
+    <a class="spreaker-player" href="https://www.spreaker.com/podcast/papa-remo-beach--6638332"
+       data-resource="show_id=6638332" data-width="100%" data-height="150px" data-theme="dark"
+       data-playlist="false" data-playlist-continuous="false" data-chapters-image="false"
+       data-episode-image-position="right" data-hide-logo="true" data-hide-likes="true"
+       data-hide-comments="true" data-hide-sharing="true" data-hide-download="true"
+       data-title="Papa Remo Beach" data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">
+       Ascolta "Papa Remo Beach" su Spreaker.</a>
+    <script async src="https://widget.spreaker.com/widgets.js"></script>
+</div>
+
+<nav class="sidebar-nav">
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="story.html">La Nostra Storia</a></li>
+<li><a href="restaurant.html">Ristorante</a></li>
+<li><a href="wedding.html">Matrimoni</a></li>
+<li><a href="events.html">Eventi</a></li>
+<li><a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer">Paparemo Village</a></li>
+<li><a href="podcast.html">Podcast</a></li>
+<li><a href="our-posts.html">I Nostri Articoli</a></li>
+<li><a href="contact.html">Contatti</a></li>
+</ul>
+</nav>
+
+<a class="book-now-btn" href="contact.html#reservation">Prenota Ora</a>
+
+<div class="sidebar-contact">
+<h3>Contattaci</h3>
+<p><i class="fas fa-map-marker-alt"></i> Jacaranda Road, Watamu, Kenya</p>
+<p><i class="fas fa-phone"></i> +254 707 010527</p>
+<p><i class="fas fa-envelope"></i> beach@paparemobeach.com</p>
+</div>
+
+</aside>
+
+<main class="main-content">
+<header class="page-header">
+<h1>Benvenuti al Papa Remo Beach</h1>
+<p>Vivi la magia di Watamu nel nostro incantevole ristorante e beach club sulla costa</p>
+</header>
+
+<section class="hero">
+    <div class="slideshow-container">
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/front_beach.webp" type="image/webp">
+                <img src="../assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Vista frontale della spiaggia di Papa Remo" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/ground_beach.webp" type="image/webp">
+                <img src="../assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Vista a terra della spiaggia di Papa Remo" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
+                <img src="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relax sulla spiaggia di Papa Remo" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
+                <img src="../assets/images/optimized/hero_slideshow/bar.jpg" alt="Il bar di Papa Remo Beach" class="hero-image">
+            </picture>
+        </div>
+        <div class="slide">
+            <picture>
+                <source srcset="../assets/images/optimized/hero_slideshow/event_dj.webp" type="image/webp">
+                <source srcset="../assets/images/optimized/hero_slideshow/event_dj.jpg" type="image/jpeg">
+                <img src="../assets/images/optimized/hero_slideshow/event_dj.jpg" alt="DJ che suona a un evento di Papa Remo" class="hero-image">
+            </picture>
+        </div>
+    </div>
+    <div class="hero-overlay">
+        <h1>Il Tuo Paradiso sulla Costa Keniota</h1>
+        <p>Fondato nel 1997 da Remo Lenzi</p>
+        <a class="btn btn-primary" href="restaurant.html">Scopri il Ristorante</a>
+    </div>
+</section>
+
+<section class="about mt-4">
+    <div class="row">
+        <div class="col">
+            <h2>La Storia di Papa Remo Beach</h2>
+            <p>Fondato dal visionario Remo Lenzi nel 1997, Papa Remo Beach è diventato rapidamente un nome amato. Oggi è una destinazione iconica, un gioiello incastonato nella splendida costa keniota.</p>
+            <p>Scoprirete il nostro paradiso sulla pittoresca Jacaranda Road di Watamu, una location unica che si affaccia direttamente sulla famosa e incantevole "spiaggia dell'amore". Il nostro locale offre una miscela unica e accattivante di relax per giornate tranquille, deliziose esperienze culinarie con vista sull'oceano e intrattenimento vivace e coinvolgente sotto le stelle.</p>
+            <p>La cucina è principalmente e autenticamente italiana, con pesce locale freschissimo, classiche pizze cotte nel forno a legna e paste deliziose.</p>
+            <a class="btn btn-primary" href="story.html" style="margin-top: 1rem;">Leggi la Nostra Storia</a>
+        </div>
+        <div class="col">
+            <picture>
+                <source srcset="../assets/images/optimized/General/in_entrance.webp" type="image/webp">
+                <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Ingresso del Papa Remo Beach" class="about-image">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<section class="village-promo mt-4">
+    <div class="row" style="align-items: center;">
+        <div class="col"> 
+            <picture>
+                <source srcset="../assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
+                <img src="../assets/images/optimized/General/Paparemovillage.jpg" alt="Soggiorno confortevole al Paparemo Village" class="about-image">
+            </picture>
+        </div>
+        <div class="col"> 
+            <h2>Scopri il Paparemo Village</h2>
+            <p>Vivi l'autentico fascino di Watamu con un soggiorno confortevole al Paparemo Village. I nostri alloggi offrono una miscela perfetta di stile locale e comfort moderni, ideali per la tua fuga serena o per una residenza più lunga sulla costa keniota.</p>
+            <p>Goditi privacy, comfort e un facile accesso al Papa Remo Beach e a tutte le sue strutture.</p>
+            <a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Esplora il Village</a>
+        </div>
+    </div>
+</section>
+
+<section class="wedding-promo mt-4">
+    <div class="row" style="align-items: center;">
+        <div class="col">
+            <picture>
+                <source srcset="../assets/images/optimized/General/wedding.webp" type="image/webp">
+                <img src="../assets/images/optimized/General/wedding.jpg" alt="Matrimonio in spiaggia al Papa Remo" class="about-image">
+            </picture>
+        </div>
+        <div class="col">
+            <h2>Organizza il Tuo Matrimonio da Sogno</h2>
+            <p>Immagina il tuo giorno speciale sulle sabbie bianche e incontaminate di Watamu, con l'oceano Indiano turchese come sfondo mozzafiato. Papa Remo Beach offre un ambiente idilliaco e indimenticabile per la cerimonia e il ricevimento dei tuoi sogni.</p>
+            <p>Il nostro team dedicato fornisce servizi personalizzati per garantire che ogni dettaglio sia perfetto, creando ricordi magici che durano una vita. Dai raduni intimi alle grandi celebrazioni, adattiamo tutto alla tua visione.</p>
+            <a href="wedding.html" class="btn btn-primary mt-2">Scopri le Opzioni per Matrimoni</a>
+        </div>
+    </div>
+</section>
+
+<section class="events-promo mt-4">
+    <div class="row" style="align-items: center;">
+        <div class="col">
+            <h2>Eventi Vivaci in Spiaggia</h2>
+            <p>Dai nostri famosi beach party del sabato con DJ di fama ai festeggiamenti speciali e alle serate a tema, c'è sempre qualcosa di eccitante al Papa Remo. Goditi ottima musica, cibo delizioso, cocktail d'autore e un'atmosfera imbattibile proprio sulle rive dell'Oceano Indiano.</p>
+            <p>Non perderti il miglior intrattenimento di Watamu. Controlla regolarmente il nostro calendario eventi!</p>
+            <a href="events.html" class="btn btn-primary mt-2">Guarda Tutti gli Eventi</a>
+        </div>
+        <div class="col">
+            <picture>
+                <source srcset="../assets/images/optimized/General/beach_party.webp" type="image/webp">
+                <img src="../assets/images/optimized/General/beach_party.jpg" alt="Vivace Beach Party al Papa Remo" class="about-image">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<section class="podcast-promo mt-4">
+    <div class="row" style="align-items: center;">
+        <div class="col"> 
+            <h2>Sintonizzati su Papa Remo Waves</h2>
+            <p>Immergiti più a fondo nelle storie, nei suoni e nell'anima di Watamu con il podcast ufficiale di Papa Remo. Ascolta le personalità locali, esplora gli sforzi di conservazione e ottieni spunti unici sulla vita vibrante della costa keniota.</p>
+            <p>Nuovi episodi regolarmente, per portarti la magia di Papa Remo direttamente a casa, ovunque tu sia.</p>
+            <a href="podcast.html" class="btn btn-primary mt-2">Ascolta il Nostro Podcast</a>
+        </div>
+        <div class="col"> 
+            <picture>
+                <source srcset="../assets/images/optimized/General/podcast.webp" type="image/webp">
+                <img src="../assets/images/optimized/General/podcast.jpg" alt="Podcast Papa Remo" class="about-image">
+            </picture>
+        </div>
+    </div>
+</section>
+
+<section class="our-posts-promo mt-4">
+    <div class="row" style="align-items: center;">
+        <div class="col"> 
+            <picture>
+                <source srcset="../assets/images/optimized/General/latest_news.webp" type="image/webp">
+                <img src="../assets/images/optimized/General/latest_news.jpg" alt="Ultime notizie e storie da Papa Remo" class="about-image">
+            </picture>
+        </div>
+        <div class="col"> 
+            <h2>Ultime Notizie e Storie</h2>
+            <p>Rimani aggiornato sugli ultimi avvenimenti, storie avvincenti dalla spiaggia e spunti unici dalla famiglia di Papa Remo. Il nostro blog ti porta più vicino al cuore di Watamu e alla nostra vibrante comunità.</p>
+            <p>Scopri consigli, resoconti di eventi e molto altro.</p>
+            <a href="our-posts.html" class="btn btn-primary mt-2">Leggi i Nostri Articoli</a>
+        </div>
+    </div>
+</section>
+
+<section class="events mt-4"> 
+<h2>Prossimi Eventi</h2>
+<div class="event-card">
+<div class="event-date">
+<span class="day">SAB</span>
+<span class="date">Ogni Settimana</span>
+</div>
+<div class="event-details">
+<h3>Beach Party Settimanale</h3>
+<p>Unisciti a noi per il nostro famoso beach party settimanale con DJ locali, cocktail deliziosi e le migliori vibrazioni della costa keniota.</p>
+<a class="btn btn-secondary" href="events.html">Scopri di più</a>
+</div>
+</div>
+</section>
+
+<section class="testimonials mt-4">
+<h2>Cosa Dicono i Nostri Ospiti</h2>
+<div class="testimonial-slider">
+<div class="testimonial">
+<p>"Una location meravigliosa con cibo e servizio incredibili. Il beach party del sabato è da non perdere!"</p>
+<div class="testimonial-author">- Sarah M.</div>
+</div>
+</div>
+</section>
+
+<section class="features mt-4">
+<div class="row">
+<div class="feature-card">
+<i class="fas fa-utensils"></i>
+<h3>Ristorante</h3>
+<p>Gusta una cucina deliziosa con vista sull'oceano</p>
+<a class="btn btn-secondary" href="restaurant.html">Scopri di più</a>
+</div>
+<div class="feature-card">
+<i class="fas fa-glass-cheers"></i>
+<h3>Beach Club</h3>
+<p>Rilassati e rigenerati nel nostro esclusivo ambiente in spiaggia</p>
+<a class="btn btn-secondary" href="events.html">Scopri di più</a>
+</div>
+<div class="feature-card">
+<i class="fas fa-music"></i>
+<h3>Beach Party del Sabato</h3>
+<p>Partecipa al nostro famoso beach party settimanale</p>
+<a class="btn btn-secondary" href="events.html">Scopri di più</a>
+</div>
+</div>
+</section>
+
+</main>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Papa Remo Beach</h3>
+            <p>Jacaranda Road, Watamu, Kenya</p>
+            <p>Telefono: +254 707 010527</p>
+            <p>Email: beach@paparemobeach.com</p>
+        </div>
+        <div class="footer-column">
+            <h3>Seguici</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2025 Papa Remo Beach. Tutti i diritti riservati. | <a href="cookie-policy.html" style="color: var(--dark-gray);">Cookie Policy</a> | <a href="privacy-policy.html" style="color: var(--dark-gray);">Privacy Policy</a></p>
+    </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/language-toggle.js"></script>
+<script src="../assets/js/theme-switcher.js"></script> 
+
+<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmb8fu5cu002ncxd62utidh80'></zapier-interfaces-chatbot-embed>
+</body>
+</html>

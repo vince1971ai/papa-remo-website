@@ -26,8 +26,6 @@
             height: 100%;
             background-color: #0c1a2c;
             z-index: 9999;
-            /* Durata animazione sfondo aggiornata a 5.5s per una dissolvenza più morbida */
-            animation: fadeOutSplashScreen 5.5s forwards;
         }
 
         #splash-content {
@@ -45,12 +43,10 @@
             opacity: 0; 
         }
         
-        /* Animazione aggiornata a 5s */
         #intro-text-group {
             animation: intro-anim 5s forwards;
         }
         
-        /* Animazione aggiornata a 5s */
         #final-text-group {
             animation: final-text-anim 5s forwards;
         }
@@ -78,36 +74,50 @@
             color: #FFFFFF;
         }
 
-        /* KEYFRAMES AGGIORNATI PER UNA DURATA DI 5 SECONDI */
+        #language-choice {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 
-        /* Animazione per "Paparemo Beach" e "Watamu Kenya" */
+        .lang-button {
+            display: inline-block;
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            background-color: transparent;
+            border: 2px solid #FFFFFF;
+            border-radius: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lang-button:hover {
+            background-color: #FFFFFF;
+            color: #0c1a2c;
+        }
+
         @keyframes intro-anim {
             0% { opacity: 0; }
-            10% { opacity: 1; } /* Appare (0.5s) */
-            50% { opacity: 1; } /* Rimane (2s) */
-            60% { opacity: 0; } /* Scompare (0.5s) */
+            10% { opacity: 1; } 
+            50% { opacity: 1; } 
+            60% { opacity: 0; } 
             100% { opacity: 0; }
         }
 
-        /* Animazione per "Your dream come true" */
         @keyframes final-text-anim {
             0% { opacity: 0; }
             60% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
-            70% { opacity: 1; transform: translate(-50%, -50%) scale(1); } /* Appare */
-            100% { opacity: 1; } /* Rimane fino alla fine */
-        }
-        
-        @keyframes fadeOutSplashScreen {
-            0%, 90% { opacity: 1; } /* Rimane visibile per 4.5s dei 5s totali */
-            100% { opacity: 0; visibility: hidden; }
+            70% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 1; }
         }
     </style>
-
-    <script>
-        setTimeout(function() {
-            window.location.href = 'paparemo_website/pages/index.html';
-        }, 5000); // REINDIRIZZA ESATTAMENTE DOPO 5 SECONDI
-    </script>
 </head>
 <body>
 
@@ -117,8 +127,13 @@
                 <h1 id="main-title">Paparemo Beach</h1>
                 <p id="subtitle">Watamu Kenya</p>
             </div>
+
             <div id="final-text-group">
                 <h2 id="final-text">Your dream come true</h2>
+                <div id="language-choice">
+                    <a href="it/index.html" class="lang-button">Italiano</a>
+                    <a href="en/index.html" class="lang-button">English</a>
+                </div>
             </div>
         </div>
     </div>

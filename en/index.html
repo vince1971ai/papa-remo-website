@@ -3,8 +3,22 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Papa Remo Beach - Watamu, Kenya</title>
+
+<title>Papa Remo Beach - Watamu, Kenya | Restaurant & Beach Club</title>
 <meta content="Welcome to Papa Remo Beach in Watamu, Kenya. Experience our restaurant, beach club, events, and more in this beautiful coastal paradise." name="description"/>
+<meta name="keywords" content="papa remo beach, watamu restaurant, kenya beach club, watamu events, italian food watamu, watamu beach party"/>
+
+<link rel="canonical" href="https://www.paparemobeach.com/en/index.html" />
+<link rel="alternate" hreflang="en" href="https://www.paparemobeach.com/en/index.html" />
+<link rel="alternate" hreflang="it" href="https://www.paparemobeach.com/it/index.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.paparemobeach.com/en/index.html" />
+
+<meta property="og:title" content="Papa Remo Beach - Watamu, Kenya | Restaurant & Beach Club" />
+<meta property="og:description" content="Experience the magic of Watamu at our charming coastal restaurant and beach club." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.paparemobeach.com/en/index.html" />
+<meta property="og:image" content="https://www.paparemobeach.com/assets/images/optimized/hero_slideshow/front_beach.jpg" />
+<meta property="og:site_name" content="Papa Remo Beach" />
 
 <script>
     (function() {
@@ -17,42 +31,16 @@
 <link href="../assets/css/pages.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <style>
-    /* CSS per lo Slideshow Hero aggiornato per 5 immagini */
-    .slideshow-container{
-        position:relative;
-        width:100%;
-        height:500px;
-        overflow:hidden
-    }
-    .slide{
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        opacity:0;
-        /* Durata totale animazione: 5s per slide * 5 slides = 25s */
-        animation:fadeEffect 25s infinite
-    }
-    .slide img.hero-image{
-        display:block
-    }
+    .slideshow-container{position:relative;width:100%;height:500px;overflow:hidden}
+    .slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;animation:fadeEffect 25s infinite}
+    .slide img.hero-image{display:block}
     .slide:nth-child(1){animation-delay:0s}
     .slide:nth-child(2){animation-delay:5s}
     .slide:nth-child(3){animation-delay:10s}
     .slide:nth-child(4){animation-delay:15s}
-    .slide:nth-child(5){animation-delay:20s} /* Aggiunto ritardo per la quinta slide */
-
-    @keyframes fadeEffect{
-        0%{opacity:0}
-        4%{opacity:1}   /* Fade in (1s / 25s totali) */
-        16%{opacity:1}  /* Mantiene visibilità (per 3s) */
-        20%{opacity:0}  /* Fade out (1s) - completa il ciclo di una slide da 5s */
-        100%{opacity:0}
-    }
-    @media (max-width:768px){
-        .slideshow-container{height:300px}
-    }
+    .slide:nth-child(5){animation-delay:20s}
+    @keyframes fadeEffect{0%{opacity:0}4%{opacity:1}16%{opacity:1}20%{opacity:0}100%{opacity:0}}
+    @media (max-width:768px){.slideshow-container{height:300px}}
 </style>
 </head>
 <body>
@@ -60,14 +48,16 @@
 <aside class="sidebar">
 <div class="sidebar-logo">
     <a href="index.html">
-    <picture><source srcset="../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Bar Logo" src="../assets/images/optimized/logo.jpg"/></picture>
+    <picture><source srcset="../assets/images/optimized/logo.webp" type="image/webp"/><source srcset="../assets/images/optimized/logo.jpg" type="image/jpeg"/><img alt="Papa Remo Beach Logo" src="../assets/images/optimized/logo.jpg"/></picture>
     </a>
 </div>
 
 <div class="sidebar-controls">
     <div class="language-toggle">
-        <img alt="Italian Flag" src="../assets/images/italian_flag.svg"/>
-        <span>Italiano</span>
+        <a href="../it/index.html" title="Passa all'Italiano">
+            <i class="fas fa-globe" style="margin-right: 8px; font-size: 1.1em;"></i>
+            <span>Italiano</span>
+        </a>
     </div>
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-toggle">
@@ -85,7 +75,7 @@
        data-episode-image-position="right" data-hide-logo="true" data-hide-likes="true"
        data-hide-comments="true" data-hide-sharing="true" data-hide-download="true"
        data-title="Papa Remo Beach" data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">
-       Ascolta "Papa Remo Beach" su Spreaker.</a>
+       Listen to "Papa Remo Beach" on Spreaker.</a>
     <script async src="https://widget.spreaker.com/widgets.js"></script>
 </div>
 
@@ -96,7 +86,6 @@
 <li><a href="restaurant.html">Restaurant</a></li>
 <li><a href="wedding.html">Wedding</a></li>
 <li><a href="events.html">Events</a></li>
-<li><a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer">Paparemo Village</a></li>
 <li><a href="podcast.html">Podcast</a></li>
 <li><a href="our-posts.html">Our Posts</a></li>
 <li><a href="contact.html">Contact</a></li>
@@ -116,7 +105,7 @@
 
 <main class="main-content">
 <header class="page-header">
-<h1>Welcome to Papa Remo Beach Bar</h1>
+<h1>Welcome to Papa Remo Beach</h1>
 <p>Experience the magic of Watamu at our charming coastal restaurant and beach club</p>
 </header>
 
@@ -155,7 +144,7 @@
         </div>
     </div>
     <div class="hero-overlay">
-        <h1 class="">Your Paradise on the Kenyan Coast</h1>
+        <h1>Your Paradise on the Kenyan Coast</h1>
         <p>Established in 1997 by Remo Lenzi</p>
         <a class="btn btn-primary" href="restaurant.html">Explore Our Restaurant</a>
     </div>
@@ -165,7 +154,7 @@
     <div class="row">
         <div class="col">
             <h2>About Papa Remo Beach</h2>
-            <p>Established by the visionary Remo Lenzi back in 1997, Papa Remo Beach Bar swiftly became a cherished name. It stands today as a truly iconic destination, a jewel nestled on the beautiful Kenyan coast.</p>
+            <p>Established by the visionary Remo Lenzi back in 1997, Papa Remo Beach swiftly became a cherished name. It stands today as a truly iconic destination, a jewel nestled on the beautiful Kenyan coast.</p>
             <p>You will discover our haven on Watamu's picturesque Jacaranda Road, a location second to none, directly overlooking the famed and enchanting "love beach." Our venue proudly offers a unique and captivating blend of serene relaxation for peaceful days, delightful dining experiences with ocean vistas, and vibrant, engaging entertainment under the stars.</p>
             <p>The cuisine is primarily, and authentically, Italian at its heart, featuring the freshest local seafood, classic wood-fired pizzas, and delicious pasta.</p>
             <a class="btn btn-primary" href="story.html" style="margin-top: 1rem;">Read Our Story</a>
@@ -173,7 +162,7 @@
         <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/in_entrance.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Entrance of Papa Remo Beach Bar" class="about-image">
+                <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Entrance of Papa Remo Beach" class="about-image">
             </picture>
         </div>
     </div>
@@ -190,7 +179,7 @@
         <div class="col"> 
             <h2>Discover Paparemo Village</h2>
             <p>Experience authentic Watamu charm with a comfortable stay at Paparemo Village. Our accommodations offer a perfect blend of local style and modern amenities, ideal for your serene getaway or a longer residence on the Kenyan coast.</p>
-            <p>Enjoy privacy, comfort, and easy access to Papa Remo Beach Bar and all its facilities.</p>
+            <p>Enjoy privacy, comfort, and easy access to Papa Remo Beach and all its facilities.</p>
             <a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Explore the Village</a>
         </div>
     </div>
@@ -317,7 +306,7 @@
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-column">
-            <h3>Papa Remo Beach Bar</h3>
+            <h3>Papa Remo Beach</h3>
             <p>Jacaranda Road, Watamu, Kenya</p>
             <p>Phone: +254 707 010527</p>
             <p>Email: beach@paparemobeach.com</p>
@@ -331,7 +320,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>© 2025 Papa Remo Beach Bar. All rights reserved. | <a href="cookie-policy.html" style="color: var(--dark-gray);">Cookie Policy</a> | <a href="privacy-policy.html" style="color: var(--dark-gray);">Privacy Policy</a></p>
+        <p>© 2025 Papa Remo Beach. All rights reserved. | <a href="cookie-policy.html" style="color: var(--dark-gray);">Cookie Policy</a> | <a href="privacy-policy.html" style="color: var(--dark-gray);">Privacy Policy</a></p>
     </div>
 </footer>
 <script src="../assets/js/main.js"></script>
