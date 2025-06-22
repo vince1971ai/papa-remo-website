@@ -1,16 +1,16 @@
-// Funzione per applicare il tema all'avvio
+// Questa prima parte rimane invariata e imposta il tema all'avvio per evitare sfarfallii
 (function() {
-    // Se un tema è salvato, usa quello, altrimenti imposta 'dark' come predefinito
     const theme = localStorage.getItem('theme') || 'dark'; 
     document.documentElement.setAttribute('data-theme', theme);
 })();
 
-// Logica per gestire l'interruttore
-document.addEventListener('DOMContentLoaded', () => {
+// --- MODIFICA PRINCIPALE ---
+// Sostituisco 'DOMContentLoaded' con il nostro evento personalizzato 'menuLoaded'
+document.addEventListener('menuLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
 
     if (themeToggle) {
-        // Imposta lo stato dell'interruttore in base al tema corrente al caricamento della pagina
+        // Imposta lo stato dell'interruttore in base al tema corrente
         const currentTheme = document.documentElement.getAttribute('data-theme');
         if (currentTheme === 'dark') {
             themeToggle.checked = true;

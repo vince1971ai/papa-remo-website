@@ -84,13 +84,34 @@ img {
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  border-left: 3px solid transparent; /* Aggiunto per transizione fluida */
 }
 
-.sidebar-nav a:hover,
-.sidebar-nav a.active {
+/* --- INIZIO BLOCCO CORRETTO --- */
+
+/* Effetto per quando si passa il mouse sui link NON attivi */
+.sidebar-nav a:hover {
   color: var(--turquoise);
   padding-left: 0.5rem;
 }
+
+/* Stile UNICO e BEN VISIBILE per il link della pagina attiva */
+.sidebar-nav a.active {
+    color: var(--coral);
+    font-weight: 600; /* Testo in grassetto */
+    padding-left: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.15); /* Sfondo leggermente diverso */
+    border-left: 3px solid var(--coral); /* Barra laterale per evidenziare */
+}
+
+/* Hover per il link attivo (opzionale, per un feedback al mouse) */
+.sidebar-nav a.active:hover {
+    color: var(--coral); /* Mantiene il colore corallo */
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* --- FINE BLOCCO CORRETTO --- */
+
 
 .sidebar-contact {
   margin-top: 1.5rem;
