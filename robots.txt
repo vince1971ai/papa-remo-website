@@ -1,0 +1,8 @@
+# Istruzioni per tutti i bot dei motori di ricerca
+User-agent: *
+
+# Non bloccare nessuna pagina
+Disallow:
+
+# Posizione della nostra Sitemap
+Sitemap: https://www.paparemobeach.com/sitemap.xml
