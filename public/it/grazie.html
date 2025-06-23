@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Grazie! - Papa Remo Beach</title>
+    <meta name="robots" content="noindex">
+
+    <link rel="alternate" hreflang="it" href="https://www.paparemobeach.com/it/grazie.html" />
+    <link rel="alternate" hreflang="en" href="https://www.paparemobeach.com/en/thank-you.html" />
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link href="../assets/css/main.css" rel="stylesheet"/>
+    <link href="../assets/css/pages.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+        .thank-you-wrapper {
+            text-align: center;
+            padding: 40px 20px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+        .thank-you-header .icon {
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .thank-you-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        .thank-you-header p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .feature-card {
+            background-color: var(--card-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            width: 250px;
+            flex-grow: 1;
+            max-width: 280px;
+        }
+        .feature-card .icon {
+            font-size: 3rem;
+            color: var(--primary-color-light);
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: default;
+        }
+        .btn-primary {
+             cursor: default;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="menu-placeholder"></div>
+    <main class="main-content">
+        <section class="thank-you-wrapper">
+            <div class="thank-you-header">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+                <h1>Grazie per averci contattato!</h1>
+                <p>Abbiamo ricevuto il tuo messaggio. Mentre attendi la nostra risposta, scopri cos'altro bolle in pentola al Papa Remo Beach.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-podcast"></i></div>
+                    <h3>Il nostro Podcast</h3>
+                    <p>Sintonizzati sulle vibrazioni di Watamu con le nostre playlist esclusive e i racconti dalla spiaggia.</p>
+                    <div class="btn-secondary">Ascolta Ora</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Calendario Eventi</h3>
+                    <p>Non perderti le nostre serate a tema, i beach party e gli eventi speciali. Scopri cosa succede!</p>
+                    <div class="btn-secondary">Scopri gli Eventi</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-images"></i></div>
+                    <h3>Il Caleidoscopio</h3>
+                    <p>Immergiti nei colori e nelle emozioni del Papa Remo Beach attraverso la nostra galleria di momenti indimenticabili.</p>
+                    <div class="btn-secondary">Esplora la Galleria</div>
+                </div>
+            </div>
+
+            <div class="btn btn-primary">Torna alla Home</div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+</div>
+
+<script src="../assets/js/menu-loader.js"></script>
+<script src="../assets/js/footer-loader.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/language-toggle.js"></script>
+<script src="../assets/js/theme-switcher.js"></script>
+</body>
+</html>
