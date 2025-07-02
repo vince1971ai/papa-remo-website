@@ -28,7 +28,7 @@
         }
         .thank-you-header .icon {
             font-size: 5rem;
-            color: var(--primary-color);
+            color: var(--coral);
             margin-bottom: 20px;
         }
         .thank-you-header h1 {
@@ -51,17 +51,18 @@
             margin-bottom: 50px;
         }
         .feature-card {
-            background-color: var(--card-bg-color);
+            background-color: var(--primary-dark-light);
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             padding: 30px;
             width: 250px;
             flex-grow: 1;
             max-width: 280px;
+            border-top: 3px solid var(--ocean-blue);
         }
         .feature-card .icon {
             font-size: 3rem;
-            color: var(--primary-color-light);
+            color: var(--turquoise);
             margin-bottom: 15px;
         }
         .feature-card h3 {
@@ -73,17 +74,9 @@
             line-height: 1.5;
             margin-bottom: 20px;
         }
-        .btn-secondary {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+        .btn-secondary, .btn-primary {
             text-decoration: none;
             display: inline-block;
-            cursor: default;
-        }
-        .btn-primary {
-            cursor: default;
         }
     </style>
 </head>
@@ -95,7 +88,7 @@
             <div class="thank-you-header">
                 <div class="icon"><i class="fas fa-check-circle"></i></div>
                 <h1>Thank you for reaching out!</h1>
-                <p>We have received your message. While you wait for our reply, discover what else is happening at Papa Remo Beach.</p>
+                <p>We have received your message. We will get back to you as soon as possible. In the meantime, discover what else is happening at Papa Remo Beach.</p>
             </div>
 
             <div class="features-grid">
@@ -103,25 +96,25 @@
                     <div class="icon"><i class="fas fa-podcast"></i></div>
                     <h3>Our Podcast</h3>
                     <p>Tune into the vibes of Watamu with our exclusive playlists and stories from the beach.</p>
-                    <div class="btn-secondary">Listen Now</div>
+                    <a href="/en/podcast.html" class="btn btn-secondary">Listen Now</a>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon"><i class="fas fa-calendar-alt"></i></div>
                     <h3>Events Calendar</h3>
                     <p>Don't miss out on our theme nights, beach parties, and special events. Find out what's on!</p>
-                    <div class="btn-secondary">Discover Events</div>
+                    <a href="/en/events.html" class="btn btn-secondary">Discover Events</a>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon"><i class="fas fa-images"></i></div>
                     <h3>The Kaleidoscope</h3>
-                    <p>Immerse yourself in the colors and emotions of Papa Remo Beach through our gallery of unforgettable moments.</p>
-                    <div class="btn-secondary">Explore the Gallery</div>
+                    <p>Immerse yourself in the colors and emotions of Papa Remo Beach through our articles and stories.</p>
+                    <a href="/en/our-posts.html" class="btn btn-secondary">Read the Stories</a>
                 </div>
             </div>
 
-            <div class="btn btn-primary">Back to Home</div>
+            <a href="/en/index.html" class="btn btn-primary">Back to Home</a>
         </section>
     </main>
     <div id="footer-placeholder"></div>
