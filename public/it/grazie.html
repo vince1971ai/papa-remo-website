@@ -28,7 +28,7 @@
         }
         .thank-you-header .icon {
             font-size: 5rem;
-            color: var(--primary-color);
+            color: var(--coral);
             margin-bottom: 20px;
         }
         .thank-you-header h1 {
@@ -51,17 +51,18 @@
             margin-bottom: 50px;
         }
         .feature-card {
-            background-color: var(--card-bg-color);
+            background-color: var(--primary-dark-light);
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             padding: 30px;
             width: 250px;
             flex-grow: 1;
             max-width: 280px;
+            border-top: 3px solid var(--ocean-blue);
         }
         .feature-card .icon {
             font-size: 3rem;
-            color: var(--primary-color-light);
+            color: var(--turquoise);
             margin-bottom: 15px;
         }
         .feature-card h3 {
@@ -73,17 +74,10 @@
             line-height: 1.5;
             margin-bottom: 20px;
         }
-        .btn-secondary {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+        /* Assicura che i link con classe bottone siano stilizzati correttamente */
+        .btn-secondary, .btn-primary {
             text-decoration: none;
             display: inline-block;
-            cursor: default;
-        }
-        .btn-primary {
-             cursor: default;
         }
     </style>
 </head>
@@ -95,7 +89,7 @@
             <div class="thank-you-header">
                 <div class="icon"><i class="fas fa-check-circle"></i></div>
                 <h1>Grazie per averci contattato!</h1>
-                <p>Abbiamo ricevuto il tuo messaggio. Mentre attendi la nostra risposta, scopri cos'altro bolle in pentola al Papa Remo Beach.</p>
+                <p>Abbiamo ricevuto il tuo messaggio. Ti risponderemo il prima possibile. Nel frattempo, scopri cos'altro bolle in pentola al Papa Remo Beach.</p>
             </div>
 
             <div class="features-grid">
@@ -103,25 +97,25 @@
                     <div class="icon"><i class="fas fa-podcast"></i></div>
                     <h3>Il nostro Podcast</h3>
                     <p>Sintonizzati sulle vibrazioni di Watamu con le nostre playlist esclusive e i racconti dalla spiaggia.</p>
-                    <div class="btn-secondary">Ascolta Ora</div>
+                    <a href="/it/podcast.html" class="btn-secondary">Ascolta Ora</a>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon"><i class="fas fa-calendar-alt"></i></div>
                     <h3>Calendario Eventi</h3>
                     <p>Non perderti le nostre serate a tema, i beach party e gli eventi speciali. Scopri cosa succede!</p>
-                    <div class="btn-secondary">Scopri gli Eventi</div>
+                    <a href="/it/events.html" class="btn-secondary">Scopri gli Eventi</a>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon"><i class="fas fa-images"></i></div>
                     <h3>Il Caleidoscopio</h3>
-                    <p>Immergiti nei colori e nelle emozioni del Papa Remo Beach attraverso la nostra galleria di momenti indimenticabili.</p>
-                    <div class="btn-secondary">Esplora la Galleria</div>
+                    <p>Immergiti nei colori e nelle emozioni del Papa Remo Beach attraverso i nostri articoli e le nostre storie.</p>
+                    <a href="/it/our-posts.html" class="btn-secondary">Leggi le Storie</a>
                 </div>
             </div>
 
-            <div class="btn btn-primary">Torna alla Home</div>
+            <a href="/it/index.html" class="btn btn-primary">Torna alla Home</a>
         </section>
     </main>
     <div id="footer-placeholder"></div>
