@@ -10,7 +10,7 @@
   --border-light: #dee2e6;    /* Bordo per form e card */
 
   /* Colori d'accento */
-  --ocean-blue: #1560bd;
+  --ocean-blue: #104B8F;      /* COLORE MODIFICATO (Vecchio: #1560bd) */
   --turquoise: #1abc9c;
   --coral: #e74c3c;
   
@@ -34,7 +34,7 @@ html[data-theme="dark"] {
   --border-light: #2c3a4f;    /* Bordi chiari diventano più scuri */
   
   /* Colori d'accento possono rimanere vibranti o essere leggermente aggiustati */
-  --ocean-blue: #3498db;
+  --ocean-blue: #2471A3;      /* COLORE MODIFICATO (Vecchio: #3498db) */
   --turquoise: #1abc9c;
   --coral: #e67e22;
 
