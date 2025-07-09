@@ -24,6 +24,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+/* --- INIZIO BLOCCO CORRETTO --- */
+/* Risolve l'avviso di PageSpeed sulle API deprecate per i titoli */
+article h1,
+section h1,
+aside h1,
+nav h1 {
+    font-size: 2.2rem; /* Imposta una dimensione esplicita per gli H1 dentro le sezioni */
+}
+/* --- FINE BLOCCO CORRETTO --- */
+
 a {
   text-decoration: none;
   color: var(--ocean-blue);
@@ -87,8 +97,6 @@ img {
   border-left: 3px solid transparent; /* Aggiunto per transizione fluida */
 }
 
-/* --- INIZIO BLOCCO CORRETTO --- */
-
 /* Effetto per quando si passa il mouse sui link NON attivi */
 .sidebar-nav a:hover {
   color: var(--turquoise);
@@ -109,9 +117,6 @@ img {
     color: var(--coral); /* Mantiene il colore corallo */
     background-color: rgba(0, 0, 0, 0.25);
 }
-
-/* --- FINE BLOCCO CORRETTO --- */
-
 
 .sidebar-contact {
   margin-top: 1.5rem;
