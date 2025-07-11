@@ -1,104 +1,8 @@
-/* Import color scheme - DEVE ESSERE LA PRIMA REGOLA */
+/* Import color scheme */
 @import url('color_scheme.css');
 
-/* ================== INIZIO FONT LOCALI ================== */
-
-/* NOTA: Le seguenti dichiarazioni sono state aggiornate per corrispondere ai file presenti sul server.
-   Le dichiarazioni per font non trovati sono state rimosse per eliminare gli errori 404. */
-
-/* playfair-display-regular - latin */
-@font-face {
-  font-display: swap;
-  font-family: 'Playfair Display SC'; /* Aggiornato per riflettere la variante Small Caps */
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/playfair-display-sc-v17-latin-regular.woff2') format('woff2');
-}
-
-/* playfair-display-700 - latin */
-@font-face {
-  font-display: swap;
-  font-family: 'Playfair Display SC'; /* Aggiornato per riflettere la variante Small Caps */
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/playfair-display-sc-v17-latin-700.woff2') format('woff2');
-}
-
-/* poppins-regular - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/poppins-v23-latin-regular.woff2') format('woff2');
-}
-
-/* poppins-italic - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: italic;
-  font-weight: 400;
-  src: url('../fonts/poppins-v23-latin-italic.woff2') format('woff2');
-}
-
-/* poppins-500 - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/poppins-v23-latin-500.woff2') format('woff2');
-}
-
-/* poppins-500italic - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: italic;
-  font-weight: 500;
-  src: url('../fonts/poppins-v23-latin-500italic.woff2') format('woff2');
-}
-
-/* poppins-600 - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/poppins-v23-latin-600.woff2') format('woff2');
-}
-
-/* poppins-600italic - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: italic;
-  font-weight: 600;
-  src: url('../fonts/poppins-v23-latin-600italic.woff2') format('woff2');
-}
-
-/* poppins-700 - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/poppins-v23-latin-700.woff2') format('woff2');
-}
-
-/* poppins-700italic - latin */
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: italic;
-  font-weight: 700;
-  src: url('../fonts/poppins-v23-latin-700italic.woff2') format('woff2');
-}
-
-
-/* ================== FINE FONT LOCALI ================== */
-
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
 /* Reset and base styles */
 * {
@@ -116,7 +20,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display SC', serif; /* Aggiornato per coerenza */
+  font-family: 'Playfair Display', serif;
   margin-bottom: 1rem;
 }
 
@@ -187,7 +91,7 @@ img {
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  border-left: 3px solid transparent; 
+  border-left: 3px solid transparent;
 }
 
 .sidebar-nav a:hover {
@@ -224,16 +128,17 @@ img {
   margin-bottom: 0.5rem;
 }
 
+/* MODIFICA: Cambiato il colore del testo per massima leggibilità */
 .book-now-btn {
   background-color: var(--coral);
-  color: var(--text-light);
+  color: var(--primary-dark); /* Testo scuro su sfondo corallo */
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   text-align: center;
   display: block;
   margin-top: 1.5rem;
@@ -241,7 +146,7 @@ img {
 
 .book-now-btn:hover {
   background-color: #ff6a3c;
-  color: var(--text-light);
+  color: var(--primary-dark); /* Mantiene il testo scuro anche in hover */
 }
 
 .language-toggle img {

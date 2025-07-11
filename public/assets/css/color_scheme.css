@@ -1,43 +1,38 @@
 /* color_scheme.css */
 :root {
   /* Palette Principale (Light Mode di default) */
-  --bg-primary: #f8f9fa;       /* Sfondo principale chiaro */
-  --primary-dark: #0c1a2c;    /* Sidebar */
-  --text-dark: #343a40;       /* Testo principale scuro */
-  --text-light: #ffffff;      /* Testo chiaro (per sidebar) */
-  --dark-gray: #6c757d;       /* Testo secondario */
-  --sand: #e9ecef;           /* Colore sabbia/grigio chiaro per bordi e sfondi secondari */
-  --border-light: #dee2e6;    /* Bordo per form e card */
+  --bg-primary: #f8f9fa;
+  --primary-dark: #0c1a2c;
+  --text-dark: #343a40;
+  --text-light: #ffffff;
+  --dark-gray: #6c757d;
+  --sand: #e9ecef;
+  --border-light: #dee2e6;
 
   /* Colori d'accento */
-  --ocean-blue: #104B8F;      /* COLORE MODIFICATO (Vecchio: #1560bd) */
-  --turquoise: #1abc9c;
+  --ocean-blue: #104B8F;
+  /* MODIFICA: Reso il turchese più scuro per aumentare il contrasto */
+  --turquoise: #00897B; 
   --coral: #e74c3c;
   
   /* Colori specifici per componenti */
   --card-bg: #ffffff;
+  --primary-dark-light: #1a2b42; /* Aggiunto per card in dark mode */
 }
 
-/* * =========================================
- * DARK MODE COLOR SCHEME
- * =========================================
- */
-
-/* Applichiamo queste variabili quando l'elemento <html> ha l'attributo data-theme="dark" */
+/* DARK MODE COLOR SCHEME */
 html[data-theme="dark"] {
-  --bg-primary: #0c1a2c;      /* Sfondo principale molto scuro */
-  --primary-dark: #07111d;    /* Sidebar ancora più scura */
-  --text-dark: #e0e1e2;       /* Testo "scuro" diventa chiaro */
-  --text-light: #ffffff;      /* Testo "chiaro" rimane bianco */
-  --dark-gray: #a0a7b3;       /* Grigio per testi secondari */
-  --sand: #3a4a60;           /* Sabbia diventa un grigio/blu scuro per i bordi */
-  --border-light: #2c3a4f;    /* Bordi chiari diventano più scuri */
+  --bg-primary: #0c1a2c;
+  --primary-dark: #07111d;
+  --text-dark: #e0e1e2;
+  --text-light: #ffffff;
+  --dark-gray: #a0a7b3;
+  --sand: #3a4a60;
+  --border-light: #2c3a4f;
   
-  /* Colori d'accento possono rimanere vibranti o essere leggermente aggiustati */
-  --ocean-blue: #2471A3;      /* COLORE MODIFICATO (Vecchio: #3498db) */
-  --turquoise: #1abc9c;
+  --ocean-blue: #2471A3;
+  --turquoise: #1abc9c; /* In dark mode il contrasto va bene, lo lasciamo originale */
   --coral: #e67e22;
 
-  /* Sfondo per le card in modalità scura */
-  --card-bg: var(--primary-dark);
+  --card-bg: var(--primary-dark-light);
 }
