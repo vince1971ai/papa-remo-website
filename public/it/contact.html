@@ -45,7 +45,7 @@
     <meta property="og:description" content="Mettiti in contatto con noi per prenotare un tavolo, organizzare un evento o per qualsiasi altra richiesta." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.paparemobeach.com/it/contact.html" />
-    <meta property="og:image" content="https://www.paparemobeach.com/assets/images/Contact.jpg" />
+    <meta property="og:image" content="https://www.paparemobeach.com/assets/images/optimized/contact/Contact.jpg" />
     <meta property="og:site_name" content="Papa Remo Beach" />
     
     <script>
@@ -71,7 +71,11 @@
 </header>
 
 <div class="contact-header-image-container">
-    <img src="../assets/images/Contact.jpg" alt="Contatta Papa Remo Beach" class="contact-header-image">
+    <picture>
+        <source srcset="../assets/images/optimized/contact/Contact.webp" type="image/webp">
+        <source srcset="../assets/images/optimized/contact/Contact.jpg" type="image/jpeg">
+        <img src="../assets/images/optimized/contact/Contact.jpg" alt="Contatta Papa Remo Beach" class="contact-header-image">
+    </picture>
 </div>
 
 <section class="reservation-form mt-4" id="reservation">
