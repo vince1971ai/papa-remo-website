@@ -11,12 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" as="style" fetchpriority="high">
-
-    <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
-    </style>
-
     <noscript>
       <link rel="stylesheet" href="/assets/css/style.css">
       <link rel="stylesheet" href="/assets/css/fontawesome-custom.css">
@@ -79,23 +73,40 @@
     <link rel="stylesheet" href="/assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
 
     <style>
-        .slideshow-container{position:relative;width:100%;height:500px;overflow:hidden}
-        .slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;animation:fadeEffect 25s infinite}
-        .slide img.hero-image{display:block}
-        .slide:nth-child(1){animation-delay:0s}
-        .slide:nth-child(2){animation-delay:5s}
-        .slide:nth-child(3){animation-delay:10s}
-        .slide:nth-child(4){animation-delay:15s}
-        .slide:nth-child(5){animation-delay:20s}
-        @keyframes fadeEffect{0%{opacity:0}4%{opacity:1}16%{opacity:1}20%{opacity:0}100%{opacity:0}}
-        @media (max-width:768px){.slideshow-container{height:300px}}
-        
-        /* Added style for h2 hero-overlay */
-        .hero-overlay h2 {
-            font-size: 2.2rem;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 1rem;
-            color: inherit;
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1600 / 900; /* Prevents layout shift */
+            height: auto; 
+            overflow: hidden;
+            background-color: #333; /* Placeholder background */
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: fadeEffect 25s infinite;
+        }
+        .slide img.hero-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the area without distortion */
+        }
+        .slide:nth-child(1) { animation-delay: 0s; }
+        .slide:nth-child(2) { animation-delay: 5s; }
+        .slide:nth-child(3) { animation-delay: 10s; }
+        .slide:nth-child(4) { animation-delay: 15s; }
+        .slide:nth-child(5) { animation-delay: 20s; }
+        @keyframes fadeEffect {
+            0% { opacity: 0; }
+            4% { opacity: 1; }
+            16% { opacity: 1; }
+            20% { opacity: 0; }
+            100% { opacity: 0; }
         }
     </style>
 </head>
@@ -115,32 +126,32 @@
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/front_beach.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Front view of Papa Remo beach" class="hero-image">
+                <img src="../assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Front view of Papa Remo beach" class="hero-image" width="1600" height="900" fetchpriority="high">
             </picture>
         </div>
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/ground_beach.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Ground view of Papa Remo beach" class="hero-image">
+                <img src="../assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Ground view of Papa Remo beach" class="hero-image" width="1600" height="900">
             </picture>
         </div>
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relaxing on Papa Remo beach" class="hero-image">
+                <img src="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relaxing on Papa Remo beach" class="hero-image" width="1600" height="900">
             </picture>
         </div>
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/bar.jpg" alt="The bar at Papa Remo Beach" class="hero-image">
+                <img src="../assets/images/optimized/hero_slideshow/bar.jpg" alt="The bar at Papa Remo Beach" class="hero-image" width="1600" height="900">
             </picture>
         </div>
         <div class="slide">
             <picture>
                 <source srcset="../assets/images/optimized/hero_slideshow/event_dj.webp" type="image/webp">
                 <source srcset="../assets/images/optimized/hero_slideshow/event_dj.jpg" type="image/jpeg">
-                <img src="../assets/images/optimized/hero_slideshow/event_dj.jpg" alt="DJ playing at a Papa Remo event" class="hero-image">
+                <img src="../assets/images/optimized/hero_slideshow/event_dj.jpg" alt="DJ playing at a Papa Remo event" class="hero-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -163,7 +174,7 @@
         <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/in_entrance.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Entrance of Papa Remo Beach" class="about-image">
+                <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Entrance of Papa Remo Beach" class="about-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -174,7 +185,7 @@
         <div class="col"> 
             <picture>
                 <source srcset="../assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/Paparemovillage.jpg" alt="Comfortable stay at Paparemo Village" class="about-image">
+                <img src="../assets/images/optimized/General/Paparemovillage.jpg" alt="Comfortable stay at Paparemo Village" class="about-image" width="1600" height="900">
             </picture>
         </div>
         <div class="col"> 
@@ -191,7 +202,7 @@
         <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/wedding.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/wedding.jpg" alt="Beach wedding at Papa Remo" class="about-image">
+                <img src="../assets/images/optimized/General/wedding.jpg" alt="Beach wedding at Papa Remo" class="about-image" width="1600" height="900">
             </picture>
         </div>
         <div class="col">
@@ -214,7 +225,7 @@
         <div class="col">
             <picture>
                 <source srcset="../assets/images/optimized/General/beach_party.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/beach_party.jpg" alt="Vibrant Beach Party at Papa Remo" class="about-image">
+                <img src="../assets/images/optimized/General/beach_party.jpg" alt="Vibrant Beach Party at Papa Remo" class="about-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -231,7 +242,7 @@
         <div class="col"> 
             <picture>
                 <source srcset="../assets/images/optimized/General/podcast.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast" class="about-image">
+                <img src="../assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast" class="about-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -242,7 +253,7 @@
         <div class="col"> 
             <picture>
                 <source srcset="../assets/images/optimized/General/latest_news.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/latest_news.jpg" alt="Latest news and stories from Papa Remo" class="about-image">
+                <img src="../assets/images/optimized/General/latest_news.jpg" alt="Latest news and stories from Papa Remo" class="about-image" width="1600" height="900">
             </picture>
         </div>
         <div class="col"> 
