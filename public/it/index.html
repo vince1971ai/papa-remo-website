@@ -10,11 +10,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
+    
     <noscript>
-      <link rel="stylesheet" href="../assets/css/style.css">
-      <link rel="stylesheet" href="../assets/css/fontawesome-custom.css">
+      <link rel="stylesheet" href="/assets/css/style.css">
+      <link rel="stylesheet" href="/assets/css/fontawesome-custom.css">
     </noscript>
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -71,17 +70,17 @@
     </script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../assets/css/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
 
     <style>
+        /* CSS per lo Slideshow Hero ottimizzato per CLS */
         .slideshow-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 1600 / 900;
-            height: auto; 
+            aspect-ratio: 16 / 9; /* Mantiene le proporzioni e previene il CLS */
             overflow: hidden;
-            background-color: #333; /* Colore di sfondo temporaneo */
+            background-color: #333; /* Sfondo di riserva */
         }
         .slide {
             position: absolute;
@@ -96,7 +95,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Assicura che l'immagine copra lo spazio senza distorsioni */
         }
         .slide:nth-child(1) { animation-delay: 0s; }
         .slide:nth-child(2) { animation-delay: 5s; }
@@ -127,33 +126,32 @@
     <div class="slideshow-container">
         <div class="slide">
             <picture>
-                <source srcset="../assets/images/optimized/hero_slideshow/front_beach.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Vista frontale della spiaggia di Papa Remo" class="hero-image" width="1600" height="900" fetchpriority="high">
+                <source srcset="/assets/images/optimized/hero_slideshow/front_beach.webp" type="image/webp">
+                <img src="/assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Vista frontale della spiaggia di Papa Remo" class="hero-image" width="1600" height="900" fetchpriority="high">
             </picture>
         </div>
         <div class="slide">
             <picture>
-                <source srcset="../assets/images/optimized/hero_slideshow/ground_beach.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Vista a terra della spiaggia di Papa Remo" class="hero-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/hero_slideshow/ground_beach.webp" type="image/webp">
+                <img src="/assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Vista a terra della spiaggia di Papa Remo" class="hero-image" width="1600" height="900">
             </picture>
         </div>
         <div class="slide">
             <picture>
-                <source srcset="../assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relax sulla spiaggia di Papa Remo" class="hero-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
+                <img src="/assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relax sulla spiaggia di Papa Remo" class="hero-image" width="1600" height="900">
             </picture>
         </div>
         <div class="slide">
             <picture>
-                <source srcset="../assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
-                <img src="../assets/images/optimized/hero_slideshow/bar.jpg" alt="Il bar di Papa Remo Beach" class="hero-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
+                <img src="/assets/images/optimized/hero_slideshow/bar.jpg" alt="Il bar di Papa Remo Beach" class="hero-image" width="1600" height="900">
             </picture>
         </div>
         <div class="slide">
             <picture>
-                <source srcset="../assets/images/optimized/hero_slideshow/event_dj.webp" type="image/webp">
-                <source srcset="../assets/images/optimized/hero_slideshow/event_dj.jpg" type="image/jpeg">
-                <img src="../assets/images/optimized/hero_slideshow/event_dj.jpg" alt="DJ che suona a un evento di Papa Remo" class="hero-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/hero_slideshow/event_dj.webp" type="image/webp">
+                <img src="/assets/images/optimized/hero_slideshow/event_dj.jpg" alt="DJ che suona a un evento di Papa Remo" class="hero-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -175,8 +173,8 @@
         </div>
         <div class="col">
             <picture>
-                <source srcset="../assets/images/optimized/General/in_entrance.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/in_entrance.jpg" alt="Ingresso del Papa Remo Beach" class="about-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/General/in_entrance.webp" type="image/webp">
+                <img src="/assets/images/optimized/General/in_entrance.jpg" alt="Ingresso del Papa Remo Beach" class="about-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -186,8 +184,8 @@
     <div class="row" style="align-items: center;">
         <div class="col"> 
             <picture>
-                <source srcset="../assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/Paparemovillage.jpg" alt="Soggiorno confortevole al Paparemo Village" class="about-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
+                <img src="/assets/images/optimized/General/Paparemovillage.jpg" alt="Soggiorno confortevole al Paparemo Village" class="about-image" width="1600" height="900">
             </picture>
         </div>
         <div class="col"> 
@@ -203,8 +201,8 @@
     <div class="row" style="align-items: center;">
         <div class="col">
             <picture>
-                <source srcset="../assets/images/optimized/General/wedding.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/wedding.jpg" alt="Matrimonio in spiaggia al Papa Remo" class="about-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/General/wedding.webp" type="image/webp">
+                <img src="/assets/images/optimized/General/wedding.jpg" alt="Matrimonio in spiaggia al Papa Remo" class="about-image" width="1600" height="900">
             </picture>
         </div>
         <div class="col">
@@ -226,8 +224,8 @@
         </div>
         <div class="col">
             <picture>
-                <source srcset="../assets/images/optimized/General/beach_party.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/beach_party.jpg" alt="Vivace Beach Party al Papa Remo" class="about-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/General/beach_party.webp" type="image/webp">
+                <img src="/assets/images/optimized/General/beach_party.jpg" alt="Vivace Beach Party al Papa Remo" class="about-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -243,8 +241,8 @@
         </div>
         <div class="col"> 
             <picture>
-                <source srcset="../assets/images/optimized/General/podcast.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/podcast.jpg" alt="Podcast Papa Remo" class="about-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/General/podcast.webp" type="image/webp">
+                <img src="/assets/images/optimized/General/podcast.jpg" alt="Podcast Papa Remo" class="about-image" width="1600" height="900">
             </picture>
         </div>
     </div>
@@ -254,8 +252,8 @@
     <div class="row" style="align-items: center;">
         <div class="col"> 
             <picture>
-                <source srcset="../assets/images/optimized/General/latest_news.webp" type="image/webp">
-                <img src="../assets/images/optimized/General/latest_news.jpg" alt="Ultime notizie e storie da Papa Remo" class="about-image" width="1600" height="900">
+                <source srcset="/assets/images/optimized/General/latest_news.webp" type="image/webp">
+                <img src="/assets/images/optimized/General/latest_news.jpg" alt="Ultime notizie e storie da Papa Remo" class="about-image" width="1600" height="900">
             </picture>
         </div>
         <div class="col"> 
@@ -320,12 +318,12 @@
 
 <div id="footer-placeholder"></div>
 
-<script src="../assets/js/menu-loader.js"></script>
-<script src="../assets/js/footer-loader.js"></script>
-<script src="../assets/js/main.js"></script>
-<script src="../assets/js/mobile-menu.js"></script>
-<script src="../assets/js/language-toggle.js"></script>
-<script src="../assets/js/theme-switcher.js"></script> 
+<script src="/assets/js/menu-loader.js"></script>
+<script src="/assets/js/footer-loader.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/mobile-menu.js"></script>
+<script src="/assets/js/language-toggle.js"></script>
+<script src="/assets/js/theme-switcher.js"></script> 
 
 </body>
 </html>

@@ -331,7 +331,7 @@ input:checked + .slider:before {
 
 .hero-image {
   width: 100%;
-  height: 500px;
+  /* height: 500px;  <-- MODIFICA: Questa riga è stata disattivata */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -1011,9 +1011,11 @@ input:checked + .slider:before {
 
 /* Responsive adjustments for all pages */
 @media (max-width: 768px) {
+  /*
   .hero-image {
     height: 300px;
   }
+  MODIFICA: Questa intera regola è stata disattivata */
 
   .hero-overlay h2 {
     font-size: 1.8rem;
