@@ -8,8 +8,20 @@
     <meta content="Welcome to Papa Remo Beach in Watamu, Kenya. Discover our restaurant, beach club, events, and more in this coastal paradise." name="description"/>
     <meta name="keywords" content="papa remo beach, watamu restaurant, watamu beach, kenya beach club, watamu events, beach wedding, italian cuisine watamu, kenya vacation"/>
 
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
 
     <noscript>
       <link rel="stylesheet" href="/assets/css/style.css">
@@ -61,16 +73,6 @@
       "image": "https://www.paparemobeach.com/assets/images/optimized/paparemovillage.jpg"
     }
     </script>
-    <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/assets/css/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
 
     <style>
         /* CSS per lo Slideshow Hero ottimizzato per CLS */
