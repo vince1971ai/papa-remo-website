@@ -11,7 +11,6 @@
 
   /* Colori d'accento */
   --ocean-blue: #104B8F;
-  /* MODIFICA: Reso il turchese più scuro per aumentare il contrasto */
   --turquoise: #00897B;
   --coral: #e74c3c;
 
@@ -29,9 +28,9 @@ html[data-theme="dark"] {
   --dark-gray: #a0a7b3;
   --sand: #3a4a60;
   --border-light: #2c3a4f;
-
+  
   --ocean-blue: #2471A3;
-  --turquoise: #1abc9c; /* In dark mode il contrasto va bene, lo lasciamo originale */
+  --turquoise: #1abc9c;
   --coral: #e67e22;
 
   --card-bg: var(--primary-dark-light);
@@ -55,13 +54,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 1rem;
-}
-
-article h1,
-section h1,
-aside h1,
-nav h1 {
-    font-size: 2.2rem;
 }
 
 a {
@@ -1037,7 +1029,18 @@ input:checked + .slider:before {
     gap: 0;
   }
 }
+
 /* Fix per l'avviso "API Obsolete" sui titoli h1 */
 section h1, article h1, aside h1, nav h1 {
   font-size: 2.2rem; /* Assicura una dimensione esplicita e consistente */
+}
+
+/* Risolve: link nel footer non distinguibili */
+.copyright a {
+  color: var(--dark-gray);
+  text-decoration: underline; /* Aggiunge la sottolineatura per essere riconoscibile */
+}
+
+.copyright a:hover {
+  color: var(--turquoise);
 }
