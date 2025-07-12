@@ -4,4 +4,289 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
-/* ... incolla qui il resto del tuo file main.css originale ... */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+article h1,
+section h1,
+aside h1,
+nav h1 {
+    font-size: 2.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ocean-blue);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--turquoise);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar / Vertical Menu */
+.sidebar {
+  width: 290px;
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  text-align: center;
+}
+
+.sidebar-logo img {
+  max-width: 180px;
+}
+
+.sidebar-nav {
+  margin: 1.5rem 0;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-nav a {
+  color: var(--text-light);
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-nav a:hover {
+  color: var(--turquoise);
+  padding-left: 0.5rem;
+}
+
+.sidebar-nav a.active {
+    color: var(--coral);
+    font-weight: 600;
+    padding-left: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-left: 3px solid var(--coral);
+}
+
+.sidebar-nav a.active:hover {
+    color: var(--coral);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+.sidebar-contact {
+  margin-top: 1.5rem;
+}
+
+.sidebar-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--turquoise);
+}
+
+.sidebar-contact p {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* MODIFICA: Cambiato il colore del testo per massima leggibilità */
+.book-now-btn {
+  background-color: var(--coral);
+  color: var(--primary-dark); /* Testo scuro su sfondo corallo */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.book-now-btn:hover {
+  background-color: #ff6a3c;
+  color: var(--primary-dark); /* Mantiene il testo scuro anche in hover */
+}
+
+.language-toggle img {
+  width: 24px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.language-toggle span {
+  font-size: 0.9rem;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 290px;
+  padding: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 2rem;
+  margin-left: 290px;
+}
+
+.sidebar-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 48px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #5b6e84;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: var(--turquoise);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--ocean-blue);
+  box-shadow: 0 0 0 3px rgba(34, 137, 221, 0.2);
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+    }
+    .main-content, .footer {
+        margin-left: 0;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
