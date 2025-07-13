@@ -1,3 +1,4 @@
+
 /* color_scheme.css */
 :root {
   /* Palette Principale (Light Mode di default) */
@@ -11,13 +12,13 @@
 
   /* Colori d'accento */
   --ocean-blue: #104B8F;
-  /* MODIFICA: Reso il turchese più scuro per aumentare il contrasto */
+  /* MODIFICA: Reso il turchese più scuro per aumentare il contrasto su sfondo chiaro */
   --turquoise: #00897B; 
   --coral: #e74c3c;
   
   /* Colori specifici per componenti */
   --card-bg: #ffffff;
-  --primary-dark-light: #1a2b42; /* Aggiunto per card in dark mode */
+  --primary-dark-light: #1a2b42;
 }
 
 /* DARK MODE COLOR SCHEME */
@@ -30,8 +31,9 @@ html[data-theme="dark"] {
   --sand: #3a4a60;
   --border-light: #2c3a4f;
   
+  /* In dark mode il contrasto del turchese originale va bene */
   --ocean-blue: #2471A3;
-  --turquoise: #1abc9c; /* In dark mode il contrasto va bene, lo lasciamo originale */
+  --turquoise: #1abc9c; 
   --coral: #e67e22;
 
   --card-bg: var(--primary-dark-light);

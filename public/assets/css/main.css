@@ -1,7 +1,9 @@
+
 /* Import color scheme */
 @import url('color_scheme.css');
 
 /* Import fonts */
+/* Questa riga verrà rimossa quando implementeremo i font locali */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
 /* Reset and base styles */
@@ -91,7 +93,7 @@ img {
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  border-left: 3px solid transparent;
+  border-left: 3px solid transparent; 
 }
 
 .sidebar-nav a:hover {
@@ -128,10 +130,10 @@ img {
   margin-bottom: 0.5rem;
 }
 
-/* MODIFICA: Cambiato il colore del testo per massima leggibilità */
 .book-now-btn {
   background-color: var(--coral);
-  color: var(--primary-dark); /* Testo scuro su sfondo corallo */
+  /* MODIFICA: Cambiato il colore del testo per massima leggibilità */
+  color: var(--primary-dark);
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -146,7 +148,8 @@ img {
 
 .book-now-btn:hover {
   background-color: #ff6a3c;
-  color: var(--primary-dark); /* Mantiene il testo scuro anche in hover */
+  /* MODIFICA: Mantiene il testo scuro anche in hover */
+  color: var(--primary-dark);
 }
 
 .language-toggle img {
