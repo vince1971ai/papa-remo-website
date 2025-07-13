@@ -136,10 +136,17 @@
                 height: 400px; 
                 margin-bottom: 2rem; 
             }
+            /* ================================== */
+            /* ==== FIX PER VERSIONE MOBILE ==== */
+            /* ================================== */
+            .food-text-column,
+            .food-slideshow-column {
+                width: 100%;
+                flex-basis: 100%;
+            }
         }
         
-        /* 
-        ===================================================================
+        /* ===================================================================
         ====   FIX: Aggiunge spazio verticale sotto la sezione galleria  ====
         ===================================================================
         */
@@ -180,11 +187,9 @@
     </div>
 </section>
 
-<!-- SEZIONE GALLERIA CON LAYOUT A 2 COLONNE -->
 <section class="restaurant-gallery mt-4">
     <div class="content-slideshow-split">
         
-        <!-- Colonna Sinistra: Testo Descrittivo -->
         <div class="food-text-column">
             <h2>Passione e Freschezza</h2>
             <p>Le nostre creazioni culinarie sono il cuore pulsante della nostra cucina. Ogni piatto è un viaggio tra i sapori autentici dell'Italia e la ricchezza degli ingredienti che il Kenya ci offre ogni giorno.</p>
@@ -192,7 +197,6 @@
             <p class="mt-2">Lasciatevi tentare dalla nostra arte culinaria.</p>
         </div>
 
-        <!-- Colonna Destra: Slideshow Verticale -->
         <div class="food-slideshow-column">
             <div class="food-slideshow-container">
                 <div class="food-slide">
@@ -236,8 +240,6 @@
 
     </div>
 </section>
-<!-- FINE SEZIONE MODIFICATA -->
-
 <section class="aperitivo-promo mt-4">
     <div class="row" style="align-items: center;">
         <div class="col">

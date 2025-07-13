@@ -19,7 +19,6 @@
     <noscript>
       <link rel="stylesheet" href="../assets/css/style.css">
       <link rel="stylesheet" href="../assets/css/fontawesome-custom.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     </noscript>
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -28,7 +27,7 @@
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png">
-
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LGP8596KW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -59,24 +58,75 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../assets/css/style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" media="print" onload="this.media='all'">
     
     <style>
-        .aperitivo-slideshow-container{position:relative;width:100%;min-height:350px;overflow:hidden;border-radius:8px}
-        .aperitivo-slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;animation:aperitivoFadeEffect 30s infinite}
-        .aperitivo-slide img{width:100%;height:100%;object-fit:cover}
-        .aperitivo-slide:nth-child(1){animation-delay:0s}
-        .aperitivo-slide:nth-child(2){animation-delay:5s}
-        .aperitivo-slide:nth-child(3){animation-delay:10s}
-        .aperitivo-slide:nth-child(4){animation-delay:15s}
-        .aperitivo-slide:nth-child(5){animation-delay:20s}
-        .aperitivo-slide:nth-child(6){animation-delay:25s}
-        @keyframes aperitivoFadeEffect{0%{opacity:0}3.33%{opacity:1}13.33%{opacity:1}16.67%{opacity:0}100%{opacity:0}}
-        .gallery-grid-3-col{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-        .gallery-item-photo img{width:100%;height:auto;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,.1);transition:transform .3s ease,box-shadow .3s ease;cursor:pointer}
-        .gallery-item-photo img:hover{transform:scale(1.05);box-shadow:0 8px 16px rgba(0,0,0,.2)}
-        @media (max-width:992px){.gallery-grid-3-col{grid-template-columns:repeat(2,1fr)}}
-        @media (max-width:576px){.gallery-grid-3-col{grid-template-columns:1fr}}
+        /* === CSS FOR APERITIVO SLIDESHOW === */
+        .aperitivo-slideshow-container {
+            position: relative; width: 100%; min-height: 350px;
+            overflow: hidden; border-radius: 8px;
+        }
+        .aperitivo-slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0; animation: aperitivoFadeEffect 30s infinite;
+        }
+        .aperitivo-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .aperitivo-slide:nth-child(1) { animation-delay: 0s; }
+        .aperitivo-slide:nth-child(2) { animation-delay: 5s; }
+        .aperitivo-slide:nth-child(3) { animation-delay: 10s; }
+        .aperitivo-slide:nth-child(4) { animation-delay: 15s; }
+        .aperitivo-slide:nth-child(5) { animation-delay: 20s; }
+        .aperitivo-slide:nth-child(6) { animation-delay: 25s; }
+        @keyframes aperitivoFadeEffect {
+          0% { opacity: 0; } 3.33% { opacity: 1; } 13.33% { opacity: 1; } 16.67% { opacity: 0; } 100% { opacity: 0; }
+        }
+
+        /* ==== CSS FOR 2-COLUMN LAYOUT AND VERTICAL SLIDESHOW ==== */
+        .content-slideshow-split {
+            display: flex; align-items: center; gap: 2rem; 
+        }
+        .food-slideshow-column { flex: 0 0 40%; }
+        .food-text-column { flex: 1; }
+        .food-slideshow-container {
+            position: relative; width: 100%; height: 550px; 
+            overflow: hidden; border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .food-slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0; animation: foodFadeEffect 30s infinite;
+        }
+        .food-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .food-slide:nth-child(1) { animation-delay: 0s; }
+        .food-slide:nth-child(2) { animation-delay: 5s; }
+        .food-slide:nth-child(3) { animation-delay: 10s; }
+        .food-slide:nth-child(4) { animation-delay: 15s; }
+        .food-slide:nth-child(5) { animation-delay: 20s; }
+        .food-slide:nth-child(6) { animation-delay: 25s; }
+
+        @keyframes foodFadeEffect {
+          0% { opacity: 0; transform: scale(1.05); }
+          3.33% { opacity: 1; transform: scale(1); }
+          13.33% { opacity: 1; transform: scale(1); }
+          16.67% { opacity: 0; transform: scale(1); }
+          100% { opacity: 0; }
+        }
+        
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 992px) {
+            .content-slideshow-split { flex-direction: column; }
+            .food-slideshow-container { height: 400px; margin-bottom: 2rem; }
+            /* ============================ */
+            /* ==== FIX FOR MOBILE VIEW ==== */
+            /* ============================ */
+            .food-text-column,
+            .food-slideshow-column {
+                width: 100%;
+                flex-basis: 100%;
+            }
+        }
+        
+        .restaurant-gallery { margin-bottom: 3rem; }
+
     </style>
 </head>
 <body>
@@ -102,65 +152,65 @@
         <p>Our restaurant offers a unique dining experience that combines delicious cuisine with breathtaking views of the Indian Ocean. Located on the beautiful Watamu beach, Papa Remo Restaurant is the perfect place to enjoy a meal while taking in the natural beauty of the Kenyan coast.</p>
         <p>We pride ourselves on serving fresh, locally-sourced ingredients prepared with a blend of Italian and Kenyan influences. Our menu features a variety of seafood dishes, traditional Italian favorites, and local specialties, ensuring there's something for everyone to enjoy.</p>
         <div class="restaurant-features mt-3">
-            <div class="feature">
-                <i class="fas fa-fish"></i>
-                <span>Fresh Seafood</span>
-            </div>
-            <div class="feature">
-                <i class="fas fa-pizza-slice"></i>
-                <span>Italian Cuisine</span>
-            </div>
-            <div class="feature">
-                <i class="fas fa-cocktail"></i>
-                <span>Signature Cocktails</span>
-            </div>
-            <div class="feature">
-                <i class="fas fa-umbrella-beach"></i>
-                <span>Beach Dining</span>
-            </div>
+            <div class="feature"><i class="fas fa-fish"></i><span>Fresh Seafood</span></div>
+            <div class="feature"><i class="fas fa-pizza-slice"></i><span>Italian Cuisine</span></div>
+            <div class="feature"><i class="fas fa-cocktail"></i><span>Signature Cocktails</span></div>
+            <div class="feature"><i class="fas fa-umbrella-beach"></i><span>Beach Dining</span></div>
         </div>
     </div>
 </section>
 
 <section class="restaurant-gallery mt-4">
-    <h2>Our Culinary Creations</h2>
-    <div class="gallery-grid-3-col baguette-gallery">
-        <a href="../assets/images/restaurant/food_1.jpg" class="gallery-item-photo">
-            <picture>
-                <source srcset="../assets/images/optimized/restaurant/food_1.webp" type="image/webp">
-                <img src="../assets/images/optimized/restaurant/food_1.jpg" alt="A delicious seafood dish served at Papa Remo" loading="lazy">
-            </picture>
-        </a>
-        <a href="../assets/images/restaurant/food_2.jpg" class="gallery-item-photo">
-            <picture>
-                <source srcset="../assets/images/optimized/restaurant/food_2.webp" type="image/webp">
-                <img src="../assets/images/optimized/restaurant/food_2.jpg" alt="Exotic fruit platter from our kitchen" loading="lazy">
-            </picture>
-        </a>
-        <a href="../assets/images/restaurant/food_3.jpg" class="gallery-item-photo">
-            <picture>
-                <source srcset="../assets/images/optimized/restaurant/food_3.webp" type="image/webp">
-                <img src="../assets/images/optimized/restaurant/food_3.jpg" alt="Gourmet pizza with fresh ingredients" loading="lazy">
-            </picture>
-        </a>
-        <a href="../assets/images/restaurant/food_4.jpg" class="gallery-item-photo">
-            <picture>
-                <source srcset="../assets/images/optimized/restaurant/food_4.webp" type="image/webp">
-                <img src="../assets/images/optimized/restaurant/food_4.jpg" alt="Freshly prepared pasta dish" loading="lazy">
-            </picture>
-        </a>
-        <a href="../assets/images/restaurant/food_5.jpg" class="gallery-item-photo">
-            <picture>
-                <source srcset="../assets/images/optimized/restaurant/food_5.webp" type="image/webp">
-                <img src="../assets/images/optimized/restaurant/food_5.jpg" alt="A plate of grilled fish with vegetables" loading="lazy">
-            </picture>
-        </a>
-        <a href="../assets/images/restaurant/food_6.jpg" class="gallery-item-photo">
-            <picture>
-                <source srcset="../assets/images/optimized/restaurant/food_6.webp" type="image/webp">
-                <img src="../assets/images/optimized/restaurant/food_6.jpg" alt="Artfully presented culinary creation" loading="lazy">
-            </picture>
-        </a>
+    <div class="content-slideshow-split">
+        
+        <div class="food-text-column">
+            <h2>Passion and Freshness</h2>
+            <p>Our culinary creations are the vibrant heart of our kitchen. Each dish is a journey through the authentic flavors of Italy and the richness of the ingredients that Kenya offers us daily.</p>
+            <p>From homemade pasta to the catch of the day, we select only the freshest raw materials to ensure an unforgettable taste experience. The images you see are a glimpse of the passion we put into every plate, served against the splendid backdrop of the ocean.</p>
+            <p class="mt-2">Let yourself be tempted by our culinary art.</p>
+        </div>
+
+        <div class="food-slideshow-column">
+            <div class="food-slideshow-container">
+                <div class="food-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/food_1.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/food_1.jpg" alt="A delicious seafood dish served at Papa Remo" loading="lazy">
+                    </picture>
+                </div>
+                <div class="food-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/food_2.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/food_2.jpg" alt="Exotic fruit platter from our kitchen" loading="lazy">
+                    </picture>
+                </div>
+                <div class="food-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/food_3.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/food_3.jpg" alt="Gourmet pizza with fresh ingredients" loading="lazy">
+                    </picture>
+                </div>
+                <div class="food-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/food_4.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/food_4.jpg" alt="Freshly prepared pasta dish" loading="lazy">
+                    </picture>
+                </div>
+                <div class="food-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/food_5.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/food_5.jpg" alt="A plate of grilled fish with vegetables" loading="lazy">
+                    </picture>
+                </div>
+                <div class="food-slide">
+                    <picture>
+                        <source srcset="../assets/images/optimized/restaurant/food_6.webp" type="image/webp">
+                        <img src="../assets/images/optimized/restaurant/food_6.jpg" alt="Artfully presented culinary creation" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 <section class="aperitivo-promo mt-4">
@@ -173,122 +223,26 @@
         </div>
         <div class="col">
             <div class="aperitivo-slideshow-container">
-                <div class="aperitivo-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/bar_slide_1.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/bar_slide_1.jpg" alt="Aperitivo cocktail at the bar" loading="lazy">
-                    </picture>
-                </div>
-                <div class="aperitivo-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/bar_slide_2.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/bar_slide_2.jpg" alt="View of the beach during sunset aperitivo" loading="lazy">
-                    </picture>
-                </div>
-                <div class="aperitivo-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/bar_slide_3.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/bar_slide_3.jpg" alt="Colorful drinks served for aperitivo" loading="lazy">
-                    </picture>
-                </div>
-                <div class="aperitivo-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/bar_slide_4.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/bar_slide_4.jpg" alt="Guests enjoying drinks at Papa Remo" loading="lazy">
-                    </picture>
-                </div>
-                <div class="aperitivo-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/bar_slide_5.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/bar_slide_5.jpg" alt="Close-up of an exotic cocktail" loading="lazy">
-                    </picture>
-                </div>
-                <div class="aperitivo-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/bar_slide_6.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/bar_slide_6.jpg" alt="A platter of delicious appetizers" loading="lazy">
-                    </picture>
-                </div>
+                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_1.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_1.jpg" alt="Aperitivo cocktail at the bar" loading="lazy"></picture></div>
+                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_2.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_2.jpg" alt="View of the beach during sunset aperitivo" loading="lazy"></picture></div>
+                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_3.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_3.jpg" alt="Colorful drinks served for aperitivo" loading="lazy"></picture></div>
+                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_4.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_4.jpg" alt="Guests enjoying drinks at Papa Remo" loading="lazy"></picture></div>
+                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_5.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_5.jpg" alt="Close-up of an exotic cocktail" loading="lazy"></picture></div>
+                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_6.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_6.jpg" alt="A platter of delicious appetizers" loading="lazy"></picture></div>
             </div>
         </div>
     </div>
 </section>
 <section class="menu-preview mt-4">
 <h2>Our Menu Highlights</h2>
-<div class="menu-category" id="seafood">
-<h3>Seafood Specialties</h3>
-<div class="menu-items">
-<div class="menu-item">
-<div class="menu-item-name">Fresh Catch of the Day</div>
-<div class="menu-item-description">Locally caught fish prepared to your preference - grilled, fried, or in a coconut sauce</div>
-</div>
-<div class="menu-item">
-<div class="menu-item-name">Garlic Prawns</div>
-<div class="menu-item-description">Succulent prawns sautéed in garlic butter and white wine</div>
-</div>
-<div class="menu-item">
-<div class="menu-item-name">Seafood Platter</div>
-<div class="menu-item-description">A selection of the freshest seafood including fish, prawns, calamari, and lobster (seasonal)</div>
-</div>
-</div>
-</div>
-<div class="menu-category" id="italian">
-<h3>Italian Favorites</h3>
-<div class="menu-items">
-<div class="menu-item">
-<div class="menu-item-name">Homemade Pasta</div>
-<div class="menu-item-description">Choice of sauces including seafood, bolognese, or vegetarian options</div>
-</div>
-<div class="menu-item">
-<div class="menu-item-name">Wood-Fired Pizza</div>
-<div class="menu-item-description">Traditional Italian pizzas with a variety of toppings</div>
-</div>
-<div class="menu-item">
-<div class="menu-item-name">Risotto</div>
-<div class="menu-item-description">Creamy risotto with seafood or seasonal vegetables</div>
-</div>
-</div>
-</div>
-<div class="menu-category" id="beverages">
-<h3>Beverages</h3>
-<div class="menu-items">
-<div class="menu-item">
-<div class="menu-item-name">Signature Cocktails</div>
-<div class="menu-item-description">Try our famous beach cocktails made with fresh local fruits</div>
-</div>
-<div class="menu-item">
-<div class="menu-item-name">Italian Wines</div>
-<div class="menu-item-description">Selection of fine Italian wines to complement your meal</div>
-</div>
-<div class="menu-item">
-<div class="menu-item-name">Fresh Juices</div>
-<div class="menu-item-description">Freshly squeezed tropical fruit juices</div>
-</div>
-</div>
-</div>
-<div class="menu-note mt-3">
-<p>* Our menu changes seasonally to ensure we serve only the freshest ingredients. Please ask your server for daily specials.</p>
-</div>
+<div class="menu-category" id="seafood"><h3>Seafood Specialties</h3><div class="menu-items"><div class="menu-item"><div class="menu-item-name">Fresh Catch of the Day</div><div class="menu-item-description">Locally caught fish prepared to your preference - grilled, fried, or in a coconut sauce</div></div><div class="menu-item"><div class="menu-item-name">Garlic Prawns</div><div class="menu-item-description">Succulent prawns sautéed in garlic butter and white wine</div></div><div class="menu-item"><div class="menu-item-name">Seafood Platter</div><div class="menu-item-description">A selection of the freshest seafood including fish, prawns, calamari, and lobster (seasonal)</div></div></div></div>
+<div class="menu-category" id="italian"><h3>Italian Favorites</h3><div class="menu-items"><div class="menu-item"><div class="menu-item-name">Homemade Pasta</div><div class="menu-item-description">Choice of sauces including seafood, bolognese, or vegetarian options</div></div><div class="menu-item"><div class="menu-item-name">Wood-Fired Pizza</div><div class="menu-item-description">Traditional Italian pizzas with a variety of toppings</div></div><div class="menu-item"><div class="menu-item-name">Risotto</div><div class="menu-item-description">Creamy risotto with seafood or seasonal vegetables</div></div></div></div>
+<div class="menu-category" id="beverages"><h3>Beverages</h3><div class="menu-items"><div class="menu-item"><div class="menu-item-name">Signature Cocktails</div><div class="menu-item-description">Try our famous beach cocktails made with fresh local fruits</div></div><div class="menu-item"><div class="menu-item-name">Italian Wines</div><div class="menu-item-description">Selection of fine Italian wines to complement your meal</div></div><div class="menu-item"><div class="menu-item-name">Fresh Juices</div><div class="menu-item-description">Freshly squeezed tropical fruit juices</div></div></div></div>
+<div class="menu-note mt-3"><p>* Our menu changes seasonally to ensure we serve only the freshest ingredients. Please ask your server for daily specials.</p></div>
 </section>
 <section class="dining-experience mt-4">
 <h2>Dining Experience</h2>
-<div class="experience-options">
-<div class="experience-card">
-<i class="fas fa-sun"></i>
-<h3>Beachfront Dining</h3>
-<p>Enjoy your meal with your feet in the sand and the sound of waves in the background.</p>
-</div>
-<div class="experience-card">
-<i class="fas fa-moon"></i>
-<h3>Sunset Dinner</h3>
-<p>Experience a romantic dinner as the sun sets over the Indian Ocean.</p>
-</div>
-<div class="experience-card">
-<i class="fas fa-users"></i>
-<h3>Group Celebrations</h3>
-<p>Perfect for birthdays, anniversaries, and special occasions.</p>
-</div>
-</div>
+<div class="experience-options"><div class="experience-card"><i class="fas fa-sun"></i><h3>Beachfront Dining</h3><p>Enjoy your meal with your feet in the sand and the sound of waves in the background.</p></div><div class="experience-card"><i class="fas fa-moon"></i><h3>Sunset Dinner</h3><p>Experience a romantic dinner as the sun sets over the Indian Ocean.</p></div><div class="experience-card"><i class="fas fa-users"></i><h3>Group Celebrations</h3><p>Perfect for birthdays, anniversaries, and special occasions.</p></div></div>
 </section>
 <section class="reservation-cta mt-4">
 <h2>Make a Reservation</h2>
@@ -306,13 +260,6 @@
 <script src="../assets/js/mobile-menu.js"></script>
 <script src="../assets/js/language-toggle.js"></script>
 <script src="../assets/js/theme-switcher.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" async></script>
-<script>
-    window.addEventListener('load', function() {
-      // Initialize the lightbox gallery
-      baguetteBox.run('.baguette-gallery');
-    });
-</script>
 
 </body>
 </html>
