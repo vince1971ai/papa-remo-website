@@ -117,9 +117,12 @@
 
 <style>
     @media (max-width: 768px) {
+        /* Nasconde il titolo H1 duplicato */
         body.homepage .page-header {
             display: none;
         }
+
+        /* Centra e ridimensiona il testo sull'immagine */
         .hero-overlay {
             text-align: center;
             padding: 0 15px;
@@ -132,6 +135,15 @@
         .hero-overlay p {
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
+        }
+
+        /* ===== NUOVA REGOLA PER ORDINE IMMAGINI SU MOBILE ===== */
+        /* Inverte l'ordine delle sezioni dove il testo viene prima,
+           in modo che su mobile ci sia sempre prima l'immagine e poi il testo. */
+        .about .row,
+        .wedding-promo .row,
+        .podcast-promo .row {
+            flex-direction: column-reverse;
         }
     }
 </style>
