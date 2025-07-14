@@ -122,16 +122,19 @@
             display: none;
         }
 
-        /* Centra e ridimensiona il testo sull'immagine */
+        /* Centra e ridimensiona il testo sull'immagine in modo definitivo */
         .hero-overlay {
             text-align: center;
-            padding: 0 20px;
+            padding: 0 15px; /* Aggiunge un po' di spazio ai lati */
         }
         .hero-overlay h2 {
-            font-size: 1.8rem; /* <-- VALORE RIDOTTO ULTERIORMENTE */
+            font-size: clamp(1.6rem, 8vw, 2.2rem); /* Dimensione del font fluida */
+            line-height: 1.25; /* Interlinea ridotta per compattezza */
+            margin-bottom: 0.75rem; /* Spazio ridotto sotto il titolo */
         }
         .hero-overlay p {
-            font-size: 1rem;
+            font-size: 0.95rem; /* Dimensione ridotta per il sottotitolo */
+            margin-bottom: 1.5rem; /* Aumenta lo spazio prima del bottone */
         }
     }
 </style>
