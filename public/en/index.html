@@ -114,8 +114,32 @@
             100% { opacity: 0; }
         }
     </style>
-</head>
-<body>
+    
+    <style>
+        @media (max-width: 768px) {
+            /* Hides the duplicate H1 title */
+            body.homepage .page-header {
+                display: none;
+            }
+
+            /* Centers and resizes the text on the image definitively */
+            .hero-overlay {
+                text-align: center;
+                padding: 0 15px; /* Adds some side padding */
+            }
+            .hero-overlay h2 {
+                font-size: clamp(1.6rem, 8vw, 2.2rem); /* Fluid font size */
+                line-height: 1.25; /* Reduced line-height for compactness */
+                margin-bottom: 0.75rem; /* Reduced space below the title */
+            }
+            .hero-overlay p {
+                font-size: 0.95rem; /* Reduced size for the subtitle */
+                margin-bottom: 1.5rem; /* Increases space before the button */
+            }
+        }
+    </style>
+    </head>
+<body class="homepage">
 <div class="container">
 
 <div id="menu-placeholder"></div>
