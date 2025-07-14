@@ -117,8 +117,21 @@
 
 <style>
     @media (max-width: 768px) {
+        /* Nasconde il titolo H1 duplicato */
         body.homepage .page-header {
             display: none;
+        }
+
+        /* Centra e ridimensiona il testo sull'immagine */
+        .hero-overlay {
+            text-align: center;
+            padding: 0 20px; /* Aggiunge un po' di spazio laterale */
+        }
+        .hero-overlay h2 {
+            font-size: 2.2rem; /* Riduce la dimensione del titolo */
+        }
+        .hero-overlay p {
+            font-size: 1rem; /* Riduce la dimensione del sottotitolo */
         }
     }
 </style>
