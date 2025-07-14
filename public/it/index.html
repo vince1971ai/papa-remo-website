@@ -117,12 +117,9 @@
 
 <style>
     @media (max-width: 768px) {
-        /* Nasconde il titolo H1 duplicato */
         body.homepage .page-header {
             display: none;
         }
-
-        /* Centra e ridimensiona il testo sull'immagine */
         .hero-overlay {
             text-align: center;
             padding: 0 15px;
@@ -136,10 +133,6 @@
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
         }
-
-        /* ===== NUOVA REGOLA PER ORDINE IMMAGINI SU MOBILE ===== */
-        /* Inverte l'ordine delle sezioni dove il testo viene prima,
-           in modo che su mobile ci sia sempre prima l'immagine e poi il testo. */
         .about .row,
         .wedding-promo .row,
         .podcast-promo .row {
@@ -355,12 +348,12 @@
 
 <div id="footer-placeholder"></div>
 
-<script src="/assets/js/menu-loader.js"></script>
-<script src="/assets/js/footer-loader.js"></script>
-<script src="/assets/js/main.js"></script>
-<script src="/assets/js/mobile-menu.js"></script>
-<script src="/assets/js/language-toggle.js"></script>
-<script src="/assets/js/theme-switcher.js"></script> 
+<script src="/assets/js/menu-loader.js" defer></script>
+<script src="/assets/js/footer-loader.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/mobile-menu.js" defer></script>
+<script src="/assets/js/language-toggle.js" defer></script>
+<script src="/assets/js/theme-switcher.js" defer></script> 
 
 </body>
 </html>
