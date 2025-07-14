@@ -117,10 +117,29 @@
     
     <style>
         @media (max-width: 768px) {
-            body.homepage .page-header { display: none; }
-            .hero-overlay { text-align: center; padding: 0 15px; }
-            .hero-overlay h2 { font-size: clamp(1.6rem, 8vw, 2.2rem); line-height: 1.25; margin-bottom: 0.75rem; }
-            .hero-overlay p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+            body.homepage .page-header {
+                display: none;
+            }
+            .hero-overlay {
+                text-align: center;
+                padding: 0 15px;
+            }
+            .hero-overlay h2 {
+                font-size: clamp(1.6rem, 8vw, 2.2rem);
+                line-height: 1.25;
+                margin-bottom: 0.75rem;
+            }
+            .hero-overlay p {
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+            }
+
+            /* Reverses stacking order on mobile for a consistent layout */
+            .about .row,
+            .wedding-promo .row,
+            .podcast-promo .row {
+                flex-direction: column-reverse;
+            }
         }
     </style>
 </head>
