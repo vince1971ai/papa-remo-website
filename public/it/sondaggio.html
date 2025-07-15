@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <title>Sondaggio di Feedback - Papa Remo Beach</title>
+    <meta name="description" content="Aiutaci a migliorare la tua esperienza al Papa Remo Beach. Compila il nostro sondaggio di feedback."/>
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <style>
+      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
+    </style>
+    
+    <link rel="stylesheet" href="../assets/css/style.css" media="all">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    
+    <noscript>
+      <link rel="stylesheet" href="../assets/css/style.css">
+      <link rel="stylesheet" href="../assets/css/all.css">
+      <link rel="stylesheet" href="../assets/css/fontawesome-custom.css">
+    </noscript>
+    
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
+
+    <style>
+        .survey-form { max-width: 800px; margin: 2rem auto; }
+        .rating-group { display: flex; gap: 1rem; justify-content: flex-start; margin-top: 0.5rem; }
+        .rating-group label { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
+        .radio-group { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+        .checkbox-group { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div id="menu-placeholder"></div>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Sondaggio di Feedback</h1>
+            <p>La tua opinione è importante per noi. Aiutaci a migliorare!</p>
+        </header>
+
+        <section class="survey-form">
+            <form action="https://formspree.io/f/your_new_survey_form_id" method="POST">
+                
+                <div class="form-group">
+                    <label class="form-label" for="overall-rating">Come valuteresti la tua esperienza complessiva al Papa Remo Beach? (1 = Pessima, 5 = Eccellente)</label>
+                    <div class="rating-group">
+                        <label><input type="radio" name="esperienza-generale" value="1" required> 1</label>
+                        <label><input type="radio" name="esperienza-generale" value="2"> 2</label>
+                        <label><input type="radio" name="esperienza-generale" value="3"> 3</label>
+                        <label><input type="radio" name="esperienza-generale" value="4"> 4</label>
+                        <label><input type="radio" name="esperienza-generale" value="5"> 5</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Come valuteresti la qualità del cibo e delle bevande?</label>
+                    <div class="rating-group">
+                        <label><input type="radio" name="qualita-cibo" value="1"> 1</label>
+                        <label><input type="radio" name="qualita-cibo" value="2"> 2</label>
+                        <label><input type="radio" name="qualita-cibo" value="3"> 3</label>
+                        <label><input type="radio" name="qualita-cibo" value="4"> 4</label>
+                        <label><input type="radio" name="qualita-cibo" value="5"> 5</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Come hai sentito parlare di Papa Remo Beach?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="scoperta" value="passaparola"> Passaparola (amici, famiglia)</label>
+                        <label><input type="radio" name="scoperta" value="social_media"> Social Media (Instagram, Facebook)</label>
+                        <label><input type="radio" name="scoperta" value="ricerca_google"> Ricerca su Google</label>
+                        <label><input type="radio" name="scoperta" value="altro"> Altro</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Quali dei nostri servizi hai utilizzato? (Puoi selezionare più opzioni)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="servizi[]" value="ristorante"> Ristorante</label>
+                        <label><input type="checkbox" name="servizi[]" value="beach_club"> Beach Club (lettini, bar)</label>
+                        <label><input type="checkbox" name="servizi[]" value="eventi"> Eventi Serali (es. Beach Party)</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="suggerimenti">Hai qualche suggerimento per aiutarci a migliorare, o qualcosa che ti è piaciuto in particolare?</label>
+                    <textarea class="form-control" id="suggerimenti" name="suggerimenti" rows="5"></textarea>
+                </div>
+
+                <hr style="margin: 2rem 0;">
+                <p style="margin-bottom: 1rem;">Se desideri essere ricontattato riguardo il tuo feedback, puoi lasciare i tuoi contatti (opzionale).</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Nome</label>
+                        <input class="form-control" id="name" name="nome_sondaggio" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" id="email" name="email_sondaggio" type="email"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Invia Feedback</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="../assets/js/menu-loader.js" defer></script>
+<script src="../assets/js/footer-loader.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/mobile-menu.js" defer></script>
+<script src="../assets/js/language-toggle.js" defer></script>
+<script src="../assets/js/theme-switcher.js" defer></script>
+
+</body>
+</html>
