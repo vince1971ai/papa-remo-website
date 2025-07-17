@@ -79,39 +79,34 @@
 </script>
 
 <style>
-    .slideshow-container {
+    /* Stili per il contenitore del video Hero */
+    .hero {
         position: relative;
         width: 100%;
         aspect-ratio: 16 / 9; 
         overflow: hidden;
-        background-color: #333; 
+        background-color: #000; /* Colore di sfondo mentre il video carica */
     }
-    .slide {
+    .hero iframe {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
         width: 100%;
         height: 100%;
-        opacity: 0;
-        animation: fadeEffect 25s infinite;
+        transform: translate(-50%, -50%);
+        pointer-events: none; /* Impedisce l'interazione con il video di sfondo */
     }
-    .slide img.hero-image {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
+
+    /* Assicura che l'iframe copra l'area anche se le proporzioni non sono perfette */
+    @media (min-aspect-ratio: 16/9) {
+      .hero iframe {
+        height: 56.25vw; /* altezza = larghezza viewport * 9/16 */
+      }
     }
-    .slide:nth-child(1) { animation-delay: 0s; }
-    .slide:nth-child(2) { animation-delay: 5s; }
-    .slide:nth-child(3) { animation-delay: 10s; }
-    .slide:nth-child(4) { animation-delay: 15s; }
-    .slide:nth-child(5) { animation-delay: 20s; }
-    @keyframes fadeEffect {
-        0% { opacity: 0; }
-        4% { opacity: 1; }
-        16% { opacity: 1; }
-        20% { opacity: 0; }
-        100% { opacity: 0; }
+    @media (max-aspect-ratio: 16/9) {
+      .hero iframe {
+        width: 177.78vh; /* larghezza = altezza viewport * 16/9 */
+      }
     }
 </style>
 
@@ -120,10 +115,41 @@
         body.homepage .page-header {
             display: none;
         }
-        .hero-overlay {
-            text-align: center;
-            padding: 0 15px;
+
+        /* --- MODIFICHE PER LAYOUT HERO SU MOBILE --- */
+
+        /* 1. Il contenitore hero si adatta in altezza al suo contenuto */
+        .hero {
+            aspect-ratio: auto;
+            height: auto;
+            overflow: visible; /* Assicura che nulla venga tagliato */
         }
+        
+        /* 2. L'iframe diventa un blocco normale che definisce la propria altezza */
+        .hero iframe {
+            position: relative;
+            transform: none;
+            top: auto;
+            left: auto;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
+            pointer-events: auto; /* Riabilita interazione se necessario, ma con autoplay non serve */
+        }
+
+        /* 3. L'overlay diventa un blocco di testo posizionato sotto il video */
+        .hero-overlay {
+            position: relative; 
+            transform: none; 
+            top: auto;
+            left: auto;
+            width: 100%;
+            padding: 2rem 1rem; /* Aggiunge spazio sopra/sotto e ai lati */
+            text-align: center;
+        }
+        
+        /* --- FINE MODIFICHE --- */
+
         .hero-overlay h2 {
             font-size: clamp(1.6rem, 8vw, 2.2rem);
             line-height: 1.25;
@@ -153,38 +179,13 @@
 </header>
 
 <section class="hero">
-    <div class="slideshow-container">
-        <div class="slide">
-            <picture>
-                <source srcset="/assets/images/optimized/hero_slideshow/front_beach.webp" type="image/webp">
-                <img src="/assets/images/optimized/hero_slideshow/front_beach.jpg" alt="Vista frontale della spiaggia di Papa Remo" class="hero-image" width="1600" height="900" fetchpriority="high">
-            </picture>
-        </div>
-        <div class="slide">
-            <picture>
-                <source srcset="/assets/images/optimized/hero_slideshow/ground_beach.webp" type="image/webp">
-                <img src="/assets/images/optimized/hero_slideshow/ground_beach.jpg" alt="Vista a terra della spiaggia di Papa Remo" class="hero-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-        <div class="slide">
-            <picture>
-                <source srcset="/assets/images/optimized/hero_slideshow/sit_on_the_beach.webp" type="image/webp">
-                <img src="/assets/images/optimized/hero_slideshow/sit_on_the_beach.jpg" alt="Relax sulla spiaggia di Papa Remo" class="hero-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-        <div class="slide">
-            <picture>
-                <source srcset="/assets/images/optimized/hero_slideshow/bar.webp" type="image/webp">
-                <img src="/assets/images/optimized/hero_slideshow/bar.jpg" alt="Il bar di Papa Remo Beach" class="hero-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-        <div class="slide">
-            <picture>
-                <source srcset="/assets/images/optimized/hero_slideshow/event_dj.webp" type="image/webp">
-                <img src="/assets/images/optimized/hero_slideshow/event_dj.jpg" alt="DJ che suona a un evento di Papa Remo" class="hero-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-    </div>
+    <iframe 
+        src="https://www.youtube.com/embed/hZ4ELnzLeoo?si=iqjHxa3exdg9qF35&autoplay=1&mute=1&loop=1&playlist=hZ4ELnzLeoo&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1" 
+        title="Video di sfondo di Papa Remo Beach" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+    </iframe>
     <div class="hero-overlay">
         <h2>Il Tuo Paradiso sulla Costa Keniota</h2>
         <p>Fondato nel 1997 da Remo Lenzi</p>
