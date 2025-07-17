@@ -19,7 +19,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="/assets/css/style.css">
-
     <link rel="stylesheet" href="/assets/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
@@ -82,31 +81,26 @@
         /* Styles for the Hero video container */
         .hero {
             position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9; 
-            overflow: hidden;
-            background-color: #000; /* Background color while video loads */
+            background-color: #000;
         }
-        .hero iframe {
+        
+        /* The "window" container that hides the edges */
+        .hero-video-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden; /* The magic is here: hides anything that overflows */
+            position: relative;
+        }
+
+        /* The iframe is now larger than its container */
+        .hero-video-wrapper iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100%;
-            height: 100%;
+            width: 140%;  /* Scaled up to hide vertical edges */
+            height: 140%; /* Scaled up to hide horizontal edges */
             transform: translate(-50%, -50%);
-            pointer-events: none; /* Prevents interaction with the background video */
-        }
-
-        /* Ensures the iframe covers the area even if proportions aren't perfect */
-        @media (min-aspect-ratio: 16/9) {
-          .hero iframe {
-            height: 56.25vw;
-          }
-        }
-        @media (max-aspect-ratio: 16/9) {
-          .hero iframe {
-            width: 177.78vh;
-          }
+            pointer-events: none;
         }
     </style>
     
@@ -116,22 +110,25 @@
                 display: none;
             }
 
-            /* --- CHANGES FOR HERO LAYOUT ON MOBILE --- */
             .hero {
-                aspect-ratio: auto;
                 height: auto;
                 overflow: visible;
             }
-            .hero iframe {
+            
+            /* On mobile, the iframe behaves normally */
+            .hero-video-wrapper {
+                aspect-ratio: 16 / 9;
+            }
+            .hero-video-wrapper iframe {
+                width: 100%;
+                height: 100%;
                 position: relative;
                 transform: none;
                 top: auto;
                 left: auto;
-                width: 100%;
-                height: auto;
-                aspect-ratio: 16 / 9;
                 pointer-events: auto;
             }
+
             .hero-overlay {
                 position: relative; 
                 transform: none; 
@@ -141,7 +138,6 @@
                 padding: 2rem 1rem;
                 text-align: center;
             }
-            /* --- END OF CHANGES --- */
             
             .hero-overlay h2 {
                 font-size: clamp(1.6rem, 8vw, 2.2rem);
@@ -172,13 +168,16 @@
 </header>
 
 <section class="hero">
-    <iframe 
-        src="https://www.youtube.com/embed/hZ4ELnzLeoo?si=iqjHxa3exdg9qF35&autoplay=1&mute=1&loop=1&playlist=hZ4ELnzLeoo&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1" 
-        title="Papa Remo Beach background video" 
-        frameborder="0" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-    </iframe>
+    <!-- The "window" div wrapper -->
+    <div class="hero-video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/hZ4ELnzLeoo?si=iqjHxa3exdg9qF35&autoplay=1&mute=1&loop=1&playlist=hZ4ELnzLeoo&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1" 
+            title="Papa Remo Beach background video" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
     <div class="hero-overlay">
         <h2>Your Paradise on the Kenyan Coast</h2>
         <p>Founded in 1997 by Remo Lenzi</p>
@@ -186,6 +185,7 @@
     </div>
 </section>
 
+<!-- The rest of the content remains unchanged -->
 <section class="about mt-4">
     <div class="row">
         <div class="col">

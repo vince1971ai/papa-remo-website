@@ -19,7 +19,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link rel="stylesheet" href="/assets/css/style.css">
-
 <link rel="stylesheet" href="/assets/css/all.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="/assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
@@ -82,31 +81,26 @@
     /* Stili per il contenitore del video Hero */
     .hero {
         position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9; 
-        overflow: hidden;
-        background-color: #000; /* Colore di sfondo mentre il video carica */
+        background-color: #000;
     }
-    .hero iframe {
+    
+    /* NUOVO: Questo è il contenitore-finestra che nasconde i bordi */
+    .hero-video-wrapper {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden; /* La magia è qui: nasconde tutto ciò che esce */
+        position: relative;
+    }
+
+    /* NUOVO: L'iframe ora è più grande del suo contenitore */
+    .hero-video-wrapper iframe {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 100%;
-        height: 100%;
+        width: 140%; /* Ingrandito per nascondere i bordi verticali */
+        height: 140%; /* Ingrandito per nascondere i bordi orizzontali */
         transform: translate(-50%, -50%);
-        pointer-events: none; /* Impedisce l'interazione con il video di sfondo */
-    }
-
-    /* Assicura che l'iframe copra l'area anche se le proporzioni non sono perfette */
-    @media (min-aspect-ratio: 16/9) {
-      .hero iframe {
-        height: 56.25vw; /* altezza = larghezza viewport * 9/16 */
-      }
-    }
-    @media (max-aspect-ratio: 16/9) {
-      .hero iframe {
-        width: 177.78vh; /* larghezza = altezza viewport * 16/9 */
-      }
+        pointer-events: none;
     }
 </style>
 
@@ -116,40 +110,37 @@
             display: none;
         }
 
-        /* --- MODIFICHE PER LAYOUT HERO SU MOBILE --- */
-
-        /* 1. Il contenitore hero si adatta in altezza al suo contenuto */
+        /* Il contenitore non ha più un aspect-ratio fisso */
         .hero {
-            aspect-ratio: auto;
             height: auto;
-            overflow: visible; /* Assicura che nulla venga tagliato */
+            overflow: visible;
         }
         
-        /* 2. L'iframe diventa un blocco normale che definisce la propria altezza */
-        .hero iframe {
+        /* Su mobile, l'iframe si comporta normalmente, non c'è bisogno di nascondere i bordi */
+        .hero-video-wrapper {
+            aspect-ratio: 16 / 9;
+        }
+
+        .hero-video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: none;
+            top: auto;
+            left: auto;
+            pointer-events: auto;
+        }
+
+        .hero-overlay {
             position: relative;
             transform: none;
             top: auto;
             left: auto;
             width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9; /* Mantiene le proporzioni del video */
-            pointer-events: auto; /* Riabilita interazione se necessario, ma con autoplay non serve */
-        }
-
-        /* 3. L'overlay diventa un blocco di testo posizionato sotto il video */
-        .hero-overlay {
-            position: relative; 
-            transform: none; 
-            top: auto;
-            left: auto;
-            width: 100%;
-            padding: 2rem 1rem; /* Aggiunge spazio sopra/sotto e ai lati */
+            padding: 2rem 1rem;
             text-align: center;
         }
         
-        /* --- FINE MODIFICHE --- */
-
         .hero-overlay h2 {
             font-size: clamp(1.6rem, 8vw, 2.2rem);
             line-height: 1.25;
@@ -179,13 +170,16 @@
 </header>
 
 <section class="hero">
-    <iframe 
-        src="https://www.youtube.com/embed/hZ4ELnzLeoo?si=iqjHxa3exdg9qF35&autoplay=1&mute=1&loop=1&playlist=hZ4ELnzLeoo&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1" 
-        title="Video di sfondo di Papa Remo Beach" 
-        frameborder="0" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-    </iframe>
+    <!-- NUOVO: Div che funge da "finestra" -->
+    <div class="hero-video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/hZ4ELnzLeoo?si=iqjHxa3exdg9qF35&autoplay=1&mute=1&loop=1&playlist=hZ4ELnzLeoo&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1" 
+            title="Video di sfondo di Papa Remo Beach" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
     <div class="hero-overlay">
         <h2>Il Tuo Paradiso sulla Costa Keniota</h2>
         <p>Fondato nel 1997 da Remo Lenzi</p>
@@ -193,6 +187,7 @@
     </div>
 </section>
 
+<!-- Il resto del contenuto rimane invariato -->
 <section class="about mt-4">
     <div class="row">
         <div class="col">
