@@ -16,8 +16,7 @@
       :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
     </style>
 
-    <link rel="stylesheet" href="../assets/css/style.css" media="all">
-    
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/all.css">
     <noscript>
       <link rel="stylesheet" href="../assets/css/style.css">
@@ -29,8 +28,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LGP8596KW"></script>
     <script>
@@ -110,10 +107,26 @@
                     <img alt="Beach Party at Papa Remo" src="../assets/images/optimized/events/beach_party.jpg"/>
                 </picture>
             </div>
-            <div class="events-text mt-4">
-                <h1>Join the Celebration</h1>
-                <p>Papa Remo Beach is known for its vibrant events and lively atmosphere. From our famous weekly beach parties to special holiday celebrations, there's always something exciting happening at Papa Remo.</p>
-                <p>Our events feature local DJs, live music, delicious food, and signature cocktails, all set against the stunning backdrop of Watamu beach. Whether you're looking to dance the night away or enjoy a relaxed evening with friends, our events offer the perfect setting.</p>
+            
+            <hr class="section-divider">
+
+            <div class="intro-layout">
+                <div class="intro-layout-text">
+                    <h2>Join the Party</h2>
+                    <p>Papa Remo Beach is renowned for its vibrant events and lively atmosphere. From our famous weekly beach parties to special holiday celebrations, there's always something exciting happening at Papa Remo.</p>
+                    <p>Our events feature local DJs, live music, delicious food, and signature cocktails, all set against the stunning backdrop of Watamu beach. Whether you want to dance the night away or enjoy a relaxed evening with friends, our events provide the perfect setting.</p>
+                </div>
+                <div class="intro-layout-image">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/FENQj1uP76A?si=K42z-RfWMNEhewnh" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </section>
 
