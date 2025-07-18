@@ -1039,3 +1039,30 @@ input:checked + .slider:before {
     gap: 0;
   }
 }
+
+/* ================================================== */
+/* Stile per layout Storia come da disegno           */
+/* ================================================== */
+
+.intro-layout {
+  display: grid; /* Usa Grid per un controllo preciso delle colonne */
+  grid-template-columns: 1.2fr 1fr; /* Crea 2 colonne: testo (più grande) e immagine */
+  gap: 2.5rem;   /* Spazio tra testo e immagine */
+  align-items: center; /* Allinea verticalmente il contenuto */
+  margin-bottom: 2.5rem; /* Spazio sotto prima del resto del testo */
+}
+
+.intro-layout-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Modalità Responsive: SOLO per schermi piccoli (cellulari) */
+@media (max-width: 768px) {
+  .intro-layout {
+    grid-template-columns: 1fr; /* Imposta una sola colonna */
+    gap: 2rem; /* Riduci lo spazio quando sono impilati */
+  }
+}
