@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Diario degli Aggiornamenti - Papa Remo Beach</title>
+    <style>
+        :root {
+            --dark-bg: #0c1a2c;
+            --card-bg: #07111d;
+            --text-primary: #e0e1e2;
+            --text-secondary: #a0a7b3;
+            --border-color: #2c3a4f;
+            --accent-color: #2471A3;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            /* Ottimizzazione rendering font per schermi Retina */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: var(--card-bg);
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            letter-spacing: 1px;
+        }
+        
+        /* Stili Timeline Verticale */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background-color: var(--border-color);
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent-color);
+        }
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+        .timeline-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+        }
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-right: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .tag-novita { background-color: #28a745; }
+        .tag-correzione { background-color: #dc3545; }
+        .tag-velocita { background-color: #17a2b8; }
+        .tag-ordine { background-color: #ffc107; color: #333; }
+        .tag-manutenzione { background-color: #6c757d; }
+
+        /* Stili Legenda */
+        .legend-section {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        .legend-section h2 {
+            font-family: "Segoe UI",-apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .legend-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .legend-item .tag {
+            flex-shrink: 0;
+            width: 110px;
+            text-align: center;
+        }
+        .legend-item p {
+            margin: 0 0 0 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Stili Timeline Orizzontale */
+        .horizontal-timeline-section {
+            margin-top: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .horizontal-timeline-section h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+        .h-timeline-container {
+            position: relative;
+            width: 100%;
+            overflow-x: hidden;
+            cursor: grab;
+            user-select: none;
+        }
+        .h-timeline-container.active {
+            cursor: grabbing;
+        }
+        .h-timeline-track {
+            display: inline-flex;
+            position: relative;
+            align-items: flex-start;
+            padding: 20px 0;
+            min-width: 100%;
+        }
+        .h-timeline-track::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--border-color);
+        }
+        .h-timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 30px; 
+            min-width: 160px;
+            text-align: center;
+        }
+        .h-timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            z-index: 1;
+        }
+        .h-timeline-date {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 25px;
+        }
+        .h-timeline-title {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Diario degli Aggiornamenti del Sito</h1>
+
+        <!-- SEZIONE TIMELINE ORIZZONTALE -->
+        <div class="horizontal-timeline-section">
+            <h2>L'Evoluzione del Sito in Breve</h2>
+            <div class="h-timeline-container">
+                <div class="h-timeline-track">
+                    <div class="h-timeline-item">
+                        <div class="h-timeline-date">14 Mag 2025</div>
+                        <div class="h-timeline-title">Nascita del Sito!</div>
+                    </div>
+                    <div class="h-timeline-item">
+                        <div class="h-timeline-date">17 Mag 2025</div>
+                        <div class="h-timeline-title">Norme sulla Privacy</div>
+                    </div>
+                    <div class="h-timeline-item">
+                        <div class="h-timeline-date">Giu 2025</div>
+                        <div class="h-timeline-title">Miglioramenti Interni</div>
+                    </div>
+                    <div class="h-timeline-item">
+                        <div class="h-timeline-date">15 Lug 2025</div>
+                        <div class="h-timeline-title">Più Facile da Usare</div>
+                    </div>
+                     <div class="h-timeline-item">
+                        <div class="h-timeline-date">16 Lug 2025</div>
+                        <div class="h-timeline-title">Sito più Veloce</div>
+                    </div>
+                    <div class="h-timeline-item">
+                        <div class="h-timeline-date">17 Lug 2025</div>
+                        <div class="h-timeline-title">Nuove Storie e Foto</div>
+                    </div>
+                    <div class="h-timeline-item">
+                        <div class="h-timeline-date">18 Lug 2025</div>
+                        <div class="h-timeline-title">Migliore su Smartphone</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEZIONE TIMELINE VERTICALE -->
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-date">18 Luglio 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-novita">Novità</span>Miglioramenti per Smartphone</h3>
+                    <p>Ora puoi aggiungere il sito alla schermata principale del tuo telefono, come se fosse un'app, per un accesso più rapido.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">17 Luglio 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-novita">Novità</span>Nuove Storie e Immagini</h3>
+                    <p>Ho aggiunto un nuovo racconto sul blog, "Sogni di Paradiso", e una nuova foto interattiva nella pagina della storia del Papa Remo.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">16 Luglio 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-velocita">Velocità</span>Sito Più Veloce</h3>
+                    <p>Ho ottimizzato il caricamento delle immagini e dei caratteri del testo per rendere la navigazione nelle pagine molto più rapida.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">15 Luglio 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-correzione">Correzione</span>Più Facile da Usare e Trovare</h3>
+                    <p>Ho migliorato la leggibilità del testo. Questi accorgimenti rendono il sito più semplice da navigare e più facile da trovare su Google.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Giugno 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-ordine">Ordine</span>Miglioramento dell'Architettura Interna</h3>
+                    <p>Ho riorganizzato il codice "dietro le quinte" per renderlo più pulito e facile da aggiornare. Questo mi aiuta a mantenere il sito efficiente.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">Giugno 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-correzione">Correzione</span>Miglioramento dei Dettagli</h3>
+                    <p>Ho perfezionato alcuni aspetti della navigazione e della condivisione sui social media per rendere l'esperienza ancora più fluida.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">17 Maggio 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-novita">Novità</span>Pagine su Privacy e Cookie</h3>
+                    <p>Ho aggiunto le informative sulla privacy e sui cookie per essere completamente trasparente e in regola con le normative.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">14 Maggio 2025</div>
+                <div class="timeline-content">
+                    <h3><span class="tag tag-novita">Novità</span>Il Sito è Online!</h3>
+                    <p>Ho pubblicato la prima versione del nuovo sito web. Benvenuti!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEZIONE LEGENDA -->
+        <div class="legend-section">
+            <h2>Cosa Significano le Etichette Colorate?</h2>
+            <div class="legend-item">
+                <span class="tag tag-novita">Novità</span>
+                <p>Quando aggiungo qualcosa di completamente nuovo, come una pagina o una funzione.</p>
+            </div>
+            <div class="legend-item">
+                <span class="tag tag-correzione">Correzione</span>
+                <p>Quando miglioro qualcosa che non funzionava perfettamente.</p>
+            </div>
+            <div class="legend-item">
+                <span class="tag tag-velocita">Velocità</span>
+                <p>Quando faccio una modifica per rendere il sito più veloce e reattivo.</p>
+            </div>
+            <div class="legend-item">
+                <span class="tag tag-ordine">Ordine</span>
+                <p>Quando faccio pulizia nel codice "dietro le quinte". Non cambia nulla per te, ma mi aiuta a lavorare meglio.</p>
+            </div>
+             <div class="legend-item">
+                <span class="tag tag-manutenzione">Manutenzione</span>
+                <p>Per le piccole attività di gestione e pulizia generale che mantengono il sito in salute.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT CORRETTO E ROBUSTO PER IL DRAG DELLA TIMELINE -->
+    <script>
+        const slider = document.querySelector('.h-timeline-container');
+        
+        // Controlla se l'elemento esiste prima di aggiungere gli event listener
+        if (slider) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            const getClientX = (e) => {
+                // Controlla se è un evento touch e se ci sono tocchi attivi
+                if (e.touches && e.touches.length) {
+                    return e.touches[0].clientX;
+                }
+                // Altrimenti usa l'evento mouse
+                return e.clientX;
+            };
+
+            const startDragging = (e) => {
+                isDown = true;
+                slider.classList.add('active');
+                startX = getClientX(e) - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            };
+
+            const stopDragging = () => {
+                isDown = false;
+                slider.classList.remove('active');
+            };
+
+            const drag = (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = getClientX(e) - slider.offsetLeft;
+                const walk = (x - startX) * 2; // Moltiplicatore per rendere il drag più reattivo
+                slider.scrollLeft = scrollLeft - walk;
+            };
+
+            // Eventi Mouse
+            slider.addEventListener('mousedown', startDragging);
+            slider.addEventListener('mouseup', stopDragging);
+            slider.addEventListener('mouseleave', stopDragging);
+            slider.addEventListener('mousemove', drag);
+
+            // Eventi Touch
+            slider.addEventListener('touchstart', startDragging, { passive: false });
+            slider.addEventListener('touchend', stopDragging);
+            slider.addEventListener('touchmove', drag, { passive: false });
+        }
+    </script>
+
+</body>
+</html>
