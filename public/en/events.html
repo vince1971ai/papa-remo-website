@@ -32,7 +32,7 @@
         padding-bottom: 56.25%; /* 16:9 aspect ratio */
         height: 0;
         overflow: hidden;
-        border-radius: 8px; /* Aggiunto per ammorbidire i bordi */
+        border-radius: 8px;
       }
       .video-container iframe {
         position: absolute;
@@ -40,6 +40,21 @@
         left: 0;
         width: 100%;
         height: 100%;
+      }
+      
+      /* Stile per placeholder "Coming Soon" */
+      .placeholder-container {
+        border: 2px dashed var(--border-light);
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dark-gray);
+        background-color: var(--sand);
+        border-radius: 8px;
+        padding: 1rem;
+        text-align: center;
+        font-style: italic;
       }
       
       .section-divider {
@@ -210,30 +225,41 @@
         </section>
 
         <section class="special-events mt-4">
+            <hr class="section-divider">
             <h2>Special Events</h2>
-            <div class="event-card">
-                <div class="event-date">
-                    <span class="day">DEC</span>
-                    <span class="date">31</span>
+            <div class="intro-layout">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">DEC</span>
+                        <span class="date">31</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>New Year's Eve Celebration</h3>
+                        <p>Ring in the New Year at our spectacular beach party with fireworks, special performances, and an unforgettable celebration.</p>
+                        <ul class="event-info">
+                            <li><i class="far fa-clock"></i> 10:30 PM - Late</li>
+                            <li><i class="fas fa-ticket-alt"></i> Tickets required</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="event-details">
-                    <h3>New Year's Eve Celebration</h3>
-                    <p>Ring in the New Year at our spectacular beach party with fireworks, special performances, and an unforgettable celebration.</p>
-                    <ul class="event-info">
-                        <li><i class="far fa-clock"></i> 10:30 PM - Late</li>
-                        <li><i class="fas fa-ticket-alt"></i> Tickets required</li>
-                    </ul>
+                <div class="intro-layout-video">
+                    <div class="placeholder-container">
+                        <p>Coming soon</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="private-events mt-4">
+            <hr class="section-divider">
             <h2>Private Events</h2>
-            <div class="intro-layout intro-layout--reverse">
-                <div class="intro-layout-text">
+            <div class="intro-layout">
+                <div>
                     <p>Looking to host your own event at Papa Remo Beach? We offer a stunning venue for private parties, corporate events, birthdays, and more.</p>
                     <p>Our team will work with you to create a customized event that meets your specific needs and preferences. From catering and decorations to entertainment and logistics, we'll handle all the details so you can focus on enjoying your special occasion.</p>
-                    <h3 class="mt-3">Private Event Options:</h3>
+                </div>
+                <div>
+                    <h3>Private Event Options:</h3>
                     <ul class="private-event-options">
                         <li>Birthday celebrations</li>
                         <li>Corporate retreats and team-building events</li>
@@ -243,17 +269,13 @@
                         <li>Family reunions</li>
                     </ul>
                 </div>
-                </div>
+            </div>
             <div class="private-events-cta mt-3">
                 <a class="btn btn-primary" href="contact.html">Inquire About Private Events</a>
             </div>
         </section>
 
-        <section class="event-gallery mt-4">
-            <h2>Event Gallery</h2>
-            <div class="gallery-grid">
-                </div>
-        </section>
+        <hr class="section-divider">
 
         <section class="event-signup mt-4">
             <h2>Stay Updated</h2>
