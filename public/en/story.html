@@ -56,6 +56,57 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
+
+    <style>
+        /* Horizontal Timeline Styles */
+        .timeline-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            -webkit-overflow-scrolling: touch; /* For smooth scrolling on mobile */
+            scrollbar-width: thin;
+            scrollbar-color: #cccccc #333333;
+        }
+        /* Scrollbar styling for Webkit browsers */
+        .timeline-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .timeline-container::-webkit-scrollbar-track {
+            background: #333333; /* Or match your theme's background */
+        }
+        .timeline-container::-webkit-scrollbar-thumb {
+            background-color: #cccccc; /* Scrollbar color */
+            border-radius: 10px;
+            border: 2px solid #333333; /* Match track color */
+        }
+        .timeline .timeline-item {
+            flex: 0 0 250px; /* Fixed width for each item */
+            margin-right: 20px;
+            background: rgba(255, 255, 255, 0.05); /* A subtle background for contrast */
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .timeline .timeline-item:last-child {
+            margin-right: 0;
+        }
+        .timeline .timeline-year {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        .timeline .timeline-content h3 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .timeline .timeline-content p {
+            font-size: 0.9em;
+            flex-grow: 1; /* Allows the content to fill available space */
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -122,32 +173,34 @@
 </section>
 <section class="timeline mt-4">
     <h2>Our Journey</h2>
-    <div class="timeline-item">
-        <div class="timeline-year">1997</div>
-        <div class="timeline-content">
-            <h3>Founding of Papa Remo Beach</h3>
-            <p>Remo Lenzi establishes Papa Remo Beach on Jacaranda Road in Watamu.</p>
+    <div class="timeline-container">
+        <div class="timeline-item">
+            <div class="timeline-year">1997</div>
+            <div class="timeline-content">
+                <h3>Founding of Papa Remo Beach</h3>
+                <p>Remo Lenzi establishes Papa Remo Beach on Jacaranda Road in Watamu.</p>
+            </div>
         </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">2000s</div>
-        <div class="timeline-content">
-            <h3>Expansion</h3>
-            <p>Papa Remo grows from a simple beach bar to include a restaurant and event venue.</p>
+        <div class="timeline-item">
+            <div class="timeline-year">2000s</div>
+            <div class="timeline-content">
+                <h3>Expansion</h3>
+                <p>Papa Remo grows from a simple beach bar to include a restaurant and event venue.</p>
+            </div>
         </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">2019</div>
-        <div class="timeline-content">
-            <h3>Seven Island Festival</h3>
-            <p>Papa Remo hosts the Seven Islands Festival, solidifying its reputation as a premier event venue on the coast.</p>
+        <div class="timeline-item">
+            <div class="timeline-year">2019</div>
+            <div class="timeline-content">
+                <h3>Seven Island Festival</h3>
+                <p>Papa Remo hosts the Seven Islands Festival, solidifying its reputation as a premier event venue on the coast.</p>
+            </div>
         </div>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">Today</div>
-        <div class="timeline-content">
-            <h3>A Beloved Destination</h3>
-            <p>Papa Remo Beach is now a well-established destination known for its beach parties, restaurant, and special events.</p>
+        <div class="timeline-item">
+            <div class="timeline-year">Today</div>
+            <div class="timeline-content">
+                <h3>A Beloved Destination</h3>
+                <p>Papa Remo Beach is now a well-established destination known for its beach parties, restaurant, and special events.</p>
+            </div>
         </div>
     </div>
 </section>
