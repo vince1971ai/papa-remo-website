@@ -13,7 +13,55 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
+      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}
+
+      /* Layout a due colonne per sezioni */
+      .events-feature-layout, .intro-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+      }
+      .events-feature-text, .events-feature-video, .intro-layout > div {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 8px; /* Aggiunto per ammorbidire i bordi */
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .section-divider {
+          border: 0;
+          height: 1px;
+          background-color: var(--border-light);
+          margin: 2.5rem 0;
+      }
+
+      .event-calendar-section p {
+          margin-bottom: 1.5rem;
+      }
+
+      /* Media Query per la versione mobile */
+      @media (max-width:768px){
+        .container{flex-direction:column}
+        .sidebar{width:100%;height:auto;position:relative}
+        .main-content{margin-left:0}
+        .events-feature-layout, .intro-layout {
+            flex-direction: column;
+        }
+      }
     </style>
 
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -125,6 +173,7 @@
         </section>
 
         <section class="event-calendar-section mt-4">
+            <hr class="section-divider">
             <h2>Our Event Calendar</h2>
             <p>Discover all our upcoming events and plan your visit!</p>
             <div class="calendar-container">
@@ -134,6 +183,7 @@
         </section>
         
         <section class="regular-events mt-4">
+            <hr class="section-divider">
             <h2>Weekly Events</h2>
             <div class="intro-layout">
                 <div class="event-card featured-event">
@@ -151,12 +201,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="intro-layout-image">
-                    <picture>
-                        <source srcset="../assets/images/optimized/events/event_private.webp" type="image/webp"/>
-                        <source srcset="../assets/images/optimized/events/event_private.jpg" type="image/jpeg"/>
-                        <img alt="Atmosphere at the Saturday Beach Party" src="../assets/images/optimized/events/event_private.jpg" loading="lazy"/>
-                    </picture>
+                <div class="intro-layout-video">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/f2VA0WM28vE?si=P8pBQr5aYZk5VzUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -195,8 +243,7 @@
                         <li>Family reunions</li>
                     </ul>
                 </div>
-                <!-- Image removed from this section -->
-            </div>
+                </div>
             <div class="private-events-cta mt-3">
                 <a class="btn btn-primary" href="contact.html">Inquire About Private Events</a>
             </div>
@@ -205,8 +252,7 @@
         <section class="event-gallery mt-4">
             <h2>Event Gallery</h2>
             <div class="gallery-grid">
-                <!-- Previously removed duplicate image -->
-            </div>
+                </div>
         </section>
 
         <section class="event-signup mt-4">
