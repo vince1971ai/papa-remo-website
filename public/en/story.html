@@ -106,6 +106,23 @@
             font-size: 0.9em;
             flex-grow: 1; /* Allows the content to fill available space */
         }
+        
+        /* Two Column Layout Styles */
+        .two-column-layout {
+            display: flex;
+            gap: 40px; /* Increased gap for better separation */
+            margin-top: 20px;
+        }
+        .two-column-layout .column {
+            flex: 1; /* Each column takes equal width */
+        }
+        /* Responsive stacking for mobile */
+        @media (max-width: 768px) {
+            .two-column-layout {
+                flex-direction: column;
+                gap: 0; /* Remove gap when stacked */
+            }
+        }
     </style>
 </head>
 <body>
@@ -130,11 +147,47 @@
 
     <hr style="margin-top: 40px; margin-bottom: 20px;">
 
-    <div class="story-text mt-4">
+    <section class="timeline mt-4">
+        <h2>Our Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-year">1997</div>
+                <div class="timeline-content">
+                    <h3>Founding of Papa Remo Beach</h3>
+                    <p>Remo Lenzi establishes Papa Remo Beach on Jacaranda Road in Watamu.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2000s</div>
+                <div class="timeline-content">
+                    <h3>Expansion</h3>
+                    <p>Papa Remo grows from a simple beach bar to include a restaurant and event venue.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-content">
+                    <h3>Seven Island Festival</h3>
+                    <p>Papa Remo hosts the Seven Islands Festival, solidifying its reputation as a premier event venue on the coast.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">Today</div>
+                <div class="timeline-content">
+                    <h3>A Beloved Destination</h3>
+                    <p>Papa Remo Beach is now a well-established destination known for its beach parties, restaurant, and special events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <hr style="margin-top: 20px; margin-bottom: 40px;">
+
+    <div class="story-text mt-4">
+        
+        <h2>Our Beginning</h2>
         <div class="intro-layout">
             <div class="intro-layout-text">
-                <h2>Our Beginning</h2>
                 <p>Papa Remo Beach was established in 1997 by Remo Lenzi, an Italian with a passion for the Kenyan coast. The story begins when Remo first visited Watamu and fell in love with its pristine beaches and warm community.</p>
                 <p>Determined to create something special, Remo lived in a tent for a year to fully immerse himself in the African experience and understand the local culture. This dedication and respect for the environment and community became the foundation of Papa Remo Beach.</p>
             </div>
@@ -147,9 +200,11 @@
             </div>
         </div>
 
+        <hr style="margin-top: 40px; margin-bottom: 40px;">
+
+        <h2 class="mt-4">Growth and Evolution</h2>
         <div class="intro-layout intro-layout--reverse">
             <div class="intro-layout-text">
-                <h2>Growth and Evolution</h2>
                 <p>What began as a simple family hut, where my dad, my sister, the rest of the family, and I would go to relax and walk on the beach, transformed over time into something special. In the first photo, from the early 2000s, you can still feel that simple, familiar atmosphere. Over time, when my dad returned to Italy, I took over the project, turning that place full of memories into what Papa Remo is today: a restaurant, a beach club, an event venue, and much more.</p>
                 <p>Papa Remo has grown while staying true to its roots, offering authentic experiences and preserving the natural beauty of Watamu. The famous Saturday beach parties, with local DJs, continue to bring together residents and tourists in a vibrant atmosphere. A family story that has become a beloved destination.</p>
             </div>
@@ -162,44 +217,18 @@
             </div>
         </div>
         
-        <h2 class="mt-4">Our Philosophy</h2>
-        <p>At Papa Remo Beach, we believe in creating a space where people can connect with nature, enjoy delicious food and drinks, and create lasting memories. Our philosophy is rooted in respect for the environment, support for the local community, and providing exceptional service to our guests.</p>
-        <p>We strive to offer a unique blend of Italian and Kenyan influences, creating a cultural experience that celebrates both traditions.</p>
+        <hr style="margin-top: 40px; margin-bottom: 40px;">
 
-        <h2 class="mt-4">Today</h2>
-        <p>Today, Papa Remo Beach continues to be a cherished destination on the Kenyan coast. We're proud to welcome guests from around the world to experience the magic of Watamu and the warm hospitality that has defined Papa Remo since its inception.</p>
-        <p>Whether you're joining us for a meal, a special event, or simply to relax on the beach, we're committed to making your experience at Papa Remo Beach unforgettable.</p>
-    </div>
-</section>
-<section class="timeline mt-4">
-    <h2>Our Journey</h2>
-    <div class="timeline-container">
-        <div class="timeline-item">
-            <div class="timeline-year">1997</div>
-            <div class="timeline-content">
-                <h3>Founding of Papa Remo Beach</h3>
-                <p>Remo Lenzi establishes Papa Remo Beach on Jacaranda Road in Watamu.</p>
+        <div class="two-column-layout">
+            <div class="column">
+                <h2 class="mt-4">Our Philosophy</h2>
+                <p>At Papa Remo Beach, we believe in creating a space where people can connect with nature, enjoy delicious food and drinks, and create lasting memories. Our philosophy is rooted in respect for the environment, support for the local community, and providing exceptional service to our guests.</p>
+                <p>We strive to offer a unique blend of Italian and Kenyan influences, creating a cultural experience that celebrates both traditions.</p>
             </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-year">2000s</div>
-            <div class="timeline-content">
-                <h3>Expansion</h3>
-                <p>Papa Remo grows from a simple beach bar to include a restaurant and event venue.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-year">2019</div>
-            <div class="timeline-content">
-                <h3>Seven Island Festival</h3>
-                <p>Papa Remo hosts the Seven Islands Festival, solidifying its reputation as a premier event venue on the coast.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-year">Today</div>
-            <div class="timeline-content">
-                <h3>A Beloved Destination</h3>
-                <p>Papa Remo Beach is now a well-established destination known for its beach parties, restaurant, and special events.</p>
+            <div class="column">
+                <h2 class="mt-4">Today</h2>
+                <p>Today, Papa Remo Beach continues to be a cherished destination on the Kenyan coast. We're proud to welcome guests from around the world to experience the magic of Watamu and the warm hospitality that has defined Papa Remo since its inception.</p>
+                <p>Whether you're joining us for a meal, a special event, or simply to relax on the beach, we're committed to making your experience at Papa Remo Beach unforgettable.</p>
             </div>
         </div>
     </div>
