@@ -4,9 +4,9 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-    <title>Papa Remo Beach - Restaurant & Beach Club in Watamu, Kenya</title>
+    <title>Papa Remo Beach - Restaurant and Beach Club in Watamu, Kenya</title>
     <meta content="Welcome to Papa Remo Beach in Watamu, Kenya. Discover our restaurant, beach club, events, and more in this coastal paradise." name="description"/>
-    <meta name="keywords" content="papa remo beach, watamu restaurant, watamu beach, kenya beach club, watamu events, beach wedding, italian cuisine watamu, kenya vacation"/>
+    <meta name="keywords" content="papa remo beach, watamu restaurant, watamu beach, kenya beach club, watamu events, beach wedding, italian food watamu, kenya holidays"/>
 
     <script>
         (function() {
@@ -51,8 +51,8 @@
     <link rel="alternate" hreflang="it" href="https://www.paparemobeach.com/it/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.paparemobeach.com/en/index.html" />
 
-    <meta property="og:title" content="Papa Remo Beach - Restaurant & Beach in Watamu, Kenya" />
-    <meta property="og:description" content="Experience the magic of Watamu at our enchanting restaurant and coastal beach club." />
+    <meta property="og:title" content="Papa Remo Beach - Restaurant and Beach Club in Watamu, Kenya" />
+    <meta property="og:description" content="Experience the magic of Watamu at our enchanting coastal restaurant and beach club." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.paparemobeach.com/en/index.html" />
     <meta property="og:image" content="https://www.paparemobeach.com/assets/images/hero_slideshow/front_beach.jpg" />
@@ -92,8 +92,8 @@
             position: relative;
         }
 
-        /* The iframe is now larger than its container */
-        .hero-video-wrapper iframe {
+        /* The iframe/div is now larger than its container */
+        .hero-video-wrapper #youtube-player, .hero-video-wrapper iframe {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -115,18 +115,18 @@
                 overflow: visible;
             }
             
-            /* On mobile, the iframe behaves normally */
+            /* On mobile, the iframe/div behaves normally */
             .hero-video-wrapper {
                 aspect-ratio: 16 / 9;
             }
-            .hero-video-wrapper iframe {
+            .hero-video-wrapper #youtube-player, .hero-video-wrapper iframe {
                 width: 100%;
                 height: 100%;
                 position: relative;
                 transform: none;
                 top: auto;
                 left: auto;
-                pointer-events: auto;
+                pointer-events: auto; /* Re-enable pointer events on mobile */
             }
 
             .hero-overlay {
@@ -164,19 +164,13 @@
 <main class="main-content">
 <header class="page-header">
     <h1>Welcome to Papa Remo Beach</h1>
-    <p>Experience the magic of Watamu at our enchanting restaurant and coastal beach club</p>
+    <p>Experience the magic of Watamu at our enchanting coastal restaurant and beach club</p>
 </header>
 
 <section class="hero">
-    <!-- The "window" div wrapper -->
     <div class="hero-video-wrapper">
-        <iframe 
-            src="https://www.youtube.com/embed/ibxJKiKtlJA?si=48uqsprpC9UJA-0B&autoplay=1&mute=1&loop=1&playlist=ibxJKiKtlJA&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1" 
-            title="Papa Remo Beach background video" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-        </iframe>
+        <!-- ===== MODIFICATION: THE IFRAME WAS REPLACED WITH THIS DIV ===== -->
+        <div id="youtube-player"></div>
     </div>
     <div class="hero-overlay">
         <h2>Your Paradise on the Kenyan Coast</h2>
@@ -185,14 +179,13 @@
     </div>
 </section>
 
-<!-- The rest of the content remains unchanged -->
 <section class="about mt-4">
     <div class="row">
         <div class="col">
             <h2>The Story of Papa Remo Beach</h2>
-            <p>Founded by the visionary Remo Lenzi in 1997, Papa Remo Beach quickly became a beloved name. Today, it stands as an iconic destination, a jewel nestled on the stunning Kenyan coast.</p>
-            <p>You'll discover our paradise on the picturesque Jacaranda Road in Watamu, a unique location overlooking the famous and enchanting "beach of love." Our venue offers a unique and captivating blend of relaxation for quiet days, delightful culinary experiences with an ocean view, and vibrant, engaging entertainment under the stars.</p>
-            <p>The cuisine is primarily and authentically Italian, featuring the freshest local seafood, classic wood-fired pizzas, and delicious pastas.</p>
+            <p>Founded by the visionary Remo Lenzi in 1997, Papa Remo Beach quickly became a beloved household name. Today, it stands as an iconic destination, a cherished gem nestled on the stunning Kenyan coast.</p>
+            <p>You'll discover our paradise on the picturesque Jacaranda Road in Watamu, a unique location overlooking the renowned and enchanting "love beach". Our venue offers a unique and captivating blend of relaxation for lazy days, delightful ocean-view dining experiences, and vibrant, engaging entertainment under the stars.</p>
+            <p>The cuisine is primarily and authentically Italian, featuring the freshest local seafood, classic wood-fired pizzas, and delicious pasta.</p>
             <a class="btn btn-primary" href="story.html" style="margin-top: 1rem;">Read Our Story</a>
         </div>
         <div class="col">
@@ -203,6 +196,8 @@
         </div>
     </div>
 </section>
+
+<!-- ... the rest of your code remains identical ... -->
 
 <section class="village-promo mt-4">
     <div class="row" style="align-items: center;">
@@ -224,8 +219,8 @@
 <section class="wedding-promo mt-4">
     <div class="row" style="align-items: center;">
         <div class="col">
-            <h2>Plan Your Dream Wedding</h2>
-            <p>Imagine your special day on the pristine white sands of Watamu, with the turquoise Indian Ocean as your breathtaking backdrop. Papa Remo Beach offers an idyllic and unforgettable setting for your dream ceremony and reception.</p>
+            <h2>Host Your Dream Wedding</h2>
+            <p>Imagine your special day on the pristine white sands of Watamu, with the turquoise Indian Ocean as your breathtaking backdrop. Papa Remo Beach provides an idyllic and unforgettable setting for your dream ceremony and reception.</p>
             <p>Our dedicated team provides personalized services to ensure every detail is perfect, creating magical memories that last a lifetime. From intimate gatherings to grand celebrations, we tailor everything to your vision.</p>
             <a href="wedding.html" class="btn btn-primary mt-2">Discover Wedding Options</a>
         </div>
@@ -248,8 +243,8 @@
         </div>
         <div class="col">
             <h2>Vibrant Beach Events</h2>
-            <p>From our famous Saturday beach parties with renowned DJs to special festivities and themed nights, there's always something exciting at Papa Remo. Enjoy great music, delicious food, signature cocktails, and an unbeatable atmosphere right on the shores of the Indian Ocean.</p>
-            <p>Don't miss out on the best entertainment in Watamu. Check our event calendar regularly!</p>
+            <p>From our famous Saturday beach parties with renowned DJs to special festivities and themed nights, there's always something exciting happening at Papa Remo. Enjoy great music, delicious food, signature cocktails, and an unbeatable atmosphere right on the shores of the Indian Ocean.</p>
+            <p>Don't miss out on Watamu's best entertainment. Check our events calendar regularly!</p>
             <a href="events.html" class="btn btn-primary mt-2">See All Events</a>
         </div>
     </div>
@@ -260,7 +255,7 @@
         <div class="col"> 
             <h2>Tune into Papa Remo Waves</h2>
             <p>Dive deeper into the stories, sounds, and soul of Watamu with the official Papa Remo podcast. Hear from local personalities, explore conservation efforts, and get unique insights into the vibrant life on the Kenyan coast.</p>
-            <p>New episodes regularly, bringing the magic of Papa Remo right to your home, wherever you are.</p>
+            <p>New episodes drop regularly, bringing the magic of Papa Remo right to you, wherever you are.</p>
             <a href="podcast.html" class="btn btn-primary mt-2">Listen to Our Podcast</a>
         </div>
         <div class="col"> 
@@ -282,7 +277,7 @@
         </div>
         <div class="col"> 
             <h2>Salt & Soul</h2>
-            <p>Stay updated with the latest happenings, compelling stories from the beach, and unique insights from the Papa Remo family. Our blog brings you closer to the heart of Watamu and our vibrant community.</p>
+            <p>Stay up-to-date with the latest happenings, compelling stories from the beach, and unique insights from the Papa Remo family. Our blog brings you closer to the heart of Watamu and our vibrant community.</p>
             <p>Discover tips, event recaps, and much more.</p>
             <a href="our-posts.html" class="btn btn-primary mt-2">Read Our Posts</a>
         </div>
@@ -298,8 +293,8 @@
 </div>
 <div class="event-details">
 <h3>Weekly Beach Party</h3>
-<p>Join us for our famous weekly beach party with local DJs, delicious cocktails, and the best vibes on the Kenyan coast.</p>
-<a class="btn btn-secondary" href="events.html">See Event Details</a>
+<p>Join us for our famous weekly beach party featuring local DJs, delicious cocktails, and the best vibes on the Kenyan coast.</p>
+<a class="btn btn-secondary" href="events.html">View Event Details</a>
 </div>
 </div>
 </section>
@@ -308,8 +303,8 @@
 <h2>What Our Guests Say</h2>
 <div class="testimonial-slider">
 <div class="testimonial">
-<p>"A wonderful location with incredible food and service. The Saturday beach party is a must-see!"</p>
-<div class="testimonial-author">- Sarah M.</div>
+<p>"A wonderful location with incredible food and service. The Saturday beach party is an absolute must-do!"</p>
+<div class="testimonial-author">- Sara M.</div>
 </div>
 </div>
 </section>
@@ -325,7 +320,7 @@
 <div class="feature-card">
 <i class="fas fa-glass-cheers"></i>
 <h3>Beach Club</h3>
-<p>Relax and rejuvenate in our exclusive beach setting</p>
+<p>Relax and unwind in our exclusive beach setting</p>
 <a class="btn btn-secondary" href="events.html">Discover Our Events</a>
 </div>
 <div class="feature-card">
@@ -348,6 +343,47 @@
 <script src="/assets/js/mobile-menu.js"></script>
 <script src="/assets/js/language-toggle.js"></script>
 <script src="/assets/js/theme-switcher.js"></script> 
+
+<!-- ===== NEW SCRIPT FOR YOUTUBE PLAYER ===== -->
+<script>
+    // 1. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 2. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-player', {
+            videoId: 'w4XtNE6ZJFM', // Your video ID
+            playerVars: {
+                'autoplay': 1,
+                'mute': 1,
+                'controls': 0,
+                'showinfo': 0,
+                'modestbranding': 1,
+                'loop': 1,
+                'playlist': 'w4XtNE6ZJFM', // Required for a single video loop
+                'fs': 0,
+                'cc_load_policy': 0,
+                'iv_load_policy': 3,
+                'autohide': 0
+            },
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    // 3. The API will call this function when the video player is ready.
+    //    Here we explicitly command the video to play.
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+</script>
+<!-- ===== END NEW SCRIPT ===== -->
 
 </body>
 </html>
