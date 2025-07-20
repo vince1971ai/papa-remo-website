@@ -84,23 +84,59 @@
             background-color: #000;
         }
         
-        /* The "window" container that hides the edges */
         .hero-video-wrapper {
             width: 100%;
             aspect-ratio: 16 / 9;
-            overflow: hidden; /* The magic is here: hides anything that overflows */
+            overflow: hidden; 
             position: relative;
         }
 
-        /* The iframe/div is now larger than its container */
         .hero-video-wrapper #youtube-player, .hero-video-wrapper iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 140%;  /* Scaled up to hide vertical edges */
-            height: 140%; /* Scaled up to hide horizontal edges */
+            width: 140%; 
+            height: 140%;
             transform: translate(-50%, -50%);
             pointer-events: none;
+        }
+
+        /* Stili per il Banner Cookie */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--card-bg);
+            color: var(--text-secondary);
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-top: 1px solid var(--border-color);
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+            transform: translateY(150%);
+            transition: transform 0.5s ease-in-out;
+        }
+        .cookie-banner.visible {
+            transform: translateY(0);
+        }
+        .cookie-content p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .cookie-content a {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-left: 2rem;
+        }
+        .cookie-buttons .btn {
+            white-space: nowrap;
         }
     </style>
     
@@ -115,7 +151,6 @@
                 overflow: visible;
             }
             
-            /* On mobile, the iframe/div behaves normally */
             .hero-video-wrapper {
                 aspect-ratio: 16 / 9;
             }
@@ -126,7 +161,7 @@
                 transform: none;
                 top: auto;
                 left: auto;
-                pointer-events: auto; /* Re-enable pointer events on mobile */
+                pointer-events: auto;
             }
 
             .hero-overlay {
@@ -153,6 +188,21 @@
             .podcast-promo .row {
                 flex-direction: column-reverse;
             }
+
+            /* Cookie Banner su Mobile */
+            .cookie-banner {
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+            }
+            .cookie-content p {
+                margin-bottom: 1rem;
+            }
+            .cookie-buttons {
+                margin-left: 0;
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -169,7 +219,6 @@
 
 <section class="hero">
     <div class="hero-video-wrapper">
-        <!-- ===== MODIFICA: L'IFRAME È STATO SOSTITUITO CON QUESTO DIV ===== -->
         <div id="youtube-player"></div>
     </div>
     <div class="hero-overlay">
@@ -196,8 +245,6 @@
         </div>
     </div>
 </section>
-
-<!-- ... il resto del tuo codice rimane identico ... -->
 
 <section class="village-promo mt-4">
     <div class="row" style="align-items: center;">
@@ -337,6 +384,16 @@
 
 <div id="footer-placeholder"></div>
 
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <p>Utilizziamo i cookie per migliorare la tua esperienza di navigazione e analizzare il traffico. Cliccando "Accetta", acconsenti al loro utilizzo. Consulta la nostra <a href="/it/privacy-policy.html">Privacy Policy</a> e <a href="/it/cookie-policy.html">Cookie Policy</a>.</p>
+    </div>
+    <div class="cookie-buttons">
+        <button id="cookie-reject" class="btn btn-secondary">Rifiuta</button>
+        <button id="cookie-accept" class="btn btn-primary">Accetta</button>
+    </div>
+</div>
+
 <script src="/assets/js/menu-loader.js"></script>
 <script src="/assets/js/footer-loader.js"></script>
 <script src="/assets/js/main.js"></script>
@@ -344,46 +401,59 @@
 <script src="/assets/js/language-toggle.js"></script>
 <script src="/assets/js/theme-switcher.js"></script> 
 
-<!-- ===== NUOVO SCRIPT PER IL PLAYER DI YOUTUBE ===== -->
 <script>
-    // 1. Questo codice carica l'API IFrame Player di YouTube in modo asincrono.
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // 2. Questa funzione crea un <iframe> (e il player di YouTube)
-    //    dopo che il codice API è stato scaricato.
     var player;
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('youtube-player', {
-            videoId: 'w4XtNE6ZJFM', // L'ID del tuo video
+            videoId: 'w4XtNE6ZJFM',
             playerVars: {
-                'autoplay': 1,
-                'mute': 1,
-                'controls': 0,
-                'showinfo': 0,
-                'modestbranding': 1,
-                'loop': 1,
-                'playlist': 'w4XtNE6ZJFM', // Necessario per il loop di un singolo video
-                'fs': 0,
-                'cc_load_policy': 0,
-                'iv_load_policy': 3,
-                'autohide': 0
+                'autoplay': 1, 'mute': 1, 'controls': 0, 'showinfo': 0,
+                'modestbranding': 1, 'loop': 1, 'playlist': 'w4XtNE6ZJFM',
+                'fs': 0, 'cc_load_policy': 0, 'iv_load_policy': 3, 'autohide': 0
             },
-            events: {
-                'onReady': onPlayerReady
-            }
+            events: { 'onReady': onPlayerReady }
         });
     }
 
-    // 3. L'API chiamerà questa funzione quando il video player è pronto.
-    //    Qui diamo il comando esplicito di avviare il video.
     function onPlayerReady(event) {
         event.target.playVideo();
     }
 </script>
-<!-- ===== FINE NUOVO SCRIPT ===== -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('cookie-accept');
+        const rejectBtn = document.getElementById('cookie-reject');
+
+        // Controlla se l'utente ha già dato il consenso
+        if (!localStorage.getItem('cookie_consent')) {
+            // Se non c'è consenso, mostra il banner dopo un breve ritardo
+            setTimeout(() => {
+                banner.classList.add('visible');
+            }, 500);
+        }
+
+        const hideBanner = () => {
+            banner.classList.remove('visible');
+        };
+        
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookie_consent', 'accepted');
+            hideBanner();
+        });
+
+        rejectBtn.addEventListener('click', () => {
+            localStorage.setItem('cookie_consent', 'rejected');
+            hideBanner();
+        });
+    });
+</script>
 
 </body>
 </html>
