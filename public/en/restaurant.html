@@ -11,14 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
-    </style>
-
-    <link rel="stylesheet" href="../assets/css/style.css" media="all">
     
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
+    
     <noscript>
       <link rel="stylesheet" href="../assets/css/style.css">
       <link rel="stylesheet" href="../assets/css/all.css">
@@ -29,8 +27,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LGP8596KW"></script>
     <script>
@@ -58,78 +54,71 @@
             document.documentElement.setAttribute('data-theme', savedTheme);
         })();
     </script>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
     
     <style>
-        /* === CSS FOR APERITIVO SLIDESHOW === */
-        .aperitivo-slideshow-container {
-            position: relative; width: 100%; min-height: 350px;
-            overflow: hidden; border-radius: 8px;
+        :root {
+            --bg-primary:#f8f9fa; --primary-dark:#0c1a2c; --text-dark:#343a40; --text-light:#ffffff; --dark-gray:#6c757d; --sand:#e9ecef; --border-light:#dee2e6; --ocean-blue:#104B8F; --turquoise:#00897B; --coral:#e74c3c; --card-bg:#ffffff; --primary-dark-light:#1a2b42
         }
-        .aperitivo-slide {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0; animation: aperitivoFadeEffect 30s infinite;
+        html[data-theme=dark] {
+            --bg-primary:#0c1a2c; --primary-dark:#07111d; --text-dark:#e0e1e2; --text-light:#ffffff; --dark-gray:#a0a7b3; --sand:#3a4a60; --border-light:#2c3a4f; --ocean-blue:#2471A3; --turquoise:#1abc9c; --coral:#e67e22; --card-bg:var(--primary-dark-light)
         }
-        .aperitivo-slide img { width: 100%; height: 100%; object-fit: cover; }
-        .aperitivo-slide:nth-child(1) { animation-delay: 0s; }
-        .aperitivo-slide:nth-child(2) { animation-delay: 5s; }
-        .aperitivo-slide:nth-child(3) { animation-delay: 10s; }
-        .aperitivo-slide:nth-child(4) { animation-delay: 15s; }
-        .aperitivo-slide:nth-child(5) { animation-delay: 20s; }
-        .aperitivo-slide:nth-child(6) { animation-delay: 25s; }
-        @keyframes aperitivoFadeEffect {
-          0% { opacity: 0; } 3.33% { opacity: 1; } 13.33% { opacity: 1; } 16.67% { opacity: 0; } 100% { opacity: 0; }
-        }
+        body { font-family:'Poppins',sans-serif; color:var(--text-dark); background-color:var(--bg-primary); }
+        .main-content { flex:1; margin-left:290px; padding:2rem }
+        .page-container { max-width: 960px; margin: 0 auto; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem;}
+        .page-header p { font-size: 1.1rem; color: var(--dark-gray); margin-bottom: 2rem; }
 
-        /* ==== CSS FOR 2-COLUMN LAYOUT AND VERTICAL SLIDESHOW ==== */
-        .content-slideshow-split {
-            display: flex; align-items: center; gap: 2rem; 
-        }
-        .food-slideshow-column { flex: 0 0 40%; }
-        .food-text-column { flex: 1; }
-        .food-slideshow-container {
-            position: relative; width: 100%; height: 550px; 
-            overflow: hidden; border-radius: 8px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        .food-slide {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0; animation: foodFadeEffect 30s infinite;
-        }
-        .food-slide img { width: 100%; height: 100%; object-fit: cover; }
-        .food-slide:nth-child(1) { animation-delay: 0s; }
-        .food-slide:nth-child(2) { animation-delay: 5s; }
-        .food-slide:nth-child(3) { animation-delay: 10s; }
-        .food-slide:nth-child(4) { animation-delay: 15s; }
-        .food-slide:nth-child(5) { animation-delay: 20s; }
-        .food-slide:nth-child(6) { animation-delay: 25s; }
+        @media (max-width:768px){.main-content{margin-left:0}}
 
-        @keyframes foodFadeEffect {
-          0% { opacity: 0; transform: scale(1.05); }
-          3.33% { opacity: 1; transform: scale(1); }
-          13.33% { opacity: 1; transform: scale(1); }
-          16.67% { opacity: 0; transform: scale(1); }
-          100% { opacity: 0; }
-        }
+        /* Hero Image Styles */
+        .hero-image-section { max-height: 50vh; border-radius: 8px; overflow: hidden; background-color: var(--sand); }
+        .hero-image-section img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
-        /* Responsive adjustments for smaller screens */
-        @media (max-width: 992px) {
-            .content-slideshow-split { flex-direction: column; }
-            .food-slideshow-container { height: 400px; margin-bottom: 2rem; }
-            /* ============================ */
-            /* ==== FIX FOR MOBILE VIEW ==== */
-            /* ============================ */
-            .food-text-column,
-            .food-slideshow-column {
-                width: 100%;
-                flex-basis: 100%;
-            }
-        }
+        /* Placeholders & Slideshow */
+        .slideshow-container { position: relative; width: 100%; height: 100%; min-height: 400px; aspect-ratio: 3 / 4; border-radius: 8px; overflow: hidden; background-color: var(--sand); }
+        .slideshow-container .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s ease-in-out; }
+        .slideshow-container .slide.active { opacity: 1; }
         
-        .restaurant-gallery { margin-bottom: 3rem; }
+        /* Menu Layout */
+        .menu-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; align-items: flex-start; }
+        
+        .menu-tabs-container { position: relative; overflow-x: auto; scrollbar-width: none; margin-bottom: 1.5rem; }
+        .menu-tabs-container::-webkit-scrollbar { display: none; }
+        .menu-tabs { display: flex; flex-wrap: nowrap; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light); }
+        .tab-button { padding: 0.6rem 1.2rem; cursor: pointer; background-color: transparent; border: 1px solid var(--border-light); color: var(--dark-gray); border-radius: 30px; font-weight: 500; white-space: nowrap; transition: all 0.3s ease; }
+        .tab-button:hover { background-color: var(--sand); color: var(--text-dark); }
+        .tab-button.active { background-color: var(--accent-color); color: white; border-color: var(--accent-color); }
 
+        /* Menu Content & Pagination */
+        .tab-content { display: none; animation: fadeIn 0.5s; }
+        .tab-content.active { display: flex; flex-direction: column; gap: 1.5rem; }
+        .menu-items-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .menu-item-card { background: var(--card-bg); border: 1px solid var(--border-light); border-radius: 8px; padding: 1rem; }
+        .menu-item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px dashed var(--border-light); padding-bottom: 0.5rem; margin-bottom: 0.5rem; }
+        .menu-item-header h4 { margin: 0; font-size: 1.05rem; }
+        .menu-item-price { font-weight: 600; color: var(--accent-color); white-space: nowrap; }
+        .menu-item-description { font-size: 0.9rem; color: var(--dark-gray); }
+
+        .pagination-controls { display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; padding-top: 1rem; border-top: 1px solid var(--border-light); }
+        .pagination-arrow { background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dark-gray); }
+        .pagination-arrow:disabled { color: var(--border-light); cursor: not-allowed; }
+        .page-info { font-size: 0.9rem; font-weight: 500; color: var(--dark-gray); }
+        
+        /* General Styles */
+        .section-divider { border: 0; height: 1px; background-color: var(--border-light); margin: 3rem 0; }
+        .single-pdf-download { text-align: center; margin-top: 2.5rem; }
+        .single-pdf-download h4 { font-family:'Poppins',sans-serif; font-weight: 500; margin-bottom: 1rem; }
+        .row { display: flex; gap: 2rem; align-items: center; }
+        .col { flex: 1; }
+        
+        .aperitivo-promo .col:first-child { flex: 2; }
+        .aperitivo-promo .col:last-child { flex: 1; }
+
+        @media(max-width: 992px){ 
+            .menu-content-grid { grid-template-columns: 1fr; }
+            .placeholder-column { display: none; } 
+        }
+        @media(max-width: 768px){ .row {flex-direction: column;} }
     </style>
 </head>
 <body>
@@ -138,120 +127,121 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-<h1>Our Restaurant</h1>
-<p>Delicious cuisine with breathtaking ocean views</p>
-</header>
-<section class="restaurant-intro">
-    <div class="restaurant-image">
-        <picture>
-            <source srcset="../assets/images/optimized/restaurant/cover_restaurant.webp" type="image/webp">
-            <source srcset="../assets/images/optimized/restaurant/cover_restaurant.jpg" type="image/jpeg">
-            <img alt="Papa Remo Restaurant View" src="../assets/images/optimized/restaurant/cover_restaurant.jpg">
-        </picture>
-    </div>
-    <div class="restaurant-text mt-4">
-        <h1>Dining at Papa Remo</h1>
-        <p>Our restaurant offers a unique dining experience that combines delicious cuisine with breathtaking views of the Indian Ocean. Located on the beautiful Watamu beach, Papa Remo Restaurant is the perfect place to enjoy a meal while taking in the natural beauty of the Kenyan coast.</p>
-        <p>We pride ourselves on serving fresh, locally-sourced ingredients prepared with a blend of Italian and Kenyan influences. Our menu features a variety of seafood dishes, traditional Italian favorites, and local specialties, ensuring there's something for everyone to enjoy.</p>
-        <div class="restaurant-features mt-3">
-            <div class="feature"><i class="fas fa-fish"></i><span>Fresh Seafood</span></div>
-            <div class="feature"><i class="fas fa-pizza-slice"></i><span>Italian Cuisine</span></div>
-            <div class="feature"><i class="fas fa-cocktail"></i><span>Signature Cocktails</span></div>
-            <div class="feature"><i class="fas fa-umbrella-beach"></i><span>Beach Dining</span></div>
-        </div>
-    </div>
-</section>
+<div class="page-container">
 
-<section class="restaurant-gallery mt-4">
-    <div class="content-slideshow-split">
-        
-        <div class="food-text-column">
-            <h2>Passion and Freshness</h2>
-            <p>Our culinary creations are the vibrant heart of our kitchen. Each dish is a journey through the authentic flavors of Italy and the richness of the ingredients that Kenya offers us daily.</p>
-            <p>From homemade pasta to the catch of the day, we select only the freshest raw materials to ensure an unforgettable taste experience. The images you see are a glimpse of the passion we put into every plate, served against the splendid backdrop of the ocean.</p>
-            <p class="mt-2">Let yourself be tempted by our culinary art.</p>
-        </div>
+    <header class="page-header">
+        <h1>Our Restaurant</h1>
+        <p>A unique culinary experience on the coast of Watamu</p>
+    </header>
 
-        <div class="food-slideshow-column">
-            <div class="food-slideshow-container">
-                <div class="food-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/food_1.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/food_1.jpg" alt="A delicious seafood dish served at Papa Remo" loading="lazy">
-                    </picture>
-                </div>
-                <div class="food-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/food_2.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/food_2.jpg" alt="Exotic fruit platter from our kitchen" loading="lazy">
-                    </picture>
-                </div>
-                <div class="food-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/food_3.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/food_3.jpg" alt="Gourmet pizza with fresh ingredients" loading="lazy">
-                    </picture>
-                </div>
-                <div class="food-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/food_4.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/food_4.jpg" alt="Freshly prepared pasta dish" loading="lazy">
-                    </picture>
-                </div>
-                <div class="food-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/food_5.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/food_5.jpg" alt="A plate of grilled fish with vegetables" loading="lazy">
-                    </picture>
-                </div>
-                <div class="food-slide">
-                    <picture>
-                        <source srcset="../assets/images/optimized/restaurant/food_6.webp" type="image/webp">
-                        <img src="../assets/images/optimized/restaurant/food_6.jpg" alt="Artfully presented culinary creation" loading="lazy">
-                    </picture>
+    <section class="hero-image-section">
+        <img src="/assets/images/optimized/restaurant/bar_slide_1.webp" alt="Atmosphere of the bar and restaurant at Papa Remo Beach">
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="restaurant-intro-text">
+        <h2>Dining at Papa Remo</h2>
+        <p>Our restaurant offers a unique culinary experience that combines delicious cuisine with a breathtaking view of the Indian Ocean. Located on the beautiful Watamu beach, Papa Remo Restaurant is the perfect place to enjoy a meal while admiring the natural beauty of the Kenyan coast.</p>
+        <p>We pride ourselves on serving fresh, locally-sourced ingredients, prepared with a blend of Italian and Kenyan influences. Our menu offers a variety of seafood dishes, classic Italian favorites, and local specialties, ensuring a wide choice for all tastes.</p>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="food-menu-section">
+        <h2>Restaurant Menu</h2>
+        <div class="menu-tabs-container">
+            <div class="menu-tabs" data-nav-group="food">
+                <button class="tab-button" data-tab="antipasti">Starters</button>
+                <button class="tab-button" data-tab="primi">First Courses</button>
+                <button class="tab-button" data-tab="secondi">Main Courses</button>
+                <button class="tab-button" data-tab="pizze">Pizzas</button>
+                <button class="tab-button" data-tab="insalate">Salads & Poke</button>
+                <button class="tab-button" data-tab="vegetariano">Vegetarian</button>
+                <button class="tab-button" data-tab="bimbi">Kids Menu</button>
+                <button class="tab-button" data-tab="dessert">Desserts</button>
+            </div>
+        </div>
+        <div class="menu-content-grid">
+            <div class="menu-content-wrapper">
+                <div id="antipasti-content" class="tab-content"></div>
+                <div id="primi-content" class="tab-content"></div>
+                <div id="secondi-content" class="tab-content"></div>
+                <div id="pizze-content" class="tab-content"></div>
+                <div id="insalate-content" class="tab-content"></div>
+                <div id="vegetariano-content" class="tab-content"></div>
+                <div id="bimbi-content" class="tab-content"></div>
+                <div id="dessert-content" class="tab-content"></div>
+            </div>
+            <div class="placeholder-column">
+                <div class="slideshow-container" data-slideshow="food">
+                    <img src="/assets/images/optimized/restaurant/food_1.webp" class="slide" alt="Selection of restaurant dishes">
+                    <img src="/assets/images/optimized/restaurant/food_2.webp" class="slide" alt="Fresh seafood dish">
+                    <img src="/assets/images/optimized/restaurant/food_4.webp" class="slide" alt="Handmade pasta">
+                    <img src="/assets/images/optimized/restaurant/food_8.webp" class="slide" alt="Chef's special">
                 </div>
             </div>
         </div>
-
-    </div>
-</section>
-<section class="aperitivo-promo mt-4">
-    <div class="row" style="align-items: center;">
-        <div class="col">
-            <h2>Sunset Aperitivo</h2>
-            <p>Experience the magic of the Italian aperitivo at Papa Remo. As the sun sets over the Indian Ocean, relax with one of our signature cocktails, a glass of fine wine, or your favorite drink. It's the perfect moment to unwind and soak in the breathtaking views from our beachfront location.</p>
-            <p>To make the experience even more special, every aperitivo comes with a selection of delicious complimentary appetizers ("stuzzichini"), freshly prepared by our chefs to tantalize your taste buds before dinner.</p>
-            <a href="#beverages" class="btn btn-primary mt-2">Discover Our Cocktails</a>
+        <div class="single-pdf-download">
+            <h4>Consult the Full Menu</h4>
+            <a href="/assets/pdf/new_season_menu.pdf" class="btn btn-primary" download>Download Restaurant Menu (PDF)</a>
         </div>
-        <div class="col">
-            <div class="aperitivo-slideshow-container">
-                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_1.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_1.jpg" alt="Aperitivo cocktail at the bar" loading="lazy"></picture></div>
-                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_2.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_2.jpg" alt="View of the beach during sunset aperitivo" loading="lazy"></picture></div>
-                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_3.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_3.jpg" alt="Colorful drinks served for aperitivo" loading="lazy"></picture></div>
-                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_4.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_4.jpg" alt="Guests enjoying drinks at Papa Remo" loading="lazy"></picture></div>
-                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_5.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_5.jpg" alt="Close-up of an exotic cocktail" loading="lazy"></picture></div>
-                <div class="aperitivo-slide"><picture><source srcset="../assets/images/optimized/restaurant/bar_slide_6.webp" type="image/webp"><img src="../assets/images/optimized/restaurant/bar_slide_6.jpg" alt="A platter of delicious appetizers" loading="lazy"></picture></div>
+    </section>
+
+    <hr class="section-divider">
+    
+    <section class="aperitivo-promo">
+        <div class="row">
+            <div class="col">
+                <h2>Sunset Aperitivo</h2>
+                <p>Experience the magic of the Italian aperitivo at Papa Remo. As the sun sets over the Indian Ocean, relax with one of our signature cocktails, a glass of fine wine, or your favorite drink. It's the perfect moment to unwind and soak in the breathtaking views from our beachfront location.</p>
+                <p>To make the experience even more special, every aperitivo is accompanied by a selection of delicious complimentary appetizers, freshly prepared by our chefs to tantalize your palate before dinner.</p>
+                 <a class="btn btn-primary mt-2" href="contact.html#reservation">Book Your Spot</a>
+            </div>
+            <div class="col">
+                 <div class="single-image-container">
+                    <img src="/assets/images/optimized/restaurant/cover_restaurant.webp" alt="Aperitivo at sunset at Papa Remo Beach">
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="menu-preview mt-4">
-<h2>Our Menu Highlights</h2>
-<div class="menu-category" id="seafood"><h3>Seafood Specialties</h3><div class="menu-items"><div class="menu-item"><div class="menu-item-name">Fresh Catch of the Day</div><div class="menu-item-description">Locally caught fish prepared to your preference - grilled, fried, or in a coconut sauce</div></div><div class="menu-item"><div class="menu-item-name">Garlic Prawns</div><div class="menu-item-description">Succulent prawns sautéed in garlic butter and white wine</div></div><div class="menu-item"><div class="menu-item-name">Seafood Platter</div><div class="menu-item-description">A selection of the freshest seafood including fish, prawns, calamari, and lobster (seasonal)</div></div></div></div>
-<div class="menu-category" id="italian"><h3>Italian Favorites</h3><div class="menu-items"><div class="menu-item"><div class="menu-item-name">Homemade Pasta</div><div class="menu-item-description">Choice of sauces including seafood, bolognese, or vegetarian options</div></div><div class="menu-item"><div class="menu-item-name">Wood-Fired Pizza</div><div class="menu-item-description">Traditional Italian pizzas with a variety of toppings</div></div><div class="menu-item"><div class="menu-item-name">Risotto</div><div class="menu-item-description">Creamy risotto with seafood or seasonal vegetables</div></div></div></div>
-<div class="menu-category" id="beverages"><h3>Beverages</h3><div class="menu-items"><div class="menu-item"><div class="menu-item-name">Signature Cocktails</div><div class="menu-item-description">Try our famous beach cocktails made with fresh local fruits</div></div><div class="menu-item"><div class="menu-item-name">Italian Wines</div><div class="menu-item-description">Selection of fine Italian wines to complement your meal</div></div><div class="menu-item"><div class="menu-item-name">Fresh Juices</div><div class="menu-item-description">Freshly squeezed tropical fruit juices</div></div></div></div>
-<div class="menu-note mt-3"><p>* Our menu changes seasonally to ensure we serve only the freshest ingredients. Please ask your server for daily specials.</p></div>
-</section>
-<section class="dining-experience mt-4">
-<h2>Dining Experience</h2>
-<div class="experience-options"><div class="experience-card"><i class="fas fa-sun"></i><h3>Beachfront Dining</h3><p>Enjoy your meal with your feet in the sand and the sound of waves in the background.</p></div><div class="experience-card"><i class="fas fa-moon"></i><h3>Sunset Dinner</h3><p>Experience a romantic dinner as the sun sets over the Indian Ocean.</p></div><div class="experience-card"><i class="fas fa-users"></i><h3>Group Celebrations</h3><p>Perfect for birthdays, anniversaries, and special occasions.</p></div></div>
-</section>
-<section class="reservation-cta mt-4">
-<h2>Make a Reservation</h2>
-<p>To ensure the best dining experience, we recommend making a reservation, especially during peak season.</p>
-<a class="btn btn-primary" href="contact.html#reservation">Reserve a Table</a>
-</section>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="drinks-menu-section">
+        <h2>Drink List</h2>
+        <div class="menu-tabs-container">
+            <div class="menu-tabs" data-nav-group="drinks">
+                <button class="tab-button" data-tab="aperitivi">Aperitifs</button>
+                <button class="tab-button" data-tab="cocktail">Cocktails</button>
+                <button class="tab-button" data-tab="vini">Wines</button>
+                <button class="tab-button" data-tab="distillati">Spirits & Liqueurs</button>
+                <button class="tab-button" data-tab="bevande">Soft Drinks & Beverages</button>
+            </div>
+        </div>
+        <div class="menu-content-grid">
+            <div class="menu-content-wrapper">
+                <div id="aperitivi-content" class="tab-content"></div>
+                <div id="cocktail-content" class="tab-content"></div>
+                <div id="vini-content" class="tab-content"></div>
+                <div id="distillati-content" class="tab-content"></div>
+                <div id="bevande-content" class="tab-content"></div>
+            </div>
+            <div class="placeholder-column">
+                <div class="slideshow-container" data-slideshow="aperitivo">
+                    <img src="/assets/images/optimized/restaurant/cocktail_01.webp" class="slide" alt="Sunset cocktail">
+                    <img src="/assets/images/optimized/restaurant/cocktail_02.webp" class="slide" alt="Cocktail on the beach">
+                    <img src="/assets/images/optimized/restaurant/cocktail_03.webp" class="slide" alt="Aperitivo with an ocean view">
+                </div>
+            </div>
+        </div>
+        <div class="single-pdf-download">
+            <h4>Consult the Full List</h4>
+            <a href="/assets/pdf/drink_2026.pdf" class="btn btn-secondary" download>Download Drink & Wine List (PDF)</a>
+        </div>
+    </section>
+    
+</div> 
 </main>
 </div>
 
@@ -259,4 +249,126 @@
 
 <script src="../assets/js/menu-loader.js"></script>
 <script src="../assets/js/footer-loader.js"></script>
-<script src="../assets/js/main.
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/language-toggle.js"></script>
+<script src="../assets/js/theme-switcher.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuData = {
+            antipasti: [ { name: 'Octopus Carpaccio', price: '1,500 KSH' }, { name: 'Seafood Salad in Focaccia Bowl', price: '1,500 KSH' }, { name: 'Passion Fruit Ceviche', price: '1,600 KSH'}, { name: 'Tuna Tartare on Guacamole', price: '1,600 KSH' }, { name: 'King Fish Carpaccio (Gravlax style) with Mango', price: '1,600 KSH' }, { name: 'Mixed Bruschetta', price: '1,100 KSH' }, { name: 'Italian Cold Cuts & Cheese Platter', price: '2,300 KSH' }, { name: 'Fried Mix (Panzerotti, supplì, etc)', price: '1,300 KSH' }, { name: 'Meat Samosa (3pcs)', price: '1,300 KSH' } ],
+            primi: [ { name: 'Tagliatelle Paparemo (Lobster and Prawns)', price: '2,300 KSH'}, { name: 'Lobster Linguine', price: '2,100 KSH'}, { name: 'Crab Spaghetti', price: '2,000 KSH'}, { name: 'Tagliatelle "Love Island" (Calamari & Pesto)', price: '1,900 KSH'}, { name: 'Octopus Ragù Rigatoni', price: '1,900 KSH'}, { name: 'Mixed Seafood Risotto', price: '2,100 KSH'}, { name: 'Tagliatelle with Ham and Mushrooms', price: '1,900 KSH'}, { name: 'Gnocchi with Meat Ragù', price: '1,900 KSH' } ],
+            secondi: [ { name: 'Mixed Seafood Grill', price: '4,800 KSH', desc: 'Side dish included.' }, { name: 'Grilled Lobster with Garlic Butter', price: '3,800 KSH', desc: 'Side dish included.' }, { name: 'Grilled Tuna Steak', price: '2,100 KSH', desc: 'With sesame seeds and soy sauce. Side dish included.' }, { name: 'Grilled Fish Fillet (Catch of the Day)', price: '2,100 KSH', desc: 'Side dish included.' }, { name: 'Fried Prawns and Calamari', price: '2,500 KSH', desc: 'Side dish included.' }, { name: 'Beef Fillet with Pepper Sauce', price: '4,800 KSH', desc: 'Side dish included.' }, { name: 'Grilled Beef Fillet', price: '3,800 KSH', desc: 'Side dish included.' }, { name: 'Beef "Tagliata"', price: '2,400 KSH', desc: 'With rocket, cherry tomatoes, and parmesan. Side dish included.' } ],
+            pizze: [ { name: 'Focaccia', price: '700 KSH', desc: 'Olive oil and rosemary.' }, { name: 'Margherita', price: '1,200 KSH', desc: 'Tomato and mozzarella.' }, { name: 'Marinara', price: '900 KSH', desc: 'Tomato, garlic, oregano.' }, { name: 'Vegetariana', price: '1,400 KSH', desc: 'Tomato, mozzarella, eggplant, carrots, zucchini, mushrooms.' }, { name: 'Diavola', price: '1,600 KSH', desc: 'Tomato, mozzarella, spicy salami.' }, { name: 'Prosciutto Crudo', price: '1,900 KSH', desc: 'Tomato, mozzarella, Parma Ham.' }, { name: 'Misto Pesce (Seafood)', price: '1,700 KSH', desc: 'Tomato, mozzarella, mixed seafood.' } ],
+            insalate: [ { name: 'Paparemo Salad', price: '1,900 KSH', desc: 'Rocket, mango, orange, prawns, and lobster.' }, { name: 'Shamba Salad in Focaccia', price: '1,500 KSH', desc: 'Mixed salad with zucchini, mango, and avocado.' }, { name: 'Greek Salad', price: '1,600 KSH', desc: 'Lettuce, tomato, onion, black olives, cucumber, and feta.' }, { name: 'Caesar Salad', price: '1,700 KSH', desc: 'Grilled chicken, boiled egg, croutons, parmesan, and caesar dressing.' }, { name: 'Paparemo Poke', price: '2,200 KSH', desc: 'Rice, tuna, avocado, cherry tomatoes, pineapple, soy sauce.' }, { name: 'Chicken Poke', price: '2,200 KSH', desc: 'Rice, chicken, zucchini, corn, onion, soy sauce.' } ],
+            vegetariano: [ { name: 'Caprese', price: '1,500 KSH', desc: 'Mozzarella and tomato.' }, { name: 'Beetroot & Taleggio Risotto', price: '1,400 KSH' }, { name: 'Ricotta and Spinach Ravioli', price: '1,800 KSH', desc: 'With tomato and basil sauce.' }, { name: 'Vegetarian Paparemo Penne', price: '1,900 KSH', desc: 'Pesto, sesame seeds, feta, cherry tomato, zucchini.' }, { name: 'Eggplant Parmigiana', price: '1,800 KSH' } ],
+            bimbi: [ { name: 'Schnitzel with Fries (Chicken or Beef)', price: '1,700 KSH' }, { name: 'Fried Fish Fingers', price: '1,500 KSH' }, { name: 'Pasta with Tomato Sauce', price: '1,200 KSH' } ],
+            dessert: [ { name: 'Panna Cotta', price: '950 KSH' }, { name: 'Tiramisù', price: '950 KSH' }, { name: 'Chocolate Mousse', price: '950 KSH' }, { name: 'Crema Catalana', price: '950 KSH' }, { name: 'Lemon Sorbet', price: '450 KSH' }, { name: 'Affogato al Caffè', price: '650 KSH' }, { name: 'Ice Cream (1 scoop)', price: '400 KSH' }, { name: 'Fruit Salad', price: '600 KSH' } ],
+            aperitivi: [ { name: 'Aperol Spritz', price: '1,300 KSH', desc: 'Aperol, soda, prosecco.' }, { name: 'Campari Spritz', price: '1,300 KSH', desc: 'Campari, soda, prosecco.' }, { name: 'Negroni', price: '1,300 KSH', desc: 'Gin, red vermouth, campari.' }, { name: 'Negroni Sbagliato', price: '1,300 KSH', desc: 'Prosecco, red vermouth, campari.' }, { name: 'Americano', price: '1,300 KSH', desc: 'Campari, sweet vermouth, soda.' } ],
+            cocktail: [ { name: 'Nusu Nusu Negroni', price: '1,400 KSH', desc: 'Gin, Amaretto, Campari, Red Vermouth.' }, { name: 'Paparemo Star', price: '1,300 KSH', desc: 'Vodka, passion fruit, prosecco.' }, { name: 'Long Island', price: '1,300 KSH', desc: 'Vodka, Rum, Gin, Tequila, Triple sec, lime.' }, { name: 'Mojito (Classic or Passion)', price: '1,200 KSH' }, { name: 'Dawa', price: '1,200 KSH', desc: 'Vodka, honey, lime.' }, { name: 'Gin & Tonic / Lemon', price: '1,100 KSH' }, { name: 'Moscow Mule', price: '1,200 KSH' } ],
+            distillati: [ { name: 'J.W. Black Label', price: '650 KSH' }, { name: 'Glenfiddich 12 yrs', price: '800 KSH' }, { name: 'Jack Daniel\'s', price: '700 KSH' }, { name: 'Havana Club 7 yrs', price: '700 KSH' }, { name: 'Jose Cuervo (Gold/Silver)', price: '600 KSH' }, { name: 'Amaro Lucano', price: '500 KSH' }, { name: 'Limoncello', price: '500 KSH' }, { name: 'Grappa Nonino', price: '500 KSH' } ],
+            bevande: [ { name: 'Fresh Juice', price: '400 KSH', desc: 'Mango, pineapple, watermelon or passion fruit.' }, { name: 'Fresh Madafu (Coconut)', price: '300 KSH' }, { name: 'Espresso', price: '250 KSH' }, { name: 'Cappuccino', price: '350 KSH' }, { name: 'Local Beers (Tusker, etc)', price: '500 KSH' }, { name: 'Mineral Water', price: 'from 250 KSH' }, { name: 'Soft Drinks', price: '300 KSH' } ]
+        };
+        
+        const ITEMS_PER_PAGE = 5;
+        let currentPages = {};
+
+        function renderMenuPage(category, page = 1) {
+            const container = document.getElementById(`${category}-content`);
+            if (!container || !menuData[category]) return;
+
+            currentPages[category] = page;
+            const allItems = menuData[category];
+            const totalPages = Math.ceil(allItems.length / ITEMS_PER_PAGE);
+            const start = (page - 1) * ITEMS_PER_PAGE;
+            const end = start + ITEMS_PER_PAGE;
+            const pageItems = allItems.slice(start, end);
+
+            let gridHtml = '<div class="menu-items-grid">';
+            pageItems.forEach(item => {
+                gridHtml += `
+                    <div class="menu-item-card">
+                        <div class="menu-item-header">
+                            <h4>${item.name}</h4>
+                            <span class="menu-item-price">${item.price}</span>
+                        </div>
+                        ${item.desc ? `<p class="menu-item-description">${item.desc}</p>` : ''}
+                    </div>
+                `;
+            });
+            gridHtml += '</div>';
+
+            let paginationHtml = '';
+            if (totalPages > 1) {
+                paginationHtml = `
+                    <div class="pagination-controls">
+                        <button class="pagination-arrow prev-page" ${page === 1 ? 'disabled' : ''} data-category="${category}">◂ Back</button>
+                        <span class="page-info">Page ${page} of ${totalPages}</span>
+                        <button class="pagination-arrow next-page" ${page === totalPages ? 'disabled' : ''} data-category="${category}">Next ▸</button>
+                    </div>
+                `;
+            }
+            container.innerHTML = gridHtml + paginationHtml;
+        }
+
+        document.querySelectorAll('.menu-tabs').forEach(container => {
+            container.addEventListener('click', function(e) {
+                if (e.target.classList.contains('tab-button')) {
+                    const targetSubTab = e.target.dataset.tab;
+                    container.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+                    
+                    const wrapper = container.closest('section').querySelector('.menu-content-wrapper');
+                    wrapper.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === `${targetSubTab}-content`) {
+                            content.classList.add('active');
+                        }
+                    });
+                    renderMenuPage(targetSubTab, 1);
+                }
+            });
+        });
+
+        document.querySelectorAll('.menu-content-wrapper').forEach(wrapper => {
+            wrapper.addEventListener('click', function(e) {
+                const category = e.target.dataset.category;
+                if (!category) return;
+                if (e.target.classList.contains('next-page')) {
+                    renderMenuPage(category, currentPages[category] + 1);
+                } else if (e.target.classList.contains('prev-page')) {
+                    renderMenuPage(category, currentPages[category] - 1);
+                }
+            });
+        });
+        
+        Object.keys(menuData).forEach(category => renderMenuPage(category, 1));
+        
+        const viniContainer = document.getElementById('vini-content');
+        viniContainer.innerHTML = `<div class="menu-item-card">
+                                      <div class="menu-item-header"><h4>A Curated Selection for You</h4></div>
+                                      <p class="menu-item-description">We offer a wide selection of white, red, rosé, and sparkling wines. We invite you to download our complete wine list to discover all the proposals.</p>
+                                   </div>`;
+                                   
+        document.querySelector('.tab-button[data-tab="antipasti"]').click();
+        document.querySelector('.tab-button[data-tab="aperitivi"]').click();
+
+        function initializeSlideshow(slideshowElement) {
+            if (!slideshowElement) return;
+            const slides = slideshowElement.querySelectorAll('.slide');
+            let currentSlide = 0;
+            if (slides.length > 0) {
+                slides[0].classList.add('active'); 
+                setInterval(() => {
+                    if(slides[currentSlide]) slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    if(slides[currentSlide]) slides[currentSlide].classList.add('active');
+                }, 4000); 
+            }
+        }
+        document.querySelectorAll('.slideshow-container').forEach(initializeSlideshow);
+    });
+</script>
+
+</body>
+</html>

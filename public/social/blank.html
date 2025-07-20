@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post | Papa Remo Beach</title>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <!-- CSS & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link rel="stylesheet" href="/assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png">
+
+  <!-- Theme -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+<div class="container">
+
+  <!-- MENU -->
+  <div id="menu-placeholder"></div>
+
+  <!-- CONTENUTO POST -->
+  <main class="main-content mt-4 mb-4">
+    <!-- Inizia il contenuto del tuo post qui -->
+    <section class="post-content">
+      <h1>Titolo del Post</h1>
+      <p>Scrivi qui il contenuto del tuo post HTML...</p>
+    </section>
+  </main>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+    <p>Utilizziamo i cookie per migliorare la tua esperienza. Consulta la nostra <a href="/it/privacy-policy.html">Privacy Policy</a> e <a href="/it/cookie-policy.html">Cookie Policy</a>.</p>
+  </div>
+  <div class="cookie-buttons">
+    <button id="cookie-reject" class="btn btn-secondary">Rifiuta</button>
+    <button id="cookie-accept" class="btn btn-primary">Accetta</button>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="/assets/js/menu-loader.js"></script>
+<script src="/assets/js/footer-loader.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/mobile-menu.js"></script>
+<script src="/assets/js/language-toggle.js"></script>
+<script src="/assets/js/theme-switcher.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const rejectBtn = document.getElementById('cookie-reject');
+
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(() => {
+        banner.classList.add('visible');
+      }, 500);
+    }
+
+    const hideBanner = () => banner.classList.remove('visible');
+    
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie_consent', 'accepted');
+      hideBanner();
+    });
+
+    rejectBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie_consent', 'rejected');
+      hideBanner();
+    });
+  });
+</script>
+
+</body>
+</html>
