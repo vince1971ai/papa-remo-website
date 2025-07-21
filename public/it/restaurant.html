@@ -73,7 +73,7 @@
         /* Stili Hero Image */
         .hero-image-section { max-height: 50vh; border-radius: 8px; overflow: hidden; background-color: var(--sand); }
         .hero-image-section img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
+        
         /* Placeholders & Slideshow */
         .img-placeholder-vertical { width: 100%; height: 100%; min-height: 400px; aspect-ratio: 3 / 4; background-color: var(--sand); border: 2px dashed var(--border-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--dark-gray); font-style: italic; }
         .slideshow-container { position: relative; width: 100%; height: 100%; min-height: 400px; aspect-ratio: 3 / 4; border-radius: 8px; overflow: hidden; background-color: var(--sand); }
@@ -81,7 +81,6 @@
         .slideshow-container .slide.active { opacity: 1; }
         .single-image-container { width: 100%; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background-color: var(--sand); }
         .single-image-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
 
         /* Menu Layout */
         .menu-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; align-items: flex-start; }
@@ -115,8 +114,8 @@
         .row { display: flex; gap: 2rem; align-items: center; }
         .col { flex: 1; }
         
-        .aperitivo-promo .col:first-child { flex: 2; }
-        .aperitivo-promo .col:last-child { flex: 1; }
+        .aperitivo-promo .col p { line-height: 1.6; margin: 0 0 1rem 0; }
+        .aperitivo-promo .col p:last-child { margin-bottom: 0; }
 
         @media(max-width: 992px){ 
             .menu-content-grid { grid-template-columns: 1fr; }
@@ -183,6 +182,7 @@
                     <img src="/assets/images/optimized/restaurant/food_2.webp" class="slide" alt="Piatto di pesce fresco">
                     <img src="/assets/images/optimized/restaurant/food_4.webp" class="slide" alt="Pasta artigianale">
                     <img src="/assets/images/optimized/restaurant/food_8.webp" class="slide" alt="Specialità dello chef">
+                    <img src="/assets/images/optimized/restaurant/pizza.webp" class="slide" alt="Pizza cotta a legna">
                 </div>
             </div>
         </div>
