@@ -11,74 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}
-
-      /* Layout a due colonne per sezioni */
-      .events-feature-layout, .intro-layout {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        align-items: center;
-      }
-      .events-feature-text, .events-feature-video, .intro-layout > div {
-        flex: 1;
-        min-width: 300px;
-      }
-      
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-        border-radius: 8px;
-      }
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      
-      /* Stile per placeholder "Coming Soon" */
-      .placeholder-container {
-        border: 2px dashed var(--border-light);
-        min-height: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--dark-gray);
-        background-color: var(--sand);
-        border-radius: 8px;
-        padding: 1rem;
-        text-align: center;
-        font-style: italic;
-      }
-      
-      .section-divider {
-          border: 0;
-          height: 1px;
-          background-color: var(--border-light);
-          margin: 2.5rem 0;
-      }
-
-      .event-calendar-section p {
-          margin-bottom: 1.5rem;
-      }
-
-      /* Media Query per la versione mobile */
-      @media (max-width:768px){
-        .container{flex-direction:column}
-        .sidebar{width:100%;height:auto;position:relative}
-        .main-content{margin-left:0}
-        .events-feature-layout, .intro-layout {
-            flex-direction: column;
-        }
-      }
-    </style>
-
+    
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/all.css">
     <noscript>
@@ -111,36 +44,7 @@
     <meta property="og:url" content="https://www.paparemobeach.com/it/events.html" />
     <meta property="og:image" content="https://www.paparemobeach.com/assets/images/optimized/events/beach_party.jpg" />
     <meta property="og:site_name" content="Papa Remo Beach" />
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Beach Party del Sabato",
-      "startDate": "2025-07-12T22:30:00+03:00",
-      "description": "Il nostro evento di punta! Unisciti a noi ogni sabato per il miglior beach party di Watamu con DJ locali, cocktail speciali e un'atmosfera vibrante.",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "location": {
-        "@type": "Place",
-        "name": "Papa Remo Beach",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jacaranda Road",
-          "addressLocality": "Watamu",
-          "addressCountry": "KE"
-        }
-      },
-      "image": [
-        "https://www.paparemobeach.com/assets/images/optimized/events/beach_party.jpg"
-       ],
-      "organizer": {
-        "@type": "Organization",
-        "name": "Papa Remo Beach",
-        "url": "https://www.paparemobeach.com"
-      }
-    }
-    </script>
+    
     <script>
         (function() {
             const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -150,9 +54,68 @@
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
+    
+    <style>
+        :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}
+        
+        /* MODIFICA APPORTATA QUI */
+        main.main-content {
+            padding: 0 2rem;
+        }
+
+        @media (min-width: 992px) {
+            main.main-content {
+                 /* Questo valore sposta il contenuto a destra per fare spazio al menu. 
+                    Puoi aggiustarlo se la larghezza del menu è diversa. */
+                margin-left: 280px;
+            }
+        }
+        /* /FINE MODIFICHE */
+
+        .events-feature-layout,.intro-layout{display:flex;flex-wrap:wrap;gap:2rem;align-items:center}.events-feature-text,.events-feature-video,.intro-layout > div{flex:1;min-width:300px}.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px}.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}.placeholder-container{border:2px dashed var(--border-light);min-height:300px;display:flex;align-items:center;justify-content:center;color:var(--dark-gray);background-color:var(--sand);border-radius:8px;padding:1rem;text-align:center;font-style:italic}.section-divider{border:0;height:1px;background-color:var(--border-light);margin:2.5rem 0}
+        @media (max-width:768px){.events-feature-layout,.intro-layout{flex-direction:column}}
+
+        /* Stili per il Calendario Eventi con Classi Uniche */
+        .events-slider { max-width: 100%; margin: 0 auto; }
+        .slider-wrapper { position: relative; }
+        .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 1rem 0; cursor: grab; user-select: none; }
+        .slider-container::-webkit-scrollbar { display: none; }
+        .slider-container.active { cursor: grabbing; cursor: -webkit-grabbing; }
+        .slider-card { scroll-snap-align: center; flex: 0 0 90%; max-width: 650px; margin: 0 1rem; display: flex; background-color: var(--card-bg); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid var(--border-light); }
+        .slider-card-details { color: white; padding: 1.2rem; width: 45%; display: flex; flex-direction: column; }
+        .slider-card-image { width: 55%; background-color: var(--primary-dark); pointer-events: none; }
+        .slider-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .slider-card-date { background-color: rgba(255,255,255,0.9); border-radius: 8px; padding: 0.4rem; width: 70px; text-align: center; margin-bottom: 1rem; }
+        .slider-date-day { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+        .slider-date-month-day { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; }
+        .slider-card-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin: 0 0 0.5rem 0; color: white;}
+        .slider-card-tags { font-size: 0.75rem; opacity: 0.9; margin-bottom: 1rem; }
+        .slider-card-info { font-size: 0.8rem; margin-top: auto; padding-top: 0.8rem; border-top: 1px solid rgba(255,255,255,0.3); }
+        .slider-card-info p { margin: 0.4rem 0; display: flex; align-items: center; gap: 0.75rem; }
+        .slider-card-info i { width: 14px; text-align: center; }
+        .slider-card-description { font-size: 0.8rem; line-height: 1.5; opacity: 0.8; margin: 1rem 0; }
+        .slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(26, 43, 66, 0.8); border: 1px solid var(--border-light); color: white; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 10; display: none; }
+        .slider-arrow.prev { left: -25px; }
+        .slider-arrow.next { right: -25px; }
+        
+        .slider-card-details.color-red { background-color: #c0392b; }
+        .slider-card-details.color-red .slider-card-date { color: #c0392b; }
+        .slider-card-details.color-blue { background-color: #2980b9; }
+        .slider-card-details.color-blue .slider-card-date { color: #2980b9; }
+        .slider-card-details.color-purple { background-color: #8e44ad; }
+        .slider-card-details.color-purple .slider-card-date { color: #8e44ad; }
+        .slider-card-details.color-green { background-color: #27ae60; }
+        .slider-card-details.color-green .slider-card-date { color: #27ae60; }
+        .slider-card-details.color-yellow { background-color: #f1c40f; }
+        .slider-card-details.color-yellow .slider-card-date { color: #f1c40f; }
+
+        @media (min-width: 992px) {
+            .slider-card { flex: 0 0 650px; }
+            .slider-arrow { display: block; }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
     
     <div id="menu-placeholder"></div>
 
@@ -187,34 +150,30 @@
             </div>
         </section>
 
-        <section class="event-calendar-section mt-4">
+        <section id="prossimi-eventi">
             <hr class="section-divider">
-            <h2>Il Nostro Calendario Eventi</h2>
-            <p>Scopri tutti i nostri prossimi eventi e pianifica la tua visita!</p>
-            <div class="calendar-container">
-                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                <div class="elfsight-app-bfc6bb07-3fb9-4693-8a99-0724e423fb8e" data-elfsight-app-lazy></div>
+            <div class="events-slider">
+                <h2 style="text-align: center;">I Prossimi Eventi</h2>
+                <div class="slider-wrapper">
+                    <div class="slider-container"></div>
+                    <button class="slider-arrow prev">◂</button>
+                    <button class="slider-arrow next">▸</button>
+                </div>
             </div>
         </section>
-        
+
         <section class="regular-events mt-4">
             <hr class="section-divider">
             <h2>Eventi Settimanali</h2>
             <div class="intro-layout">
-                <div class="event-card featured-event">
-                    <div class="event-date">
-                        <span class="day">SAB</span>
-                        <span class="date">Ogni Settimana</span>
-                    </div>
-                    <div class="event-details">
-                        <h3>Beach Party del Sabato</h3>
-                        <p>Il nostro evento di punta! Unisciti a noi ogni sabato per il miglior beach party di Watamu. Con DJ locali, cocktail speciali e un'atmosfera vibrante che unisce residenti e turisti.</p>
-                        <ul class="event-info">
-                            <li><i class="far fa-clock"></i> Inizia alle 22:30</li>
-                            <li><i class="fas fa-music"></i> DJ dal Vivo</li>
-                            <li><i class="fas fa-cocktail"></i> Menu cocktail speciale</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3>Beach Party del Sabato</h3>
+                    <p>Il nostro evento di punta! Unisciti a noi ogni sabato per il miglior beach party di Watamu. Con DJ locali, cocktail speciali e un'atmosfera vibrante che unisce residenti e turisti.</p>
+                    <ul>
+                        <li><i class="far fa-clock"></i> Inizia alle 22:30</li>
+                        <li><i class="fas fa-music"></i> DJ dal Vivo</li>
+                        <li><i class="fas fa-cocktail"></i> Menu cocktail speciale</li>
+                    </ul>
                 </div>
                 <div class="intro-layout-video">
                     <div class="video-container">
@@ -228,24 +187,12 @@
             <hr class="section-divider">
             <h2>Eventi Speciali</h2>
             <div class="intro-layout">
-                <div class="event-card">
-                    <div class="event-date">
-                        <span class="day">DIC</span>
-                        <span class="date">31</span>
-                    </div>
-                    <div class="event-details">
-                        <h3>Festa di Capodanno</h3>
-                        <p>Festeggia l'arrivo del nuovo anno al nostro spettacolare beach party con fuochi d'artificio, esibizioni speciali e una celebrazione indimenticabile.</p>
-                        <ul class="event-info">
-                            <li><i class="far fa-clock"></i> 22:30 - Tardi</li>
-                            <li><i class="fas fa-ticket-alt"></i> Biglietti richiesti</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3>Festa di Capodanno</h3>
+                    <p>Festeggia l'arrivo del nuovo anno al nostro spettacolare beach party con fuochi d'artificio, esibizioni speciali e una celebrazione indimenticabile.</p>
                 </div>
-                <div class="intro-layout-video">
-                    <div class="placeholder-container">
-                        <p>Arriviamo tra poco</p>
-                    </div>
+                <div class="placeholder-container">
+                    <p>Coming soon</p>
                 </div>
             </div>
         </section>
@@ -256,22 +203,20 @@
             <div class="intro-layout">
                 <div>
                     <p>Vuoi organizzare il tuo evento privato al Papa Remo Beach? Offriamo una location mozzafiato per feste private, eventi aziendali, compleanni e molto altro.</p>
-                    <p>Il nostro team lavorerà con te per creare un evento personalizzato che soddisfi le tue specifiche esigenze e preferenze. Dal catering alle decorazioni, dall'intrattenimento alla logistica, ci occuperemo di tutti i dettagli per permetterti di goderti la tua occasione speciale.</p>
+                    <p>Il nostro team lavorerà con te per creare un evento personalizzato che soddisfi le tue specifiche esigenze e preferenze.</p>
                 </div>
                 <div>
                     <h3>Opzioni per Eventi Privati:</h3>
-                    <ul class="private-event-options">
+                    <ul>
                         <li>Feste di compleanno</li>
-                        <li>Ritiri aziendali ed eventi di team-building</li>
+                        <li>Eventi aziendali</li>
                         <li>Feste di fidanzamento</li>
                         <li>Anniversari</li>
-                        <li>Feste di laurea</li>
-                        <li>Riunioni di famiglia</li>
                     </ul>
                 </div>
             </div>
-            <div class="private-events-cta mt-3">
-                <a class="btn btn-primary" href="contact.html">Richiedi Info per Eventi Privati</a>
+            <div style="text-align:center; margin-top: 1.5rem;">
+                <a class="btn btn-primary" href="contact.html">Richiedi Info</a>
             </div>
         </section>
 
@@ -279,16 +224,15 @@
 
         <section class="event-signup mt-4">
             <h2>Rimani Aggiornato</h2>
-            <p>Vuoi rimanere informato sui prossimi eventi al Papa Remo Beach? Seguici sui social media.</p>
-            <div class="social-links mt-3">
+            <p>Seguici sui social media per non perdere nessun aggiornamento.</p>
+            <div class="social-links mt-3" style="text-align:center;">
                 <a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i> @paparemobeach</a>
                 <a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i> Papa Remo Beach</a>
             </div>
         </section>
     </main>
-</div>
 
-<div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
 <script src="../assets/js/menu-loader.js"></script>
 <script src="../assets/js/footer-loader.js"></script>
@@ -296,6 +240,191 @@
 <script src="../assets/js/mobile-menu.js"></script>
 <script src="../assets/js/language-toggle.js"></script>
 <script src="../assets/js/theme-switcher.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const eventsData = [
+            {
+                day: '26', month: 'LUG', dayOfWeek: 'SAB',
+                title: 'Beach Party - DJ Ali Pappi',
+                tags: 'Watamu • Kenya • Beach Party • DJ Set',
+                time: '26 Luglio 22:30 - 27 Luglio 22:30',
+                location: 'Papa Remo Beach',
+                description: 'Per chi ama le avventure notturne con gli amici, DJ Ali Pappi ci terrà in pista per tutta la notte!',
+                image: '../assets/images/optimized/calendar/Ali_Pappi.webp',
+                colorClass: 'color-red'
+            },
+            { 
+                day: '02', month: 'AGO', dayOfWeek: 'SAB', 
+                title: 'Beach Party - DJ Kisila', 
+                tags: 'Watamu • Kenya • Beach Party • DJ Set', 
+                time: '02 Agosto 22:30 - 03 Agosto 03:00', 
+                location: 'Papa Remo Beach', 
+                description: 'Produttore radiofonico a Capital FM Kenya, DJ per club ed eventi e creatore di contenuti per radio e social media.', 
+                image: '../assets/images/optimized/calendar/jo_kisila.webp',
+                colorClass: 'color-blue'
+            },
+            { 
+                day: '09', month: 'AGO', dayOfWeek: 'SAB',
+                title: 'Beach Party - DJ Delph',
+                tags: 'Watamu • Kenya • Beach Party • DJ set',
+                time: '09 Agosto 22:30 - 10 Agosto 03:00',
+                location: 'Papa Remo Beach',
+                description: 'Selezione musicale: Afrohouse, Edm, Progressive, Amapiano, Deephouse & Latino/Arabic.',
+                image: '../assets/images/optimized/calendar/delph.webp',
+                colorClass: 'color-purple'
+            },
+            {
+                day: '16', month: 'AGO', dayOfWeek: 'SAB',
+                title: 'Beach Party - Special guest DJ Crème de la Crème',
+                tags: 'Watamu • Kenya • Beach Party • DJ set',
+                time: 'Dalle 22:30',
+                location: 'Papa Remo Beach',
+                description: 'Super DJ | Produttore discografico | Imprenditore | Ristoratore',
+                image: '../assets/images/optimized/calendar/creme.webp',
+                colorClass: 'color-yellow'
+            },
+            {
+                day: '23', month: 'AGO', dayOfWeek: 'SAB',
+                title: 'Beach Party - DJ Teekay',
+                tags: 'Watamu • Kenya • Beach Party • DJ set',
+                time: '23 August 22:30 - 24 August 03:00',
+                location: 'Papa Remo Beach',
+                description: 'DJ, EVENT DJ, CLUB DJ, MUSIC PROMOTER, SOUND ENGINEER',
+                image: '../assets/images/optimized/calendar/djteeky.webp',
+                colorClass: 'color-red'
+            },
+	        {
+                day: '30', month: 'AGO', dayOfWeek: 'SAB',
+                title: 'Beach Party - DJ Ali Pappi',
+                tags: 'Watamu • Kenya • Beach Party • DJ Set',
+                time: '30 August 21:30 - 31 August 02:00',
+                location: 'Papa Remo Beach',
+                description: 'For those who love to hangout with friends night adventures, DJ Ali Pappi kept us on the floor the whole night!',
+                image: '../assets/images/optimized/calendar/Ali_Pappi.webp',
+                colorClass: 'color-red'
+            },
+            {
+                day: '06', month: 'SET', dayOfWeek: 'SAB',
+                title: 'Beach Party - DJ Kisila',
+                tags: 'Watamu • Kenya • Beach Party • DJ set',
+                time: '6 September 21:30 - 7 September 02:00',
+                location: 'Papa Remo Beach',
+                description: 'Radio Producer at Capital FM Kenya Radio, Club & Events DJ, Radio and Social Media Content Creator',
+                image: '../assets/images/optimized/calendar/jo_kisila.webp',
+                colorClass: 'color-blue'
+            },
+            {
+                day: '20', month: 'SET', dayOfWeek: 'SAB',
+                title: 'Beach Party - DJ Teekay',
+                tags: 'Watamu • Kenya • Beach Party • DJ set',
+                time: '20 September 21:30 - 21 September 02:00',
+                location: 'Papa Remo Beach',
+                description: 'DJ, EVENT DJ, CLUB DJ, MUSIC PROMOTER, SOUND ENGINEER',
+                image: '../assets/images/optimized/calendar/djteeky.webp',
+                colorClass: 'color-blue'
+            },
+            {
+                day: '27', month: 'SET', dayOfWeek: 'SAB',
+                title: 'Beach Party - DJ Ali Pappi',
+                tags: 'Watamu • Kenya • Beach Party • DJ Set',
+                time: '27 September 21:30 - 28 September 02:00',
+                location: 'Papa Remo Beach',
+                description: 'For those who love to hangout with friends night adventures, DJ Ali Pappi kept us on the floor the whole night!',
+                image: '../assets/images/optimized/calendar/Ali_Pappi.webp',
+                colorClass: 'color-red'
+            }
+        ];
+
+        const sliderContainer = document.querySelector('.slider-container');
+        if (sliderContainer) {
+            // Popola il calendario con gli eventi
+            let sliderHtml = '';
+            eventsData.forEach(event => {
+                sliderHtml += `
+                    <div class="slider-card">
+                        <div class="slider-card-details ${event.colorClass}">
+                            <div class="slider-card-date">
+                                <div class="slider-date-day">${event.day}</div>
+                                <div class="slider-date-month-day">${event.month} - ${event.dayOfWeek}</div>
+                            </div>
+                            <h3 class="slider-card-title">${event.title}</h3>
+                            <p class="slider-card-tags">${event.tags}</p>
+                            <p class="slider-card-description">${event.description}</p>
+                            <div class="slider-card-info">
+                                <p><i class="fa-regular fa-clock"></i> ${event.time}</p>
+                                <p><i class="fa-solid fa-location-dot"></i> ${event.location}</p>
+                            </div>
+                        </div>
+                        <div class="slider-card-image">
+                            <img src="${event.image}" alt="${event.title}">
+                        </div>
+                    </div>
+                `;
+            });
+            sliderContainer.innerHTML = sliderHtml;
+
+            // Logica per le frecce
+            const prevButton = document.querySelector('.slider-arrow.prev');
+            const nextButton = document.querySelector('.slider-arrow.next');
+            const cards = sliderContainer.querySelectorAll('.slider-card');
+            
+            if(cards.length > 0) {
+                const cardStyle = window.getComputedStyle(cards[0]);
+                const cardMargin = parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
+                
+                nextButton.addEventListener('click', () => {
+                    const cardWidth = cards[0].offsetWidth;
+                    sliderContainer.scrollBy({ left: cardWidth + cardMargin, behavior: 'smooth' });
+                });
+
+                prevButton.addEventListener('click', () => {
+                    const cardWidth = cards[0].offsetWidth;
+                    sliderContainer.scrollBy({ left: -(cardWidth + cardMargin), behavior: 'smooth' });
+                });
+            }
+
+            // --- NUOVA LOGICA PER LO SCORRIMENTO ---
+
+            // 1. Logica per trascinare con il mouse (Click and Drag)
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            sliderContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                sliderContainer.classList.add('active');
+                startX = e.pageX - sliderContainer.offsetLeft;
+                scrollLeft = sliderContainer.scrollLeft;
+            });
+
+            sliderContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                sliderContainer.classList.remove('active');
+            });
+
+            sliderContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                sliderContainer.classList.remove('active');
+            });
+
+            sliderContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - sliderContainer.offsetLeft;
+                const walk = (x - startX); 
+                sliderContainer.scrollLeft = scrollLeft - walk;
+            });
+            
+            // 2. Logica per lo scorrimento con la rotellina del mouse
+            sliderContainer.addEventListener('wheel', (e) => {
+                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                    e.preventDefault();
+                    sliderContainer.scrollLeft += e.deltaY;
+                }
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
