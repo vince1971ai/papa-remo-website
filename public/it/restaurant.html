@@ -75,13 +75,12 @@
         .hero-image-section img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         /* Placeholders & Slideshow */
-        .img-placeholder-vertical { width: 100%; height: 100%; min-height: 400px; aspect-ratio: 3 / 4; background-color: var(--sand); border: 2px dashed var(--border-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--dark-gray); font-style: italic; }
         .slideshow-container { position: relative; width: 100%; height: 100%; min-height: 400px; aspect-ratio: 3 / 4; border-radius: 8px; overflow: hidden; background-color: var(--sand); }
         .slideshow-container .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s ease-in-out; }
         .slideshow-container .slide.active { opacity: 1; }
         .single-image-container { width: 100%; aspect-ratio: 4 / 3; border-radius: 8px; overflow: hidden; background-color: var(--sand); }
         .single-image-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
+        
         /* Menu Layout */
         .menu-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; align-items: flex-start; }
         
@@ -306,9 +305,9 @@
             if (totalPages > 1) {
                 paginationHtml = `
                     <div class="pagination-controls">
-                        <button class="pagination-arrow prev-page" ${page === 1 ? 'disabled' : ''} data-category="${category}">◂ Indietro</button>
-                        <span class="page-info">Pagina ${page} di ${totalPages}</span>
-                        <button class="pagination-arrow next-page" ${page === totalPages ? 'disabled' : ''} data-category="${category}">Avanti ▸</button>
+                        <button class="pagination-arrow prev-page" ${page === 1 ? 'disabled' : ''} data-category="${category}">◂ Back</button>
+                        <span class="page-info">Page ${page} of ${totalPages}</span>
+                        <button class="pagination-arrow next-page" ${page === totalPages ? 'disabled' : ''} data-category="${category}">Next ▸</button>
                     </div>
                 `;
             }
@@ -350,8 +349,8 @@
         
         const viniContainer = document.getElementById('vini-content');
         viniContainer.innerHTML = `<div class="menu-item-card">
-                                      <div class="menu-item-header"><h4>Una Selezione Curata per Voi</h4></div>
-                                      <p class="menu-item-description">Offriamo una vasta selezione di vini bianchi, rossi, rosé e bollicine. Vi invitiamo a scaricare la nostra carta completa per scoprire tutte le proposte.</p>
+                                      <div class="menu-item-header"><h4>A Curated Selection for You</h4></div>
+                                      <p class="menu-item-description">We offer a wide selection of white, red, rosé, and sparkling wines. We invite you to download our complete wine list to discover all the proposals.</p>
                                    </div>`;
                                    
         document.querySelector('.tab-button[data-tab="antipasti"]').click();

@@ -94,7 +94,7 @@
         /* Menu Content & Pagination */
         .tab-content { display: none; animation: fadeIn 0.5s; }
         .tab-content.active { display: flex; flex-direction: column; gap: 1.5rem; }
-        .menu-items-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        .menu-items-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
         .menu-item-card { background: var(--card-bg); border: 1px solid var(--border-light); border-radius: 8px; padding: 1rem; }
         .menu-item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; border-bottom: 1px dashed var(--border-light); padding-bottom: 0.5rem; margin-bottom: 0.5rem; }
         .menu-item-header h4 { margin: 0; font-size: 1.05rem; }
@@ -115,7 +115,7 @@
         
         .aperitivo-promo .col p { line-height: 1.6; margin: 0 0 1rem 0; }
         .aperitivo-promo .col p:last-child { margin-bottom: 0; }
-        
+
         @media(max-width: 992px){ 
             .menu-content-grid { grid-template-columns: 1fr; }
             .placeholder-column { display: none; } 
