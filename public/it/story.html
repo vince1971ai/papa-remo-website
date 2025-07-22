@@ -54,6 +54,12 @@
     <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
     
     <style>
+        /* Regola aggiunta per limitare la larghezza */
+        .page-container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
         /* Horizontal Timeline Styles */
         .timeline-container {
             display: flex;
@@ -127,108 +133,110 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-    <h1>La Storia di Papa Remo</h1>
-    <p>Da un sogno a una destinazione balneare amata da tutti</p>
-</header>
-<section class="story-content">
-    
-    <div class="story-image">
-        <picture>
-            <source srcset="../assets/images/optimized/beach_view3.webp" type="image/webp"/>
-            <source srcset="../assets/images/optimized/beach_view3.jpg" type="image/jpeg"/>
-            <img alt="Paesaggio marino di Watamu vicino a Papa Remo Beach" src="../assets/images/optimized/beach_view3.jpg" loading="lazy"/>
-        </picture>
-    </div>
+<div class="page-container">
+    <header class="page-header">
+        <h1>La Storia di Papa Remo</h1>
+        <p>Da un sogno a una destinazione balneare amata da tutti</p>
+    </header>
+    <section class="story-content">
+        
+        <div class="story-image">
+            <picture>
+                <source srcset="../assets/images/optimized/beach_view3.webp" type="image/webp"/>
+                <source srcset="../assets/images/optimized/beach_view3.jpg" type="image/jpeg"/>
+                <img alt="Paesaggio marino di Watamu vicino a Papa Remo Beach" src="../assets/images/optimized/beach_view3.jpg" loading="lazy"/>
+            </picture>
+        </div>
 
-    <hr style="margin-top: 40px; margin-bottom: 20px;">
-    
-    <section class="timeline mt-4">
-        <h2>Il Nostro Percorso</h2>
-        <div class="timeline-container">
-            <div class="timeline-item">
-                <div class="timeline-year">1997</div>
-                <div class="timeline-content">
-                    <h3>Fondazione del Papa Remo Beach</h3>
-                    <p>Remo Lenzi fonda il Papa Remo Beach sulla Jacaranda Road a Watamu.</p>
+        <hr style="margin-top: 40px; margin-bottom: 20px;">
+        
+        <section class="timeline mt-4">
+            <h2>Il Nostro Percorso</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-year">1997</div>
+                    <div class="timeline-content">
+                        <h3>Fondazione del Papa Remo Beach</h3>
+                        <p>Remo Lenzi fonda il Papa Remo Beach sulla Jacaranda Road a Watamu.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Anni 2000</div>
+                    <div class="timeline-content">
+                        <h3>Espansione</h3>
+                        <p>Papa Remo si espande da semplice bar sulla spiaggia per includere un ristorante e una location per eventi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h3>Seven Islands Festival</h3>
+                        <p>Papa Remo ospita il Seven Islands Festival, consolidando la sua reputazione come location per eventi di primo piano sulla costa.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Oggi</div>
+                    <div class="timeline-content">
+                        <h3>Una Destinazione Amata</h3>
+                        <p>Oggi il Papa Remo Beach è una destinazione consolidata, nota per i suoi beach party, il ristorante e gli eventi speciali.</p>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-year">Anni 2000</div>
-                <div class="timeline-content">
-                    <h3>Espansione</h3>
-                    <p>Papa Remo si espande da semplice bar sulla spiaggia per includere un ristorante e una location per eventi.</p>
+        </section>
+
+        <hr style="margin-top: 20px; margin-bottom: 40px;">
+
+        <div class="story-text mt-4">
+
+            <h2>Le Nostre Origini</h2>
+            <div class="intro-layout">
+                <div class="intro-layout-text">
+                    <p>Papa Remo Beach è stato fondato nel 1997 da Remo Lenzi, un italiano con una grande passione per la costa keniota. La storia inizia quando Remo visitò per la prima volta Watamu e si innamorò delle sue spiagge incontaminate e della sua calda comunità.</p>
+                    <p>Determinato a creare qualcosa di speciale, Remo visse in una tenda per un anno per immergersi completamente nell'esperienza africana e comprendere la cultura locale. Questa dedizione e questo rispetto per l'ambiente e la comunità sono diventati le fondamenta del Papa Remo Beach.</p>
+                </div>
+                <div class="intro-layout-image">
+                    <picture>
+                        <source srcset="../assets/images/optimized/storia/remo-lenzi.webp" type="image/webp">
+                        <source srcset="../assets/images/optimized/storia/remo-lenzi.jpg" type="image/jpeg">
+                        <img src="../assets/images/optimized/storia/remo-lenzi.jpg" alt="Remo Lenzi, il fondatore di Papa Remo Beach" loading="lazy">
+                    </picture>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-year">2019</div>
-                <div class="timeline-content">
-                    <h3>Seven Islands Festival</h3>
-                    <p>Papa Remo ospita il Seven Islands Festival, consolidando la sua reputazione come location per eventi di primo piano sulla costa.</p>
+
+            <hr style="margin-top: 40px; margin-bottom: 40px;">
+
+            <h2 class="mt-4">Crescita ed Evoluzione</h2>
+            <div class="intro-layout intro-layout--reverse">
+                <div class="intro-layout-text">
+                    <p>Quello che era iniziato come un semplice capanno di famiglia, dove io, mio papà, mia sorella e il resto della famiglia andavamo per rilassarci e passeggiare sulla spiaggia, si è trasformato nel tempo in qualcosa di speciale. Nella prima foto, risalente ai primi anni 2000, si respira ancora quell’atmosfera semplice e familiare. Col tempo, quando papà è rientrato in Italia, ho preso in mano il progetto, trasformando quel luogo pieno di ricordi in ciò che oggi è Papa Remo: un ristorante, un beach club, una location per eventi e molto altro.</p>
+                    <p>Papa Remo è cresciuto rimanendo fedele alle sue radici, offrendo esperienze autentiche e preservando la bellezza naturale di Watamu. I celebri beach party del sabato, con DJ locali, continuano a unire residenti e turisti in un’atmosfera vibrante. Una storia di famiglia che è diventata una destinazione amata.</p>
+                </div>
+                 <div class="intro-layout-image">
+                    <picture>
+                        <source srcset="../assets/images/optimized/storia/papa.webp" type="image/webp">
+                        <source srcset="../assets/images/optimized/storia/papa.jpg" type="image/jpeg">
+                        <img src="../assets/images/optimized/storia/papa.jpg" alt="L'ingresso originale di Papa Remo Beach" loading="lazy">
+                    </picture>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-year">Oggi</div>
-                <div class="timeline-content">
-                    <h3>Una Destinazione Amata</h3>
-                    <p>Oggi il Papa Remo Beach è una destinazione consolidata, nota per i suoi beach party, il ristorante e gli eventi speciali.</p>
+
+            <hr style="margin-top: 40px; margin-bottom: 40px;">
+
+            <div class="two-column-layout">
+                <div class="column">
+                    <h2 class="mt-4">La Nostra Filosofia</h2>
+                    <p>Al Papa Remo Beach, crediamo nella creazione di uno spazio in cui le persone possano connettersi con la natura, gustare cibo e bevande deliziosi e creare ricordi indelebili. La nostra filosofia è radicata nel rispetto per l'ambiente, nel sostegno alla comunità locale e nell'offrire un servizio eccezionale ai nostri ospiti.</p>
+                    <p>Ci sforziamo di offrire una miscela unica di influenze italiane e keniote, creando un'esperienza culturale che celebra entrambe le tradizioni.</p>
+                </div>
+                <div class="column">
+                    <h2 class="mt-4">Oggi</h2>
+                    <p>Oggi, Papa Remo Beach continua a essere una destinazione preziosa sulla costa keniota. Siamo orgogliosi di accogliere ospiti da tutto il mondo per far vivere loro la magia di Watamu e la calda ospitalità che ha definito Papa Remo sin dalla sua nascita.</p>
+                    <p>Che tu sia dei nostri per un pasto, un evento speciale o semplicemente per rilassarti sulla spiaggia, ci impegniamo a rendere la tua esperienza al Papa Remo Beach indimenticabile.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <hr style="margin-top: 20px; margin-bottom: 40px;">
-
-    <div class="story-text mt-4">
-
-        <h2>Le Nostre Origini</h2>
-        <div class="intro-layout">
-            <div class="intro-layout-text">
-                <p>Papa Remo Beach è stato fondato nel 1997 da Remo Lenzi, un italiano con una grande passione per la costa keniota. La storia inizia quando Remo visitò per la prima volta Watamu e si innamorò delle sue spiagge incontaminate e della sua calda comunità.</p>
-                <p>Determinato a creare qualcosa di speciale, Remo visse in una tenda per un anno per immergersi completamente nell'esperienza africana e comprendere la cultura locale. Questa dedizione e questo rispetto per l'ambiente e la comunità sono diventati le fondamenta del Papa Remo Beach.</p>
-            </div>
-            <div class="intro-layout-image">
-                <picture>
-                    <source srcset="../assets/images/optimized/storia/remo-lenzi.webp" type="image/webp">
-                    <source srcset="../assets/images/optimized/storia/remo-lenzi.jpg" type="image/jpeg">
-                    <img src="../assets/images/optimized/storia/remo-lenzi.jpg" alt="Remo Lenzi, il fondatore di Papa Remo Beach" loading="lazy">
-                </picture>
-            </div>
-        </div>
-
-        <hr style="margin-top: 40px; margin-bottom: 40px;">
-
-        <h2 class="mt-4">Crescita ed Evoluzione</h2>
-        <div class="intro-layout intro-layout--reverse">
-            <div class="intro-layout-text">
-                <p>Quello che era iniziato come un semplice capanno di famiglia, dove io, mio papà, mia sorella e il resto della famiglia andavamo per rilassarci e passeggiare sulla spiaggia, si è trasformato nel tempo in qualcosa di speciale. Nella prima foto, risalente ai primi anni 2000, si respira ancora quell’atmosfera semplice e familiare. Col tempo, quando papà è rientrato in Italia, ho preso in mano il progetto, trasformando quel luogo pieno di ricordi in ciò che oggi è Papa Remo: un ristorante, un beach club, una location per eventi e molto altro.</p>
-                <p>Papa Remo è cresciuto rimanendo fedele alle sue radici, offrendo esperienze autentiche e preservando la bellezza naturale di Watamu. I celebri beach party del sabato, con DJ locali, continuano a unire residenti e turisti in un’atmosfera vibrante. Una storia di famiglia che è diventata una destinazione amata.</p>
-            </div>
-             <div class="intro-layout-image">
-                <picture>
-                    <source srcset="../assets/images/optimized/storia/papa.webp" type="image/webp">
-                    <source srcset="../assets/images/optimized/storia/papa.jpg" type="image/jpeg">
-                    <img src="../assets/images/optimized/storia/papa.jpg" alt="L'ingresso originale di Papa Remo Beach" loading="lazy">
-                </picture>
-            </div>
-        </div>
-
-        <hr style="margin-top: 40px; margin-bottom: 40px;">
-
-        <div class="two-column-layout">
-            <div class="column">
-                <h2 class="mt-4">La Nostra Filosofia</h2>
-                <p>Al Papa Remo Beach, crediamo nella creazione di uno spazio in cui le persone possano connettersi con la natura, gustare cibo e bevande deliziosi e creare ricordi indelebili. La nostra filosofia è radicata nel rispetto per l'ambiente, nel sostegno alla comunità locale e nell'offrire un servizio eccezionale ai nostri ospiti.</p>
-                <p>Ci sforziamo di offrire una miscela unica di influenze italiane e keniote, creando un'esperienza culturale che celebra entrambe le tradizioni.</p>
-            </div>
-            <div class="column">
-                <h2 class="mt-4">Oggi</h2>
-                <p>Oggi, Papa Remo Beach continua a essere una destinazione preziosa sulla costa keniota. Siamo orgogliosi di accogliere ospiti da tutto il mondo per far vivere loro la magia di Watamu e la calda ospitalità che ha definito Papa Remo sin dalla sua nascita.</p>
-                <p>Che tu sia dei nostri per un pasto, un evento speciale o semplicemente per rilassarti sulla spiaggia, ci impegniamo a rendere la tua esperienza al Papa Remo Beach indimenticabile.</p>
-            </div>
-        </div>
-    </div>
-</section>
+</div>
 </main>
 </div>
 

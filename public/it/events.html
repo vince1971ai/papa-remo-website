@@ -59,7 +59,13 @@
         :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}
         
         main.main-content {
-            padding: 0 2rem;
+            padding: 2rem;
+        }
+
+        /* Regola aggiunta per limitare la larghezza */
+        .page-container {
+            max-width: 960px;
+            margin: 0 auto;
         }
 
         @media (min-width: 992px) {
@@ -107,7 +113,7 @@
         /* MODIFICA PER IL MOBILE */
         @media (max-width: 768px) {
             .events-feature-layout,.intro-layout{flex-direction:column}
-            
+            .main-content { margin-left: 0; }
             .slider-card {
                 flex: 0 0 100%;
                 margin: 0;
@@ -133,116 +139,123 @@
     <div id="menu-placeholder"></div>
 
     <main class="main-content">
-        <header class="page-header">
-            <h1>Eventi al Papa Remo</h1>
-            <p>Vivi l'atmosfera vibrante dei nostri beach party e degli eventi speciali</p>
-        </header>
+        <div class="page-container">
 
-        <section class="events-intro">
-            <div class="events-image">
-                <picture>
-                    <source srcset="../assets/images/optimized/events/beach_party.webp" type="image/webp"/>
-                    <source srcset="../assets/images/optimized/events/beach_party.jpg" type="image/jpeg"/>
-                    <img alt="Beach Party al Papa Remo" src="../assets/images/optimized/events/beach_party.jpg"/>
-                </picture>
-            </div>
-            
-            <hr class="section-divider">
+            <header class="page-header">
+                <h1>Eventi al Papa Remo</h1>
+                <p>Vivi l'atmosfera vibrante dei nostri beach party e degli eventi speciali</p>
+            </header>
 
-            <div class="events-feature-layout">
-                <div class="events-feature-text">
-                    <h2>Unisciti alla Festa</h2>
-                    <p>Papa Remo Beach è rinomato per i suoi eventi vibranti e l'atmosfera vivace. Dai nostri famosi beach party settimanali alle celebrazioni speciali per le festività, c'è sempre qualcosa di eccitante al Papa Remo.</p>
-                    <p>I nostri eventi presentano DJ locali, musica dal vivo, cibo delizioso e cocktail d'autore, il tutto incorniciato dalla splendida spiaggia di Watamu. Che tu voglia ballare tutta la notte o goderti una serata rilassante con gli amici, i nostri eventi offrono l'ambiente perfetto.</p>
+            <section class="events-intro">
+                <div class="events-image">
+                    <picture>
+                        <source srcset="../assets/images/optimized/events/beach_party.webp" type="image/webp"/>
+                        <source srcset="../assets/images/optimized/events/beach_party.jpg" type="image/jpeg"/>
+                        <img alt="Beach Party al Papa Remo" src="../assets/images/optimized/events/beach_party.jpg"/>
+                    </picture>
                 </div>
-                <div class="events-feature-video">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/FENQj1uP76A?si=K42z-RfWMNEhewnh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+                <hr class="section-divider">
+
+                <div class="events-feature-layout">
+                    <div class="events-feature-text">
+                        <h2>Unisciti alla Festa</h2>
+                        <p>Papa Remo Beach è rinomato per i suoi eventi vibranti e l'atmosfera vivace. Dai nostri famosi beach party settimanali alle celebrazioni speciali per le festività, c'è sempre qualcosa di eccitante al Papa Remo.</p>
+                        <p>I nostri eventi presentano DJ locali, musica dal vivo, cibo delizioso e cocktail d'autore, il tutto incorniciato dalla splendida spiaggia di Watamu. Che tu voglia ballare tutta la notte o goderti una serata rilassante con gli amici, i nostri eventi offrono l'ambiente perfetto.</p>
+                    </div>
+                    <div class="events-feature-video">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/FENQj1uP76A?si=K42z-RfWMNEhewnh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="prossimi-eventi">
-            <hr class="section-divider">
-            <div class="events-slider">
-                <h2 style="text-align: center;">I Prossimi Eventi</h2>
-                <div class="slider-wrapper">
-                    <div class="slider-container"></div>
-                    <button class="slider-arrow prev">◂</button>
-                    <button class="slider-arrow next">▸</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="regular-events mt-4">
-            <hr class="section-divider">
-            <h2>Eventi Settimanali</h2>
-            <div class="intro-layout">
-                <div>
-                    <h3>Beach Party del Sabato</h3>
-                    <p>Il nostro evento di punta! Unisciti a noi ogni sabato per il miglior beach party di Watamu. Con DJ locali, cocktail speciali e un'atmosfera vibrante che unisce residenti e turisti.</p>
-                    <ul>
-                        <li><i class="far fa-clock"></i> Inizia alle 22:30</li>
-                        <li><i class="fas fa-music"></i> DJ dal Vivo</li>
-                        <li><i class="fas fa-cocktail"></i> Menu cocktail speciale</li>
-                    </ul>
-                </div>
-                <div class="intro-layout-video">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/f2VA0WM28vE?si=P8pBQr5aYZk5VzUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <section id="prossimi-eventi">
+                <hr class="section-divider">
+                <div class="events-slider">
+                    <h2 style="text-align: center;">I Prossimi Eventi</h2>
+                    <div class="slider-wrapper">
+                        <div class="slider-container"></div>
+                        <button class="slider-arrow prev">◂</button>
+                        <button class="slider-arrow next">▸</button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="special-events mt-4">
+            <section class="regular-events mt-4">
+                <hr class="section-divider">
+                <h2>Eventi Settimanali</h2>
+                <div class="intro-layout">
+                    <div>
+                        <h3>Beach Party del Sabato</h3>
+                        <p>Il nostro evento di punta! Unisciti a noi ogni sabato per il miglior beach party di Watamu. Con DJ locali, cocktail speciali e un'atmosfera vibrante che unisce residenti e turisti.</p>
+                        <ul>
+                            <li><i class="far fa-clock"></i> Inizia alle 22:30</li>
+                            <li><i class="fas fa-music"></i> DJ dal Vivo</li>
+                            <li><i class="fas fa-cocktail"></i> Menu cocktail speciale</li>
+                        </ul>
+                    </div>
+                    <div class="intro-layout-video">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/f2VA0WM28vE?si=P8pBQr5aYZk5VzUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="special-events mt-4">
+                <hr class="section-divider">
+                <h2>Eventi Speciali</h2>
+                <div class="intro-layout">
+                    <div>
+                        <h3>Festa di Capodanno</h3>
+                        <p>Festeggia l'arrivo del nuovo anno al nostro spettacolare beach party con fuochi d'artificio, esibizioni speciali e una celebrazione indimenticabile.</p>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="../assets/images/optimized/events/eventi_speciali.webp" type="image/webp">
+                            <source srcset="../assets/images/optimized/events/eventi_speciali.jpg" type="image/jpeg">
+                            <img src="../assets/images/optimized/events/eventi_speciali.jpg" alt="Festa di Capodanno al Papa Remo Beach" style="width:100%; height:100%; object-fit: cover; border-radius: 8px;">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+
+            <section class="private-events mt-4">
+                <hr class="section-divider">
+                <h2>Eventi Privati</h2>
+                <div class="intro-layout">
+                    <div>
+                        <p>Vuoi organizzare il tuo evento privato al Papa Remo Beach? Offriamo una location mozzafiato per feste private, eventi aziendali, compleanni e molto altro.</p>
+                        <p>Il nostro team lavorerà con te per creare un evento personalizzato che soddisfi le tue specifiche esigenze e preferenze.</p>
+                    </div>
+                    <div>
+                        <h3>Opzioni per Eventi Privati:</h3>
+                        <ul>
+                            <li>Feste di compleanno</li>
+                            <li>Eventi aziendali</li>
+                            <li>Feste di fidanzamento</li>
+                            <li>Anniversari</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top: 1.5rem;">
+                    <a class="btn btn-primary" href="contact.html">Richiedi Info</a>
+                </div>
+            </section>
+
             <hr class="section-divider">
-            <h2>Eventi Speciali</h2>
-            <div class="intro-layout">
-                <div>
-                    <h3>Festa di Capodanno</h3>
-                    <p>Festeggia l'arrivo del nuovo anno al nostro spettacolare beach party con fuochi d'artificio, esibizioni speciali e una celebrazione indimenticabile.</p>
-                </div>
-                <div class="placeholder-container">
-                    <p>Coming soon</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="private-events mt-4">
-            <hr class="section-divider">
-            <h2>Eventi Privati</h2>
-            <div class="intro-layout">
-                <div>
-                    <p>Vuoi organizzare il tuo evento privato al Papa Remo Beach? Offriamo una location mozzafiato per feste private, eventi aziendali, compleanni e molto altro.</p>
-                    <p>Il nostro team lavorerà con te per creare un evento personalizzato che soddisfi le tue specifiche esigenze e preferenze.</p>
+            <section class="event-signup mt-4">
+                <h2>Rimani Aggiornato</h2>
+                <p>Seguici sui social media per non perdere nessun aggiornamento.</p>
+                <div class="social-links mt-3" style="text-align:center;">
+                    <a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i> @paparemobeach</a>
+                    <a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i> Papa Remo Beach</a>
                 </div>
-                <div>
-                    <h3>Opzioni per Eventi Privati:</h3>
-                    <ul>
-                        <li>Feste di compleanno</li>
-                        <li>Eventi aziendali</li>
-                        <li>Feste di fidanzamento</li>
-                        <li>Anniversari</li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align:center; margin-top: 1.5rem;">
-                <a class="btn btn-primary" href="contact.html">Richiedi Info</a>
-            </div>
-        </section>
-
-        <hr class="section-divider">
-
-        <section class="event-signup mt-4">
-            <h2>Rimani Aggiornato</h2>
-            <p>Seguici sui social media per non perdere nessun aggiornamento.</p>
-            <div class="social-links mt-3" style="text-align:center;">
-                <a href="https://www.instagram.com/paparemobeach/" target="_blank"><i class="fab fa-instagram"></i> @paparemobeach</a>
-                <a href="https://www.facebook.com/paparemobeach/" target="_blank"><i class="fab fa-facebook"></i> Papa Remo Beach</a>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <div id="footer-placeholder"></div>

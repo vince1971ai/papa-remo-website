@@ -13,7 +13,9 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
+      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}
+      .page-container { max-width: 960px; margin: 0 auto; }
+      @media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
     </style>
     
     <link rel="stylesheet" href="../assets/css/style.css" media="all">
@@ -68,103 +70,105 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-<h1>Matrimoni in Spiaggia</h1>
-<p>Il matrimonio dei tuoi sogni sulle splendide coste di Watamu</p>
-</header>
-<section class="wedding-intro">
-<div class="wedding-image">
-<picture><source srcset="../assets/images/optimized/wedding/wedding.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view2.jpg" type="image/jpeg"/><img alt="Matrimonio in spiaggia al Papa Remo" src="../assets/images/optimized/beach_view2.jpg"/></picture>
+<div class="page-container">
+    <header class="page-header">
+    <h1>Matrimoni in Spiaggia</h1>
+    <p>Il matrimonio dei tuoi sogni sulle splendide coste di Watamu</p>
+    </header>
+    <section class="wedding-intro">
+    <div class="wedding-image">
+    <picture><source srcset="../assets/images/optimized/wedding/wedding.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view2.jpg" type="image/jpeg"/><img alt="Matrimonio in spiaggia al Papa Remo" src="../assets/images/optimized/beach_view2.jpg"/></picture>
+    </div>
+    <div class="wedding-text mt-4">
+    <h1>Il Tuo Matrimonio Perfetto in Spiaggia</h1>
+    <p>Immagina di scambiare le promesse con i piedi nella sabbia, il suono delle onde in sottofondo e lo splendido Oceano Indiano come cornice. Al Papa Remo Beach, siamo specializzati nel creare magici matrimoni sulla spiaggia che trasformano i tuoi sogni in realtà.</p>
+    <p>Il nostro team esperto sa che il giorno del tuo matrimonio è uno dei più importanti della tua vita. Per questo offriamo servizi di nozze personalizzati, su misura per le tue specifiche esigenze e preferenze, assicurando che ogni dettaglio sia perfetto per il tuo giorno speciale.</p>
+    <div class="wedding-features mt-3">
+    <div class="feature">
+    <i class="fas fa-heart"></i>
+    <span>Cerimonie in Riva al Mare</span>
+    </div>
+    <div class="feature">
+    <i class="fas fa-glass-cheers"></i>
+    <span>Pacchetti Ricevimento</span>
+    </div>
+    <div class="feature">
+    <i class="fas fa-camera"></i>
+    <span>Location Foto Mozzafiato</span>
+    </div>
+    <div class="feature">
+    <i class="fas fa-concierge-bell"></i>
+    <span>Servizio Personalizzato</span>
+    </div>
+    </div>
+    </div>
+    </section>
+    <section class="wedding-packages mt-4">
+    <h2>Pacchetti Matrimonio</h2>
+    <div class="package-card">
+    <h3>Cerimonia Intima in Spiaggia</h3>
+    <ul class="package-features">
+    <li>Allestimento cerimonia sulla spiaggia</li>
+    <li>Arco o gazebo decorato</li>
+    <li>Posti a sedere per un massimo di 30 ospiti</li>
+    <li>Impianto audio per la musica della cerimonia</li>
+    <li>Bouquet per la sposa e fiore all'occhiello per lo sposo</li>
+    <li>Coordinatore del matrimonio</li>
+    </ul>
+    </div>
+    <div class="package-card">
+    <h3>Matrimonio Completo in Spiaggia</h3>
+    <ul class="package-features">
+    <li>Tutte le caratteristiche della Cerimonia Intima</li>
+    <li>Cena di ricevimento per un massimo di 50 ospiti</li>
+    <li>Torta nuziale</li>
+    <li>Brindisi con champagne</li>
+    <li>Area ricevimento decorata</li>
+    <li>DJ o musica dal vivo per 3 ore</li>
+    </ul>
+    </div>
+    <div class="package-card">
+    <h3>Esperienza di Nozze di Lusso</h3>
+    <ul class="package-features">
+    <li>Tutte le caratteristiche del Matrimonio Completo</li>
+    <li>Alloggio per la coppia di sposi</li>
+    <li>Trattamenti spa pre-matrimonio</li>
+    <li>Pacchetto fotografico professionale</li>
+    <li>Ricevimento esteso con open bar</li>
+    <li>Spettacolo di fuochi d'artificio</li>
+    </ul>
+    </div>
+    <div class="package-note mt-3">
+    <p>* Tutti i pacchetti possono essere personalizzati per soddisfare le vostre esigenze specifiche. Contattate il nostro wedding coordinator per maggiori informazioni.</p>
+    </div>
+    </section>
+    <section class="wedding-gallery mt-4">
+    <h2>Galleria Matrimoni</h2>
+    <div class="gallery-note">
+    <p>Guarda la nostra galleria di matrimoni passati al Papa Remo Beach. Ogni matrimonio è unico e su misura per la visione della coppia.</p>
+    </div>
+    <div class="gallery-grid">
+    <div class="gallery-item">
+    <picture><source srcset="../assets/images/optimized/beach_view3.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view3.jpg" type="image/jpeg"/><img alt="Allestimento Matrimonio in Spiaggia" src="../assets/images/optimized/beach_view3.jpg"/></picture>
+    </div>
+    <div class="gallery-item">
+    <picture><source srcset="../assets/images/optimized/beach_view1.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_party.jpg" type="image/jpeg"/><img alt="Ricevimento di Nozze" src="../assets/images/optimized/beach_party.jpg"/></picture>
+    </div>
+    </div>
+    </section>
+    <section class="testimonials mt-4">
+    <h2>Coppie Felici</h2>
+    <div class="testimonial">
+    <p>"Il nostro matrimonio al Papa Remo è stato assolutamente perfetto. Il team si è preso cura di ogni dettaglio e la cornice della spiaggia era mozzafiato. I nostri ospiti parlano ancora di quanto fosse bello!"</p>
+    <div class="testimonial-author">- Maria & Giovanni</div>
+    </div>
+    </section>
+    <section class="wedding-contact mt-4">
+    <h2>Pianifica il Tuo Matrimonio</h2>
+    <p>Pronto per iniziare a pianificare il matrimonio dei tuoi sogni sulla spiaggia? Contatta il nostro wedding coordinator per discutere la tua visione e come possiamo trasformarla in realtà.</p>
+    <a class="btn btn-primary" href="contact.html">Contattaci</a>
+    </section>
 </div>
-<div class="wedding-text mt-4">
-<h1>Il Tuo Matrimonio Perfetto in Spiaggia</h1>
-<p>Immagina di scambiare le promesse con i piedi nella sabbia, il suono delle onde in sottofondo e lo splendido Oceano Indiano come cornice. Al Papa Remo Beach, siamo specializzati nel creare magici matrimoni sulla spiaggia che trasformano i tuoi sogni in realtà.</p>
-<p>Il nostro team esperto sa che il giorno del tuo matrimonio è uno dei più importanti della tua vita. Per questo offriamo servizi di nozze personalizzati, su misura per le tue specifiche esigenze e preferenze, assicurando che ogni dettaglio sia perfetto per il tuo giorno speciale.</p>
-<div class="wedding-features mt-3">
-<div class="feature">
-<i class="fas fa-heart"></i>
-<span>Cerimonie in Riva al Mare</span>
-</div>
-<div class="feature">
-<i class="fas fa-glass-cheers"></i>
-<span>Pacchetti Ricevimento</span>
-</div>
-<div class="feature">
-<i class="fas fa-camera"></i>
-<span>Location Foto Mozzafiato</span>
-</div>
-<div class="feature">
-<i class="fas fa-concierge-bell"></i>
-<span>Servizio Personalizzato</span>
-</div>
-</div>
-</div>
-</section>
-<section class="wedding-packages mt-4">
-<h2>Pacchetti Matrimonio</h2>
-<div class="package-card">
-<h3>Cerimonia Intima in Spiaggia</h3>
-<ul class="package-features">
-<li>Allestimento cerimonia sulla spiaggia</li>
-<li>Arco o gazebo decorato</li>
-<li>Posti a sedere per un massimo di 30 ospiti</li>
-<li>Impianto audio per la musica della cerimonia</li>
-<li>Bouquet per la sposa e fiore all'occhiello per lo sposo</li>
-<li>Coordinatore del matrimonio</li>
-</ul>
-</div>
-<div class="package-card">
-<h3>Matrimonio Completo in Spiaggia</h3>
-<ul class="package-features">
-<li>Tutte le caratteristiche della Cerimonia Intima</li>
-<li>Cena di ricevimento per un massimo di 50 ospiti</li>
-<li>Torta nuziale</li>
-<li>Brindisi con champagne</li>
-<li>Area ricevimento decorata</li>
-<li>DJ o musica dal vivo per 3 ore</li>
-</ul>
-</div>
-<div class="package-card">
-<h3>Esperienza di Nozze di Lusso</h3>
-<ul class="package-features">
-<li>Tutte le caratteristiche del Matrimonio Completo</li>
-<li>Alloggio per la coppia di sposi</li>
-<li>Trattamenti spa pre-matrimonio</li>
-<li>Pacchetto fotografico professionale</li>
-<li>Ricevimento esteso con open bar</li>
-<li>Spettacolo di fuochi d'artificio</li>
-</ul>
-</div>
-<div class="package-note mt-3">
-<p>* Tutti i pacchetti possono essere personalizzati per soddisfare le vostre esigenze specifiche. Contattate il nostro wedding coordinator per maggiori informazioni.</p>
-</div>
-</section>
-<section class="wedding-gallery mt-4">
-<h2>Galleria Matrimoni</h2>
-<div class="gallery-note">
-<p>Guarda la nostra galleria di matrimoni passati al Papa Remo Beach. Ogni matrimonio è unico e su misura per la visione della coppia.</p>
-</div>
-<div class="gallery-grid">
-<div class="gallery-item">
-<picture><source srcset="../assets/images/optimized/beach_view3.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view3.jpg" type="image/jpeg"/><img alt="Allestimento Matrimonio in Spiaggia" src="../assets/images/optimized/beach_view3.jpg"/></picture>
-</div>
-<div class="gallery-item">
-<picture><source srcset="../assets/images/optimized/beach_view1.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_party.jpg" type="image/jpeg"/><img alt="Ricevimento di Nozze" src="../assets/images/optimized/beach_party.jpg"/></picture>
-</div>
-</div>
-</section>
-<section class="testimonials mt-4">
-<h2>Coppie Felici</h2>
-<div class="testimonial">
-<p>"Il nostro matrimonio al Papa Remo è stato assolutamente perfetto. Il team si è preso cura di ogni dettaglio e la cornice della spiaggia era mozzafiato. I nostri ospiti parlano ancora di quanto fosse bello!"</p>
-<div class="testimonial-author">- Maria & Giovanni</div>
-</div>
-</section>
-<section class="wedding-contact mt-4">
-<h2>Pianifica il Tuo Matrimonio</h2>
-<p>Pronto per iniziare a pianificare il matrimonio dei tuoi sogni sulla spiaggia? Contatta il nostro wedding coordinator per discutere la tua visione e come possiamo trasformarla in realtà.</p>
-<a class="btn btn-primary" href="contact.html">Contattaci</a>
-</section>
 </main>
 </div>
 

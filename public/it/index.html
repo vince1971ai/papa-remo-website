@@ -78,6 +78,12 @@
     </script>
 
     <style>
+        /* Regola aggiunta per limitare la larghezza */
+        .page-container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
         /* Stili Esistenti */
         .hero { position: relative; background-color: #000; }
         .hero-video-wrapper { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; position: relative; }
@@ -171,159 +177,160 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-    <h1>Benvenuti a Papa Remo Beach</h1>
-    <p>Vivi la magia di Watamu nel nostro incantevole ristorante e beach club sulla costa</p>
-</header>
+<div class="page-container">
+    <header class="page-header">
+        <h1>Benvenuti a Papa Remo Beach</h1>
+        <p>Vivi la magia di Watamu nel nostro incantevole ristorante e beach club sulla costa</p>
+    </header>
 
-<section class="hero">
-    <div class="hero-video-wrapper">
-        <div id="youtube-player"></div>
-    </div>
-    <div class="hero-overlay">
-        <h2>Il Tuo Paradiso sulla Costa Keniota</h2>
-        <p>Fondato nel 1997 da Remo Lenzi</p>
-        <a class="btn btn-primary" href="restaurant.html">Scopri il Ristorante</a>
-    </div>
-</section>
+    <section class="hero">
+        <div class="hero-video-wrapper">
+            <div id="youtube-player"></div>
+        </div>
+        <div class="hero-overlay">
+            <h2>Il Tuo Paradiso sulla Costa Keniota</h2>
+            <p>Fondato nel 1997 da Remo Lenzi</p>
+            <a class="btn btn-primary" href="restaurant.html">Scopri il Ristorante</a>
+        </div>
+    </section>
 
-<section class="about mt-4">
+    <section class="about mt-4">
+        <div class="row">
+            <div class="col">
+                <h2>La Storia di Papa Remo Beach</h2>
+                <p>Fondato dal visionario Remo Lenzi nel 1997, Papa Remo Beach è diventato rapidamente un nome amato. Oggi si erge come una destinazione iconica, un gioiello incastonato sulla splendida costa keniota.</p>
+                <p>Scoprirai il nostro paradiso sulla pittoresca Jacaranda Road a Watamu, una posizione unica con vista sulla famosa e incantevole "spiaggia dell'amore". Il nostro locale offre una miscela unica e accattivante di relax per giornate tranquille, deliziose esperienze culinarie con vista sull'oceano e intrattenimento vibrante e coinvolgente sotto le stelle.</p>
+                <a class="btn btn-primary" href="story.html" style="margin-top: 1rem;">Leggi la Nostra Storia</a>
+            </div>
+            <div class="col">
+                <picture>
+                    <source srcset="/assets/images/optimized/General/in_entrance.webp" type="image/webp">
+                    <img src="/assets/images/optimized/General/in_entrance.jpg" alt="Ingresso di Papa Remo Beach" class="about-image" width="1600" height="900" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="events-promo mt-4">
+        <div class="row" style="align-items: center;">
+            <div class="col">
+                <picture>
+                    <source srcset="/assets/images/optimized/General/beach_party.webp" type="image/webp">
+                    <img src="/assets/images/optimized/General/beach_party.jpg" alt="Vibrante Beach Party al Papa Remo" class="about-image" width="1600" height="900" loading="lazy">
+                </picture>
+            </div>
+            <div class="col">
+                <h2>Eventi Vibranti in Spiaggia</h2>
+                <p>Dai nostri famosi beach party del sabato con DJ di fama a festività speciali e serate a tema, c'è sempre qualcosa di eccitante al Papa Remo. Goditi ottima musica, cibo delizioso, cocktail d'autore e un'atmosfera imbattibile proprio sulle rive dell'Oceano Indiano.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-grid">
+        <div class="promo-card with-bg" style="--bg-image: url('/assets/images/optimized/General/cover.webp');">
+            <div class="promo-card-content">
+                <h2>Prossimo Evento</h2>
+                <div id="countdown-timer">
+                    <span>00g</span>:<span>00o</span>:<span>00m</span>:<span>00s</span>
+                </div>
+                <div class="event-card-promo">
+                    <h4>Beach Party - Special Guest DJ</h4>
+                    <p><strong>Quando:</strong> Sabato Prossimo, dalle 22:30</p>
+                    <p>Preparati per una notte indimenticabile con un DJ di fama internazionale. Non mancare!</p>
+                </div>
+                <a href="events.html" class="btn btn-primary">Scopri Tutti gli Eventi</a>
+            </div>
+        </div>
+        <div class="promo-card with-bg" style="--bg-image: url('/assets/images/optimized/General/rivivi.webp');">
+            <div class="promo-card-content">
+                <h2>Rivivi la Magia</h2>
+                <p>Le serate al Papa Remo sono indimenticabili. Guarda le foto dell'ultimo Beach Party e immergiti nell'atmosfera unica.</p>
+                <a href="galleria.html" class="btn btn-primary">Guarda le Foto</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="podcast-promo mt-4">
+        <div class="row" style="align-items: center;">
+            <div class="col"> 
+                <h2>Sintonizzati su Papa Remo Waves</h2>
+                <p>Immergiti più a fondo nelle storie, nei suoni e nell'anima di Watamu con il podcast ufficiale di Papa Remo. Ascolta personalità locali, esplora gli sforzi di conservazione e ottieni spunti unici sulla vita vibrante della costa keniota.</p>
+                <a href="podcast.html" class="btn btn-primary mt-2">Ascolta il Nostro Podcast</a>
+            </div>
+            <div class="col"> 
+                <picture>
+                    <source srcset="/assets/images/optimized/General/podcast.webp" type="image/webp">
+                    <img src="/assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast" class="about-image" width="1600" height="900" loading="lazy">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-posts-promo mt-4">
+        <div class="row" style="align-items: center;">
+            <div class="col"> 
+                <picture>
+                    <source srcset="/assets/images/optimized/General/latest_news.webp" type="image/webp">
+                    <img src="/assets/images/optimized/General/latest_news.jpg" alt="Ultime notizie e storie da Papa Remo" class="about-image" width="1600" height="900" loading="lazy">
+                </picture>
+            </div>
+            <div class="col"> 
+                <h2>Sale & Anima</h2>
+                <p>Rimani aggiornato sugli ultimi avvenimenti, storie avvincenti dalla spiaggia e spunti unici dalla famiglia Papa Remo. Il nostro blog ti avvicina al cuore di Watamu e alla nostra vibrante comunità.</p>
+                <a href="our-posts.html" class="btn btn-primary mt-2">Leggi i Nostri Post</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="events mt-4"> 
+    <h2>Prossimi Eventi</h2>
+    <div class="event-card">
+    <div class="event-date">
+    <span class="day">SAB</span>
+    <span class="date">Ogni Settimana</span>
+    </div>
+    <div class="event-details">
+    <h3>Beach Party Settimanale</h3>
+    <p>Unisciti a noi per il nostro famoso beach party settimanale con DJ locali, deliziosi cocktail e le migliori vibrazioni della costa keniota.</p>
+    <a class="btn btn-secondary" href="events.html">Vedi Dettagli Evento</a>
+    </div>
+    </div>
+    </section>
+
+    <section class="testimonials mt-4">
+    <h2>Cosa Dicono i Nostri Ospiti</h2>
+    <div class="testimonial-slider">
+    <div class="testimonial">
+    <p>"Una location meravigliosa con cibo e servizio incredibili. Il beach party del sabato è assolutamente da non perdere!"</p>
+    <div class="testimonial-author">- Sara M.</div>
+    </div>
+    </div>
+    </section>
+
+    <section class="features mt-4">
     <div class="row">
-        <div class="col">
-            <h2>La Storia di Papa Remo Beach</h2>
-            <p>Fondato dal visionario Remo Lenzi nel 1997, Papa Remo Beach è diventato rapidamente un nome amato. Oggi si erge come una destinazione iconica, un gioiello incastonato sulla splendida costa keniota.</p>
-            <p>Scoprirai il nostro paradiso sulla pittoresca Jacaranda Road a Watamu, una posizione unica con vista sulla famosa e incantevole "spiaggia dell'amore". Il nostro locale offre una miscela unica e accattivante di relax per giornate tranquille, deliziose esperienze culinarie con vista sull'oceano e intrattenimento vibrante e coinvolgente sotto le stelle.</p>
-            <a class="btn btn-primary" href="story.html" style="margin-top: 1rem;">Leggi la Nostra Storia</a>
-        </div>
-        <div class="col">
-            <picture>
-                <source srcset="/assets/images/optimized/General/in_entrance.webp" type="image/webp">
-                <img src="/assets/images/optimized/General/in_entrance.jpg" alt="Ingresso di Papa Remo Beach" class="about-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
+    <div class="feature-card">
+    <i class="fas fa-utensils"></i>
+    <h3>Ristorante</h3>
+    <p>Gusta una cucina deliziosa con vista sull'oceano</p>
+    <a class="btn btn-secondary" href="restaurant.html">Esplora il Menu</a>
     </div>
-</section>
-
-<section class="events-promo mt-4">
-    <div class="row" style="align-items: center;">
-        <div class="col">
-            <picture>
-                <source srcset="/assets/images/optimized/General/beach_party.webp" type="image/webp">
-                <img src="/assets/images/optimized/General/beach_party.jpg" alt="Vibrante Beach Party al Papa Remo" class="about-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-        <div class="col">
-            <h2>Eventi Vibranti in Spiaggia</h2>
-            <p>Dai nostri famosi beach party del sabato con DJ di fama a festività speciali e serate a tema, c'è sempre qualcosa di eccitante al Papa Remo. Goditi ottima musica, cibo delizioso, cocktail d'autore e un'atmosfera imbattibile proprio sulle rive dell'Oceano Indiano.</p>
-        </div>
+    <div class="feature-card">
+    <i class="fas fa-glass-cheers"></i>
+    <h3>Beach Club</h3>
+    <p>Rilassati e rigenerati nel nostro esclusivo ambiente sulla spiaggia</p>
+    <a class="btn btn-secondary" href="events.html">Scopri i Nostri Eventi</a>
     </div>
-</section>
-
-<section class="promo-grid">
-    <div class="promo-card with-bg" style="--bg-image: url('/assets/images/optimized/General/cover.webp');">
-        <div class="promo-card-content">
-            <h2>Prossimo Evento</h2>
-            <div id="countdown-timer">
-                <span>00g</span>:<span>00o</span>:<span>00m</span>:<span>00s</span>
-            </div>
-            <div class="event-card-promo">
-                <h4>Beach Party - Special Guest DJ</h4>
-                <p><strong>Quando:</strong> Sabato Prossimo, dalle 22:30</p>
-                <p>Preparati per una notte indimenticabile con un DJ di fama internazionale. Non mancare!</p>
-            </div>
-            <a href="events.html" class="btn btn-primary">Scopri Tutti gli Eventi</a>
-        </div>
+    <div class="feature-card">
+    <i class="fas fa-music"></i>
+    <h3>Beach Party del Sabato</h3>
+    <p>Partecipa al nostro famoso beach party settimanale</p>
+    <a class="btn btn-secondary" href="events.html">Unisciti alla Festa</a>
     </div>
-    <div class="promo-card with-bg" style="--bg-image: url('/assets/images/optimized/General/rivivi.webp');">
-        <div class="promo-card-content">
-            <h2>Rivivi la Magia</h2>
-            <p>Le serate al Papa Remo sono indimenticabili. Guarda le foto dell'ultimo Beach Party e immergiti nell'atmosfera unica.</p>
-            <a href="galleria.html" class="btn btn-primary">Guarda le Foto</a>
-        </div>
     </div>
-</section>
-
-
-<section class="podcast-promo mt-4">
-    <div class="row" style="align-items: center;">
-        <div class="col"> 
-            <h2>Sintonizzati su Papa Remo Waves</h2>
-            <p>Immergiti più a fondo nelle storie, nei suoni e nell'anima di Watamu con il podcast ufficiale di Papa Remo. Ascolta personalità locali, esplora gli sforzi di conservazione e ottieni spunti unici sulla vita vibrante della costa keniota.</p>
-            <a href="podcast.html" class="btn btn-primary mt-2">Ascolta il Nostro Podcast</a>
-        </div>
-        <div class="col"> 
-            <picture>
-                <source srcset="/assets/images/optimized/General/podcast.webp" type="image/webp">
-                <img src="/assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast" class="about-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-    </div>
-</section>
-
-<section class="our-posts-promo mt-4">
-    <div class="row" style="align-items: center;">
-        <div class="col"> 
-            <picture>
-                <source srcset="/assets/images/optimized/General/latest_news.webp" type="image/webp">
-                <img src="/assets/images/optimized/General/latest_news.jpg" alt="Ultime notizie e storie da Papa Remo" class="about-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-        <div class="col"> 
-            <h2>Sale & Anima</h2>
-            <p>Rimani aggiornato sugli ultimi avvenimenti, storie avvincenti dalla spiaggia e spunti unici dalla famiglia Papa Remo. Il nostro blog ti avvicina al cuore di Watamu e alla nostra vibrante comunità.</p>
-            <a href="our-posts.html" class="btn btn-primary mt-2">Leggi i Nostri Post</a>
-        </div>
-    </div>
-</section>
-
-<section class="events mt-4"> 
-<h2>Prossimi Eventi</h2>
-<div class="event-card">
-<div class="event-date">
-<span class="day">SAB</span>
-<span class="date">Ogni Settimana</span>
+    </section>
 </div>
-<div class="event-details">
-<h3>Beach Party Settimanale</h3>
-<p>Unisciti a noi per il nostro famoso beach party settimanale con DJ locali, deliziosi cocktail e le migliori vibrazioni della costa keniota.</p>
-<a class="btn btn-secondary" href="events.html">Vedi Dettagli Evento</a>
-</div>
-</div>
-</section>
-
-<section class="testimonials mt-4">
-<h2>Cosa Dicono i Nostri Ospiti</h2>
-<div class="testimonial-slider">
-<div class="testimonial">
-<p>"Una location meravigliosa con cibo e servizio incredibili. Il beach party del sabato è assolutamente da non perdere!"</p>
-<div class="testimonial-author">- Sara M.</div>
-</div>
-</div>
-</section>
-
-<section class="features mt-4">
-<div class="row">
-<div class="feature-card">
-<i class="fas fa-utensils"></i>
-<h3>Ristorante</h3>
-<p>Gusta una cucina deliziosa con vista sull'oceano</p>
-<a class="btn btn-secondary" href="restaurant.html">Esplora il Menu</a>
-</div>
-<div class="feature-card">
-<i class="fas fa-glass-cheers"></i>
-<h3>Beach Club</h3>
-<p>Rilassati e rigenerati nel nostro esclusivo ambiente sulla spiaggia</p>
-<a class="btn btn-secondary" href="events.html">Scopri i Nostri Eventi</a>
-</div>
-<div class="feature-card">
-<i class="fas fa-music"></i>
-<h3>Beach Party del Sabato</h3>
-<p>Partecipa al nostro famoso beach party settimanale</p>
-<a class="btn btn-secondary" href="events.html">Unisciti alla Festa</a>
-</div>
-</div>
-</section>
-
 </main>
 </div>
 

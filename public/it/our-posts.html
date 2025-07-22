@@ -63,6 +63,10 @@
     <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
     
     <style>
+        .page-container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
         .page-header-image-container {
             width: 100%;
             border-radius: 8px;
@@ -82,73 +86,75 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-<h1>Sale & anima</h1>
-<p>Storie, notizie e colori dal Papa Remo Beach</p>
-</header>
+<div class="page-container">
+    <header class="page-header">
+    <h1>Sale & anima</h1>
+    <p>Storie, notizie e colori dal Papa Remo Beach</p>
+    </header>
 
-<div class="page-header-image-container">
-    <picture>
-        <source srcset="../assets/images/optimized/General/latest_news.webp" type="image/webp">
-        <img src="../assets/images/optimized/General/latest_news.jpg" alt="Blog di Papa Remo Beach" class="page-header-image">
-    </picture>
-</div>
-
-<section class="featured-posts mt-4">
-    <h2>Articoli in Evidenza</h2>
-    <div class="row">
-        <div class="col">
-            <div class="card blog-post-card">
-                <a href="post/sogni.html">
-                    <picture>
-                        <source srcset="../assets/images/optimized/posts/sogni_post.webp" type="image/webp">
-                        <img src="../assets/images/optimized/posts/sogni_post.jpeg" alt="Atmosfera serale al ristorante di Papa Remo Beach" class="card-img">
-                    </picture>
-                </a>
-                <div class="card-content">
-                    <h3 class="card-title"><a href="post/sogni.html">Sogni di Fuggire nel Vero Paradiso?</a></h3>
-                    <p class="post-meta"><span><i class="far fa-calendar-alt"></i> 07 Luglio 2025</span> | <span><i class="fas fa-tag"></i> Voci dal Paradiso</span></p>
-                    <p class="card-text">Immagina: la sabbia bianca e finissima che accarezza i tuoi piedi, il suono dolce delle onde che ti culla, e l'acqua cristallina dell'Oceano Indiano che ti invita a tuffarti...</p>
-                    <a href="post/sogni.html" class="btn btn-secondary">Leggi di più</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card blog-post-card">
-                <a href="post/The_New_Season_in_Watamu.html">
-                    <picture>
-                        <source srcset="../assets/images/optimized/posts/The_New_Season_in_Watamu.webp" type="image/webp">
-                        <img src="../assets/images/optimized/posts/The_New_Season_in_Watamu.jpg" alt="Una vista mozzafiato di Papa Remo Beach a Watamu, pronta per la nuova stagione" class="card-img">
-                    </picture>
-                </a>
-                <div class="card-content">
-                    <h3 class="card-title"><a href="post/The_New_Season_in_Watamu.html">La Nuova Stagione a Watamu è Arrivata: il Paradiso Keniota vi Aspetta!</a></h3>
-                    <p class="post-meta"><span><i class="far fa-calendar-alt"></i> 06 Giugno 2025</span> | <span><i class="fas fa-tag"></i> Notizie dal Paradiso</span></p>
-                    <p class="card-text">L'attesa è quasi finita! Mentre l'estate avanza, una nuova ed entusiasmante stagione sta per sbocciare sulla costa del Kenya. Watamu, con il suo mare cristallino e le spiagge bianche, è pronta per voi.</p>
-                    <a href="post/The_New_Season_in_Watamu.html" class="btn btn-secondary">Leggi di più</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card blog-post-card">
-                 <a href="post/Events_Under_the_Kenyan_Sky.html">
-                    <picture>
-                        <source srcset="../assets/images/optimized/posts/Events_Under_the_Kenyan_Sky.webp" type="image/webp">
-                        <img src="../assets/images/optimized/posts/Events_Under_the_Kenyan_Sky.jpg" alt="Un vivace beach party sotto il cielo keniota al Paparemo Beach" class="card-img">
-                    </picture>
-                </a>
-                <div class="card-content">
-                    <h3 class="card-title"><a href="post/Events_Under_the_Kenyan_Sky.html">La Nuova Stagione è Arrivata: un'Esplosione di Eventi Sotto il Cielo del Kenya</a></h3>
-                    <p class="post-meta"><span><i class="far fa-calendar-alt"></i> 07 Giugno 2025</span> | <span><i class="fas fa-tag"></i> Eventi Speciali</span></p>
-                    <p class="card-text">L'attesa è finita. Le notti di Watamu stanno per riaccendersi con la magia inconfondibile del Paparemo Beach, la gemma incastonata nella splendida Baia dell'Amore...</p>
-                    <a href="post/Events_Under_the_Kenyan_Sky.html" class="btn btn-secondary">Leggi di più</a>
-                </div>
-            </div>
-        </div>
+    <div class="page-header-image-container">
+        <picture>
+            <source srcset="../assets/images/optimized/General/latest_news.webp" type="image/webp">
+            <img src="../assets/images/optimized/General/latest_news.jpg" alt="Blog di Papa Remo Beach" class="page-header-image">
+        </picture>
     </div>
-</section>
 
+    <section class="featured-posts mt-4">
+        <h2>Articoli in Evidenza</h2>
+        <div class="row">
+            <div class="col">
+                <div class="card blog-post-card">
+                    <a href="post/sogni.html">
+                        <picture>
+                            <source srcset="../assets/images/optimized/posts/sogni_post.webp" type="image/webp">
+                            <img src="../assets/images/optimized/posts/sogni_post.jpeg" alt="Atmosfera serale al ristorante di Papa Remo Beach" class="card-img">
+                        </picture>
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="post/sogni.html">Sogni di Fuggire nel Vero Paradiso?</a></h3>
+                        <p class="post-meta"><span><i class="far fa-calendar-alt"></i> 07 Luglio 2025</span> | <span><i class="fas fa-tag"></i> Voci dal Paradiso</span></p>
+                        <p class="card-text">Immagina: la sabbia bianca e finissima che accarezza i tuoi piedi, il suono dolce delle onde che ti culla, e l'acqua cristallina dell'Oceano Indiano che ti invita a tuffarti...</p>
+                        <a href="post/sogni.html" class="btn btn-secondary">Leggi di più</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card blog-post-card">
+                    <a href="post/The_New_Season_in_Watamu.html">
+                        <picture>
+                            <source srcset="../assets/images/optimized/posts/The_New_Season_in_Watamu.webp" type="image/webp">
+                            <img src="../assets/images/optimized/posts/The_New_Season_in_Watamu.jpg" alt="Una vista mozzafiato di Papa Remo Beach a Watamu, pronta per la nuova stagione" class="card-img">
+                        </picture>
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="post/The_New_Season_in_Watamu.html">La Nuova Stagione a Watamu è Arrivata: il Paradiso Keniota vi Aspetta!</a></h3>
+                        <p class="post-meta"><span><i class="far fa-calendar-alt"></i> 06 Giugno 2025</span> | <span><i class="fas fa-tag"></i> Notizie dal Paradiso</span></p>
+                        <p class="card-text">L'attesa è quasi finita! Mentre l'estate avanza, una nuova ed entusiasmante stagione sta per sbocciare sulla costa del Kenya. Watamu, con il suo mare cristallino e le spiagge bianche, è pronta per voi.</p>
+                        <a href="post/The_New_Season_in_Wata
+                        mu.html" class="btn btn-secondary">Leggi di più</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card blog-post-card">
+                     <a href="post/Events_Under_the_Kenyan_Sky.html">
+                        <picture>
+                            <source srcset="../assets/images/optimized/posts/Events_Under_the_Kenyan_Sky.webp" type="image/webp">
+                            <img src="../assets/images/optimized/posts/Events_Under_the_Kenyan_Sky.jpg" alt="Un vivace beach party sotto il cielo keniota al Paparemo Beach" class="card-img">
+                        </picture>
+                    </a>
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="post/Events_Under_the_Kenyan_Sky.html">La Nuova Stagione è Arrivata: un'Esplosione di Eventi Sotto il Cielo del Kenya</a></h3>
+                        <p class="post-meta"><span><i class="far fa-calendar-alt"></i> 07 Giugno 2025</span> | <span><i class="fas fa-tag"></i> Eventi Speciali</span></p>
+                        <p class="card-text">L'attesa è finita. Le notti di Watamu stanno per riaccendersi con la magia inconfondibile del Paparemo Beach, la gemma incastonata nella splendida Baia dell'Amore...</p>
+                        <a href="post/Events_Under_the_Kenyan_Sky.html" class="btn btn-secondary">Leggi di più</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 </main>
 </div>
 
