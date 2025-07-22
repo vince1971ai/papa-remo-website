@@ -78,131 +78,90 @@
     </script>
 
     <style>
-        /* Styles for the Hero video container */
-        .hero {
-            position: relative;
-            background-color: #000;
-        }
-        
-        .hero-video-wrapper {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            overflow: hidden; 
-            position: relative;
-        }
+        /* Stili Esistenti */
+        .hero { position: relative; background-color: #000; }
+        .hero-video-wrapper { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; position: relative; }
+        .hero-video-wrapper #youtube-player, .hero-video-wrapper iframe { position: absolute; top: 50%; left: 50%; width: 140%; height: 140%; transform: translate(-50%, -50%); pointer-events: none; }
+        .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background-color: var(--card-bg); color: var(--text-secondary); padding: 1.2rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-top: 1px solid var(--border-color); box-shadow: 0 -4px 15px rgba(0,0,0,0.2); transform: translateY(150%); transition: transform 0.5s ease-in-out; }
+        .cookie-banner.visible { transform: translateY(0); }
+        .cookie-content p { margin: 0; font-size: 0.9rem; }
+        .cookie-content a { color: var(--accent-color); text-decoration: underline; }
+        .cookie-buttons { display: flex; gap: 1rem; margin-left: 2rem; }
+        .cookie-buttons .btn { white-space: nowrap; }
 
-        .hero-video-wrapper #youtube-player, .hero-video-wrapper iframe {
+        /* Nuovi Stili per le Sezioni Dinamiche */
+        .promo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .promo-card {
+            background-color: var(--sand);
+            padding: 1.5rem; /* Padding ridotto */
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            color: var(--text-dark);
+        }
+        .promo-card.with-bg {
+             color: white;
+        }
+        .promo-card-content {
+            position: relative;
+            z-index: 2;
+        }
+        .promo-card.with-bg::before {
+            content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 140%; 
-            height: 140%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            background-image: var(--bg-image);
+            filter: brightness(0.4);
+            z-index: 1;
         }
 
-        /* Stili per il Banner Cookie */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--card-bg);
-            color: var(--text-secondary);
-            padding: 1.2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border-top: 1px solid var(--border-color);
-            box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
-            transform: translateY(150%);
-            transition: transform 0.5s ease-in-out;
+        .promo-card h2 {
+            font-family: 'Playfair Display', serif;
+            margin-top: 0;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
         }
-        .cookie-banner.visible {
-            transform: translateY(0);
+        #countdown-timer {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0.5rem 0 1rem 0;
+            letter-spacing: 2px;
         }
-        .cookie-content p {
-            margin: 0;
-            font-size: 0.9rem;
+        .event-card-promo {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: left;
+            margin: 1rem 0 1.5rem 0;
         }
-        .cookie-content a {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
-        .cookie-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-left: 2rem;
-        }
-        .cookie-buttons .btn {
-            white-space: nowrap;
-        }
-    </style>
-    
-    <style>
+        .event-card-promo h4 { margin-top: 0; font-size: 1rem; }
+        .event-card-promo p { font-size: 0.9rem; margin-bottom: 0.5rem; }
+        
         @media (max-width: 768px) {
-            body.homepage .page-header {
-                display: none;
-            }
-
-            .hero {
-                height: auto;
-                overflow: visible;
-            }
-            
-            .hero-video-wrapper {
-                aspect-ratio: 16 / 9;
-            }
-            .hero-video-wrapper #youtube-player, .hero-video-wrapper iframe {
-                width: 100%;
-                height: 100%;
-                position: relative;
-                transform: none;
-                top: auto;
-                left: auto;
-                pointer-events: auto;
-            }
-
-            .hero-overlay {
-                position: relative; 
-                transform: none; 
-                top: auto;
-                left: auto;
-                width: 100%;
-                padding: 2rem 1rem;
-                text-align: center;
-            }
-            
-            .hero-overlay h2 {
-                font-size: clamp(1.6rem, 8vw, 2.2rem);
-                line-height: 1.25;
-                margin-bottom: 0.75rem;
-            }
-            .hero-overlay p {
-                font-size: 0.95rem;
-                margin-bottom: 1.5rem;
-            }
-            .about .row,
-            .wedding-promo .row,
-            .podcast-promo .row {
-                flex-direction: column-reverse;
-            }
-
-            /* Cookie Banner su Mobile */
-            .cookie-banner {
-                flex-direction: column;
-                padding: 1rem;
-                text-align: center;
-            }
-            .cookie-content p {
-                margin-bottom: 1rem;
-            }
-            .cookie-buttons {
-                margin-left: 0;
-                width: 100%;
-                justify-content: center;
-            }
+            body.homepage .page-header { display: none; }
+            .hero { height: auto; overflow: visible; }
+            .hero-video-wrapper { aspect-ratio: 16 / 9; }
+            .hero-video-wrapper #youtube-player, .hero-video-wrapper iframe { width: 100%; height: 100%; position: relative; transform: none; top: auto; left: auto; pointer-events: auto; }
+            .hero-overlay { position: relative; transform: none; top: auto; left: auto; width: 100%; padding: 2rem 1rem; text-align: center; }
+            .hero-overlay h2 { font-size: clamp(1.6rem, 8vw, 2.2rem); line-height: 1.25; margin-bottom: 0.75rem; }
+            .hero-overlay p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+            .about .row, .wedding-promo .row, .podcast-promo .row { flex-direction: column-reverse; }
+            .cookie-banner { flex-direction: column; padding: 1rem; text-align: center; }
+            .cookie-content p { margin-bottom: 1rem; }
+            .cookie-buttons { margin-left: 0; width: 100%; justify-content: center; }
+            .promo-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -234,47 +193,12 @@
             <h2>La Storia di Papa Remo Beach</h2>
             <p>Fondato dal visionario Remo Lenzi nel 1997, Papa Remo Beach è diventato rapidamente un nome amato. Oggi si erge come una destinazione iconica, un gioiello incastonato sulla splendida costa keniota.</p>
             <p>Scoprirai il nostro paradiso sulla pittoresca Jacaranda Road a Watamu, una posizione unica con vista sulla famosa e incantevole "spiaggia dell'amore". Il nostro locale offre una miscela unica e accattivante di relax per giornate tranquille, deliziose esperienze culinarie con vista sull'oceano e intrattenimento vibrante e coinvolgente sotto le stelle.</p>
-            <p>La cucina è principalmente e autenticamente italiana, con il pesce locale più fresco, classiche pizze cotte nel forno a legna e deliziose paste.</p>
             <a class="btn btn-primary" href="story.html" style="margin-top: 1rem;">Leggi la Nostra Storia</a>
         </div>
         <div class="col">
             <picture>
                 <source srcset="/assets/images/optimized/General/in_entrance.webp" type="image/webp">
                 <img src="/assets/images/optimized/General/in_entrance.jpg" alt="Ingresso di Papa Remo Beach" class="about-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-    </div>
-</section>
-
-<section class="village-promo mt-4">
-    <div class="row" style="align-items: center;">
-        <div class="col"> 
-            <picture>
-                <source srcset="/assets/images/optimized/General/Paparemovillage.webp" type="image/webp">
-                <img src="/assets/images/optimized/General/Paparemovillage.jpg" alt="Soggiorno confortevole al Paparemo Village" class="about-image" width="1600" height="900" loading="lazy">
-            </picture>
-        </div>
-        <div class="col"> 
-            <h2>Scopri Paparemo Village</h2>
-            <p>Vivi l'autentico fascino di Watamu con un soggiorno confortevole al Paparemo Village. I nostri alloggi offrono una miscela perfetta di stile locale e comfort moderno, ideali per la tua fuga serena o una residenza più lunga sulla costa keniota.</p>
-            <p>Goditi privacy, comfort e un facile accesso a Papa Remo Beach e a tutte le sue strutture.</p>
-            <a href="https://www.paparemovillage.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Esplora il Villaggio</a>
-        </div>
-    </div>
-</section>
-
-<section class="wedding-promo mt-4">
-    <div class="row" style="align-items: center;">
-        <div class="col">
-            <h2>Organizza il Tuo Matrimonio da Sogno</h2>
-            <p>Immagina il tuo giorno speciale sulle sabbie bianche e incontaminate di Watamu, con il turchese dell'Oceano Indiano come sfondo mozzafiato. Papa Remo Beach offre un ambiente idilliaco e indimenticabile per la tua cerimonia e ricevimento da sogno.</p>
-            <p>Il nostro team dedicato fornisce servizi personalizzati per garantire che ogni dettaglio sia perfetto, creando ricordi magici che durano una vita. Dalle riunioni intime alle grandi celebrazioni, adattiamo tutto alla tua visione.</p>
-            <a href="wedding.html" class="btn btn-primary mt-2">Scopri le Opzioni di Matrimonio</a>
-        </div>
-        <div class="col">
-            <picture>
-                <source srcset="/assets/images/optimized/General/wedding.webp" type="image/webp">
-                <img src="/assets/images/optimized/General/wedding.jpg" alt="Matrimonio in spiaggia al Papa Remo" class="about-image" width="1600" height="900" loading="lazy">
             </picture>
         </div>
     </div>
@@ -291,18 +215,40 @@
         <div class="col">
             <h2>Eventi Vibranti in Spiaggia</h2>
             <p>Dai nostri famosi beach party del sabato con DJ di fama a festività speciali e serate a tema, c'è sempre qualcosa di eccitante al Papa Remo. Goditi ottima musica, cibo delizioso, cocktail d'autore e un'atmosfera imbattibile proprio sulle rive dell'Oceano Indiano.</p>
-            <p>Non perderti il miglior intrattenimento di Watamu. Controlla regolarmente il nostro calendario eventi!</p>
-            <a href="events.html" class="btn btn-primary mt-2">Vedi Tutti gli Eventi</a>
         </div>
     </div>
 </section>
+
+<section class="promo-grid">
+    <div class="promo-card with-bg" style="--bg-image: url('/assets/images/optimized/General/cover.webp');">
+        <div class="promo-card-content">
+            <h2>Prossimo Evento</h2>
+            <div id="countdown-timer">
+                <span>00g</span>:<span>00o</span>:<span>00m</span>:<span>00s</span>
+            </div>
+            <div class="event-card-promo">
+                <h4>Beach Party - Special Guest DJ</h4>
+                <p><strong>Quando:</strong> Sabato Prossimo, dalle 22:30</p>
+                <p>Preparati per una notte indimenticabile con un DJ di fama internazionale. Non mancare!</p>
+            </div>
+            <a href="events.html" class="btn btn-primary">Scopri Tutti gli Eventi</a>
+        </div>
+    </div>
+    <div class="promo-card with-bg" style="--bg-image: url('/assets/images/optimized/General/rivivi.webp');">
+        <div class="promo-card-content">
+            <h2>Rivivi la Magia</h2>
+            <p>Le serate al Papa Remo sono indimenticabili. Guarda le foto dell'ultimo Beach Party e immergiti nell'atmosfera unica.</p>
+            <a href="galleria.html" class="btn btn-primary">Guarda le Foto</a>
+        </div>
+    </div>
+</section>
+
 
 <section class="podcast-promo mt-4">
     <div class="row" style="align-items: center;">
         <div class="col"> 
             <h2>Sintonizzati su Papa Remo Waves</h2>
             <p>Immergiti più a fondo nelle storie, nei suoni e nell'anima di Watamu con il podcast ufficiale di Papa Remo. Ascolta personalità locali, esplora gli sforzi di conservazione e ottieni spunti unici sulla vita vibrante della costa keniota.</p>
-            <p>Nuovi episodi regolarmente, portando la magia di Papa Remo direttamente a casa tua, ovunque tu sia.</p>
             <a href="podcast.html" class="btn btn-primary mt-2">Ascolta il Nostro Podcast</a>
         </div>
         <div class="col"> 
@@ -325,7 +271,6 @@
         <div class="col"> 
             <h2>Sale & Anima</h2>
             <p>Rimani aggiornato sugli ultimi avvenimenti, storie avvincenti dalla spiaggia e spunti unici dalla famiglia Papa Remo. Il nostro blog ti avvicina al cuore di Watamu e alla nostra vibrante comunità.</p>
-            <p>Scopri consigli, riepiloghi di eventi e molto altro.</p>
             <a href="our-posts.html" class="btn btn-primary mt-2">Leggi i Nostri Post</a>
         </div>
     </div>
@@ -402,56 +347,52 @@
 <script src="/assets/js/theme-switcher.js"></script> 
 
 <script>
+    // Script YouTube
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
     var player;
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('youtube-player', {
-            videoId: 'w4XtNE6ZJFM',
-            playerVars: {
-                'autoplay': 1, 'mute': 1, 'controls': 0, 'showinfo': 0,
-                'modestbranding': 1, 'loop': 1, 'playlist': 'w4XtNE6ZJFM',
-                'fs': 0, 'cc_load_policy': 0, 'iv_load_policy': 3, 'autohide': 0
-            },
-            events: { 'onReady': onPlayerReady }
+            videoId: 'w4XtNE6ZJFM', playerVars: { 'autoplay': 1, 'mute': 1, 'controls': 0, 'showinfo': 0, 'modestbranding': 1, 'loop': 1, 'playlist': 'w4XtNE6ZJFM', 'fs': 0, 'cc_load_policy': 0, 'iv_load_policy': 3, 'autohide': 0 }, events: { 'onReady': onPlayerReady }
         });
     }
+    function onPlayerReady(event) { event.target.playVideo(); }
 
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
-</script>
-
-<script>
+    // Script Banner Cookie e Countdown
     document.addEventListener('DOMContentLoaded', () => {
         const banner = document.getElementById('cookie-banner');
         const acceptBtn = document.getElementById('cookie-accept');
         const rejectBtn = document.getElementById('cookie-reject');
+        if (!localStorage.getItem('cookie_consent')) { setTimeout(() => { banner.classList.add('visible'); }, 500); }
+        const hideBanner = () => banner.classList.remove('visible');
+        acceptBtn.addEventListener('click', () => { localStorage.setItem('cookie_consent', 'accepted'); hideBanner(); });
+        rejectBtn.addEventListener('click', () => { localStorage.setItem('cookie_consent', 'rejected'); hideBanner(); });
 
-        // Controlla se l'utente ha già dato il consenso
-        if (!localStorage.getItem('cookie_consent')) {
-            // Se non c'è consenso, mostra il banner dopo un breve ritardo
-            setTimeout(() => {
-                banner.classList.add('visible');
-            }, 500);
+        const countdownTimer = document.getElementById('countdown-timer');
+        if (countdownTimer) {
+            const nextSaturday = new Date();
+            nextSaturday.setDate(nextSaturday.getDate() + (6 - nextSaturday.getDay() + 7) % 7);
+            nextSaturday.setHours(22, 30, 0, 0);
+            
+            const countdownFunction = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = nextSaturday - now;
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                countdownTimer.innerHTML = `<span>${days}g</span>:<span>${hours}o</span>:<span>${minutes}m</span>:<span>${seconds}s</span>`;
+                
+                if (distance < 0) {
+                    clearInterval(countdownFunction);
+                    countdownTimer.innerHTML = "L'EVENTO È IN CORSO!";
+                }
+            }, 1000);
         }
-
-        const hideBanner = () => {
-            banner.classList.remove('visible');
-        };
-        
-        acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent', 'accepted');
-            hideBanner();
-        });
-
-        rejectBtn.addEventListener('click', () => {
-            localStorage.setItem('cookie_consent', 'rejected');
-            hideBanner();
-        });
     });
 </script>
 

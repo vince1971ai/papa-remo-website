@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <title>Galleria - Papa Remo Beach | I Nostri Momenti</title>
+    <meta content="Scopri le foto dei nostri eventi, dei nostri piatti e dell'atmosfera unica del Papa Remo Beach a Watamu." name="description"/>
+    <meta name="keywords" content="galleria papa remo, foto beach party, immagini watamu, eventi kenya foto, papa remo beach gallery"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <noscript>
+      <link rel="stylesheet" href="../assets/css/style.css">
+      <link rel="stylesheet" href="../assets/css/all.css">
+      <link rel="stylesheet" href="../assets/css/fontawesome-custom.css">
+    </noscript>
+    
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LGP8596KW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4LGP8596KW');
+    </script>
+
+    <link rel="canonical" href="https://www.paparemobeach.com/it/galleria.html" />
+    <link rel="alternate" hreflang="it" href="https://www.paparemobeach.com/it/galleria.html" />
+    <link rel="alternate" hreflang="en" href="https://www.paparemobeach.com/en/gallery.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.paparemobeach.com/it/galleria.html" />
+
+    <meta property="og:title" content="Galleria - Papa Remo Beach | Le Foto dei Nostri Momenti Migliori" />
+    <meta property="og:description" content="Rivivi le emozioni dei nostri eventi attraverso le immagini più belle. Scopri la galleria fotografica del Papa Remo Beach." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.paparemobeach.com/it/galleria.html" />
+    <meta property="og:image" content="https://www.paparemobeach.com/assets/images/optimized/events/beach_party.jpg" />
+    <meta property="og:site_name" content="Papa Remo Beach" />
+    
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
+    
+    <style>
+        .page-container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-album {
+            margin-bottom: 1.5rem;
+        }
+
+        .album-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .album-cover-box {
+            position: relative;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            background-color: var(--sand);
+            border: 1px solid var(--border-light);
+        }
+
+        .album-cover-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .album-cover-box:hover img {
+            transform: scale(1.05);
+        }
+        
+        .album-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-gray);
+            font-style: italic;
+        }
+
+        /* Stili per la Galleria Immersiva (Modal) */
+        .gallery-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            overflow-y: auto;
+        }
+        .gallery-modal.visible {
+            display: block;
+            opacity: 1;
+        }
+        .modal-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+        }
+        .close-modal {
+            font-size: 2.5rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .modal-grid {
+            column-count: 4;
+            column-gap: 1rem;
+        }
+        .modal-grid .photo-item {
+            margin-bottom: 1rem;
+            break-inside: avoid;
+            cursor: pointer;
+        }
+        .modal-grid .photo-item img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* Lightbox per Immagine Ingrandita */
+        .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); z-index: 1001; display: none; opacity: 0; transition: opacity 0.4s ease; }
+        .lightbox.visible { display: flex; opacity: 1; }
+        .lightbox-content { position: relative; width: 90%; height: 90%; margin: auto; display: flex; justify-content: center; align-items: center; }
+        .lightbox-content img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 1rem; right: 2rem; font-size: 3rem; color: white; cursor: pointer; background: none; border: none; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 3rem; cursor: pointer; padding: 1rem; }
+        .lightbox-nav.prev { left: 1rem; }
+        .lightbox-nav.next { right: 1rem; }
+        
+        @media (max-width: 992px) { .modal-grid { column-count: 3; } }
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .modal-grid { column-count: 2; }
+        }
+        @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    
+    <div id="menu-placeholder"></div>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Galleria</h1>
+            <p>Rivivi i momenti più belli del Papa Remo Beach</p>
+        </header>
+
+        <div class="page-container">
+            
+            <div class="gallery-grid">
+                <div class="gallery-album" id="album-dj-uv">
+                    <div class="album-cover-box" data-album-id="dj-uv">
+                        <img src="/assets/images/optimized/dj_uv_19-7-25/uv_box.webp" alt="Copertina evento DJ UV Kenya">
+                    </div>
+                    <h3 class="album-title">DJ UV Kenya, 19-7-2025</h3>
+                </div>
+                <div class="gallery-album">
+                    <div class="album-cover-box"><div class="album-placeholder"><span>Prossimo Evento</span></div></div>
+                    <h3 class="album-title">Titolo Evento</h3>
+                </div>
+                 <div class="gallery-album">
+                    <div class="album-cover-box"><div class="album-placeholder"><span>Prossimo Evento</span></div></div>
+                    <h3 class="album-title">Titolo Evento</h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<div id="gallery-modal-dj-uv" class="gallery-modal">
+    <div class="modal-content">
+        <header class="modal-header">
+            <h2 class="modal-title">DJ UV Kenya, 19-7-2025</h2>
+            <button class="close-modal" data-close-modal="dj-uv">&times;</button>
+        </header>
+        <div class="modal-grid" data-gallery-id="dj-uv">
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/01.webp" alt="Foto 1 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/02.webp" alt="Foto 2 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/03.webp" alt="Foto 3 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/04.webp" alt="Foto 4 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/05.webp" alt="Foto 5 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/06.webp" alt="Foto 6 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/07.webp" alt="Foto 7 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/08.webp" alt="Foto 8 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/09.webp" alt="Foto 9 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/010.webp" alt="Foto 10 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/011.webp" alt="Foto 11 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/012.webp" alt="Foto 12 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/013.webp" alt="Foto 13 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/014.webp" alt="Foto 14 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/015.webp" alt="Foto 15 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/016.webp" alt="Foto 16 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/017.webp" alt="Foto 17 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/018.webp" alt="Foto 18 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/019.webp" alt="Foto 19 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/020.webp" alt="Foto 20 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/021.webp" alt="Foto 21 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/022.webp" alt="Foto 22 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/023.webp" alt="Foto 23 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/024.webp" alt="Foto 24 dell'evento DJ UV"></div>
+        </div>
+    </div>
+</div>
+
+<div id="lightbox-dj-uv" class="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-nav prev">◂</button>
+    <div class="lightbox-content">
+        <img src="" alt="Immagine ingrandita">
+    </div>
+    <button class="lightbox-nav next">▸</button>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../assets/js/menu-loader.js"></script>
+<script src="../assets/js/footer-loader.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/mobile-menu.js"></script>
+<script src="../assets/js/language-toggle.js"></script>
+<script src="../assets/js/theme-switcher.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function initializeGallery(albumId) {
+            const albumCover = document.querySelector(`.album-cover-box[data-album-id="${albumId}"]`);
+            const modal = document.getElementById(`gallery-modal-${albumId}`);
+            const closeModalButton = document.querySelector(`.close-modal[data-close-modal="${albumId}"]`);
+            const lightbox = document.getElementById(`lightbox-${albumId}`);
+            
+            if (!albumCover || !modal || !closeModalButton || !lightbox) return;
+
+            const photoItems = modal.querySelectorAll('.photo-item');
+            const photos = Array.from(photoItems).map(item => item.querySelector('img') ? item.querySelector('img').src : '');
+            let currentIndex = 0;
+
+            const lightboxImg = lightbox.querySelector('.lightbox-content img');
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+            const lightboxPrev = lightbox.querySelector('.lightbox-nav.prev');
+            const lightboxNext = lightbox.querySelector('.lightbox-nav.next');
+
+            function showImage(index) {
+                currentIndex = index;
+                lightboxImg.src = photos[currentIndex];
+                lightbox.classList.add('visible');
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('visible');
+            }
+
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % photos.length;
+                lightboxImg.src = photos[currentIndex];
+            }
+
+            function showPrevImage() {
+                currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+                lightboxImg.src = photos[currentIndex];
+            }
+            
+            albumCover.addEventListener('click', () => modal.classList.add('visible'));
+            closeModalButton.addEventListener('click', () => modal.classList.remove('visible'));
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.classList.remove('visible');
+            });
+            
+            photoItems.forEach((item, index) => {
+                item.addEventListener('click', () => showImage(index));
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxNext.addEventListener('click', showNextImage);
+            lightboxPrev.addEventListener('click', showPrevImage);
+
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.classList.contains('visible')) {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowRight') showNextImage();
+                    if (e.key === 'ArrowLeft') showPrevImage();
+                }
+            });
+        }
+        
+        initializeGallery('dj-uv');
+    });
+</script>
+
+</body>
+</html>
