@@ -13,7 +13,12 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
+      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}
+      .page-container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      @media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
     </style>
 
     <link rel="stylesheet" href="../assets/css/style.css" media="all">
@@ -68,115 +73,117 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-<h1>Papa Remo Podcast</h1>
-<p>Stories, interviews, and insights from the Kenyan coast</p>
-</header>
-<section class="podcast-intro">
-<div class="podcast-image">
-    <picture>
-        <source srcset="../assets/images/optimized/General/podcast.webp" type="image/webp">
-        <source srcset="../assets/images/optimized/General/podcast.jpg" type="image/jpeg">
-        <img src="../assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast cover art">
-    </picture>
-</div>
-<div class="podcast-text mt-4">
-<h1>About Our Podcast</h1>
-<p>The Papa Remo Podcast brings you stories, interviews, and insights from Watamu and the Kenyan coast. Hosted by our team, the podcast explores local culture, tourism, environmental conservation, and the unique experiences that make Watamu special.</p>
-<p>Through conversations with local residents, business owners, conservationists, and visitors, we aim to share the rich tapestry of life on the Kenyan coast and highlight the beauty and challenges of this unique region.</p>
-</div>
-</section>
-
-<section class="main-podcast-player-section mt-4">
-    <h2>Listen to Our Show</h2>
-    <a class="spreaker-player" href="https://www.spreaker.com/podcast/papa-remo-beach--6638332" data-resource="show_id=6638332" data-width="100%" data-height="350px" data-theme="dark" data-playlist="show" data-playlist-continuous="false" data-chapters-image="true" data-episode-image-position="right" data-hide-logo="false" data-hide-likes="false" data-hide-comments="false" data-hide-sharing="false" data-hide-download="true" data-title="Papa Remo Beach" data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">Listen to "Papa Remo Beach" on Spreaker.</a>
-    <script async src="https://widget.spreaker.com/widgets.js"></script>
-</section>
-
-<section class="podcast-episodes mt-4">
-    <h2>Paparemo Beach Thematic</h2>
-
-    <div class="episode-card">
-        <div class="episode-number"><i class="fas fa-users"></i></div>
-        <div class="episode-content">
-            <h3>Voices of the Village</h3>
-            <p>Interviews with the local community: historical fishermen, artisans, chefs, farmers, artists, and guardians of traditions who narrate the authentic soul of Watamu and its surroundings. For example: <em>"The secrets of local ceramics with artisan Sofia."</em></p>
-        </div>
+<div class="page-container">
+    <header class="page-header">
+    <h1>Papa Remo Podcast</h1>
+    <p>Stories, interviews, and insights from the Kenyan coast</p>
+    </header>
+    <section class="podcast-intro">
+    <div class="podcast-image">
+        <picture>
+            <source srcset="../assets/images/optimized/General/podcast.webp" type="image/webp">
+            <source srcset="../assets/images/optimized/General/podcast.jpg" type="image/jpeg">
+            <img src="../assets/images/optimized/General/podcast.jpg" alt="Papa Remo Podcast cover art">
+        </picture>
     </div>
-
-    <div class="episode-card">
-        <div class="episode-number"><i class="fas fa-eye"></i></div>
-        <div class="episode-content">
-            <h3>Paparemo Through Your Eyes</h3>
-            <p>Short, spontaneous interviews with tourists, both Italian and foreign, directly at Paparemo Beach. What impressed them? What was their experience? Fun anecdotes, like: <em>"A family on vacation: the best moments at Paparemo."</em></p>
-        </div>
+    <div class="podcast-text mt-4">
+    <h1>About Our Podcast</h1>
+    <p>The Papa Remo Podcast brings you stories, interviews, and insights from Watamu and the Kenyan coast. Hosted by our team, the podcast explores local culture, tourism, environmental conservation, and the unique experiences that make Watamu special.</p>
+    <p>Through conversations with local residents, business owners, conservationists, and visitors, we aim to share the rich tapestry of life on the Kenyan coast and highlight the beauty and challenges of this unique region.</p>
     </div>
+    </section>
 
-    <div class="episode-card">
-        <div class="episode-number"><i class="fas fa-cogs"></i></div>
-        <div class="episode-content">
-            <h3>Behind the Scenes at Paparemo</h3>
-            <p>Interviews with the staff (lifeguards, bartenders, chefs, event organizers), stories about the preparation of special events, and Paparemo's philosophy of hospitality. For example: <em>"How an evening event at Paparemo is born."</em></p>
+    <section class="main-podcast-player-section mt-4">
+        <h2>Listen to Our Show</h2>
+        <a class="spreaker-player" href="https://www.spreaker.com/podcast/papa-remo-beach--6638332" data-resource="show_id=6638332" data-width="100%" data-height="350px" data-theme="dark" data-playlist="show" data-playlist-continuous="false" data-chapters-image="true" data-episode-image-position="right" data-hide-logo="false" data-hide-likes="false" data-hide-comments="false" data-hide-sharing="false" data-hide-download="true" data-title="Papa Remo Beach" data-cover="https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F375103d65ceb995595cbeda8138b3685.jpg">Listen to "Papa Remo Beach" on Spreaker.</a>
+        <script async src="https://widget.spreaker.com/widgets.js"></script>
+    </section>
+
+    <section class="podcast-episodes mt-4">
+        <h2>Paparemo Beach Thematic</h2>
+
+        <div class="episode-card">
+            <div class="episode-number"><i class="fas fa-users"></i></div>
+            <div class="episode-content">
+                <h3>Voices of the Village</h3>
+                <p>Interviews with the local community: historical fishermen, artisans, chefs, farmers, artists, and guardians of traditions who narrate the authentic soul of Watamu and its surroundings. For example: <em>"The secrets of local ceramics with artisan Sofia."</em></p>
+            </div>
         </div>
-    </div>
 
-    <div class="episode-card">
-        <div class="episode-number"><i class="fas fa-map-marked-alt"></i></div>
-        <div class="episode-content">
-            <h3>Hidden Treasures & Itineraries</h3>
-            <p>Dedicated to discovering the surrounding area: small villages, nature trails, lesser-known food and wine specialties, and popular traditions. An episode idea: <em>"Excursion to the abandoned lighthouse: history and legend."</em></p>
+        <div class="episode-card">
+            <div class="episode-number"><i class="fas fa-eye"></i></div>
+            <div class="episode-content">
+                <h3>Paparemo Through Your Eyes</h3>
+                <p>Short, spontaneous interviews with tourists, both Italian and foreign, directly at Paparemo Beach. What impressed them? What was their experience? Fun anecdotes, like: <em>"A family on vacation: the best moments at Paparemo."</em></p>
+            </div>
         </div>
-    </div>
 
-    <div class="episode-card">
-        <div class="episode-number"><i class="fas fa-leaf"></i></div>
-        <div class="episode-content">
-            <h3>Sustainable Paparemo</h3>
-            <p>A focus on Paparemo Beach's sustainability initiatives, interviews with environmental experts on coastal protection, and tips for more conscious tourism. Positioning Paparemo as an environmentally aware actor.</p>
+        <div class="episode-card">
+            <div class="episode-number"><i class="fas fa-cogs"></i></div>
+            <div class="episode-content">
+                <h3>Behind the Scenes at Paparemo</h3>
+                <p>Interviews with the staff (lifeguards, bartenders, chefs, event organizers), stories about the preparation of special events, and Paparemo's philosophy of hospitality. For example: <em>"How an evening event at Paparemo is born."</em></p>
+            </div>
         </div>
-    </div>
-</section>
 
-<section class="podcast-topics mt-4">
-<h2>Topics We Cover</h2>
-<div class="topics-grid">
-<div class="topic-item">
-<i class="fas fa-utensils"></i>
-<h3>Food &amp; Cuisine</h3>
-<p>Exploring the diverse culinary scene in Watamu and the Kenyan coast.</p>
+        <div class="episode-card">
+            <div class="episode-number"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="episode-content">
+                <h3>Hidden Treasures & Itineraries</h3>
+                <p>Dedicated to discovering the surrounding area: small villages, nature trails, lesser-known food and wine specialties, and popular traditions. An episode idea: <em>"Excursion to the abandoned lighthouse: history and legend."</em></p>
+            </div>
+        </div>
+
+        <div class="episode-card">
+            <div class="episode-number"><i class="fas fa-leaf"></i></div>
+            <div class="episode-content">
+                <h3>Sustainable Paparemo</h3>
+                <p>A focus on Paparemo Beach's sustainability initiatives, interviews with environmental experts on coastal protection, and tips for more conscious tourism. Positioning Paparemo as an environmentally aware actor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="podcast-topics mt-4">
+    <h2>Topics We Cover</h2>
+    <div class="topics-grid">
+    <div class="topic-item">
+    <i class="fas fa-utensils"></i>
+    <h3>Food &amp; Cuisine</h3>
+    <p>Exploring the diverse culinary scene in Watamu and the Kenyan coast.</p>
+    </div>
+    <div class="topic-item">
+    <i class="fas fa-fish"></i>
+    <h3>Marine Conservation</h3>
+    <p>Discussions on protecting the coral reefs and marine life in Watamu.</p>
+    </div>
+    <div class="topic-item">
+    <i class="fas fa-users"></i>
+    <h3>Local Culture</h3>
+    <p>Insights into the rich cultural heritage of the Kenyan coastal communities.</p>
+    </div>
+    <div class="topic-item">
+    <i class="fas fa-hotel"></i>
+    <h3>Tourism</h3>
+    <p>Conversations about sustainable tourism and visitor experiences in Watamu.</p>
+    </div>
+    <div class="topic-item">
+    <i class="fas fa-music"></i>
+    <h3>Events &amp; Entertainment</h3>
+    <p>Highlighting the vibrant event scene in Watamu and surrounding areas.</p>
+    </div>
+    <div class="topic-item">
+    <i class="fas fa-hands-helping"></i>
+    <h3>Community Initiatives</h3>
+    <p>Showcasing local projects and initiatives making a difference in the community.</p>
+    </div>
+    </div>
+    </section>
+    <section class="podcast-contact mt-4">
+    <h2>Be a Guest</h2>
+    <p>Have a story to share about Watamu or the Kenyan coast? We're always looking for interesting guests for our podcast.</p>
+    <a class="btn btn-primary" href="contact.html">Contact Us</a>
+    </section>
 </div>
-<div class="topic-item">
-<i class="fas fa-fish"></i>
-<h3>Marine Conservation</h3>
-<p>Discussions on protecting the coral reefs and marine life in Watamu.</p>
-</div>
-<div class="topic-item">
-<i class="fas fa-users"></i>
-<h3>Local Culture</h3>
-<p>Insights into the rich cultural heritage of the Kenyan coastal communities.</p>
-</div>
-<div class="topic-item">
-<i class="fas fa-hotel"></i>
-<h3>Tourism</h3>
-<p>Conversations about sustainable tourism and visitor experiences in Watamu.</p>
-</div>
-<div class="topic-item">
-<i class="fas fa-music"></i>
-<h3>Events &amp; Entertainment</h3>
-<p>Highlighting the vibrant event scene in Watamu and surrounding areas.</p>
-</div>
-<div class="topic-item">
-<i class="fas fa-hands-helping"></i>
-<h3>Community Initiatives</h3>
-<p>Showcasing local projects and initiatives making a difference in the community.</p>
-</div>
-</div>
-</section>
-<section class="podcast-contact mt-4">
-<h2>Be a Guest</h2>
-<p>Have a story to share about Watamu or the Kenyan coast? We're always looking for interesting guests for our podcast.</p>
-<a class="btn btn-primary" href="contact.html">Contact Us</a>
-</section>
 </main>
 </div>
 

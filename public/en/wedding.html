@@ -13,7 +13,12 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
+      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}
+      .page-container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      @media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
     </style>
     
     <link rel="stylesheet" href="../assets/css/style.css" media="all">
@@ -68,103 +73,105 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-<h1>Beach Weddings</h1>
-<p>Your dream wedding on the beautiful shores of Watamu</p>
-</header>
-<section class="wedding-intro">
-<div class="wedding-image">
-<picture><source srcset="../assets/images/optimized/wedding/wedding.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view2.jpg" type="image/jpeg"/><img alt="Beach Wedding at Papa Remo" src="../assets/images/optimized/beach_view2.jpg"/></picture>
+<div class="page-container">
+    <header class="page-header">
+    <h1>Beach Weddings</h1>
+    <p>Your dream wedding on the beautiful shores of Watamu</p>
+    </header>
+    <section class="wedding-intro">
+    <div class="wedding-image">
+    <picture><source srcset="../assets/images/optimized/wedding/wedding.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view2.jpg" type="image/jpeg"/><img alt="Beach Wedding at Papa Remo" src="../assets/images/optimized/beach_view2.jpg"/></picture>
+    </div>
+    <div class="wedding-text mt-4">
+    <h1>Your Perfect Beach Wedding</h1>
+    <p>Imagine exchanging vows with your feet in the sand, the sound of gentle waves in the background, and the stunning Indian Ocean as your backdrop. At Papa Remo Beach, we specialize in creating magical beach weddings that turn your dreams into reality.</p>
+    <p>Our experienced team understands that your wedding day is one of the most important days of your life. That's why we offer personalized wedding services tailored to your specific needs and preferences, ensuring that every detail is perfect for your special day.</p>
+    <div class="wedding-features mt-3">
+    <div class="feature">
+    <i class="fas fa-heart"></i>
+    <span>Beachfront Ceremonies</span>
+    </div>
+    <div class="feature">
+    <i class="fas fa-glass-cheers"></i>
+    <span>Reception Packages</span>
+    </div>
+    <div class="feature">
+    <i class="fas fa-camera"></i>
+    <span>Stunning Photo Locations</span>
+    </div>
+    <div class="feature">
+    <i class="fas fa-concierge-bell"></i>
+    <span>Personalized Service</span>
+    </div>
+    </div>
+    </div>
+    </section>
+    <section class="wedding-packages mt-4">
+    <h2>Wedding Packages</h2>
+    <div class="package-card">
+    <h3>Intimate Beach Ceremony</h3>
+    <ul class="package-features">
+    <li>Beachfront ceremony setup</li>
+    <li>Decorated arch or gazebo</li>
+    <li>Seating for up to 30 guests</li>
+    <li>Sound system for ceremony music</li>
+    <li>Bridal bouquet and groom's boutonniere</li>
+    <li>Wedding coordinator</li>
+    </ul>
+    </div>
+    <div class="package-card">
+    <h3>Complete Beach Wedding</h3>
+    <ul class="package-features">
+    <li>All features of the Intimate Beach Ceremony</li>
+    <li>Reception dinner for up to 50 guests</li>
+    <li>Wedding cake</li>
+    <li>Champagne toast</li>
+    <li>Decorated reception area</li>
+    <li>DJ or live music for 3 hours</li>
+    </ul>
+    </div>
+    <div class="package-card">
+    <h3>Luxury Wedding Experience</h3>
+    <ul class="package-features">
+    <li>All features of the Complete Beach Wedding</li>
+    <li>Accommodation for the wedding couple</li>
+    <li>Pre-wedding spa treatments</li>
+    <li>Professional photography package</li>
+    <li>Extended reception with open bar</li>
+    <li>Fireworks display</li>
+    </ul>
+    </div>
+    <div class="package-note mt-3">
+    <p>* All packages can be customized to meet your specific requirements. Please contact our wedding coordinator for more information.</p>
+    </div>
+    </section>
+    <section class="wedding-gallery mt-4">
+    <h2>Wedding Gallery</h2>
+    <div class="gallery-note">
+    <p>View our gallery of past weddings at Papa Remo Beach. Each wedding is unique and tailored to the couple's vision.</p>
+    </div>
+    <div class="gallery-grid">
+    <div class="gallery-item">
+    <picture><source srcset="../assets/images/optimized/beach_view3.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view3.jpg" type="image/jpeg"/><img alt="Beach Wedding Setup" src="../assets/images/optimized/beach_view3.jpg"/></picture>
+    </div>
+    <div class="gallery-item">
+    <picture><source srcset="../assets/images/optimized/beach_view1.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_party.jpg" type="image/jpeg"/><img alt="Wedding Reception" src="../assets/images/optimized/beach_party.jpg"/></picture>
+    </div>
+    </div>
+    </section>
+    <section class="testimonials mt-4">
+    <h2>Happy Couples</h2>
+    <div class="testimonial">
+    <p>"Our wedding at Papa Remo was absolutely perfect. The team took care of every detail, and the beach setting was breathtaking. Our guests are still talking about how beautiful it was!"</p>
+    <div class="testimonial-author">- Maria &amp; John</div>
+    </div>
+    </section>
+    <section class="wedding-contact mt-4">
+    <h2>Plan Your Wedding</h2>
+    <p>Ready to start planning your dream beach wedding? Contact our wedding coordinator to discuss your vision and how we can make it a reality.</p>
+    <a class="btn btn-primary" href="contact.html">Contact Us</a>
+    </section>
 </div>
-<div class="wedding-text mt-4">
-<h1>Your Perfect Beach Wedding</h1>
-<p>Imagine exchanging vows with your feet in the sand, the sound of gentle waves in the background, and the stunning Indian Ocean as your backdrop. At Papa Remo Beach, we specialize in creating magical beach weddings that turn your dreams into reality.</p>
-<p>Our experienced team understands that your wedding day is one of the most important days of your life. That's why we offer personalized wedding services tailored to your specific needs and preferences, ensuring that every detail is perfect for your special day.</p>
-<div class="wedding-features mt-3">
-<div class="feature">
-<i class="fas fa-heart"></i>
-<span>Beachfront Ceremonies</span>
-</div>
-<div class="feature">
-<i class="fas fa-glass-cheers"></i>
-<span>Reception Packages</span>
-</div>
-<div class="feature">
-<i class="fas fa-camera"></i>
-<span>Stunning Photo Locations</span>
-</div>
-<div class="feature">
-<i class="fas fa-concierge-bell"></i>
-<span>Personalized Service</span>
-</div>
-</div>
-</div>
-</section>
-<section class="wedding-packages mt-4">
-<h2>Wedding Packages</h2>
-<div class="package-card">
-<h3>Intimate Beach Ceremony</h3>
-<ul class="package-features">
-<li>Beachfront ceremony setup</li>
-<li>Decorated arch or gazebo</li>
-<li>Seating for up to 30 guests</li>
-<li>Sound system for ceremony music</li>
-<li>Bridal bouquet and groom's boutonniere</li>
-<li>Wedding coordinator</li>
-</ul>
-</div>
-<div class="package-card">
-<h3>Complete Beach Wedding</h3>
-<ul class="package-features">
-<li>All features of the Intimate Beach Ceremony</li>
-<li>Reception dinner for up to 50 guests</li>
-<li>Wedding cake</li>
-<li>Champagne toast</li>
-<li>Decorated reception area</li>
-<li>DJ or live music for 3 hours</li>
-</ul>
-</div>
-<div class="package-card">
-<h3>Luxury Wedding Experience</h3>
-<ul class="package-features">
-<li>All features of the Complete Beach Wedding</li>
-<li>Accommodation for the wedding couple</li>
-<li>Pre-wedding spa treatments</li>
-<li>Professional photography package</li>
-<li>Extended reception with open bar</li>
-<li>Fireworks display</li>
-</ul>
-</div>
-<div class="package-note mt-3">
-<p>* All packages can be customized to meet your specific requirements. Please contact our wedding coordinator for more information.</p>
-</div>
-</section>
-<section class="wedding-gallery mt-4">
-<h2>Wedding Gallery</h2>
-<div class="gallery-note">
-<p>View our gallery of past weddings at Papa Remo Beach. Each wedding is unique and tailored to the couple's vision.</p>
-</div>
-<div class="gallery-grid">
-<div class="gallery-item">
-<picture><source srcset="../assets/images/optimized/beach_view3.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_view3.jpg" type="image/jpeg"/><img alt="Beach Wedding Setup" src="../assets/images/optimized/beach_view3.jpg"/></picture>
-</div>
-<div class="gallery-item">
-<picture><source srcset="../assets/images/optimized/beach_view1.webp" type="image/webp"/><source srcset="../assets/images/optimized/beach_party.jpg" type="image/jpeg"/><img alt="Wedding Reception" src="../assets/images/optimized/beach_party.jpg"/></picture>
-</div>
-</div>
-</section>
-<section class="testimonials mt-4">
-<h2>Happy Couples</h2>
-<div class="testimonial">
-<p>"Our wedding at Papa Remo was absolutely perfect. The team took care of every detail, and the beach setting was breathtaking. Our guests are still talking about how beautiful it was!"</p>
-<div class="testimonial-author">- Maria &amp; John</div>
-</div>
-</section>
-<section class="wedding-contact mt-4">
-<h2>Plan Your Wedding</h2>
-<p>Ready to start planning your dream beach wedding? Contact our wedding coordinator to discuss your vision and how we can make it a reality.</p>
-<a class="btn btn-primary" href="contact.html">Contact Us</a>
-</section>
 </main>
 </div>
 

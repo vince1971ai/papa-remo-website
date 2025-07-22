@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     
-    <title>Gallery - Papa Remo Beach | Our Moments</title>
-    <meta content="Discover photos of our events, our dishes, and the unique atmosphere of Papa Remo Beach in Watamu." name="description"/>
-    <meta name="keywords" content="papa remo gallery, beach party photos, watamu images, kenya events photos, papa remo beach gallery"/>
+    <title>Galleria - Papa Remo Beach | I Nostri Momenti</title>
+    <meta content="Scopri le foto dei nostri eventi, dei nostri piatti e dell'atmosfera unica del Papa Remo Beach a Watamu." name="description"/>
+    <meta name="keywords" content="galleria papa remo, foto beach party, immagini watamu, foto eventi kenya, galleria papa remo beach"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,15 +33,15 @@
       gtag('config', 'G-4LGP8596KW');
     </script>
 
-    <link rel="canonical" href="https://www.paparemobeach.com/en/gallery.html" />
-    <link rel="alternate" hreflang="en" href="https://www.paparemobeach.com/en/gallery.html" />
+    <link rel="canonical" href="https://www.paparemobeach.com/it/galleria.html" />
     <link rel="alternate" hreflang="it" href="https://www.paparemobeach.com/it/galleria.html" />
+    <link rel="alternate" hreflang="en" href="https://www.paparemobeach.com/en/gallery.html" />
     <link rel="alternate" hreflang="x-default" href="https://www.paparemobeach.com/en/gallery.html" />
 
-    <meta property="og:title" content="Gallery - Papa Remo Beach | Photos of Our Best Moments" />
-    <meta property="og:description" content="Relive the excitement of our events through the most beautiful images. Discover the Papa Remo Beach photo gallery." />
+    <meta property="og:title" content="Galleria - Papa Remo Beach | Foto dei Nostri Momenti Migliori" />
+    <meta property="og:description" content="Rivivi l'emozione dei nostri eventi attraverso le immagini più belle. Scopri la galleria fotografica del Papa Remo Beach." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.paparemobeach.com/en/gallery.html" />
+    <meta property="og:url" content="https://www.paparemobeach.com/it/galleria.html" />
     <meta property="og:image" content="https://www.paparemobeach.com/assets/images/optimized/events/beach_party.jpg" />
     <meta property="og:site_name" content="Papa Remo Beach" />
     
@@ -60,170 +60,43 @@
             max-width: 960px;
             margin: 0 auto;
         }
-
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1.5rem;
         }
-
-        .gallery-album {
-            margin-bottom: 1.5rem;
-        }
-
-        .album-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-
-        .album-cover-box {
-            position: relative;
-            cursor: pointer;
-            border-radius: 8px;
-            overflow: hidden;
-            aspect-ratio: 16 / 9;
-            background-color: var(--sand);
-            border: 1px solid var(--border-light);
-        }
-
-        .album-cover-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .album-cover-box:hover img {
-            transform: scale(1.05);
-        }
-        
-        .album-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--dark-gray);
-            font-style: italic;
-        }
-
-        /* Styles for Immersive Gallery (Modal) */
-        .gallery-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            display: none;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            overflow-y: auto;
-        }
-        .gallery-modal.visible {
-            display: block;
-            opacity: 1;
-        }
-        .modal-content {
-            width: 90%;
-            max-width: 1200px;
-            margin: 2rem auto;
-        }
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border-light);
-        }
-        .modal-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-        }
-        .close-modal {
-            font-size: 2.5rem;
-            color: white;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        
-        .modal-grid {
-            column-count: 4;
-            column-gap: 1rem;
-        }
-        .modal-grid .photo-item {
-            margin-bottom: 1rem;
-            break-inside: avoid;
-            cursor: pointer;
-        }
-        .modal-grid .photo-item img,
-        .modal-grid .photo-placeholder {
-            width: 100%;
-            border-radius: 8px;
-            display: block;
-        }
-        .modal-grid .photo-placeholder {
-            aspect-ratio: 1 / 1;
-            background-color: var(--sand);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--dark-gray);
-        }
-
-        /* Lightbox for Enlarged Image */
+        .gallery-album { margin-bottom: 1.5rem; }
+        .album-title { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; text-align: center; }
+        .album-cover-box { position: relative; cursor: pointer; border-radius: 8px; overflow: hidden; aspect-ratio: 16 / 9; background-color: var(--sand); border: 1px solid var(--border-light); }
+        .album-cover-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .album-cover-box:hover img { transform: scale(1.05); }
+        .album-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--dark-gray); font-style: italic; }
+        .gallery-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 1000; display: none; opacity: 0; transition: opacity 0.4s ease; overflow-y: auto; }
+        .gallery-modal.visible { display: block; opacity: 1; }
+        .modal-content { width: 90%; max-width: 1200px; margin: 2rem auto; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; color: white; padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-light); }
+        .modal-title { font-family: 'Playfair Display', serif; font-size: 2rem; }
+        .close-modal { font-size: 2.5rem; color: white; cursor: pointer; background: none; border: none; }
+        .modal-grid { column-count: 4; column-gap: 1rem; }
+        .modal-grid .photo-item { margin-bottom: 1rem; break-inside: avoid; cursor: pointer; }
+        .modal-grid .photo-item img { width: 100%; border-radius: 8px; display: block; }
         .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); z-index: 1001; display: none; opacity: 0; transition: opacity 0.4s ease; }
         .lightbox.visible { display: flex; opacity: 1; }
         .lightbox-content { position: relative; width: 90%; height: 90%; margin: auto; display: flex; justify-content: center; align-items: center; }
         .lightbox-content img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        .lightbox-close { position: absolute; top: 1rem; right: 2rem; font-size: 3rem; color: white; cursor: pointer; background: none; border: none; }
-        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 3rem; cursor: pointer; padding: 1rem; }
+        .lightbox-close { position: absolute; top: 1rem; right: 2rem; font-size: 3rem; color: white; cursor: pointer; background: none; border: none; z-index: 1002; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 3rem; cursor: pointer; padding: 1rem; z-index: 1002; }
         .lightbox-nav.prev { left: 1rem; }
         .lightbox-nav.next { right: 1rem; }
-        
         @media (max-width: 992px) { .modal-grid { column-count: 3; } }
-        
         @media (max-width: 768px) {
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .modal-grid { column-count: 2; }
-
-            .lightbox-close {
-                top: 10px;
-                right: 10px;
-                font-size: 1.8rem;
-                background: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-                text-align: center;
-                padding: 0;
-            }
-            .lightbox-nav {
-                font-size: 1.8rem;
-                background: rgba(0, 0, 0, 0.5);
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-                text-align: center;
-                padding: 0;
-            }
-            .lightbox-nav.prev {
-                left: 10px;
-            }
-            .lightbox-nav.next {
-                right: 10px;
-            }
+            .lightbox-close { top: 10px; right: 10px; font-size: 2rem; background-color: rgba(0,0,0,0.4); width: 40px; height: 40px; line-height: 40px; text-align: center; border-radius: 50%; padding: 0; }
+            .lightbox-nav { font-size: 2rem; padding: 0.5rem; background-color: rgba(0,0,0,0.4); border-radius: 50%; width: 40px; height: 40px; line-height: 40px; text-align: center; }
+            .lightbox-nav.prev { left: 10px; }
+            .lightbox-nav.next { right: 10px; }
         }
-
         @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -233,30 +106,28 @@
     <div id="menu-placeholder"></div>
 
     <main class="main-content">
-        <header class="page-header">
-            <h1>Gallery</h1>
-            <p>Relive the best moments at Papa Remo Beach</p>
-        </header>
-
         <div class="page-container">
+            <header class="page-header">
+                <h1>Galleria</h1>
+                <p>Rivivi i momenti più belli del Papa Remo Beach</p>
+            </header>
             
             <div class="gallery-grid">
                 <div class="gallery-album" id="album-dj-uv">
                     <div class="album-cover-box" data-album-id="dj-uv">
-                        <img src="/assets/images/optimized/dj_uv_19-7-25/uv_box.webp" alt="Cover image for DJ UV Kenya event">
+                        <img src="/assets/images/optimized/dj_uv_19-7-25/uv_box.webp" alt="Cover per evento DJ UV Kenya">
                     </div>
                     <h3 class="album-title">DJ UV Kenya, 19-7-2025</h3>
                 </div>
                 <div class="gallery-album">
-                    <div class="album-cover-box"><div class="album-placeholder"><span>Upcoming Event</span></div></div>
-                    <h3 class="album-title">Event Title</h3>
+                    <div class="album-cover-box"><div class="album-placeholder"><span>Prossimo Album</span></div></div>
+                    <h3 class="album-title">DJ Ali Pappi, 26-7-2025</h3>
                 </div>
                  <div class="gallery-album">
-                    <div class="album-cover-box"><div class="album-placeholder"><span>Upcoming Event</span></div></div>
-                    <h3 class="album-title">Event Title</h3>
+                    <div class="album-cover-box"><div class="album-placeholder"><span>Prossimo Album</span></div></div>
+                    <h3 class="album-title">DJ Kisila, 2-8-2025</h3>
                 </div>
             </div>
-
         </div>
     </main>
 </div>
@@ -268,30 +139,30 @@
             <button class="close-modal" data-close-modal="dj-uv">&times;</button>
         </header>
         <div class="modal-grid" data-gallery-id="dj-uv">
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/01.webp" alt="Photo 1 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/02.webp" alt="Photo 2 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/03.webp" alt="Photo 3 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/04.webp" alt="Photo 4 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/05.webp" alt="Photo 5 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/06.webp" alt="Photo 6 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/07.webp" alt="Photo 7 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/08.webp" alt="Photo 8 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/09.webp" alt="Photo 9 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/010.webp" alt="Photo 10 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/011.webp" alt="Photo 11 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/012.webp" alt="Photo 12 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/013.webp" alt="Photo 13 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/014.webp" alt="Photo 14 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/015.webp" alt="Photo 15 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/016.webp" alt="Photo 16 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/017.webp" alt="Photo 17 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/018.webp" alt="Photo 18 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/019.webp" alt="Photo 19 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/020.webp" alt="Photo 20 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/021.webp" alt="Photo 21 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/022.webp" alt="Photo 22 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/023.webp" alt="Photo 23 of DJ UV event"></div>
-            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/024.webp" alt="Photo 24 of DJ UV event"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/01.webp" alt="Foto 1 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/02.webp" alt="Foto 2 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/03.webp" alt="Foto 3 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/04.webp" alt="Foto 4 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/05.webp" alt="Foto 5 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/06.webp" alt="Foto 6 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/07.webp" alt="Foto 7 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/08.webp" alt="Foto 8 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/09.webp" alt="Foto 9 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/010.webp" alt="Foto 10 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/011.webp" alt="Foto 11 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/012.webp" alt="Foto 12 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/013.webp" alt="Foto 13 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/014.webp" alt="Foto 14 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/015.webp" alt="Foto 15 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/016.webp" alt="Foto 16 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/017.webp" alt="Foto 17 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/018.webp" alt="Foto 18 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/019.webp" alt="Foto 19 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/020.webp" alt="Foto 20 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/021.webp" alt="Foto 21 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/022.webp" alt="Foto 22 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/023.webp" alt="Foto 23 dell'evento DJ UV"></div>
+            <div class="photo-item"><img src="/assets/images/optimized/dj_uv_19-7-25/024.webp" alt="Foto 24 dell'evento DJ UV"></div>
         </div>
     </div>
 </div>
@@ -300,7 +171,7 @@
     <button class="lightbox-close">&times;</button>
     <button class="lightbox-nav prev">◂</button>
     <div class="lightbox-content">
-        <img src="" alt="Enlarged image">
+        <img src="" alt="Immagine ingrandita">
     </div>
     <button class="lightbox-nav next">▸</button>
 </div>
@@ -317,15 +188,19 @@
     document.addEventListener('DOMContentLoaded', function() {
         function initializeGallery(albumId) {
             const albumCover = document.querySelector(`.album-cover-box[data-album-id="${albumId}"]`);
+            if (!albumCover) return; // Non inizializzare se l'album non esiste
+
             const modal = document.getElementById(`gallery-modal-${albumId}`);
             const closeModalButton = document.querySelector(`.close-modal[data-close-modal="${albumId}"]`);
             const lightbox = document.getElementById(`lightbox-${albumId}`);
             
-            if (!albumCover || !modal || !closeModalButton || !lightbox) return;
+            if (!modal || !closeModalButton || !lightbox) return;
 
             const photoItems = modal.querySelectorAll('.photo-item');
             const photos = Array.from(photoItems).map(item => item.querySelector('img') ? item.querySelector('img').src : '');
             let currentIndex = 0;
+
+            if (photos.length === 0) return; // Non fare nulla se non ci sono foto
 
             const lightboxImg = lightbox.querySelector('.lightbox-content img');
             const lightboxClose = lightbox.querySelector('.lightbox-close');

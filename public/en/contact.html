@@ -13,7 +13,12 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}@media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
+      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}
+      .page-container {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      @media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
     </style>
     
     <link rel="stylesheet" href="../assets/css/style.css" media="all">
@@ -68,130 +73,132 @@
 <div id="menu-placeholder"></div>
 
 <main class="main-content">
-<header class="page-header">
-<h1>Contact Us</h1>
-<p>Get in touch with Papa Remo Beach</p>
-</header>
+<div class="page-container">
+    <header class="page-header">
+    <h1>Contact Us</h1>
+    <p>Get in touch with Papa Remo Beach</p>
+    </header>
 
-<div class="contact-header-image-container">
-    <picture>
-        <source srcset="../assets/images/optimized/contact/Contact.webp" type="image/webp">
-        <source srcset="../assets/images/optimized/contact/Contact.jpg" type="image/jpeg">
-        <img src="../assets/images/optimized/contact/Contact.jpg" alt="Contact Papa Remo Beach" class="contact-header-image">
-    </picture>
-</div>
-
-<section class="reservation-form mt-4" id="reservation">
-<h2>General inquiry / Make a reservation</h2>
-<p>Fill out the form below to make a reservation at Papa Remo Beach. We'll get back to you as soon as possible to confirm your booking.</p>
-<form action="https://formspree.io/f/mjkrrppl" id="reservation-form" method="POST">
-    <div class="form-group">
-        <label class="form-label" for="reservation-type">Inquiry Type *</label>
-        <select class="form-control" id="reservation-type" name="reservation-type" required="">
-            <option value="">Select an option</option>
-            <option value="restaurant">Restaurant Dining</option>
-            <option value="event">Private Event</option>
-            <option value="wedding">Wedding Inquiry</option>
-            <option value="general_inquiry">General Inquiry</option>
-        </select>
+    <div class="contact-header-image-container">
+        <picture>
+            <source srcset="../assets/images/optimized/contact/Contact.webp" type="image/webp">
+            <source srcset="../assets/images/optimized/contact/Contact.jpg" type="image/jpeg">
+            <img src="../assets/images/optimized/contact/Contact.jpg" alt="Contact Papa Remo Beach" class="contact-header-image">
+        </picture>
     </div>
 
-    <div class="form-row">
+    <section class="reservation-form mt-4" id="reservation">
+    <h2>General inquiry / Make a reservation</h2>
+    <p>Fill out the form below to make a reservation at Papa Remo Beach. We'll get back to you as soon as possible to confirm your booking.</p>
+    <form action="https://formspree.io/f/mjkrrppl" id="reservation-form" method="POST">
         <div class="form-group">
-            <label class="form-label" for="name">Full Name *</label>
-            <input class="form-control" id="name" name="name" required="" type="text"/>
+            <label class="form-label" for="reservation-type">Inquiry Type *</label>
+            <select class="form-control" id="reservation-type" name="reservation-type" required="">
+                <option value="">Select an option</option>
+                <option value="restaurant">Restaurant Dining</option>
+                <option value="event">Private Event</option>
+                <option value="wedding">Wedding Inquiry</option>
+                <option value="general_inquiry">General Inquiry</option>
+            </select>
         </div>
-        <div class="form-group">
-            <label class="form-label" for="email">Email Address *</label>
-            <input class="form-control" id="email" name="email" required="" type="email"/>
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group">
-            <label class="form-label" for="phone">Phone Number</label>
-            <input class="form-control" id="phone" name="phone" type="tel"/>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="date">Preferred Date</label>
-            <input class="form-control" id="date" name="date" type="date"/>
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group">
-            <label class="form-label" for="time">Preferred Time</label>
-            <input class="form-control" id="time" name="time" type="time"/>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="guests">Number of Guests</label>
-            <input class="form-control" id="guests" min="1" name="guests" type="number"/>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="message">Special Requests or Comments</label>
-        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit">Submit Request</button>
-    </div>
-</form>
-</section>
 
-<section class="contact-info mt-4">
-<div class="contact-grid">
-<div class="contact-card">
-<i class="fas fa-map-marker-alt"></i>
-<h3>Location</h3>
-<p>Papa Remo Beach<br/>Jacaranda Road<br/>Watamu, Kenya</p>
-</div>
-<div class="contact-card">
-<i class="fas fa-phone"></i>
-<h3>Phone</h3>
-<p>+254 707 010527</p>
-</div>
-<div class="contact-card">
-<i class="fas fa-envelope"></i>
-<h3>Email</h3>
-<p>beach@paparemobeach.com</p>
-</div>
-<div class="contact-card">
-<i class="fas fa-clock"></i>
-<h3>Opening Hours</h3>
-<p>Restaurant: 10:00 AM - 10:00 PM<br/>Beach Bar: 10:00 AM - Late</p>
-</div>
-</div>
-</section>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label" for="name">Full Name *</label>
+                <input class="form-control" id="name" name="name" required="" type="text"/>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input class="form-control" id="email" name="email" required="" type="email"/>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input class="form-control" id="phone" name="phone" type="tel"/>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="date">Preferred Date</label>
+                <input class="form-control" id="date" name="date" type="date"/>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label" for="time">Preferred Time</label>
+                <input class="form-control" id="time" name="time" type="time"/>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="guests">Number of Guests</label>
+                <input class="form-control" id="guests" min="1" name="guests" type="number"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="message">Special Requests or Comments</label>
+            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Submit Request</button>
+        </div>
+    </form>
+    </section>
 
-<section class="map-section mt-4">
-<h2>Find Us</h2>
-<div class="map-container">
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.435759169695!2d40.0163886759186!3d-3.35928684155135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18158022d4a6a575%3A0x6b142d7de1c8882a!2sPapa%20Remo%20Beach!5e0!3m2!1sen!2ske!4v1719225725916!5m2!1sen!2ske"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-</section>
+    <section class="contact-info mt-4">
+    <div class="contact-grid">
+    <div class="contact-card">
+    <i class="fas fa-map-marker-alt"></i>
+    <h3>Location</h3>
+    <p>Papa Remo Beach<br/>Jacaranda Road<br/>Watamu, Kenya</p>
+    </div>
+    <div class="contact-card">
+    <i class="fas fa-phone"></i>
+    <h3>Phone</h3>
+    <p>+254 707 010527</p>
+    </div>
+    <div class="contact-card">
+    <i class="fas fa-envelope"></i>
+    <h3>Email</h3>
+    <p>beach@paparemobeach.com</p>
+    </div>
+    <div class="contact-card">
+    <i class="fas fa-clock"></i>
+    <h3>Opening Hours</h3>
+    <p>Restaurant: 10:00 AM - 10:00 PM<br/>Beach Bar: 10:00 AM - Late</p>
+    </div>
+    </div>
+    </section>
 
-<section class="social-connect mt-4">
-<h2>Connect With Us</h2>
-<p>Follow us on social media for updates, events, and beautiful photos of Watamu.</p>
-<div class="social-links mt-3">
-<a class="social-link" href="https://www.instagram.com/paparemobeach/" target="_blank">
-<i class="fab fa-instagram"></i>
-<span>Instagram</span>
-<span class="social-handle">@paparemobeach</span>
-</a>
-<a class="social-link" href="https://www.facebook.com/paparemobeach/" target="_blank">
-<i class="fab fa-facebook"></i>
-<span>Facebook</span>
-<span class="social-handle">Papa Remo Beach</span>
-</a>
+    <section class="map-section mt-4">
+    <h2>Find Us</h2>
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.435759169695!2d40.0163886759186!3d-3.35928684155135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18158022d4a6a575%3A0x6b142d7de1c8882a!2sPapa%20Remo%20Beach!5e0!3m2!1sen!2ske!4v1719225725916!5m2!1sen!2ske"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    </section>
+
+    <section class="social-connect mt-4">
+    <h2>Connect With Us</h2>
+    <p>Follow us on social media for updates, events, and beautiful photos of Watamu.</p>
+    <div class="social-links mt-3">
+    <a class="social-link" href="https://www.instagram.com/paparemobeach/" target="_blank">
+    <i class="fab fa-instagram"></i>
+    <span>Instagram</span>
+    <span class="social-handle">@paparemobeach</span>
+    </a>
+    <a class="social-link" href="https://www.facebook.com/paparemobeach/" target="_blank">
+    <i class="fab fa-facebook"></i>
+    <span>Facebook</span>
+    <span class="social-handle">Papa Remo Beach</span>
+    </a>
+    </div>
+    </section>
 </div>
-</section>
 </main>
 </div>
 
