@@ -18,24 +18,35 @@
         max-width: 960px;
         margin: 0 auto;
       }
+      /* Stili per il messaggio di risposta del form */
+      #form-response {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+      }
+      #form-response.success {
+        display: block;
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+      #form-response.error {
+        display: block;
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
       @media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
     </style>
 
     <link rel="stylesheet" href="../assets/css/style.css" media="all">
-    
     <link rel="stylesheet" href="../assets/css/all.css">
-    <noscript>
-      <link rel="stylesheet" href="../assets/css/style.css">
-      <link rel="stylesheet" href="../assets/css/all.css">
-      <link rel="stylesheet" href="../assets/css/fontawesome-custom.css">
-    </noscript>
-
+    
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LGP8596KW"></script>
     <script>
@@ -46,26 +57,6 @@
     </script>
     
     <link rel="canonical" href="https://www.paparemobeach.com/it/contact.html" />
-    <link rel="alternate" hreflang="it" href="https://www.paparemobeach.com/it/contact.html" />
-    <link rel="alternate" hreflang="en" href="https://www.paparemobeach.com/en/contact.html" />
-    <link rel="alternate" hreflang="x-default" href="https://www.paparemobeach.com/en/contact.html" />
-
-    <meta property="og:title" content="Contatti - Papa Remo Beach | Prenota a Watamu" />
-    <meta property="og:description" content="Mettiti in contatto con noi per prenotare un tavolo, organizzare un evento o per qualsiasi altra richiesta." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.paparemobeach.com/it/contact.html" />
-    <meta property="og:image" content="https://www.paparemobeach.com/assets/images/optimized/contact/Contact.jpg" />
-    <meta property="og:site_name" content="Papa Remo Beach" />
-    
-    <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../assets/css/fontawesome-custom.css" media="print" onload="this.media='all'">
 </head>
 <body>
 <div class="container">
@@ -90,7 +81,8 @@
     <section class="reservation-form mt-4" id="reservation">
     <h2>Richiesta generica / Effettua una prenotazione</h2>
     <p>Compila il modulo sottostante per effettuare una prenotazione al Papa Remo Beach. Ti risponderemo il prima possibile per confermare la tua richiesta.</p>
-    <form action="https://formspree.io/f/mjkrrppl" id="reservation-form" method="POST">
+    
+    <form action="https://api.paparemobeach.com/send.php" id="reservation-form" method="POST">
         <div class="form-group">
             <label class="form-label" for="reservation-type">Tipo di Richiesta *</label>
             <select class="form-control" id="reservation-type" name="reservation-type" required="">
@@ -137,68 +129,14 @@
             <textarea class="form-control" id="message" name="message" rows="4"></textarea>
         </div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">Invia Richiesta</button>
+            <button class="btn btn-primary" type="submit" id="submit-btn">Invia Richiesta</button>
         </div>
+        
+        <div id="form-response"></div>
     </form>
     </section>
 
-    <section class="contact-info mt-4">
-    <div class="contact-grid">
-    <div class="contact-card">
-    <i class="fas fa-map-marker-alt"></i>
-    <h3>Indirizzo</h3>
-    <p>Papa Remo Beach<br/>Jacaranda Road<br/>Watamu, Kenya</p>
     </div>
-    <div class="contact-card">
-    <i class="fas fa-phone"></i>
-    <h3>Telefono</h3>
-    <p>+254 707 010527</p>
-    </div>
-    <div class="contact-card">
-    <i class="fas fa-envelope"></i>
-    <h3>Email</h3>
-    <p>beach@paparemobeach.com</p>
-    </div>
-    <div class="contact-card">
-    <i class="fas fa-clock"></i>
-    <h3>Orari di Apertura</h3>
-    <p>Ristorante: 10:00 - 22:00<br/>Beach Bar: 10:00 - Tardi</p>
-    </div>
-    </div>
-    </section>
-
-    <section class="map-section mt-4">
-    <h2>Dove Trovarci</h2>
-    <div class="map-container">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.435759169695!2d40.0163886759186!3d-3.35928684155135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18158022d4a6a575%3A0x6b142d7de1c8882a!2sPapa%20Remo%20Beach!5e0!3m2!1sit!2sit!4v1719225725916!5m2!1sit!2sit"
-            width="100%"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-    </section>
-
-    <section class="social-connect mt-4">
-    <h2>Resta in Contatto</h2>
-    <p>Seguici sui social media per aggiornamenti, eventi e splendide foto di Watamu.</p>
-    <div class="social-links mt-3">
-    <a class="social-link" href="https://www.instagram.com/paparemobeach/" target="_blank">
-    <i class="fab fa-instagram"></i>
-    <span>Instagram</span>
-    <span class="social-handle">@paparemobeach</span>
-    </a>
-    <a class="social-link" href="https://www.facebook.com/paparemobeach/" target="_blank">
-    <i class="fab fa-facebook"></i>
-    <span>Facebook</span>
-    <span class="social-handle">Papa Remo Beach</span>
-    </a>
-    </div>
-    </section>
-</div>
 </main>
 </div>
 
@@ -210,6 +148,48 @@
 <script src="../assets/js/mobile-menu.js"></script>
 <script src="../assets/js/language-toggle.js"></script>
 <script src="../assets/js/theme-switcher.js"></script>
+
+<script>
+document.getElementById('reservation-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita il ricaricamento della pagina
+
+    const form = e.target;
+    const btn = document.getElementById('submit-btn');
+    const responseDiv = document.getElementById('form-response');
+    
+    // Reset messaggi e disabilita tasto
+    responseDiv.className = '';
+    responseDiv.innerHTML = 'Invio in corso...';
+    responseDiv.style.display = 'block';
+    btn.disabled = true;
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            responseDiv.className = 'success';
+            responseDiv.innerHTML = data.message;
+            form.reset(); // Pulisce il form dopo l'invio
+        } else {
+            responseDiv.className = 'error';
+            responseDiv.innerHTML = data.message;
+        }
+    })
+    .catch(error => {
+        responseDiv.className = 'error';
+        responseDiv.innerHTML = 'Si è verificato un errore di connessione. Riprova più tardi.';
+        console.error('Error:', error);
+    })
+    .finally(() => {
+        btn.disabled = false;
+    });
+});
+</script>
 
 </body>
 </html>
