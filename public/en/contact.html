@@ -2,63 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Contact Us - Papa Remo Beach | Watamu, Kenya</title>
-    <meta content="Contact Papa Remo Beach in Watamu, Kenya. Make reservations, inquire about events, or get directions to our location." name="description"/>
-    <meta name="keywords" content="contact papa remo, papa remo reservations, watamu restaurant contact, phone number papa remo, email papa remo beach"/>
+    <meta name="description" content="Contact Papa Remo Beach in Watamu, Kenya. Make reservations, inquire about events, or get directions to our location."/>
+    <meta name="keywords" content="contact papa remo, papa remo reservations, watamu restaurant contact"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <style>
-      :root{--bg-primary:#f8f9fa;--primary-dark:#0c1a2c;--text-dark:#343a40;--text-light:#ffffff;--dark-gray:#6c757d;--sand:#e9ecef;--border-light:#dee2e6;--ocean-blue:#104B8F;--turquoise:#00897B;--coral:#e74c3c;--card-bg:#ffffff;--primary-dark-light:#1a2b42}html[data-theme=dark]{--bg-primary:#0c1a2c;--primary-dark:#07111d;--text-dark:#e0e1e2;--text-light:#ffffff;--dark-gray:#a0a7b3;--sand:#3a4a60;--border-light:#2c3a4f;--ocean-blue:#2471A3;--turquoise:#1abc9c;--coral:#e67e22;--card-bg:var(--primary-dark-light)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Poppins',sans-serif;color:var(--text-dark);background-color:var(--bg-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease}h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;margin-bottom:1rem}article h1,section h1,aside h1,nav h1{font-size:2.2rem}a{text-decoration:none;color:var(--ocean-blue);transition:color .3s ease}a:hover{color:var(--turquoise)}img{max-width:100%;height:auto}.container{display:flex;min-height:100vh}.sidebar{width:290px;background-color:var(--primary-dark);color:var(--text-light);padding:2rem;display:flex;flex-direction:column;position:fixed;height:100vh;overflow-y:auto}.main-content{flex:1;margin-left:290px;padding:2rem}.page-header{margin-bottom:2rem}.page-header h1{font-size:2.5rem}.page-header p{font-size:1.1rem;color:var(--dark-gray)}
-      .page-container {
-        max-width: 960px;
-        margin: 0 auto;
-      }
-      
-      /* New CSS for form status messages */
-      #form-response {
-        margin-top: 15px;
-        padding: 10px;
-        border-radius: 5px;
-        display: none;
-      }
-      #form-response.success {
-        display: block;
-        background-color: #d4edda;
-        color: #155724;
-        border: 1px solid #c3e6cb;
-      }
-      #form-response.error {
-        display: block;
-        background-color: #f8d7da;
-        color: #721c24;
-        border: 1px solid #f5c6cb;
-      }
-
-      @media (max-width:768px){.container{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}.main-content{margin-left:0}}
-    </style>
-    
-    <link rel="stylesheet" href="../assets/css/style.css" media="all">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/all.css">
 
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LGP8596KW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4LGP8596KW');
-    </script>
-    
-    <link rel="canonical" href="https://www.paparemobeach.com/en/contact.html" />
+    <link rel="canonical" href="https://www.paparemobeach.com/en/contact.html"/>
 </head>
+
 <body>
 <div class="container">
 
@@ -66,78 +24,87 @@
 
 <main class="main-content">
 <div class="page-container">
-    <header class="page-header">
+
+<header class="page-header">
     <h1>Contact Us</h1>
     <p>Get in touch with Papa Remo Beach</p>
-    </header>
+</header>
 
-    <div class="contact-header-image-container">
-        <picture>
-            <source srcset="../assets/images/optimized/contact/Contact.webp" type="image/webp">
-            <source srcset="../assets/images/optimized/contact/Contact.jpg" type="image/jpeg">
-            <img src="../assets/images/optimized/contact/Contact.jpg" alt="Contact Papa Remo Beach" class="contact-header-image">
-        </picture>
+<div class="contact-header-image-container">
+    <picture>
+        <source srcset="../assets/images/optimized/contact/Contact.webp" type="image/webp">
+        <source srcset="../assets/images/optimized/contact/Contact.jpg" type="image/jpeg">
+        <img src="../assets/images/optimized/contact/Contact.jpg" alt="Contact Papa Remo Beach" class="contact-header-image">
+    </picture>
+</div>
+
+<section class="reservation-form mt-4">
+<h2>General Inquiry / Make a Reservation</h2>
+<p>
+    The contact form is temporarily unavailable.<br>
+    Please reach out to us via <strong>WhatsApp</strong> or <strong>Email</strong>.
+</p>
+
+<form id="reservation-form">
+
+    <div class="form-group">
+        <label for="reservation-type">Inquiry Type *</label>
+        <select id="reservation-type" class="form-control" disabled>
+            <option>Service temporarily unavailable</option>
+        </select>
     </div>
 
-    <section class="reservation-form mt-4" id="reservation">
-    <h2>General inquiry / Make a reservation</h2>
-    <p>Fill out the form below to make a reservation at Papa Remo Beach. We'll get back to you as soon as possible to confirm your booking.</p>
-    
-    <form action="https://api.paparemobeach.com/send.php" id="reservation-form" method="POST">
+    <div class="form-row">
         <div class="form-group">
-            <label class="form-label" for="reservation-type">Inquiry Type *</label>
-            <select class="form-control" id="reservation-type" name="reservation-type" required="">
-                <option value="">Select an option</option>
-                <option value="restaurant">Restaurant Dining</option>
-                <option value="event">Private Event</option>
-                <option value="wedding">Wedding Inquiry</option>
-                <option value="general_inquiry">General Inquiry</option>
-            </select>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group">
-                <label class="form-label" for="name">Full Name *</label>
-                <input class="form-control" id="name" name="name" required="" type="text"/>
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="email">Email Address *</label>
-                <input class="form-control" id="email" name="email" required="" type="email"/>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label class="form-label" for="phone">Phone Number</label>
-                <input class="form-control" id="phone" name="phone" type="tel"/>
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="date">Preferred Date</label>
-                <input class="form-control" id="date" name="date" type="date"/>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group">
-                <label class="form-label" for="time">Preferred Time</label>
-                <input class="form-control" id="time" name="time" type="time"/>
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="guests">Number of Guests</label>
-                <input class="form-control" id="guests" min="1" name="guests" type="number"/>
-            </div>
+            <label for="name">Full Name *</label>
+            <input id="name" class="form-control" type="text" disabled>
         </div>
         <div class="form-group">
-            <label class="form-label" for="message">Special Requests or Comments</label>
-            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+            <label for="email">Email Address *</label>
+            <input id="email" class="form-control" type="email" disabled>
         </div>
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit" id="submit-btn">Submit Request</button>
-        </div>
-        
-        <div id="form-response"></div>
-    </form>
-    </section>
-
     </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" class="form-control" type="tel" disabled>
+        </div>
+        <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input id="date" class="form-control" type="date" disabled>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="time">Preferred Time</label>
+            <input id="time" class="form-control" type="time" disabled>
+        </div>
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <input id="guests" class="form-control" type="number" disabled>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Special Requests or Comments</label>
+        <textarea id="message" class="form-control" rows="4" disabled></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" disabled>
+        Service temporarily unavailable
+    </button>
+
+    <div id="form-response" class="error" style="display:block; margin-top:15px;">
+        The contact form is currently disabled.<br>
+        📲 Please contact us via <strong>WhatsApp</strong> or <strong>Email</strong>.
+    </div>
+
+</form>
+</section>
+
+</div>
 </main>
 </div>
 
@@ -153,43 +120,7 @@
 <script>
 document.getElementById('reservation-form').addEventListener('submit', function(e) {
     e.preventDefault();
-
-    const form = e.target;
-    const btn = document.getElementById('submit-btn');
-    const responseDiv = document.getElementById('form-response');
-    
-    // Reset messages and disable button
-    responseDiv.className = '';
-    responseDiv.innerHTML = 'Sending...';
-    responseDiv.style.display = 'block';
-    btn.disabled = true;
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status === 'success') {
-            responseDiv.className = 'success';
-            // Custom English success message
-            responseDiv.innerHTML = "Thank you! Your message has been sent.";
-            form.reset();
-        } else {
-            responseDiv.className = 'error';
-            responseDiv.innerHTML = data.message;
-        }
-    })
-    .catch(error => {
-        responseDiv.className = 'error';
-        responseDiv.innerHTML = 'A connection error occurred. Please try again later.';
-        console.error('Error:', error);
-    })
-    .finally(() => {
-        btn.disabled = false;
-    });
+    return; // ⛔ form submission blocked
 });
 </script>
 
