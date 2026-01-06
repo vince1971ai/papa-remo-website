@@ -40,9 +40,7 @@
 
 <section class="reservation-form mt-4">
 <h2>General Inquiry / Make a Reservation</h2>
-<p>
-    Please fill out the form below to send us a message. We will get back to you as soon as possible.
-</p>
+<p>Please fill out the form below to make a reservation at Papa Remo Beach. We will get back to you as soon as possible to confirm your request.</p>
 
 <form id="reservation-form">
 
@@ -95,11 +93,10 @@
     </div>
 
     <button type="submit" class="btn btn-primary">
-        Send Message
+        Send Request
     </button>
 
-    <div id="form-response" style="display:none; margin-top:15px;">
-        </div>
+    <div id="form-response" style="display:none; margin-top:15px;"></div>
 
 </form>
 </section>
@@ -123,13 +120,13 @@ document.getElementById('reservation-form').addEventListener('submit', function(
     
     const responseDiv = document.getElementById('form-response');
     
-    // UI Feedback for the user
+    // Feedback visivo
     responseDiv.style.display = 'block';
-    responseDiv.className = 'success'; // Ensure you have a success class in your CSS
-    responseDiv.innerHTML = "Thank you! Your message has been sent successfully. We will contact you shortly.";
+    responseDiv.className = 'success'; 
+    responseDiv.innerHTML = "Thank you! Your request has been sent successfully. We will contact you shortly.";
 
-    // Here you would typically add your fetch() or AJAX call to send the data
-    console.log("Form submitted successfully!");
+    // Log per debug
+    console.log("Form submitted with all fields enabled.");
 });
 </script>
 
