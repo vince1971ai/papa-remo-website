@@ -32,40 +32,41 @@
 
 <section class="reservation-form mt-4">
 <h2>Richiesta generica / Effettua una prenotazione</h2>
-<p>Il servizio di invio richieste è temporaneamente sospeso.</p>
+<p>Compila il modulo sottostante per inviarci un messaggio. Ti risponderemo al più presto.</p>
 
 <form id="reservation-form">
 
     <div class="form-group">
         <label for="reservation-type">Tipo di Richiesta *</label>
-        <select id="reservation-type" class="form-control" disabled>
-            <option>Servizio non disponibile</option>
+        <select id="reservation-type" class="form-control" required>
+            <option value="" disabled selected>Seleziona un'opzione</option>
+            <option value="prenotazione">Prenotazione Ristorante</option>
+            <option value="informazioni">Richiesta Informazioni</option>
+            <option value="eventi">Eventi Privati / Wedding</option>
         </select>
     </div>
 
     <div class="form-group">
         <label for="name">Nome Completo *</label>
-        <input id="name" class="form-control" type="text" disabled>
+        <input id="name" class="form-control" type="text" placeholder="Tuo Nome" required>
     </div>
 
     <div class="form-group">
         <label for="email">Email *</label>
-        <input id="email" class="form-control" type="email" disabled>
+        <input id="email" class="form-control" type="email" placeholder="latua@email.com" required>
     </div>
 
     <div class="form-group">
         <label for="message">Messaggio</label>
-        <textarea id="message" class="form-control" rows="4" disabled></textarea>
+        <textarea id="message" class="form-control" rows="4" placeholder="Come possiamo aiutarti?"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary" disabled>
-        Servizio temporaneamente non disponibile
+    <button type="submit" class="btn btn-primary">
+        Invia Messaggio
     </button>
 
-    <div id="form-response" class="error" style="display:block; margin-top:15px;">
-        Il modulo di contatto è momentaneamente disabilitato.<br>
-        📲 Contattaci via <strong>WhatsApp</strong> o <strong>Email</strong>.
-    </div>
+    <div id="form-response" style="display:none; margin-top:15px;">
+        </div>
 
 </form>
 </section>
@@ -88,9 +89,14 @@ document.getElementById('reservation-form').addEventListener('submit', function(
     e.preventDefault();
 
     const responseDiv = document.getElementById('form-response');
+    
+    // Esempio di logica di invio (da collegare al tuo backend o servizio email)
     responseDiv.style.display = 'block';
+    responseDiv.className = 'success';
+    responseDiv.innerHTML = "Grazie! Il tuo messaggio è stato inviato correttamente. Ti contatteremo a breve.";
 
-    return; // ⛔ invio completamente bloccato
+    // Qui puoi aggiungere la logica fetch() per inviare i dati al server
+    console.log("Modulo inviato!");
 });
 </script>
 

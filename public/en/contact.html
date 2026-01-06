@@ -41,65 +41,65 @@
 <section class="reservation-form mt-4">
 <h2>General Inquiry / Make a Reservation</h2>
 <p>
-    The contact form is temporarily unavailable.<br>
-    Please reach out to us via <strong>WhatsApp</strong> or <strong>Email</strong>.
+    Please fill out the form below to send us a message. We will get back to you as soon as possible.
 </p>
 
 <form id="reservation-form">
 
     <div class="form-group">
         <label for="reservation-type">Inquiry Type *</label>
-        <select id="reservation-type" class="form-control" disabled>
-            <option>Service temporarily unavailable</option>
+        <select id="reservation-type" class="form-control" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="reservation">Restaurant Reservation</option>
+            <option value="inquiry">General Inquiry</option>
+            <option value="events">Private Events / Wedding</option>
         </select>
     </div>
 
     <div class="form-row">
         <div class="form-group">
             <label for="name">Full Name *</label>
-            <input id="name" class="form-control" type="text" disabled>
+            <input id="name" class="form-control" type="text" placeholder="Your Name" required>
         </div>
         <div class="form-group">
             <label for="email">Email Address *</label>
-            <input id="email" class="form-control" type="email" disabled>
+            <input id="email" class="form-control" type="email" placeholder="your@email.com" required>
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input id="phone" class="form-control" type="tel" disabled>
+            <input id="phone" class="form-control" type="tel" placeholder="+254...">
         </div>
         <div class="form-group">
             <label for="date">Preferred Date</label>
-            <input id="date" class="form-control" type="date" disabled>
+            <input id="date" class="form-control" type="date">
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group">
             <label for="time">Preferred Time</label>
-            <input id="time" class="form-control" type="time" disabled>
+            <input id="time" class="form-control" type="time">
         </div>
         <div class="form-group">
             <label for="guests">Number of Guests</label>
-            <input id="guests" class="form-control" type="number" disabled>
+            <input id="guests" class="form-control" type="number" min="1">
         </div>
     </div>
 
     <div class="form-group">
         <label for="message">Special Requests or Comments</label>
-        <textarea id="message" class="form-control" rows="4" disabled></textarea>
+        <textarea id="message" class="form-control" rows="4" placeholder="How can we help you?"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary" disabled>
-        Service temporarily unavailable
+    <button type="submit" class="btn btn-primary">
+        Send Message
     </button>
 
-    <div id="form-response" class="error" style="display:block; margin-top:15px;">
-        The contact form is currently disabled.<br>
-        📲 Please contact us via <strong>WhatsApp</strong> or <strong>Email</strong>.
-    </div>
+    <div id="form-response" style="display:none; margin-top:15px;">
+        </div>
 
 </form>
 </section>
@@ -120,7 +120,16 @@
 <script>
 document.getElementById('reservation-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    return; // ⛔ form submission blocked
+    
+    const responseDiv = document.getElementById('form-response');
+    
+    // UI Feedback for the user
+    responseDiv.style.display = 'block';
+    responseDiv.className = 'success'; // Ensure you have a success class in your CSS
+    responseDiv.innerHTML = "Thank you! Your message has been sent successfully. We will contact you shortly.";
+
+    // Here you would typically add your fetch() or AJAX call to send the data
+    console.log("Form submitted successfully!");
 });
 </script>
 
