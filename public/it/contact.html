@@ -1,60 +1,106 @@
-<section class="reservation-form mt-4">
-    <h2>Richiesta generica / Effettua una prenotazione</h2>
-    <p>Compila il modulo sottostante per effettuare una prenotazione. Ti risponderemo il prima possibile.</p>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <form id="reservation-form">
-        <div class="form-group">
-            <label for="reservation-type">Tipo di Richiesta *</label>
-            <select id="reservation-type" name="reservation-type" class="form-control" required>
-                <option value="" disabled selected>Seleziona un'opzione</option>
-                <option value="prenotazione">Prenotazione Ristorante</option>
-                <option value="informazioni">Richiesta Informazioni</option>
-                <option value="eventi">Eventi Privati / Wedding</option>
-            </select>
+    <title>Contatti - Papa Remo Beach | Prenota il Tuo Tavolo a Watamu</title>
+    <meta name="description" content="Contatta Papa Remo Beach a Watamu, Kenya. Effettua prenotazioni per il ristorante, richiedi informazioni per eventi o ottieni indicazioni per raggiungerci."/>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/all.css">
+
+    <link rel="canonical" href="https://www.paparemobeach.com/it/contact.html"/>
+</head>
+
+<body>
+<div class="container">
+    <div id="menu-placeholder"></div>
+
+    <main class="main-content">
+        <div class="page-container">
+
+            <header class="page-header">
+                <h1>Contattaci</h1>
+                <p>Mettiti in contatto con il Papa Remo Beach</p>
+            </header>
+
+            <div class="contact-header-image-container">
+                <picture>
+                    <source srcset="../assets/images/optimized/contact/Contact.webp" type="image/webp">
+                    <source srcset="../assets/images/optimized/contact/Contact.jpg" type="image/jpeg">
+                    <img src="../assets/images/optimized/contact/Contact.jpg" alt="Contatta Papa Remo Beach" class="contact-header-image">
+                </picture>
+            </div>
+
+            <section class="reservation-form mt-4">
+                <h2>Richiesta generica / Effettua una prenotazione</h2>
+                <p>Compila il modulo sottostante per effettuare una prenotazione. Ti risponderemo il prima possibile.</p>
+
+                <form id="reservation-form">
+                    
+                    <div class="form-group">
+                        <label for="reservation-type">Tipo di Richiesta *</label>
+                        <select id="reservation-type" name="reservation-type" class="form-control" required>
+                            <option value="" disabled selected>Seleziona un'opzione</option>
+                            <option value="prenotazione">Prenotazione Ristorante</option>
+                            <option value="informazioni">Richiesta Informazioni</option>
+                            <option value="eventi">Eventi Privati / Wedding</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome Completo *</label>
+                            <input id="name" name="name" class="form-control" type="text" placeholder="Tuo Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Indirizzo Email *</label>
+                            <input id="email" name="email" class="form-control" type="email" placeholder="latua@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Numero di Telefono</label>
+                            <input id="phone" name="phone" class="form-control" type="tel" placeholder="+39...">
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Data Preferita</label>
+                            <input id="date" name="date" class="form-control" type="date">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="time">Orario Preferito</label>
+                            <input id="time" name="time" class="form-control" type="time">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Numero di Ospiti</label>
+                            <input id="guests" name="guests" class="form-control" type="number" min="1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Richieste Speciali o Commenti</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Come possiamo aiutarti?"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn btn-primary">Invia Richiesta</button>
+                    
+                    <div id="form-response" style="display:none; margin-top:15px; padding: 10px; border-radius: 5px;"></div>
+                </form>
+            </section>
         </div>
+    </main>
+</div>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="name">Nome Completo *</label>
-                <input id="name" name="name" class="form-control" type="text" placeholder="Tuo Nome" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Indirizzo Email *</label>
-                <input id="email" name="email" class="form-control" type="email" placeholder="latua@email.com" required>
-            </div>
-        </div>
+<div id="footer-placeholder"></div>
 
-        <div class="form-row">
-            <div class="form-group">
-                <label for="phone">Numero di Telefono</label>
-                <input id="phone" name="phone" class="form-control" type="tel" placeholder="+39...">
-            </div>
-            <div class="form-group">
-                <label for="date">Data Preferita</label>
-                <input id="date" name="date" class="form-control" type="date">
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group">
-                <label for="time">Orario Preferito</label>
-                <input id="time" name="time" class="form-control" type="time">
-            </div>
-            <div class="form-group">
-                <label for="guests">Numero di Ospiti</label>
-                <input id="guests" name="guests" class="form-control" type="number" min="1">
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="message">Richieste Speciali o Commenti</label>
-            <textarea id="message" name="message" class="form-control" rows="4" placeholder="Come possiamo aiutarti?"></textarea>
-        </div>
-
-        <button type="submit" id="submit-btn" class="btn btn-primary">Invia Richiesta</button>
-        <div id="form-response" style="display:none; margin-top:15px;"></div>
-    </form>
-</section>
+<script src="../assets/js/menu-loader.js"></script>
+<script src="../assets/js/footer-loader.js"></script>
+<script src="../assets/js/main.js"></script>
 
 <script>
 document.getElementById('reservation-form').addEventListener('submit', function(e) {
@@ -66,7 +112,9 @@ document.getElementById('reservation-form').addEventListener('submit', function(
 
     submitBtn.disabled = true;
     submitBtn.innerHTML = "Invio in corso...";
+    responseDiv.style.display = 'none';
 
+    // Invio dei dati al server Netsons
     fetch('https://api.paparemobeach.com/send.php', {
         method: 'POST',
         body: formData
@@ -74,21 +122,26 @@ document.getElementById('reservation-form').addEventListener('submit', function(
     .then(res => res.json())
     .then(data => {
         if(data.status === "success") {
+            responseDiv.style.display = 'block';
+            responseDiv.style.backgroundColor = '#d4edda';
+            responseDiv.style.color = '#155724';
             responseDiv.innerHTML = "Grazie! La tua richiesta è stata inviata correttamente.";
-            responseDiv.style.color = "#155724";
             form.reset();
         } else {
             throw new Error(data.message);
         }
     })
     .catch(() => {
-        responseDiv.innerHTML = "Errore nell'invio. Riprova più tardi o contattaci su WhatsApp.";
-        responseDiv.style.color = "#721c24";
+        responseDiv.style.display = 'block';
+        responseDiv.style.backgroundColor = '#f8d7da';
+        responseDiv.style.color = '#721c24';
+        responseDiv.innerHTML = "Si è verificato un errore. Riprova più tardi o contattaci su WhatsApp.";
     })
     .finally(() => {
-        responseDiv.style.display = 'block';
         submitBtn.disabled = false;
         submitBtn.innerHTML = "Invia Richiesta";
     });
 });
 </script>
+</body>
+</html>
