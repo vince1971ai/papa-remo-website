@@ -3,13 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <title>Contatti - Papa Remo Beach | Prenota il Tuo Tavolo a Watamu</title>
-    <meta name="description" content="Contatta Papa Remo Beach a Watamu, Kenya. Effettua prenotazioni per il ristorante, richiedi informazioni per eventi o ottieni indicazioni per raggiungerci."/>
+    <meta name="description" content="Contatta Papa Remo Beach a Watamu, Kenya."/>
     
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/all.css">
-
     <link rel="canonical" href="https://www.paparemobeach.com/it/contact.html"/>
 </head>
 
@@ -89,7 +87,7 @@
 
                     <button type="submit" id="submit-btn" class="btn btn-primary">Invia Richiesta</button>
                     
-                    <div id="form-response" style="display:none; margin-top:15px; padding: 10px; border-radius: 5px;"></div>
+                    <div id="form-response" style="display:none; margin-top:15px; padding: 15px; border-radius: 5px;"></div>
                 </form>
             </section>
         </div>
@@ -108,21 +106,19 @@ document.getElementById('reservation-form').addEventListener('submit', function(
     const form = this;
     const responseDiv = document.getElementById('form-response');
     const submitBtn = document.getElementById('submit-btn');
-    const formData = new FormData(form);
-
+    
     submitBtn.disabled = true;
     submitBtn.innerHTML = "Invio in corso...";
     responseDiv.style.display = 'none';
 
-    // Invio dei dati al server Netsons
     fetch('https://api.paparemobeach.com/send.php', {
         method: 'POST',
-        body: formData
+        body: new FormData(form)
     })
     .then(res => res.json())
     .then(data => {
+        responseDiv.style.display = 'block';
         if(data.status === "success") {
-            responseDiv.style.display = 'block';
             responseDiv.style.backgroundColor = '#d4edda';
             responseDiv.style.color = '#155724';
             responseDiv.innerHTML = "Grazie! La tua richiesta è stata inviata correttamente.";
@@ -135,7 +131,7 @@ document.getElementById('reservation-form').addEventListener('submit', function(
         responseDiv.style.display = 'block';
         responseDiv.style.backgroundColor = '#f8d7da';
         responseDiv.style.color = '#721c24';
-        responseDiv.innerHTML = "Si è verificato un errore. Riprova più tardi o contattaci su WhatsApp.";
+        responseDiv.innerHTML = "Errore nell'invio. Controlla la connessione o contattaci su WhatsApp.";
     })
     .finally(() => {
         submitBtn.disabled = false;

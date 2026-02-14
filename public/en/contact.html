@@ -3,13 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <title>Contact Us - Papa Remo Beach | Watamu, Kenya</title>
-    <meta name="description" content="Contact Papa Remo Beach in Watamu, Kenya. Make reservations, inquire about events, or get directions to our location."/>
-    
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/all.css">
-
     <link rel="canonical" href="https://www.paparemobeach.com/en/contact.html"/>
 </head>
 
@@ -35,10 +31,9 @@
 
             <section class="reservation-form mt-4">
                 <h2>General Inquiry / Make a Reservation</h2>
-                <p>Please fill out the form below to make a reservation. We will get back to you as soon as possible.</p>
+                <p>Please fill out the form below to make a reservation. We will get back to you shortly.</p>
 
                 <form id="reservation-form">
-                    
                     <div class="form-group">
                         <label for="reservation-type">Inquiry Type *</label>
                         <select id="reservation-type" name="reservation-type" class="form-control" required>
@@ -83,13 +78,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Special Requests or Comments</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="How can we help you?"></textarea>
+                        <label for="message">Special Requests</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="How can we help?"></textarea>
                     </div>
 
                     <button type="submit" id="submit-btn" class="btn btn-primary">Send Request</button>
-                    
-                    <div id="form-response" style="display:none; margin-top:15px; padding: 10px; border-radius: 5px;"></div>
+                    <div id="form-response" style="display:none; margin-top:15px; padding: 15px; border-radius: 5px;"></div>
                 </form>
             </section>
         </div>
@@ -108,21 +102,19 @@ document.getElementById('reservation-form').addEventListener('submit', function(
     const form = this;
     const responseDiv = document.getElementById('form-response');
     const submitBtn = document.getElementById('submit-btn');
-    const formData = new FormData(form);
-
+    
     submitBtn.disabled = true;
     submitBtn.innerHTML = "Sending...";
     responseDiv.style.display = 'none';
 
-    // Invio al backend su Netsons
     fetch('https://api.paparemobeach.com/send.php', {
         method: 'POST',
-        body: formData
+        body: new FormData(form)
     })
     .then(res => res.json())
     .then(data => {
+        responseDiv.style.display = 'block';
         if(data.status === "success") {
-            responseDiv.style.display = 'block';
             responseDiv.style.backgroundColor = '#d4edda';
             responseDiv.style.color = '#155724';
             responseDiv.innerHTML = data.message;
